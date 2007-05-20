@@ -1,0 +1,1266 @@
+Bienvenue sur le serveur ^3850a0AgoraOnline^000000  !#
+Incapable de se connecter au serveur.#
+Déconnecté du serveur.#
+Déconnecté du serveur.#
+Serveur inactif.#
+Quelqu'un est déjà en ligne avec cet ID.#
+ID non enregistré. Assurez-vous d'être bien enregistré et que vous avez bien tapé votre ID.#
+ID ou Mot de passe incorrect. Veuillez recommencer.#
+Cet Identifiant est expiré.#
+Rejeté par le serveur.#
+Ce nom de personnage existe déjà.#
+La création de personnage n'est pas permise.#
+Vous n'avez pas la permission d'effacer un personnage.#
+Entrez le nom de la fenêtre de conversation.#
+Mot impoli détecté.#
+Veuillez entrer un mot de passe.#
+Veuillez entrer un mot de passe. Celui-ci doit contenir au moins quatre lettres.#
+Êtes-vous certain de vouloir quitter ?#
+Le mot de passe doit avoir au moins quatre lettres.#
+Êtes-vous sûr de vouloir effacer ce personnage ?#
+Mot impoli détecté.#
+Le nom du personnage doit contenir au moins quatre lettres.#
+Liste des commandes: /h | /help#
+Effets activés#
+Effets désactivés#
+Volume du son#
+Volume de la musique de fond#
+Sons activés#
+Sons désactivés#
+Saut d'images activé#
+Saut d'images désactivé#
+Musique de fond activée#
+Musique de fond désactivée#
+/h ou /help: Montre la liste des commandes#
+/w ou /who: Affiche le nombre de joueurs en ligne#
+/music: Démarre/arrête la musique de fond#
+/sound: Démarre/arrête les sons#
+/effect: Active/désactive les effets#
+/where: Vous donne votre emplacement#
+/skip: Active/désactive le saut d'images#
+/v(0~127): Contrôle du volume des sons#
+/bv(0~127): Contrôle du volume de la musique de fond#
+/ex (Nom du joueur): Permet de bloquer les messages privés de ce joueur#
+/ex: Vous permet de voir la liste des personnages dans votre liste de personnes bloquées#
+/in (Nom du joueur): Permet de recevoir des messages privés de ce joueur#
+/inall: Permet de recevoir les messages privés venant de tout le monde#
+/exall: Bloque les messages privés venant de tout le monde#
+Cliquez sur un personnage avec le bouton droit de votre souris et sélectionnez [Ajouter comme ami] pour ajouter cette personne dans votre liste d'amis.#
+F12 fait apparaître la liste des hotkeys où vous pouvez placer des potions, des skills ou des armes, pour effectuer des actions plus aisément.#
+Vous ne pouvez pas répéter la même chose plus de trois fois.#
+Filtre Chat#
+Vous ne pouvez pas entreposer ce type d'item dans votre inventaire.#
+Vous ne pouvez pas prendre plus d'items car vous dépassez votre capacité maximale en poids.#
+Vous ne pouvez pas prendre cet item.#
+Echange réalisé avec succès.#
+Vous n'avez pas assez de zeny.#
+Vous êtes en surcharge.#
+L'échange a échoué.#
+Vous avez bloqué les messages privés de tous les joueurs.#
+Le blocage de tous les messages privés a échoué.#
+Vous avez permis les messages privés de tous les joueurs.#
+L'autorisation de tous les messages privés a échoué.#
+Vous n'avez pas de liste de personnes bloquée.#
+[ Liste de personnes bloquées ]#
+La salle de chat a été créée avec succès.#
+Au dessus de la limite de la salle de chat.#
+Une salle de chat ayant le même nom existe déjà.#
+La salle de chat est pleine.#
+Vous avez été expulsé de cette salle de chat.#
+L'échange a été rejeté.#
+Vous êtes trop éloigné pour faire un échange avec cette personne.#
+Aucun joueur en ligne ne porte ce nom.#
+Cette personne est en train d'effectuer un autre échange.#
+Cette personne est trop chargée, vous ne pouvez pas échanger.#
+L'échange a été annulé.#
+Echange réalisé avec succès.#
+L'échange a échoué.#
+Le groupe a été organisé avec succès.#
+Ce nom de groupe existe déjà.#
+Ce joueur est déjà dans un groupe.#
+Le joueur a déjà rejoint un autre groupe.#
+Invitation dans le groupe rejetée.#
+Invitation dans le groupe acceptée.#
+Le groupe est complet.#
+Vous avez quitté le groupe.#
+A tous#
+Groupe#
+Faire un échange avec %s.#
+Demander à %s de joindre le groupe#
+Pri:#
+Pub:#
+Choisissez 'Restart' pour retourner à votre point de sauvegarde ou 'Exit' pour choisir un autre personnage.#
+Choisissez un type d'échange.#
+%s veut faire un échange.#
+Vous êtes invité à joindre le groupe. Acceptez-vous ?#
+Commande invalide.#
+Quitter le groupe#
+Expulser du groupe#
+Envoyer des messages#
+Conversation 1:1#
+         18 Slots disponibles#
+Agencement du groupe#
+Amis#
+Groupe#
+Equipement#
+Statut#
+Inventaire#
+/organize 'Nom du groupe': Pour créer un groupe. Utilisez [/leave] pour quitter/dissoudre le groupe.#
+Si vous êtes le chef d'équipe, vous pouvez inviter quelqu'un dans votre groupe en cliquant sur le joueur avec le bouton droit de votre souris.#
+Récupérer#
+Attaquer#
+Supporter#
+Entier#
+Arme#
+Défense#
+Water#
+Earth#
+Fire#
+Wind#
+Evitez d'acheter deux items identiques.#
+Veuillez changer votre résolution à 16 bits lorsque vous jouez à Ragnarok en mode fenêtre.#
+Veuillez patienter.#
+Veuillez patienter.#
+Veuillez patienter.#
+Veuillez patienter.#
+Pour créer une salle#
+Pour créer une salle#
+Pour expulser un joueur#
+Pour donner l'autorité au chef#
+Pour voir l'information#
+Chat#
+personnes#
+/sit: Vous asseoir si vous êtes debout. Vous met debout si vous êtes assis.#
+/stand: Vous fait lever debout si vous êtes assis. Vous met assis si vous êtes debout.#
+/chat: Créer salle de chat#
+/q: Quitter la fenêtre de conversation#
+/deal [Nom du personnage]: Pour initier un échange avec un autre joueur#
+/organize 'Nom du groupe': Pour former un groupe#
+/leave: Pour quitter un groupe#
+/expel [Nom du personnage]: Expulse un joueur de votre groupe#
+[Alt] + [End]: Affiche/retire la barre de HP/SP#
+[Alt] + [Home]: Active ou désactive le curseur au sol#
+Insert]: Vous permet de vous lever ou de vous asseoir. (Vous pouvez aussi taper /sit ou /stand)#
+Bravo ! Vous êtes le MVP ! Votre récompense en item est#
+ !#
+Bravo ! Vous êtes le MVP ! Votre récompense en points d'EXP est#
+ !#
+Vous êtes le MVP, mais vous ne pouvez pas recevoir la récompense parce que vous êtes en surcharge.#
+Aucun joueur en ligne ne porte ce nom.#
+ne veut pas recevoir vos messages.#
+n'est pas d'humeur à parler à qui que ce soit.#
+Joueur déconnecté/tué avec succès.#
+Le Kill a échoué.#
+Vous avez %s %d#
+[Alt] + [=]: Pour régler le problème d'intervalles entre les lettres.#
+[F10]: Pour ajouter la taille de la fenêtre de conversation  [Alt] + [F10] : Ouvre/ferme la fenêtre de conversation#
+Comment envoyer des messages privés: Entrer le nom du joueur dans la boîte de gauche de la fenêtre de conversation, puis entrer le message à droite. La touche Verr Maj vous permet d'alterner entre les deux boîtes.#
+/!,/?,/ho,/lv,/lv2,/swt,/ic,/an,/ag,/$,/¡¦.,/thx,/wah,/sry,/heh,/swt2,/hmm,/no1,/??,/omg,/oh,/X,/hp,/go,/sob,/gg,/kis,/kis2,/pif,/ok: Emotions correspondant à Alt + (1~9) Ctrl + (-=\\)#
+Comment parler au groupe: Ajouter % au début de chaque message#
+Vous n'avez pas la compétence pour réaliser des échanges.#
+Vous n'avez pas la compétence pour faire des emoticônes.#
+Vous n'avez pas la compétence pour vous asseoir.#
+Vous n'avez pas la compétence pour créer une fenêtre de conversation.#
+Vous n'avez pas la compétence pour joindre un groupe.#
+Vous n'avez pas la compétence pour crier.#
+Vous n'avez pas la compétence pour faire du PK.#
+Achat d'items#
+Magasin d'items#
+Vente d'items#
+Inventaire des items#
+ est équipé.#
+ est retiré.#
+Pour ajouter des noms sur la liste des conversations privées#
+Pour prendre des photos: [Impr écran] ou [Arrêt défil]#
+Conseil du jour#
+^3850a0Saviez vous que...?^709fed#
+Toujours Afficher#
+/tip: Ouvre le 'Conseil du jour'#
+Il y a %d joueur(s) en ligne.#
+(%s) est entré.#
+(%s) a quitté.#
+(%s) a été expulsé.#
+%d fois#
+%s : %d exemplaire(s)#
+%s %s : %d#
+Items disponibles pour la vente#
+Items du magasin#
+Endroit inconnu#
+Le langage de votre client ne correspond pas à celui du serveur.#
+Fermez votre fenêtre d'équipement si vous désirez laisser tomber un item.#
+[Erreur client] N'accepte pas tous les caractères.#
+Ceci n'est pas encore implanté.#
+Pas de liste de conversations privées.#
+ : Personne ignorée.#
+ : Cette personne n'a pas pu être bloquée.#
+ : Cette personne n'a pas pu être bloquée. La liste de personnes bloquées est pleine.#
+ : est renvoyé.#
+ : La commande a échoué.#
+ : La commande a échoué. La liste de personnes bloquées est pleine.#
+Vous ne pouvez pas mettre d'espace au début ou à la fin du nom.#
+Privé#
+Ouvert#
+Pas assez de SP#
+Pas assez de HP#
+Le skill a échoué.#
+Le vol a échoué.#
+Fenêtre d'échange#
+Intoxication échouée.#
+Vous ne pouvez pas utiliser cet ID sur ce serveur.#
+Votre vitesse a augmenté#
+Votre vitesse a diminué#
+/memo: Pour mémoriser un endroit comme un lieu de téléportation (pour les acolytes)#
+Endroit déterminé au hasard#
+Choissiez un endroit pour vous téléporter#
+Niveau du skill insuffisant.#
+Il n'y a aucun emplacement mémorisées.#
+Vous n'avez pas appris Téléportation.#
+Lieu de téléportation sauvegardé.#
+Annuler#
+Il y a un délai après l'utilisation de ce skill.#
+Vous ne pouvez pas utiliser cet item car vous êtes en surcharge.#
+Dépassement de la capacité maximale#
+Items de la charrette#
+Retirer la charrette#
+Ouvrir un magasin de rue#
+Nommez votre magasin.#
+My shop#
+Magasin de marchand#
+Achat d'items#
+%s L'achat a échoué %s#
+Rupture de stock#
+%s %d vendu.#
+Items disponibles pour la vente#
+Le skill a échoué parce que vous n'avez pas assez de zeny.#
+Choisissez la cible.#
+/pk activé: Permet le PVP. /pk désactivé: Désactive le PVP.#
+Magasin#
+Items de la charrette [Alt+W]#
+Informations de base#
+Ce skill ne peut pas être utilisé avec cette arme.#
+L'achat de %s a échoué. Rupture de stock. Stock courant: %d.#
+Vous avez été déconnecté à cause d'un trop grand délai entre vous et le serveur.#
+Chargez vos munitions en premier.#
+Vous ne pouvez pas attaquer ou utiliser de skills car vous êtes en surcharge.#
+Vous ne pouvez pas utiliser de skills car vous êtes en surcharge.#
+Les munitions ont été équipées.#
+Red Gemstone requise.#
+Blue Gemstone requise.#
+Force#
+Agilité#
+Vitalité#
+Intelligence#
+Dextérité#
+Chance#
+Attaque#
+Défense#
+Précision#
+Attaque critique#
+Membre de la guilde#
+Points de statut à répartir#
+Attaque magique#
+Défense magique#
+Esquive#
+Vitesse d'attaque#
+Le serveur est bloqué à cause du nombre de personnes connectées.#
+Option#
+Vous avez été bloqué par l'administrateur.#
+Mot de passe incorrect. Veuillez réessayer.#
+Choisissez la coiffure#
+Hit Point#
+Taux de défense#
+Ciblage automatique des monstres activé#
+Ciblage automatique des monstres désactivé#
+Ciblage automatique des skills activé#
+Ciblage automatique des skills désactivé#
+/snap: Permet d'activer/désactiver le ciblage automatique des ennemis, /skillsnap: active/désactive le ciblage automatique des skills. /itemsnap: active/désactive le ciblage automatique des items.#
+Ciblage automatique des items activé#
+Ciblage automatique des items désactivé#
+Attacher#
+Vous ne pouvez pas porter plus de 30000 items du même type.#
+Vous ne pouvez pas effacer un personnage de niveau supérieur à 30. Si vous désirez l'effacer, contactez votre Game Master (FViD)#
+Lors de l'échange, vous ne pouvez pas utiliser un magasin NPC.#
+Nom du magasin#
+Liste des skills#
+Points de skill : %d#
+Le skill a échoué.#
+Passif#
+Individuel#
+Partage#
+Individuel#
+Partage dans l'équipe#
+Assignation du groupe#
+Comment partager l'EXP#
+Comment partager les items#
+Seul le chef du groupe peut effectuer ces changements.#
+Ne pas demander le nombre d'items#
+Votre personnage sera effacé dans ^ff0000%d^000000 secondes. Appuyez sur Annuler pour interrompre.#
+Vous ne pouvez pas échanger plus de 10 items à la fois.#
+Vous êtes trop jeune.#
+Entrez votre e-mail.#
+Entrez votre e-mail.#
+Votre personnage n'a pu être effacé car l'e-mail est incorrect.#
+Entrez la seconde coordonnée de votre numéro d'assurance sociale.#
+Votre personnage n'a pu être effacé car votre SSN est incorrect.#
+Vous ne pouvez pas vendre plus de 15 items différents à la fois.#
+Vous êtes trop jeune pour joindre ce serveur.#
+Les HP et SP ne sont pas régénérés quand votre charge dépasse 50% de votre capacité.#
+Vous ne pouvez pas attaquer ou utiliser vos skills quand votre poids dépasse 90% de votre capacité.#
+Vos HP et SP sont régénérés naturellement.#
+L'attaque et les skills sont disponibles.#
+Veuillez mettre à jour ArcadyaOnline.#
+Tous les items sont vendus.#
+Conversation enregistrée sous format texte#
+/savechat: Pour enregistrer les conversations#
+Enregistrer#
+Rejeter les messages privés#
+Autoriser les messages privés#
+Afficher 'Miss'#
+Afficher 'Miss'#
+Zoom de la caméra activé#
+Zoom de la caméra désactivé#
+/camera: Zoom de la caméra activé ou désactivé. /miss: Affiche 'Miss' activé ou désactivé.#
+Voir les infos du skill#
+Changer de skill#
+Résolution des sprites#
+Résolution des textures#
+Agencement des détails#
+Vous avez %Zeny#
+Nom de la guilde#
+Niveau de la guilde#
+Maître de la guilde#
+Guildiens#
+Niveau moyen#
+Territoire#
+Tendance#
+EXP#
+Emblème#
+Point de taxe#
+Alliés#
+Ennemis#
+Infos guilde#
+Infos guildiens#
+Position#
+Skill de guilde#
+Historique des expulsions#
+Avis#
+Liste de la guilde#
+Privée#
+Ouvrir une fenêtre de conversation privée#
+Comment ouvrir la liste de conversations privées: [Alt] + [H]#
+Ouvrir la liste de conversations privées automatiquement#
+Effacer#
+Fermer#
+Temps de la dernière connexion#
+IP à la dernière connexion#
+Organisation des amis#
+êtes-vous sûr de vouloir effacer ?#
+êtes-vous sûr de vouloir quitter ?#
+Enregistrer comme ami#
+Ouvrir une conversation 1:1 entre les amis#
+Ouvrir une conversation 1:1#
+Ouvrir une conversation 1:1 hors liste d'amis#
+Avertir lors de la réception d'une conversation 1:1#
+Êtes-vous certain de vouloir expulser le membre ?#
+%s a quitté la guilde.#
+Raison de cessation: %s#
+La dissolution de la Guilde a échoué.#
+Raison de dissolution: %s#
+Cet ID a été totalement effacé.#
+Prix : #
+%s a été expulsé de la guilde.#
+Raison de l'expulsion: %s#
+Vous ne pouvez pas équiper cet item.#
+Vous ne pouvez pas modifier la configuration du groupe.#
+La guilde a été créée.#
+Vous êtes déjà dans une guilde.#
+Ce nom de guilde existe déjà.#
+Vous avez reçu une invitation pour joindre une guilde. Acceptez-vous ?#
+La personne est déjà dans une guilde.#
+Offre rejetée#
+Offre acceptée#
+Votre guilde est pleine.#
+Inviter (%s) à joindre la guilde#
+Vous n'avez pas encore la compétence pour juger les joueurs.#
+L'alignement a été accompli.#
+Vous avez déjà dépensé votre point aujourd'hui.#
+Cela fait moins d'un mois que vous avez jugé cette personne.#
+Rappelez-vous, évitez le spam.#
+Votre comportement est déplacé. Changez-le.#
+Alignement positif#
+Alignement négatif#
+Faire un échange avec (%s)#
+Inviter (%s) dans le groupe#
+ vous demandent de faire une alliance. Acceptez-vous ?#
+Vous êtes déjà allié avec cette guilde.#
+Vous rejetez l'offre#
+Vous acceptez l'offre#
+Ils ont trop d'alliés.#
+Vous avez trop d'alliés.#
+Demande d'alliance#
+La guilde a été dissoute avec succès.#
+Dissolution de la guide échouée.#
+Dissolution de la guide échouée car elle contient encore des guildiens.#
+Marquer comme guilde ennemie#
+Choisissez votre couleur de cheveux#
+Vous avez besoin d'Emperium pour créer une guilde.#
+Informations sur le monstre#
+Nom#
+Niveau#
+HP#
+Taille#
+Type#
+MDEF#
+Propriété#
+Neutral#
+Water#
+Earth#
+Fire#
+Wind#
+Poison#
+Holy#
+Shadow#
+Ghost#
+Undead#
+Vous n'avez pas les outils nécessaires pour forger.#
+Liste d'items pouvant être forgés#
+Créer %s#
+ - matériaux à inclure#
+La création de l'item a échoué.#
+Item créé avec succès.#
+La création de l'item a échoué.#
+Item créé avec succès.#
+Votre niveau n'est pas assez élevé.#
+Le niveau est trop élevé pour ce travail.#
+La classe n'est pas convenable pour ce genre de travail.#
+Enregistrez un message dans la Boîte aux messages#
+Ecrivez le message pour la Boîte aux messages#
+Guilde#
+Ce message est une erreur car ArcadyaOnline est totalement gratuit.#
+Le serveur est bloqué à cause du nombre élevé de personnes. Essayez plus tard.#
+Le serveur vous croit encore en ligne. Attendez quelques minutes et recommencez.#
+Libérer le faucon#
+Descendre du Pecopeco#
+Petit#
+Moyen#
+Gros#
+Double#
+Triple#
+Quadruple#
+Vous avez été banni jusqu'au %s.#
+ #
+ Fire #
+ Water #
+ Wind #
+ Earth#
+#
+6925#
+http://www.arcadyaonline.org#
+Tuer %s#
+Très fort #
+Très très fort #
+Très très très fort #
+La raison de l'expulsion#
+Vitesse d'attaque augmentée.#
+Vitesse d'attaque réduite.#
+Dégâts d'attaque augmentés.#
+Dégâts d'attaque réduits.#
+Temps de cast réduit.#
+Temps de cast revenu à la normale.#
+L'arme a pris la propriété Poison.#
+L'arme a été enchantée par le Saint Esprit (propriété Holy).#
+L'arme est revenue à la normale.#
+L'armure a été enchantée par le Saint Esprit (Holy).#
+L'armure est revenue à la normale.#
+Barrière formée.#
+Barrière annulée.#
+Perfection de l'arme initiée.#
+Perfection de l'arme annulée.#
+Poussée de puissance initiée.#
+Poussée de puissance annulée.#
+Maximisation de la puissance initié.#
+Maximisation de la puissance annulé.#
+Nouveau#
+(%d Joueurs Online)#
+(Serveur en maintenance)#
+%s est en ligne.#
+%s a quitté.#
+Vous avez %s de base EXP.#
+Vous avez %s de classe EXP.#
+Vous avez quitté la guilde.#
+Vous avez été expulsé de la guilde.#
+Item Appraisal a été accompli.#
+Item Appraisal a échoué.#
+La composition a été accomplie.#
+La composition a échoué.#
+Placé comme antagoniste.#
+La guilde possède déjà trop d'antagonistes.#
+Déjà placé comme un antagoniste.#
+Le raffinage été accompli avec succès.#
+Le raffinage a échoué.#
+Endroit de téléportation non disponible.#
+Endroit de téléportation non disponible.#
+Vous ne pouvez pas quitter maintenant. Essayez dans 10 secondes.#
+Position#
+Classe#
+Note#
+Dévotion#
+Point de taxe#
+Quitter la guilde#
+Expulser#
+Rang#
+Titre de position#
+Invitation#
+Expulsion#
+Taxe %#
+Titre#
+Contenu#
+Nom de la guilde#
+Niveau moyen#
+Nombre de membres#
+Rang#
+Item Appraisal#
+Insérez la carte#
+Veuillez entrer la raison de la cessation.#
+Veuillez entrer la raison de l'expulsion.#
+Veuillez fermer votre magasin.#
+Skill#
+Nom de l'item#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le nom est trop long, entrez un nom de 23 lettres maximum.#
+#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Le serveur fait encore des siennes, veuillez vous reconnecter.#
+Liste des émoticons#
+/emo#
+/!#
+/?#
+/ho#
+/lv#
+/lv2#
+/swt#
+/ic#
+/an#
+/ag#
+/$#
+/...#
+/thx#
+/wah#
+/sry#
+/heh#
+/swt2#
+/hmm#
+/no1#
+/??#
+/omg#
+/oh#
+/X#
+/hlp#
+/go#
+/sob#
+/gg#
+/kis#
+/kis2#
+/pif#
+/ok#
+Liste de raccourcis#
+This account is reserved.#
+Rating System Glitch. Disconnected.#
+Conflits IP, Déconnecté.#
+NO MESSAGE (1)#
+Vous avez été déconnecté par un Game Master.#
+Vous ne pouvez pas utiliser ce skill car vous êtes en surpoids.#
+Sans nom#
+Bravo ! le rang de %s a grimpé à %d.#
+Oh non ! le rang de %s est descendu à %d.#
+Informations sur le QPet#
+Faim#
+Intimité#
+Vous ne pouvez pas ouvrir de salle de conversation durant une vente.#
+#
+Vous avez envoyé au tapis %s.#
+Vous avez été envoyé au tapis par %s.#
+Votre QPet a besoin de l'item %s pour être nourri.#
+Nourrir le QPet#
+Performance#
+Retourner dans l'oeuf#
+Retirer l'accessoire#
+Vérifier l'état du QPet#
+Accessoire#
+Equipé#
+Liste de QPets#
+Non équipé#
+Êtes-vous sur de vouloir nourrir votre QPet ?#
+Seuls les nombres de (0~9) sont disponibles.#
+Vous ne pouvez pas vendre d'item non identifié.#
+Un item valant 0 zeny est en vente. Voulez-vous continuer ?#
+[Nouvelle liste d'émoticônes]#
+#
+#
+Quelqu'un est déjà en ligne sur le même compte.#
+(% pers.) - au dessus de 18 ans#
+Provocation initiée.#
+Provocation annulée.#
+Endure initié.#
+Endure annulé.#
+Méditation initiée.#
+Méditation annulée.#
+Disparition initiée.#
+Disparition annulée.#
+Cloaking initiée.#
+Cloaking annulée.#
+Réaction au poison initiée.#
+Réaction au poison annulée.#
+Vitesse diminuée.#
+Quagmire annulé.#
+Défense augmentée.#
+Angelus annulé.#
+Blessing initié.#
+Blessing annulé.#
+Signum Crusis initiée.#
+Signum Crusis annulée.#
+Slow Poison initié.#
+Slow Poison annulé.#
+Régénération HP/SP augmentée.#
+Magnificat annulé.#
+LUK augmentée.#
+Gloria annulé.#
+Dégâts doublés lors de la prochaine attaque reçue.#
+Lex Aeterna annulé.#
+Vitesse d'attaque augmentée.#
+Vitesse d'attaque réduite.#
+Vous avez loué un Pecopeco.#
+Vous avez libéré un Pecopeco.#
+Vous avez loué un Faucon.#
+Vous avez libéré un Faucon.#
+Fausse mort initiée.#
+Fausse mort annulée.#
+STR amélioré.#
+STR est revenu à la normale.#
+Manteau d'énergie initié.#
+Manteau d'énergie annulé.#
+Armure détruite.#
+Armure de nouveau équipable.#
+Arme détruite.#
+Arme de nouveau équipable.#
+Invisibilité initiée.#
+Invisibilité annulée.#
+NO MESSAGE (2)#
+Vous devez retirer les munitions en premier.#
+Liste de flèches#
+Liste du Cart#
+Vous devez posséder un Cart.#
+Vous ne pouvez pas ouvrir une fenêtre de conversation.#
+#
+Vous ne pouvez pas utiliser cet item en étant assis.#
+Vous ne pouvez ni parler ni utiliser de skills pendant %d minutes.#
+Vous avez la permission de parler.#
+- [Pas équipé]#
+Très faim#
+Un peu faim#
+Normal#
+Rassasié#
+Plein#
+Antipathique#
+Mal à l'aise#
+Amical#
+Intime#
+Inconnu#
+#
+#
+#
+#
+#
+Choisissez un nom d'animal de 23 lettres maximum, incluant les espaces.#
+Vous ne pouvez changer le nom du QPet qu'une fois. Le nom de votre QPet va être changé pour ^0000ff^0000ff %s^000000^000000. Voulez-vous continuer?#
+/font#
+Pas assez de zeny pour accomplir la tâche.#
+Trop de zeny pour accomplir la tâche.#
+Simplification des effets activé.#
+Simplification des effets désactivé.#
+Required Fee#
+Ouvrez la fenêtre d'items pour lâcher un item (Alt+E).#
+#
+NO MESSAGE (3)#
+NO MESSAGE (4)#
+Vous n'avez pas assez d'argent.#
+Vous venez de mourir : 'Recommencer' pour rejouer, 'Abandonner' pour revenir à l'écran titre#
+  - %d obtenu.#
+Spell List#
+/minimize#
+Cet item a été endommagé.#
+/noshift : Vous pouvez utiliser les skills du style 'Heal' sans appuyer sur la touche Shift. Marche/Arrêt#
+[No Shift] Touche Activée. [ON]#
+[No Shift] Touche Désactivée. [OFF]#
+NO MESSAGE (5)#
+NO MESSAGE (6)#
+NO MESSAGE (7)#
+NO MESSAGE (8)#
+NO MESSAGE (9)#
+NO MESSAGE (10)#
+NO MESSAGE (11)#
+/aura: Simplifie l'effet Aura. On | Off#
+Simplification Aura. [ON]#
+Simplification Aura. [OF]#
+Interdiction de Chat : %d fois#
+Liste d'interdiction de Chat#
+/showname : Change l'affichage du nom du perso.#
+/noctrl : Attaque automatiquement sans appuyer sur ctrl. On/Off#
+Attaque automatiquement sans appuyer sur ctrl. [Auto attack ON]#
+Attaque automatiquement sans appuyer sur ctrl. [Auto attack OFF]#
+Banni du Chat#
+Le ban du Chat a été retiré#
+Le ban du Chat a été réduit d'une heure mais vous êtes toujours surveillé.#
+Taille caractères normale. [showname type 1]#
+Les caractères vont être plus fins et le nom du groupe sera affiché [showname type 2]#
+/doridori: Pour regarder à gauche ou à droite...#
+Internet room is paying now.#
+Prepaid voucher validate untill %ddays %d hours %dminutes later.\nTime limit voucher validate untill %d hours %dminutes later.#
+/bingbing: Tourne le personnage de 45 degrés dans le sens inverse des aiguilles d'une montre#
+/bangbang: Tourne le personnage de 45 degrés dans le sens des aiguilles d'une montre#
+/skillfail : Affiche ou non le message "skill fail" au dessus du personnage#
+Affiche le message SkillFail [Actif]#
+Affiche le message SkillFail [Inactif]#
+/notalkmsg : Affiche ou non les messages dans une fenêtre indépendante. On | Off#
+Affichage du chat dans une fenêtre indépendante [Actif]#
+Affichage du chat dans une fenêtre indépendante [Inactif]#
+/set1 : /noctrl + /showname + /skillfail#
+/fog : Active/désactive le brouillard.#
+Vous avez été demandé en mariage. Acceptez-vous ?#
+Partage des Objets#
+Individuel#
+Equitable#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+Mon Amour#
+/report : Enregistrer le chat pour un rapport.#
+Les log des chat ne sont pas acceptés comme preuve de mauvaise conduite mais comme statistiques concernant les personnages concernés.#
+Je vous aime.#
+Si les effets sont trop brillants ajustez la luminosité/contraste de votre moniteur.#
+Si le mode plein écran se bloque, il est suggéré de presser alt+tab [ou ctrl+échap] pour désactiver et réactiver le client ArcadyaOnline.#
+#
+#
+#
+Le clic-droit donnant le menu des skills rattaché à la touche F9 est activé.[/q1 ON]#
+Le clic-droit donnant le menu des skills rattaché à la touche F9 est désactivé.[/q1 OFF]#
+/quickspell : le menu clic-droit affiche les skills assignés au raccourci F9. On/Off#
+La roulette de la souris donnant les skills des touches F7 et F8 est activé.[/q2 ON]#
+La roulette de la souris donnant les skills des touches F7 et F8 est désactivé.[/q2 OFF]#
+/quickspell2 : En faisant tourner la roue de la souris en avant ou en arrière, vous avez accès aux skills assignés aux touches de raccourci F7 et F8. On/Off#
+/q3 : /quickspell (/q1) + /quickspell2 (/q2)#
+/bzz#
+/rice#
+/awsm#
+/meh#
+/shy#
+/pat#
+/mp#
+/slur#
+/com#
+/yawn#
+/grat#
+/hp#
+/emotion : Affiche la liste des émoticônes.#
+Les skills assignés aux fenêtres de raccourcis 1, 2, 3 sont Actifs. [/bm ON]#
+Les skills assignés aux fenêtres de raccourcis 1, 2, 3 sont Inactifs. [/bm OFF]#
+/battlemode : Vous permet d'utiliser les skills assignés à la fenêtre de raccourcis 2 en appuyant sur les touches A à O.#
+Les touches Q à L te permettent d'accéder à la fenêtre de raccourcis 3.#
+Les autres programmes lancés avant le jeu peuvent influencer la vitesse de Ragnarok.#
+M'entendez-vous, mon ange ?#
+Super Novice.#
+Salut !#
+Aidez-moi s'il vous plaît.#
+désire vous adopter. Acceptez vous ?#
+Les touches W ~ > : vous permettent d'accéder à la fenêtre de raccourcis 1.#
+Pour parler, appuyez d'abord sur la barre espace [/battlemode | /bm].#
+#
+#
+#
+#
+#
+#
+#
+/notrade : Refuse automatiquement les échanges. On | Off#
+Echanges automatiquement refusés. [/nt ON]#
+Les échanges ne sont plus automatiquement refusés. [/nt OFF]#
+Vous ne pouvez pas acheter plus de 30,000 exemplaires du même item.#
+Vous ne possédez pas tout ce qu'il faut.#
+Login information remains at %s.#
+Le compte a été bloqué pour tentative de hack. Contactez l'équipe GM pour de plus amples informations.#
+Ce compte a été temporairement bloqué pour inspection à cause d'un bug.#
+Items réparables#
+Réparation réussie.#
+Réparation échouée.#
+System process enabled [GM mode] [/sc ON]#
+System process disabled [GM mode] [/sc OFF]#
+/systemcheck : Check the system process [GM mode] On | Off#
+(%s) souhaite devenir votre ami(e). Acceptez vous ?#
+Votre liste d'amis est pleine.#
+La liste d'amis de (%s) est pleine.#
+Vous êtes devenu(e) ami(e) avec (%s). #
+(%s) ne veut pas être ami(e) avec vous.#
+Ce personnage va être bloqué jusqu'au %s.#
+Le prix va être fixé à 10.000.000 zeny, même si vous entrez un nombre plus élevé.#
+(Free)#
+(Smooth)#
+(Normal)#
+(Crowded)#
+(Congested)#
+Vous avez été bloqué du chat et de l'utilisation de skills pour %d minutes par l'équipe GM.#
+Il reste %d minutes avant la fin de la sanction infligée par l'équipe GM.#
+La sanction infligée par les GM est terminée.#
+Vous avez été bloqué du chat et de l'utilisation de skills pour %d minutes [Sanction Automatique].#
+Il reste %d minutes avant que l'auto sanction ne soit retirée.#
+L'auto sanction a été retirée. Abstenez-vous de spammer dans le jeu.#
+%s et %s ont divorcés.#
+Star Gladiator %s has designated %s's as the Place of the Sun.#
+Star Gladiator %s has designated %s's as the Place of the Moon.#
+Star Gladiator %s has designated %s's as the Place of the Stars.#
+Star Gladiator %s's Place of the Sun : %s#
+Star Gladiator %s's Place of the Moon : %s#
+Star Gladiator %s's Place of the Stars : %s#
+Star Gladiator %s has designated %s's as the Target of the Sun.#
+Star Gladiator %s has designated %s's as the Target of the Moon.#
+Star Gladiator %s has designated %s's as the Target of the Stars.#
+Star Gladiator %s's Monster of the Sun : %s#
+Star Gladiator %s's Monster of the Moon : %s#
+Star Gladiator %s's Monster of the Stars : %s#
+/window : Les fenêtres s'emboîtent. On | Off#
+Emboîtement fenêtres activé. [/wi ON]#
+Emboîtement fenêtres désactivé. [/wi OFF]#
+/pvpinfo : Montre votre performance PVP et points PVP.#
+Vous avez gagné %d fois et perdu %d fois en PVP. Points disposés: %d.#
+Un point d'alignement a été mis avec succès.#
+Vous êtes dans une zone de PK. Soyez vigilant, une attaque surprise est possible.#
+#
+Le programme a rencontré une erreur due à la compatibilité avec Windows. Veuillez relancer le jeu.#
+Vous avez été banni du chat, l'utilisation de skills et le ramassage d'items.#
+Ce personnage est en cours d'effacement. L'identification est temporairement indisponible.#
+Le personnage de votre conjoint(e) est en cours d'effacement. L'identification est temporairement indisponible.#
+Novice#
+Swordman#
+Mage#
+Archer#
+Acolyte#
+Merchant#
+Thief#
+Knight#
+Priest#
+Wizard#
+Blacksmith#
+Hunter#
+Assassin#
+Novice#
+Swordman#
+Mage#
+Archer#
+Acolyte#
+Merchant#
+Thief#
+Knight#
+Priest#
+Wizard#
+Blacksmith#
+Hunter#
+Assassin#
+Envoyer une demande d'adoption à %s#
+Lorsque vous devenez Baby, non seulement vous ne pouvez pas devenir Transcendent Class, mais le max de chaque stat est limité à 80, et HP/SP Max vont être réduits. Êtes vous sûr(e) de vouloir être adopté(e) ?#
+Tous les effets des statuts anormaux sont retirés.#
+Vous êtes immunisé(e) contre les effets des statuts anormaux.#
+Votre HP Max est augmenté pour quelques instants.#
+Votre SP Max est augmenté pour quelques instants.#
+Toutes vos Stats sont augmentées pendant quelques instants.#
+Votre arme a été bénite.#
+Votre armure a été bénite.#
+Votre défense est améliorée.#
+Votre force d'attaque est améliorée.#
+Votre précision et votre esquive sont augmentés.#
+Vous ne pouvez pas adopter plus d'un enfant.#
+Vous devez avoir un niveau d'au moins 70 pour adopter quelqu'un.#
+[Point] Vous avez été récompensé de %d points Blacksmith. Votre total de points est de %d.#
+[Point] Vous avez été récompensé de %d points Alchemist. Votre total de points est de %d.#
+Guardian Angel, can you hear my voice? ^^;#
+My name is #
+, and I'm a Super Novice~#
+Please help me~ T.T#
+/notalkmsg2 : Cache les messages chat (inclut le chat guilde). On Off#
+Affiche les messages chat. [/nm2 ON]#
+Cache les messages chat (inclut le chat guilde) [/nm2 OFF]#
+Armes pouvant être raffinées#
+Armes raffinées : %s#
+Armes raffinées : %s#
+Vous ne pouvez pas raffiner %s avant d'avoir augmenté le skill Upgrade Weapon.#
+Il vous manque l'item %s pour raffiner cette arme.#
+Full Divestment cannot pierce the target. The target is fully shielded.#
+Vous ne pouvez pas adopter une personne mariée.#
+#
+/hi ou /hi message : Envoie des salutations aux personnes qui sont en ligne et qui sont dans votre liste d'amis.#
+#
+Nous vous informons que le prix maximal de vente est de 9,999. Vous ne pouvez pas vendre un item plus cher.#
+Les messages privés venant d'un amis sont précédés de [ Friend ], et ceux venant d'un membre de votre guilde : [ Member ].#
+( From character name : ) vient d'un personnage anonyme qui n'est ni un de vos amis ni dans votre guilde.#
+/blacksmith : Affiche le top 10 des Blacksmiths du serveur.#
+/alchemist : Affiche le top 10 des Alchemists du serveur.#
+ALT+Y : Ouvre une fenêtre qui vous permet d'utiliser plusieurs commandes avec facilité.#
+[POINT] Vous avez été récompensé de %d points Mission Tae-Kwon. Votre total de points est de %d.#
+[Taekwon Mission] Monstre assigné: %s (%d%%)#
+Erreur - Le GameGuard n'a pas été initialisé : %lu#
+Speed Hack a été détecté.#
+Le programme illégal, (%s) a été detécté.#
+Le jeu ou le GameGuard a été cracké.#
+GameGuard est en fonction. attendez et relancez le jeu.#
+GameGuard est en fonction. attendez et relancez le jeu.#
+Echec d'initialisation de Gameguard. Reessayez et rebootez votre système, fremez les autres programmes.#
+Echec de chargement du scan virus et de l'outil antihack. Cela est causé par un manque de mémoire ou un virus.#
+Info Homunculus#
+Liste de skills de l'Homunculus#
+Veuillez entrer un nom pas plus long que 23 caractères à votre Homunculus.#
+Vous ne pouvez renommer un Homunculus qu'une seule fois. Vous avez entré le nom, ^0000ff^0000ff %s^000000^000000. Voulez vous continuer ?#
+(Absent) #
+[Message Automatique]#
+Envoyer un message automatique lorsque vous êtes absent.#
+Retirer le message d'absence automatique.#
+Veuillez écrire un message pour votre réponse automatique.#
+/fsh#
+/spin#
+/sigh#
+/dum#
+/crwd#
+/desp#
+/dice#
+/pk : Affiche le top 10 des Slayers du serveur.#
+[POINT] Vous avez été récompensé de %d points Slayer. Votre total de points est de %d.#
+Peut être forgé#
+Vous avez décidé d'effacer cet avorton ^ff0000^ff0000. Lorsque effacé, l'avorton et son historique vont être effacés et ne pourront être restaurés. Voulez-vous continuer ?#
+Le status de l'homoculus a été sauvegardé.#
+Le status de l'homoculus n'a pas été sauvegardé.#
+Crusader#
+Monk#
+Sage#
+Rogue#
+Alchemist#
+Bard#
+Crusader#
+Monk#
+Sage#
+Rogue#
+Alchemist#
+Dancer#
+High Novice#
+High Swordman#
+High Magician#
+High Archer#
+High Acolyte#
+High Merchant#
+High Thief#
+High Novice#
+High Swordman#
+High Magician#
+High Archer#
+High Acolyte#
+High Merchant#
+High Thief#
+Lord Knight#
+High Priest#
+High Wizard#
+Whitesmith#
+Sniper#
+Assassin Cross#
+Lord Knight#
+High Priest#
+High Wizard#
+Whitesmith#
+Sniper#
+Assassin Cross#
+Paladin#
+Champion#
+Professor#
+Stalker#
+Creator#
+Clown#
+Paladin#
+Champion#
+Professor#
+Stalker#
+Creator#
+Gypsy#
+Vous n'avez pas défini de mot de passe. Voulez vous en définir un ?#
+Vous avez entrer 3 fois un pass incorect. Recommencez plus tard.#
+La création du pass a échoué.#
+Le mot de passe doit faire plus de 4 caractères et moins de 8.#
+Mot de passe#
+Nouvau mot de passe#
+Confirmez le mot de passe#
+Le mot de passe a été changé.#
+Le mot de passe ne correspond pas.#
+Entrez le mot de passe.#
+Votre Homunculus a faim. Nourrissez le sinon il partira.#
+EXP#
+[EVENT] Vous avez gagné un prix. Venez le récuperer aupres d'un GM.#
+Inamical#
+Hostile#
+L'Homunculus a été customisé.#
+L'Homunculus a été activé avec une IA basique.#
+Mail List#
+Ecrire un Mail#
+Lire un Mail#
+Vous ne pourrez plus changer la désignation de la map, une fois celle-ci designée. Êtes vous vraiment sûr de vouloir désigner celle ci ?#
+Item ajouté dans l'inventaire.#
+L'item n'a pas été ajouté dans l'inventaire.#
+Votre mail a été envoyé.#
+votre mail n'a pas été envoyé, le destinataire n'existe pas.#
+[Sun, Moon et Stars Angel] maps et montres ont été resetés.#
+Vous avez raté le surencherissement de l'enchère.#
+Vous avez réussi le surencherissement de l'enchère.#
+L'enchère a été annulé.#
+Votre proposition d'enchère ne peut être annulé.#
+Le mail a été effacé.#
+Le mail n'a pas été effacé.#
+Vous avez équipé des throwing daggers.#
+%s s'est connecté.#
+%s s'est déconnecté.#
+/loginout: montres le status On Off de vos amis et guildiens.#
+Montre le status Online de vos amis dans une fenêtre. [/li ON]#
+Désactive l'affichage du status Online de vos amis dans une fenêtre.  [/li OFF]#
+Dejà en train de tourner.#
+Utilisation d'un bot détectée.#
+Utilisation d'un speed hack détectée.#
+Un programme illicite a été detecté.#
+Un message provenant d'un programme illicite a été detecté.#
+Le module a été modifié ou endommagé et ne correspond plus à la version en cours.#
+(France) vous vous êtes logué à partir d'un cyber café.#
+Previous#
+Next#
+Auction#
+Product List#
+Register#
+Sale Status#
+Purchase Status#
+Item#
+Item Name#
+Current Bid / Direct Purchase Price#
+Seller#
+Buyer#
+Auction End Time#
+%m %d %H (mm/dd/hour)#
+Set Time#
+Auction Fee#
+No item has been searched.#
+Your Sale List is empty.#
+Your Purchase List is empty.#
+Auction Information is incorrect.#
+Cannot find targeted item information.#
+The auction has been registered already.#
+Starting Bid#
+Current Bid#
+Direct Purchase Price#
+Your current Zeny#
+Highest Bid#
+Previous Bid#
+Next Bid#
+Would you like to purchase this item?#
+Would you like to sell this item?#
+Place a Bid#
+Direct Purchase#
+End the Auction#
+Place another Bid#
+You have won the auction.#
+You have failed to win the auction.#
+Vous ne possédez pas assez de Zeny.#
+Armor#
+Card#
+Miscellaneous#
+Bid Number#
+Search#
+You have ended the auction.#
+You cannot end the auction.#
+Bid Number is incorrect.#
+Recipient#
+Title#
+You have received a new mail.#
+Searching...#
+You cannot register more than 5 items in an auction at a time.#
+You cannot place more than 5 bids at a time.#
+Please accept all items from your mail before deleting.#
+Please enter a title.#
+/shopping: Enables you to open a shop with a single left-click and close your shop with a single right-click. On/Off#
+You can now open a shop with a single left-click and close your shop with a single right-click. [sh ON].#
+You can open a shop by double-clicking. [/sh OFF]#
+Please enter Zeny amount before sending mail.#
+You do not have enough Zeny to pay the Auction Fee.#
+View Status#
+Feed#
+Passive/Agressive#
+Super Novice#
+Super Novice#
+TaeKwon Boy#
+TaeKwon Girl#
+Star Gladiator#
+Star Gladiator#
+Soul Linker#
+Soul Linker#
+Your account is using monthly payment. (Remaining day: %d day)#
+Your account is using time limited. (Remaining time : %d hour % minute % second)#
+You can not attach this item on the mail.#
+This item cannot be attached to a mail.#
+You cannot accept any more items. Please try again later.#
+Male#
+Female#
+New User.#
+E-mail address is required to delete a character.#
+Please enter the correct information.#
+Please use this key.#
+Please enter the correct card password.#
+PT Info#
+PT_ID is %s#
+NUM_ID is %s#
+Please don't forget this information.#
+1001#
+1002#
+1003#
+1004#
+1006#
+1007#
+1008#
+1009#
+1012#
+1013#
+1014#
+1015#
+1019#
+1020#
+1021#
+1023#
+1024#
+1025#
+1027#
+1028#
+10#
+20#
+40#
+50#
+60#
+70#
+80#
+90#
+100#
+110#
+Do you want to receive 30 points?#
+30 points(5 hours) have been added.#
+You cannot register Unidentified items in auctions.#
+You cannot register this Consumable item in an auction.#
+Please close Cart Window to open Mail Window.#
+Please close Mail Window to open Cart Window.#
+Bullets have been equipped.#
+The mail has been returned to the sender.#
+The mail does not exist.#
+More than 30 players sharing the same IP have logged into the game for an hour. Please check this matter.#
+More than 10 connections sharing the same IP have logged into the game for an hour. Please check this matter.#
+Please restart the game.#
+Mercenary Info. - Archer Type#
+Mercenary Info. - Swordman Type#
+Mercenary Info. - Spearman Type#
+Remaining Time#
+Loyalty#
+No. of Summons#
+Kill#
+You can feel hatred from your pet for neglecting to feed it.#
+[POINT] You earned %d Taming Mission Ranking Points, giving you a total of %d points.#
+[Taming Mission] Target Monster : %s#
+/hunting: You can check the your hunting list.#
+[Angel's Question] Please tell me, how many %s skills do you have?#
+[Angel's Question] Please tell me, how much zeny you'll have if you divide it by 100,000?#
+[Angel's Question] Please tell me, what is today's date?#
+[Angel's Question] Please tell me, how many %s do you have?#
+[Angel's Question] A is 1 and Z is 26. what will it be if you add up all alphabets of 'SiYeon's name.#
+[Angel's Question] A is 1 and Z is 26. what will it be if you add up all alphabets of 'Munak'? She is one of popular monster.#
+[Angel's Question] A is 1 and Z is 26. what will it be if you add up all alphabets of 'Bongun'? I love it so much.#
+[Angel's Question] A is 1 and Z is 26. What will it be if you add up all alphabets of 'Ragnarok', the world we are living in?#
+[Angel's Question] A is 1 and Z is 26. Online angels are being a big help to us. What will it be if you add up all alphabets 'Online'?#
+[Angel's Question] A is 1 and Z is 26. What will it be if you add up all alphabets of a word 'Death' which symbolizes Knights whose brave in front of Death?#
+[Angel's Question] A is 1 and Z is 26. Oh~I think knights are so attracktive. What will it be if you add up all alphabets of a word 'Knight'?#
+[Angel's Question] A is 1 and Z is 26. What will it be if you add up all alphabets of a word 'Gravity'?#
+[Angel's Question] A is 1 and Z is 26. It's important to keep living brightly in dark reality. What will it be if you add up all alphabets of a word 'Dark'?#
+[Angel's Question] A is 1 and Z is 26. What will it be if you add up all alphabets of a word 'Collector' who likes collecting things?#
+[Angel's Answer] Thank you for letting me know~#
+[Angel's Answer] I'm very pleased with your answer. You are a splendid adventurer.#
+[Angel's Answer] You've disappointed me...#
+[POINT] You earned %d Ranking Points, giving you a total of %d Ranking Points.#
+[%s]'s Points: %d Points#
+Unselected Characters will be deleted. Continue?#
+You cannot select more than 8.#
+Do you want to change your name to '%s'?#
+Character Name has been changed successfully.#
+Changing Character Name has been failed.#
+You can purchase only one kind of item at once.#
+No characters were selected. You must select at least one character.#
+The Character Name was changed before. You can not change the name more than once.#
+User Information is not correct.#
+Another user is using this character name, so please select another one.#
+The party member was not summoned because you are not the party leader.#
+There is no party member to summon in the current map.#
+You cannot find any trace of a Boss Monster in this area.#
+Boss Monster, '%s' will appear at %02d:%02d.#
+The location of Boss Monster, '%s', will be displayed in the Minimap.#
+Do you want to open '%s'? Once opened, the contents cannot be moved to other locations aside from the Kafra Storage. The item effect isn't doubled, even if the same items are used more than once.#
+The Purchase has failed because the NPC does not exist.#
+The Purchase has failed because the Cash Item System is not working correctly.#
+You cannot purchase items while you are in a trade.#
+The Purchase has failed because the Item Information was incorrect.#
+STR augmentée.#
+STR revenu à la normale.#
+AGI augmentée.#
+AGI revenu à la normale.#
+VIT augmentée.#
+VIT revenu à la normale.#
+INT augmentée.#
+INT revenu à la normale.#
+DEX augmentée.#
+DEX revenu à la normale.#
+LUK augmentée.#
+LUK revenu à la normale.#
+Flee augmentée.#
+Flee revenu à la normale.#
+Hit augmentée.#
+Hit revenu à la normale.#
+Critical Rate has increased.#
+Critical Rate has returned to normal.#
+You will receive 1.5 times more EXP from hunting monsters for the next 30 minutes.#
+This character will not receive any EXP penalty if killed within the next 30 minutes.#
+Regular item drops from monsters will be doubled for the next 30 minutes.#
+Boss Monster Map Information for the next 10 minutes.#
+Do you really want to spend %d Points to purchase '%s'?#
+You do not have enough points.#
+^ff0000Expiration Date: %s^000000#
+The '%s' item will disappear in %d minutes.#
+%s' item will be deleted from the inventory in 1 minute.#
+ '%s' item has been deleted from the inventory.#
+Input Number#
+%m-%d 0%H:0%M (Month/Date/Hour/Minute)#
+Boss monster %s will spawn in 1 minute.#
+Mercenary Skill List#
+Casting this spell will cost 1 Black Gemstone and 1 million zeny. Do you accept?#
+[POINT] Collector Ranking Point increase %d. Include %d Point.#
+[Collector Ranking] Target items : %s#
