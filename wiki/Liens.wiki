@@ -1,15 +1,25 @@
 #summary References de traductions.
 #labels liens
 
-= Introduction =
+= Traduction des fichiers clients =
 
-Add your content here.
+Fichiers anglais :
+http://opensvn.csie.org/EnglishTranslation/data/
+
+Comprendre les items à traduire en cas de doutes :
+
+- Liste des items :
+http://svn.eathena.ws/svn/ea/branches/stable/db/item_db.txt
+
+- Comment lire un item :
+http://svn.eathena.ws/svn/ea/branches/stable/doc/item_db.txt
+
+- Effets des items/cards :
+http://svn.eathena.ws/svn/ea/branches/stable/doc/item_bonus.txt
 
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
 
+= Traductions des NPCs =
+
+http://svn.eathena.ws/svn/ea/branches/stable/npc/
