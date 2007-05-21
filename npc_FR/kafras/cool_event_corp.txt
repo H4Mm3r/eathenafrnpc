@@ -1,0 +1,187 @@
+//===== eAthena Script ======================================= 
+//= Cool Event Corp. Staff
+//===== By: ================================================== 
+//= Gepard
+//===== Current Version: ===================================== 
+//= 1.2
+//===== Compatible With: ===================================== 
+//= eAthena
+//===== Description: ========================================= 
+//= Cool Event Corp. Staff (Save, Storage & Pushcart Service)
+//= in Hugel
+//===== Additional Comments: ================================= 
+//= 1.0 First version, iRO Sakray X.4 [Gepard]
+//= 1.1 Optimized, fixed a conditional bug [Lupus]
+//= 1.1a Redo back. It wasn't a bug [Lupus]
+//= 1.2 Added Rachel Cool Event Corp. Staff [Playtester]
+//============================================================ 
+
+hugel,88,168,4	script	Cool Event Corp. Staff#hugel	874,{
+
+	mes "[Cool Event Corp. Staff]";
+	mes "Bienvenue chez la Cool Event Corp.";
+	mes "Notre personnel ne désire que de surpasser vos attentes en matière de qualité de service.";
+        mes "Que puis-je pour vous aujourd'hui ?";
+	next;
+
+	switch(select("Sauvegarder:Utiliser le coffre:Louer un Pushcart:Annuler")){
+	case 1:
+		mes "[Cool Event Corp. Staff]";
+		mes "Votre point de Respawn a été enregistré ici, au village d'Hugel.";
+		mes "Merci d'utiliser les services de Cool Event Corp.";
+		emotion e_thx;
+		savepoint "hugel",96,155;
+		close;
+	case 2:
+		mes "[Cool Event Corp. Staff]";
+		if(basicskillcheck() && getskilllv(1) < 6){
+			mes "Je suis désolé mais vous devez avoir Basic Skill au niveau 6 minimum pour utiliser le coffre.";
+			emotion e_sry;
+			close;
+		}
+		if(Zeny < 40){
+			mes "Je suis désolé mais vous n'avez pas assez d'argent pour utiliser le coffre.";
+                        mes "Le prix d'accès au coffre est de 40 Zenies.";
+			emotion e_cash;
+			close;
+		}
+		set Zeny, Zeny - 40;
+		set RESRVPTS, RESRVPTS + 4;
+		mes "Je vous prie de bien vouloir me laisser ouvrir votre coffre personnel pour vous.";
+		mes "Merci d'encourager Cool Event Corp. en utilisant nos services.";
+                mes "Bonne journée~";
+		close2;
+		openstorage;
+		end;
+	case 3:
+		mes "[Cool Event Corp. Staff]";
+		if(BaseClass != Job_Merchant){
+			mes "Je suis désolé, mais le service de location de Pushcart n'est valable que pour les Merchants, Blacksmiths, Whitesmiths, Alchemist et Creators.";
+			emotion e_sry;
+			close;
+		}
+		if(getskilllv(39) == 0){
+			mes "Vous ne pouvez louer un Pushcart qu'après avoir appris le Skill Pushcart.";
+			close;
+		}
+		if(checkcart() == 1){
+			mes "Vous avez déjà un Pushcart équipé.";
+			mes "Malheureusement, nous ne pouvons pas louer plus d'un Pushcart pour chaque client.";
+			close;
+		}
+		if(countitem(7061)){
+			delitem 7061,1;
+			setcart;
+			close;
+		}
+		mes "Le prix d'un Pushcart est de 800 Zenies.";
+                mes "Désirez-vous louer un Pushcart ?";
+		next;
+		if(select("Louer un Pushcart:Annuler") == 1){
+			if(Zeny < 800){
+				mes "[Cool Event Corp. Staff]";
+				mes "Je suis désolé mais vous ne pouvez pas payer les 800 Zenies nécéssaires pour louer un Pushcart.";
+				emotion e_cash;
+				close;
+			} else {
+				set Zeny, Zeny - 800;
+				set RESRVPTS, RESRVPTS + 80;
+				setcart;
+				close;
+			}
+		}
+		close;
+	case 4:
+	default:
+		mes "[Cool Event Corp. Staff]";
+		mes "Cool Event Corp. s'efforce toujours de fournir les meilleurs services à nos clients.";
+		mes "Aidez-nous à améliorer nos services en nous donnant votre opinion et des avis honnêtes.";
+                mes "Merci.";
+		close;
+	}
+}
+
+rachel,109,138,5	script	Cool Event Corp. Staff#rachel	874,{
+
+	mes "[Cool Event Corp. Staff]";
+	mes "Bienvenue chez Cool Event Corp.";
+	mes "Notre personnel ne désire que de surpasser vos attentes en matière de qualité de service.";
+        mes "Que puis-je faire pour vous aujourd'hui ?";
+	next;
+
+	switch(select("Sauvegarder:Utiliser le stockage:Louer un Pushcart:Annuler")){
+	case 1:
+		mes "[Cool Event Corp. Staff]";
+		mes "Votre point de Respawn a été enregistré ici, à la ville de Rachel.";
+		mes "Merci d'utiliser les services de Cool Event Corp.";
+		emotion e_thx;
+		savepoint "rachel",113,137;
+		close;
+	case 2:
+		mes "[Cool Event Corp. Staff]";
+		if(basicskillcheck() && getskilllv(1) < 6){
+			mes "Je suis désolé mais vous devez avoir Basic Skill au niveau 6 minimum pour utiliser le service de stockage.";
+			emotion e_sry;
+			close;
+		}
+		if(Zeny < 40){
+			mes "Je suis désolé mais vous n'avez pas assez d'argent pour utiliser le service de stockage.";
+                        mes "Le prix d'accès au stockage est de 40 Zenies.";
+			emotion e_cash;
+			close;
+		}
+		set Zeny, Zeny - 40;
+		set RESRVPTS, RESRVPTS + 4;
+		mes "Je vous prie de bien vouloir me laisser ouvrir votre coffre personnel pour vous.";
+		mes "Merci d'encourager Cool Event Corp. en utilisant nos services.";
+                mes "Bonne journée~";
+		close2;
+		openstorage;
+		end;
+	case 3:
+		mes "[Cool Event Corp. Staff]";
+		if(BaseClass != Job_Merchant){
+			mes "Je suis désolé, mais le service de location de Pushcart n'est valable que pour les Merchants, Blacksmiths, Whitesmiths, Alchemist et Creators.";
+			emotion e_sry;
+			close;
+		}
+		if(getskilllv(39) == 0){
+			mes "Vous ne pouvez louer un Pushcart qu'après avoir appris le Skill Pushcart.";
+			close;
+		}
+		if(checkcart() == 1){
+			mes "Vous avez déjà un Pushcart équipé.";
+			mes "Malheureusement, nous ne pouvons pas louer plus d'un Pushcart pour chaque client.";
+			close;
+		}
+		if(countitem(7061)){
+			delitem 7061,1;
+			setcart;
+			close;
+		}
+		mes "Le prix d'un Pushcart est de 800 Zenies.";
+                mes "Would you like to rent a Pushcart?";
+		next;
+		if(select("Louer un Pushcart:Annuler") == 1){
+			if(Zeny < 800){
+				mes "[Cool Event Corp. Staff]";
+				mes "Je suis désolé mais vous ne pouvez pas payer les 800 Zenies nécéssaires pour louer un Pushcart.";
+				emotion e_cash;
+				close;
+			} else {
+				set Zeny, Zeny - 800;
+				set RESRVPTS, RESRVPTS + 80;
+				setcart;
+				close;
+			}
+		}
+		close;
+	case 4:
+	default:
+		mes "[Cool Event Corp. Staff]";
+		mes "Cool Event Corp. s'efforce toujours de fournir les meilleurs services à nos clients.";
+		mes "Aidez-nous à améliorer nos services en nous donnant une votre opinion et des avis honnêtes.";
+                mes "Merci.";
+		close;
+	}
+}
