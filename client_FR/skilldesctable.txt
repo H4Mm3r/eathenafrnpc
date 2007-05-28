@@ -230,7 +230,8 @@ Portée :^777777 9 cases^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 instantanée^000000
-Effet :^777777 Soigne la cible de ((Base lvl+INT)/8)*(4+8*Skill lvl) HP. Utilisé contre les monstres de type Undead, il devient une attaque de propriété Holy ignorant la MDEF et l'INT, mais qui ne produit que la moitié des dégâts (c'est à dire,(Valeur du Heal*Sensibilité à Holy)/2). 
+Effet :^777777 Soigne la cible de ((Base lvl+INT)/8)*(4+8*Skill lvl) HP. 
+Utilisé contre les monstres de type Undead, il devient une attaque de propriété Holy ignorant la MDEF et l'INT, mais qui ne produit que la moitié des dégâts (c'est à dire,(Valeur du Heal*Sensibilité à Holy)/2). 
 Pour l'utiliser contre un monstre, appuyez sur shift ou entrez "/noshift".^000000
 #
 AL_HOLYWATER#
@@ -681,7 +682,9 @@ Portée :^777777 9 cases^000000
 Temps de Cast :^777777 1 seconde^000000
 Délai entre 2 casts :^777777 Niv 1 à 3 : 1 seconde, Niv 4 à 5 : 0.9 seconde, Niv 6 à 7 : 0.8 seconde, Niveau 8 : 0.7 seconde, Niveau 9 : 0.6 seconde, Niveau 10 : 0.5 seconde^000000
 Durée :^777777 instantanée^000000
-Effet :^777777 Frappe tous les ennemis sur une zone de 3x3 cases autour de la cible, leur infligeant des dégâts de type Ghost de (70+10*Skill lvl)% MATK. Les dégâts sur la zone sont répartis de manière égale entre les victimes. Exemple : 3 monstres touchés, chacun reçoit 1/3 des dégâts.^000000
+Effet :^777777 Frappe tous les ennemis sur une zone de 3x3 cases autour de la cible, leur infligeant des dégâts de type Ghost de (70+10*Skill lvl)% MATK. 
+Les dégâts sur la zone sont répartis de manière égale entre les victimes. 
+Exemple : 3 monstres touchés, chacun reçoit 1/3 des dégâts.^000000
 [Niveau 1] ^77777780% MATK^000000
 [Niveau 2] ^77777790% MATK^000000
 [Niveau 3] ^777777100% MATK^000000
@@ -705,7 +708,11 @@ Temps de Cast :^777777 4.5-0.5*Skill lvl secondes (1 seconde minimum)^000000
 Délai entre 2 casts :^777777 Aucun^000000
 Durée :^777777 5*Skill lvl secondes ou 1+Skill lvl attaques.^000000
 Objet nécéssaire :^0000ff 1 Blue Gemstone^000000
-Effet :^777777 Crée un mur de Protection sur une case. L'effet protège de 1+Skill lvl attaques physiques. Même les attaques manquées comptent. Il n'est pas possible de placer plusieurs safety wall sur un même case. Protège des skills a courte portée des monstres (moins de 4 cases de portée).^000000
+Effet :^777777 Crée un mur de Protection sur une case. 
+L'effet protège de 1+Skill lvl attaques physiques. 
+Même les attaques manquées comptent. 
+Il n'est pas possible de placer plusieurs safety wall sur un même case. 
+Protège des skills a courte portée des monstres (moins de 4 cases de portée).^000000
 [Niveau 1] ^777777Protège de 2 coups^000000
 [Niveau 2] ^777777Protège de 3 coups^000000
 [Niveau 3] ^777777Protège de 4 coups^000000
@@ -1006,7 +1013,8 @@ Portée :^777777 Mêlée^000000
 Temps de Cast :^777777 0^000000
 Délai entre 2 casts :^777777 ASPD^000000
 Durée :^777777 instantanée^000000
-Effet :^777777 Une attaque de mêlée infligeant des dégâts de (100+30*Skill lvl)% ATK avec un bonus de (5*Skill lvl) HIT. Si le joueur a le skill Fatal Blow, pour les niveaux 6 à 10 il y a (5*(Niveau du Bash-5)% de chances d'infliger Stun, plus un bonus selon votre Base lvl.^000000
+Effet :^777777 Une attaque de mêlée infligeant des dégâts de (100+30*Skill lvl)% ATK avec un bonus de (5*Skill lvl) HIT. 
+Si le joueur a le skill Fatal Blow, pour les niveaux 6 à 10 il y a (5*(Niveau du Bash-5)% de chances d'infliger Stun, plus un bonus selon votre Base lvl.^000000
 [Niveau 1]^777777 130% ATK^000000
 [Niveau 2]^777777 160% ATK^000000
 [Niveau 3]^777777 190% ATK^000000
@@ -1028,7 +1036,11 @@ Cible :^777777 Soi-même^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 Aucun, sauf pour relancer (voir description)^000000
 Durée :^777777 (7+3*SkillLV) secondes^000000
-Effet :^777777 Vous permet d'éviter le "stun lock" quand vous êtes frappé. Vous prenez tous les dégâts, mais vous pouvez continuer à avancer. Une personne assise avec Endure ne se lève pas si elle est touchée. L'effet disparaît après 7 coups reçus sans miss donnés par des monstres, il n'y a pas de lmimite pour les coups donnés par des joueurs. Procure un bonus de (1*Skill lvl) MDEF . Désactivé en woe, sauf le bonus de MDEF.
+Effet :^777777 Vous permet d'éviter le "stun lock" quand vous êtes frappé. Vous prenez tous les dégâts, mais vous pouvez continuer à avancer. 
+Une personne assise avec Endure ne se lève pas si elle est touchée. 
+L'effet disparaît après 7 coups reçus sans miss donnés par des monstres, il n'y a pas de lmimite pour les coups donnés par des joueurs. 
+Procure un bonus de (1*Skill lvl) MDEF . 
+Désactivé en woe, sauf le bonus de MDEF.
 Donne un bonus de +1*Niveau du Skill bonus en MDEF.^000000
 [Niveau 1] ^777777Dure 10 secondes, MDEF +1^000000
 [Niveau 2] ^777777Dure 13 secondes, MDEF +2^000000
@@ -1110,7 +1122,9 @@ Sword Mastery
 Nécéssaire pour :^777777 Two-Handed Sword Mastery (Niv 1 Swordman)^000000
 Niveau maximum :^777777 10^000000
 Type : ^000099Passif^000000
-Effet :^777777 Augmente les dégâts des Daggers et One-Handed Sword de 4*Skill lvl. Ces dégâts ignorent les réductions de dégâts dues à l'armure et à la VIT DEF, mais pas celles dues aux éléments et aux cartes. Ce bonus s'applique à tous les coups des attaques multiples.^000000
+Effet :^777777 Augmente les dégâts des Daggers et One-Handed Sword de 4*Skill lvl. 
+Ces dégâts ignorent les réductions de dégâts dues à l'armure et à la VIT DEF, mais pas celles dues aux éléments et aux cartes. 
+Ce bonus s'applique à tous les coups des attaques multiples.^000000
 [Niveau 1]^777777 ATK+4^000000
 [Niveau 2]^777777 ATK+8^000000
 [Niveau 3]^777777 ATK+12^000000
@@ -1337,8 +1351,10 @@ Cible :^777777 Soi-même^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 Jusqu'à l'annulation ou 0 SP restants^000000
-Effet :^777777 Active le statut Cloaking : vous êtes invisible pour les joueurs et les monstres mais vous pouvez continuer de bouger. La régénération (HP/SP) est bloquée. Si le joueur attaque, il se dévoile et perd le statut Cloaking. Les monstres de type Insect, Demon et Boss ne sont pas bernés.
-Cloaking s'annule en activant le skill à nouveau (ne consomme pas de SP). Si vous êtes frappé, ou si vous rentrez dans le champ d'action d'Improve Concentration, de Ruwach ou de Sight, vous êtes découvert. A bas niveau, vous aurez besoin d'un mur à proximité pour bouger et ne pourrez pas attaquer ou utiliser de skill en étant cloak. 
+Effet :^777777 Active le statut Cloaking : vous êtes invisible pour les joueurs et les monstres mais vous pouvez continuer de bouger. 
+La régénération (HP/SP) est bloquée. Si le joueur attaque, il se dévoile et perd le statut Cloaking. Les monstres de type Insect, Demon et Boss ne sont pas bernés.
+Cloaking s'annule en activant le skill à nouveau (ne consomme pas de SP). Si vous êtes frappé, ou si vous rentrez dans le champ d'action d'Improve Concentration, de Ruwach ou de Sight, vous êtes découvert. 
+A bas niveau, vous aurez besoin d'un mur à proximité pour bouger et ne pourrez pas attaquer ou utiliser de skill en étant cloak. 
 La vitesse de déplacement augmente mais ne s'additionne pas avec le bonus d'improve dodge.
 Attaquer en étant cloak doublera vos chances de faire une attaque critique pour cette attaque.
 [Niveau 1]^777777 100%  | impossible de bouger sans mur^000000
@@ -1654,7 +1670,10 @@ Smith Axe
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Objets nécéssaires : ^777777Variés^000000
-Effet :^777777 Permet de forger des Axes avec un Hammer et une Anvil. Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill . Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le hammer adéquat dans votre inventaire.^000000
+Effet :^777777 Permet de forger des Axes avec un Hammer et une Anvil. 
+Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1694,7 +1713,10 @@ Nécéssaire pour :^777777 Smith Knucklebrace (Niv 1), Smith Spear (Niv 2), Smith 
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Objets nécéssaires : ^777777Variés^000000
-Effet :^777777 Permet de forger des Daggers avec un Hammer et une Anvil. Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentales.^000000
+Effet :^777777 Permet de forger des Daggers avec un Hammer et une Anvil. 
+Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1744,7 +1766,10 @@ Indispensable pour accéder à :^777777 Smith Mace L1+^000000
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Catalyseur : ^777777Variés^000000
-Effet :^777777 Permet de forger des Fists avec un Hammer. Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'eventuels objets supplémentaires tels que des star crumb ou des pierres élémentales.^000000
+Effet :^777777 Permet de forger des Fists avec un Hammer. 
+Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'eventuels objets supplémentaires tels que des star crumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1786,7 +1811,10 @@ Smith Mace
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Catalyseur : ^777777Variés^000000
-Effet :^777777 Permet de forger des Maces avec un Hammer. Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentales.^000000
+Effet :^777777 Permet de forger des Maces avec un Hammer. 
+Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1833,7 +1861,10 @@ Smith Spear
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Catalyseur : ^777777Variés^000000
-Effet :^777777 Permet de forger des Lances avec un Hammer. Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentales.^000000
+Effet :^777777 Permet de forger des Lances avec un Hammer. 
+Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1886,7 +1917,10 @@ Nécéssaire pour :^777777 Smith Two-Handed Sword (Niv 1)^000000
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Catalyseur : ^777777Variés^000000
-Effet :^777777 Permet de forger des Épées à une main avec un Hammer. Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentales.^000000
+Effet :^777777 Permet de forger des Épées à une main avec un Hammer. 
+Ne permet de forger que les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1940,7 +1974,10 @@ Smith Two-Handed Sword
 Niveau maximum :^777777 3^000000
 Type : ^777777Passif^000000
 Catalyseur : ^777777Variés^000000
-Effet :^777777 Permet de forger des Épées à deux mains avec un "Hammer". Permet de forger uniquement les armes de niveau inférieur ou égal à celui du skill. Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentales.^000000
+Effet :^777777 Permet de forger des Épées à deux mains avec un Hammer. 
+Permet de forger uniquement les armes de niveau inférieur ou égal à celui du skill. 
+Le taux de réussite est de ((5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK+50)%. 
+Pour forger, cliquez sur le Hammer adéquat dans votre inventaire et ajoutez d'éventuels objets tels que des Star Cumb ou des pierres élémentaires.^000000
 ^6699ffBonus/Malus de réussite sur la forge en fonction des objets utilisés pour forger :
 Normal Anvil : +0%
 Oridecon Anvil : +3%
@@ -1985,7 +2022,8 @@ Nécéssaire pour :^777777 Ore Discovery (Niv 1)^000000
 Niveau maximum :^777777 5^000000
 Type : ^777777Passif^000000
 Objets nécéssaires :^777777 5 Iron, 1 Coal, 1 Mini-Furnace^000000
-Effet :^777777 Permet de raffiner 5 Iron et 1 Coal en 1 Steel en utilisant une Mini-Furnace. Le taux de réussite est de ((30+5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK)%.^000000
+Effet :^777777 Permet de raffiner 5 Iron et 1 Coal en 1 Steel en utilisant une Mini-Furnace. 
+Le taux de réussite est de ((30+5*Skill lvl)+0.2*Job lvl+0.1*DEX+0.1*LUK)%.^000000
 #
 BS_REPAIRWEAPON#
 Weapon Repair
@@ -2008,7 +2046,9 @@ Weaponry Research
 Nécéssaire pour :^777777 Weapon Perfection (Niv 2), Weapon Repair (Niv 1), Meltdown (Niv 5 Whitesmith), Upragde Weapon (Niv 10 Whitesmith)^000000
 Niveau maximum :^777777 10^000000
 Type : ^777777Passif^000000
-Effet :^777777 Augmente le HIT et l'ATK de (2*Skill lvl) et le taux de réussite de forge de (1*Skill lvl)%. Les dégâts bonus sont appliqués même en cas de miss, mais sont cependant affectés par les éléments et les cartes. Malgré les rumeurs, ce Skill N'AMELIORE PAS les chances de succès d'upgrade avec les NPC.^000000
+Effet :^777777 Augmente le HIT et l'ATK de (2*Skill lvl) et le taux de réussite de forge de (1*Skill lvl)%. 
+Les dégâts bonus sont appliqués même en cas de miss, mais sont cependant affectés par les éléments et les cartes.
+Malgré les rumeurs, ce Skill N'AMELIORE PAS les chances de succès d'upgrade avec les NPC.^000000
 [Niveau 1] ^777777+ 2 ATK/HIT   | +1 % Forge^000000
 [Niveau 2] ^777777+ 4 ATK/HIT   | +2 % Forge^000000
 [Niveau 3] ^777777+ 6 ATK/HIT   | +3 % Forge^000000
@@ -2089,7 +2129,8 @@ Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 30-5*Skill lvl^000000
 Objet nécéssaire :^777777 1 Trap^000000
 Effet :^777777 Pose une Blast mine, un piège visible qui explose au bout de 30-5*Skill lvl secondes après sa pose ou explose directement si un ennemi pose le pied dessus. 
-L'explosion touche une zone de 3x3 cases autour de la mine et inflige des dégâts de (((50+DEX)/2)*((1+INT)/100)*Skill lvl). Ce skill ignore la DEF, la MDEF et les modifications de cartes concernant la taille et le type, mais pas les éléments. 
+L'explosion touche une zone de 3x3 cases autour de la mine et inflige des dégâts de (((50+DEX)/2)*((1+INT)/100)*Skill lvl). 
+Ce skill ignore la DEF, la MDEF et les modifications de cartes concernant la taille et le type, mais pas les éléments. 
 En zone PvP, le piège affecte toute personne dans la zone, même le poseur. Le poseur peut bouger le piège tant qu'il ne s'est pas activé.^000000
 [Niveau 1]^777777 Explose après 25 secondes^000000
 [Niveau 2]^777777 Explose après 20 secondes^000000
@@ -2127,7 +2168,8 @@ Temps de Cast :^777777 0.4 secondes^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 20*Skill lvl secondes^000000
 Objets nécéssaires :^777777 2 Trap^000000
-Effet :^777777 Pose une mine Claymore qui explose quand on pose le pied dessus, touchant une zone de 5x5 cases autour d'elle en infligeant des dégâts de type Fire de ((DEX+75)*((1+INT)/100*Skill)*Skill lvl). Ce skill ignore la DEF, la MDEF et les modifications de cartes concernant la taille et le type, 
+Effet :^777777 Pose une mine Claymore qui explose quand on pose le pied dessus, touchant une zone de 5x5 cases autour d'elle en infligeant des dégâts de type Fire de ((DEX+75)*((1+INT)/100*Skill)*Skill lvl). 
+Ce skill ignore la DEF, la MDEF et les modifications de cartes concernant la taille et le type, 
 mais pas les éléments. Ce piège affecte tous les joueurs en PvP, même le poseur. Si la Claymore n'est pas activée avant la fin du skill, elle redevient un Trap et on peut le ramasser.^000000
 [Niveau 1]^777777 Actif pendant 20 sec^000000
 [Niveau 2]^777777 Actif pendant 40 sec^000000
@@ -2213,8 +2255,10 @@ Temps de Cast :^777777 0.4 secondes^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 240-40*Skill lvl secondes^000000
 Objet nécéssaire :^777777 1 Trap^000000
-Effet :^777777 Pose une Land Mine, un piège visible qui explose quand on pose le pied dessus, touchant le monstre ou le joueur (PvP seulement) en lui infligeant des dégâts de type Earth de ((DEX+75)*((1+INT)/100)*Skill lvl). Ce skill ignore la DEF, la MDEF et les modifications de cartes concernant la taille et le type, mais pas les éléments.
-Il y a une chance d'infliger le statut Stun à la cible pendant (1+0.5*Skill lvl) secondes. Ce piège affecte tous les joueurs en PvP, y compris le poseur.
+Effet :^777777 Pose une Land Mine, un piège visible qui explose quand on pose le pied dessus, touchant le monstre ou le joueur (PvP seulement) en lui infligeant des dégâts de type Earth de ((DEX+75)*((1+INT)/100)*Skill lvl). 
+Ce skill ignore la DEF, la MDEF et les modifications de cartes concernant la taille et le type, mais pas les éléments.
+Il y a une chance d'infliger le statut Stun à la cible pendant (1+0.5*Skill lvl) secondes. 
+Ce piège affecte tous les joueurs en PvP, y compris le poseur.
 Si la Land mine n'est pas activée avant la fin du skill, elle redevient un Trap et on peut le ramasser.^000000
 [Niveau 1] ^777777ATK 50%  | Explose après 200 sec^000000
 [Niveau 2] ^777777ATK 75%  | Explose après 160 sec^000000
@@ -2290,7 +2334,9 @@ Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 360-60*Skill lvl secondes^000000
 Objet nécéssaire :^777777 1 Trap^000000
 Effet :^777777 Pose un Skid Trap qui repousse la cible quand elle pose le pied dessus. La cible recule de (5+Skill lvl) cases.
-Les Skid Trap sont invisibles, mais tout joueur voyant le Hunter poser le piège le verra sauf si le piège sort de son champ de vision. Les skills de détection révèlent ce piège. Ce piège affecte tous les joueurs en PvP, y compris le poseur. Ne fonctionne pas sur les Boss et les monstres de type plant.
+Les Skid Trap sont invisibles, mais tout joueur voyant le Hunter poser le piège le verra sauf si le piège sort de son champ de vision. 
+Les skills de détection révèlent ce piège. Ce piège affecte tous les joueurs en PvP, y compris le poseur. 
+Ne fonctionne pas sur les Boss et les monstres de type plant.
 Si le Skid Trap n'est pas activé avant la fin du skill, il redevient un trap et on peut le ramasser.^000000
 [Niveau 1] ^777777Repousse d'1 case  | Dure 300 secondes^000000
 [Niveau 2] ^777777Repousse de 2 case | Dure 240 secondes^000000
@@ -2447,7 +2493,9 @@ Portée :^777777 2 cases^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 ASPD^000000
 Durée :^777777 instantanée^000000
-Effet :^777777 Attaque à la lance bénéficiant d'un bonus de (5*Skill lvl) HIT et infligeant des dégâts de (100+10*Skill lvl)% ATK. Le nombre de coups portés dépend de la taille du monstre : Petite = 1 coup, Moyenne = 2 coups, Grande = 3 coups. Les joueurs sont considérés comme étant de taille moyenne.^000000
+Effet :^777777 Attaque à la lance bénéficiant d'un bonus de (5*Skill lvl) HIT et infligeant des dégâts de (100+10*Skill lvl)% ATK. 
+Le nombre de coups portés dépend de la taille du monstre : Petite = 1 coup, Moyenne = 2 coups, Grande = 3 coups. 
+Les joueurs sont considérés comme étant de taille moyenne.^000000
 [Niveau 1] ^777777110% ATK  | HIT +5^000000
 [Niveau 2] ^777777120% ATK  | HIT +10^000000
 [Niveau 3] ^777777130% ATK  | HIT +15^000000
@@ -3555,7 +3603,7 @@ Effet : ^777777Augmente l'efficacité des items de soins de (5*Skill lvl) et amél
 #
 AM_PHARMACY#
 Prepare Potion
-Nécéssaire pour :^777777 Summon Marine Sphere (Niv 2), Aid Potion (Niv 3), Bomb (Niv 4), Acid Terror (Niv 5), Summon Flora (Niv 5), Chemical P. Helm (Niv 5), Spiritual Potion Creation I (Niv 10 avec Soul Link), Spiritual Potion Creation II (Niv 10 avec Soul Link),  Spiritual Potion Creation III (Niv 10 avec Soul Link)^000000
+Nécéssaire pour :^777777 Summon Marine Sphere (Niv 2), Aid Potion (Niv 3), Bomb (Niv 4), Acid Terror (Niv 5), Summon Flora (Niv 5), Chemical P. Helm (Niv 5), Spiritual Potion Creation I (Niv 10 avec Soul Link), Spiritual Potion Creation II (Niv 10 avec Soul Link), Spiritual Potion Creation III (Niv 10 avec Soul Link)^000000
 Type : ^777777Actif^000000
 Niveau maximum :^777777 10^000000
 Coût en SP :^777777 5^000000
@@ -4446,7 +4494,8 @@ Coût en SP :^777777 2^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 Aucun^000000
 Durée :^777777 instantanée^000000
-Effet : ^777777Si on vous cible avec un skill/sort basé sur la MATK pendant le temps d'activation de Magic Rod, le skill dont vous êtes victime est annulé et vous récupérez une partie des SP qui ont servit à son cast. Ne fonctionne pas sur les sorts de zone. Le skill Spell Breaker est contré par ce skill et le sage ennemi perd 20% de ses SP, qui vous seront donnés. 
+Effet : ^777777Si on vous cible avec un skill/sort basé sur la MATK pendant le temps d'activation de Magic Rod, le skill dont vous êtes victime est annulé et vous récupérez une partie des SP qui ont servit à son cast. 
+Ne fonctionne pas sur les sorts de zone. Le skill Spell Breaker est contré par ce skill et le sage ennemi perd 20% de ses SP, qui vous seront donnés. 
 Si vous bougez pendant la période d'activation le skill est annulé. Le skill/sort ennemi doit vous toucher pendant la période d'activation.^000000
 [Niveau 1]^777777 0.4 seconde  | 20% SP absorbés^000000
 [Niveau 2]^777777 0.6 seconde  | 40% SP absorbés^000000
@@ -4495,7 +4544,9 @@ Temps de Cast :^777777 5 secondes^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 60*Skill lvl secondes^000000
 Objet nécéssaire :^777777 1^000000^ffff00 Yellow Gemstone^000000
-Effet : ^777777Permet de donner la propriété Fire à une zone de 7*7 cases. Cette zone va amplifier les dégâts des sorts de type Fire, ainsi que l'ATK de base de ceux qui portent une armure de propriété Fire (Pasana Card). Ice Wall ne peut être placé sur cette zone. Vous ne pouvez créer qu'une seule zone à la fois.^000000
+Effet : ^777777Permet de donner la propriété Fire à une zone de 7*7 cases. 
+Cette zone va amplifier les dégâts des sorts de type Fire, ainsi que l'ATK de base de ceux qui portent une armure de propriété Fire (Pasana Card). 
+Ice Wall ne peut être placé sur cette zone. Vous ne pouvez créer qu'une seule zone à la fois.^000000
 [Niveau 1]^777777 +10% Dégâts | +10 ATK pour les porteurs d'armures de type Fire | 1 minute^000000
 [Niveau 2]^777777 +14% Dégâts | +20 ATK pour les porteurs d'armures de type Fire | 2 minutes^000000
 [Niveau 3]^777777 +17% Dégâts | +30 ATK pour les porteurs d'armures de type Fire | 3 minutes^000000
@@ -4513,7 +4564,9 @@ Temps de Cast :^777777 5 secondes^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 60*Skill lvl secondes^000000
 Objet nécéssaire :^777777 1^000000^ffff00 Yellow Gemstone^000000
-Effet : ^777777Permet de donner la propriété Water à une zone de 7*7 cases. Dans cette zone les dégâts des attaques d'élément eau et le MaxHP de ceux qui portent une armure de propriété Water (Swordfish) sont boostés. Les skills ayant besoin d'eau (comme Water Ball ou Aqua Benedicta) peuvent être utilisés dans cette zone.^000000
+Effet : ^777777Permet de donner la propriété Water à une zone de 7*7 cases. 
+Dans cette zone les dégâts des attaques d'élément eau et le MaxHP de ceux qui portent une armure de propriété Water (Swordfish) sont boostés. 
+Les skills ayant besoin d'eau (comme Water Ball ou Aqua Benedicta) peuvent être utilisés dans cette zone.^000000
 [Niveau 1] ^777777+10% Dégâts | +10% MaxHP pour les porteurs d'armures de type Water | 1 Minute^000000
 [Niveau 2] ^777777+14% Dégâts | +20% MaxHP pour les porteurs d'armures de type Water | 2 Minutes^000000
 [Niveau 3] ^777777+17% Dégâts | +30% MaxHP pour les porteurs d'armures de type Water | 3 Minutes^000000
@@ -5042,7 +5095,9 @@ Coût en SP :^777777 20+4*Skill lvl^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 Aucun^000000
 Durée :^777777 60 secondes^000000
-Effet :^777777 Augmente le Flee de 1*Skill lvl et le Perfect Dodge de (Skill lvl)/2 (arrondi à l'unité supérieure) de tous les joueurs se trouvant dans la zone. Music Lesson affecte les bonus. L'AGI du caster affecte le bonus de Flee et sa LUK le bonus de Perfect Dodge.^000000
+Effet :^777777 Augmente le Flee de 1*Skill lvl et le Perfect Dodge de (Skill lvl)/2 (arrondi à l'unité supérieure) de tous les joueurs se trouvant dans la zone. 
+Music Lesson affecte les bonus.
+ L'AGI du caster affecte le bonus de Flee et sa LUK le bonus de Perfect Dodge.^000000
 [Niveau 1]^777777 +1 Flee | +1 Perfect Dodge^000000
 [Niveau 2]^777777 +2 Flee | +1 Perfect Dodge^000000
 [Niveau 3]^777777 +3 Flee | +2 Perfect Dodge^000000
@@ -5083,7 +5138,10 @@ Coût en SP pour être maintenu :^777777 1 SP toutes les 10 secondes^000000
 Temps de Cast :^777777 Aucun^000000
 Délai entre 2 casts :^777777 Aucun^000000
 Durée :^777777 180 secondes^000000
-Effet :^777777 Diminue l'ASPD de (3*Skill lvl)% et la vitesse de déplacement de (2*Skill Lvl)% de tous les ennemis se trouvant dans la zone. Annule toutes techniques augmentant la vitesse de marche ou l'ASPD. Dance Lessons et la STR de la danseuse affectent le diminution d'ASPD. Dance Lessons et l'AGI de la danseuse affectent la diminution de la vitesse de marche. ^000000
+Effet :^777777 Diminue l'ASPD de (3*Skill lvl)% et la vitesse de déplacement de (2*Skill Lvl)% de tous les ennemis se trouvant dans la zone. 
+Annule toutes techniques augmentant la vitesse de marche ou l'ASPD. 
+Dance Lessons et la STR de la danseuse affectent le diminution d'ASPD. 
+Dance Lessons et l'AGI de la danseuse affectent la diminution de la vitesse de marche. ^000000
 [Niveau 1]^777777-2% de vitesse de déplacement | -3% ASPD^000000
 [Niveau 2]^777777-4% de vitesse de déplacement | -6% ASPD^000000
 [Niveau 3]^777777-6% de vitesse de déplacement | -9% ASPD^000000
@@ -5333,7 +5391,9 @@ Coût en SP : ^777777Inconnu^000000
 Temps de Cast : ^7777775 secondes^00000
 Délai entre 2 casts : ^7777771 seconde^000000
 Portée : ^777777L'écran du Guild Master^000000
-Effet : ^777777Tous les membres de la guilde visibles sur l'écran du Guild Master reçoivent un bonus de +5 bonus en STR, DEX et INT pendant 1 minute. Le Guild Master doit attendre 5 minutes avant de pouvoir relancer ce skill. Ne peut être utilisé que durant les WoE (dans les châteaux).^000000
+Effet : ^777777Tous les membres de la guilde visibles sur l'écran du Guild Master reçoivent un bonus de +5 bonus en STR, DEX et INT pendant 1 minute. 
+Le Guild Master doit attendre 5 minutes avant de pouvoir relancer ce skill. 
+Ne peut être utilisé que durant les WoE (dans les châteaux).^000000
 #
 GD_REGENERATION#
 Regeneration
@@ -5357,7 +5417,9 @@ Coût en SP : ^777777Inconnu^000000
 Temps de Cast : ^7777775 secondes^00000
 Délai entre 2 casts : ^7777771 seconde^000000
 Portée : ^777777L'écran du Guild Master^000000
-Effet : ^777777Tous les membres de la guilde visibles sur l'écran du Guild Master ont leurs HP et SP restaurés à 90% de leur maximum pendant 1 minute. Le Guild Master doit attendre 5 minutes avant de pouvoir relancer ce skill. Ne peut être utilisé que durant les WoE (dans les châteaux).^000000
+Effet : ^777777Tous les membres de la guilde visibles sur l'écran du Guild Master ont leurs HP et SP restaurés à 90% de leur maximum pendant 1 minute. 
+Le Guild Master doit attendre 5 minutes avant de pouvoir relancer ce skill. 
+Ne peut être utilisé que durant les WoE (dans les châteaux).^000000
 #
 GD_EMERGENCYCALL#
 Rally Guild
@@ -5433,8 +5495,11 @@ Temps de Cast : ^777777Aucun^000000
 Délai entre 2 casts: ^777777spécial, voir descriptif^000000
 Durée : ^777777300 sec ou  HP inférieurs à 100^000000
 Effet : ^777777Requiert un job level de 50 ou plus, triple le MaxHP ( et restaure un "full HP"), double les dégâts infligés, augmente l'ASPD de 30%, augmente la vitesse de déplacement ( ne s'accumule pas avec d'autres augmentations de la vitesse, mis à part les Peco Peco), et vous donne un effet "Endure".
-Mais en contre partie le Flee est divisé par 2 et la DEF et MDEF sont mises à 0. Draine 5% de vos MaxHP toutes les 15 secondes. Pendant la durée du skill vous ne pouvez pas utiliser d'items de soins ni recevoir de Heal, ni changer d'équipements ni chater (chat mute) , le skill s'arrête si les HP atteignent 100 HP ou moins, ou après les 300 secondes. 
-La régénération HP/SP reste inactive pendant 5 Minutes après la fin du skill (durant ce délai, vous pouvez vous soigner/être soigné). Peut être utilisé en WOE et avec tout type d'armes. A la fin du skill, vos HP sont mis à 100 HP.^000000
+Mais en contre partie le Flee est divisé par 2 et la DEF et MDEF sont mises à 0. 
+Draine 5% de vos MaxHP toutes les 15 secondes. 
+Pendant la durée du skill vous ne pouvez pas utiliser d'items de soins ni recevoir de Heal, ni changer d'équipements ni chater (chat mute), le skill s'arrête si les HP atteignent 100 HP ou moins, ou après les 300 secondes. 
+La régénération HP/SP reste inactive pendant 5 Minutes après la fin du skill (durant ce délai, vous pouvez vous soigner/être soigné). 
+Peut être utilisé en WOE et avec tout type d'armes. A la fin du skill, vos HP sont mis à 100 HP.^000000
 #
 LK_CONCENTRATION#
 Concentration
@@ -5506,8 +5571,10 @@ Coût en SP : ^77777750^000000
 Niveau maximum : ^77777710^000000
 Durée : ^77777710+5*Skill lvl sec^000000
 Effet : ^777777Bloque automatiquement les attaques avec (5*Skill lvl)% de chance. 
-Ne peut être utilisé qu'avec une 2H-Sword équipée. Vous permet de bloquer les skills suivants : Bash, Bowling Bash, Pierce, Clashing Spiral, Brandish Spear, Spear Boomerang, Shield Boomerang, Grand Cross, Asura Strike, Falcon Assault, Soul Breaker, Double Strafe, Arrow Shower et Ocult Impact. 
-Quand vous bloquez une attaque vous ne pouvez pas attaquer. La durée du skill dépend de son niveau.^000000
+Ne peut être utilisé qu'avec une 2H-Sword équipée. 
+Vous permet de bloquer les skills suivants : Bash, Bowling Bash, Pierce, Clashing Spiral, Brandish Spear, Spear Boomerang, Shield Boomerang, Grand Cross, Asura Strike, Falcon Assault, Soul Breaker, Double Strafe, Arrow Shower et Ocult Impact. 
+Quand vous bloquez une attaque vous ne pouvez pas attaquer. 
+La durée du skill dépend de son niveau.^000000
 [Niveau 1] ^777777Chance de parade 5%, 15 Sec^000000
 [Niveau 2] ^777777Chance de parade 10%, 20 Sec^000000
 [Niveau 3] ^777777Chance de parade 15%, 25 Sec^000000
@@ -5641,7 +5708,9 @@ Portée: ^7777775 cases^000000
 Temps de Cast: ^7777770.5+0.5*Niveau du Skill secondes^000000
 Delai entre 2 casts: ^7777771+0.1*Skill lvl secondes^000000
 Durée: ^77777720*Skill lvl secondes^000000
-Effet : ^777777Bénit la cible, le joueur bénit bénéficie d'une réduction des dégâts qu'il reçoit pendant toute la durée du skill. Cette réduction est de 1/2 en PvM et 1/3 en PvP, désactivé en WOE sur les maps Guild vs Guild. Kyrie Eleison annule ce skill, et Asumption annule Kyrie Eleison.^000000
+Effet : ^777777Bénit la cible, le joueur bénit bénéficie d'une réduction des dégâts qu'il reçoit pendant toute la durée du skill. 
+Cette réduction est de 1/2 en PvM et 1/3 en PvP, désactivé en WOE sur les maps Guild vs Guild. 
+Kyrie Eleison annule ce skill, et Asumption annule Kyrie Eleison.^000000
 [Niveau 1] ^777777Dure 20 Sec^000000
 [Niveau 2] ^777777Dure 40 Sec^000000
 [Niveau 3] ^777777Dure 60 Sec^000000
@@ -5659,7 +5728,10 @@ Temps de Cast: ^7777774+Skill lvl secondes^000000
 Delai entre 2 casts: ^7777771+Skill lvl secondes^000000
 Durée: ^77777715+5*Skill lvl secondes^000000
 Objets nécéssaires :^0000ff 1 Blue Gemstone^000000^777777,^000000^ffff00 1 Yellow Gemstone^000000^777777,^000000^ee0000 1 Red Gemstone^000000^777777 et 1 Holy Water^000000
-Effet : ^777777Ce skill crée une zone de défense parfaite sur 5x5 cases autour de la cible, dans cette zone toutes les attaques sont bloquées. Toute personne entrant dans cette zone ne peut plus attaquer. Le skill est annulé si le priest bouge ou utilise d'autres skills. Ne fonctionne pas contre les MVP et en WOE.^000000
+Effet : ^777777Ce skill crée une zone de défense parfaite sur 5x5 cases autour de la cible, dans cette zone toutes les attaques sont bloquées. 
+Toute personne entrant dans cette zone ne peut plus attaquer. 
+Le skill est annulé si le priest bouge ou utilise d'autres skills. 
+Ne fonctionne pas contre les MVP et en WOE.^000000
 [Niveau 1] ^777777Dure 20 Secondes^000000
 [Niveau 2] ^777777Dure 25 Secondes^000000
 [Niveau 3] ^777777Dure 30 Secondes^000000
@@ -5740,7 +5812,9 @@ Portée : ^7777779 cases^000000
 Temps de Cast : ^777777Skill lvl secondes^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^777777instannée^000000
-Effet : ^777777Attaque de type télékinétique (version évoluée du Napalm Beat) qui frappe une zone de 3x3 autour de la cible avec de coups que le niveau du Skill est élevé. Les dégâts sont calculés 1 par 1 (1*MATK par coup) et ne sont pas additionnés pour donner un résultat final. A une chance d'infliger Curse à la cible. Les dégâts sont répartis sur tous les ennemis présents dans la zone. 
+Effet : ^777777Attaque de type télékinétique (version évoluée du Napalm Beat) qui frappe une zone de 3x3 autour de la cible avec de coups que le niveau du Skill est élevé. 
+Les dégâts sont calculés 1 par 1 (1*MATK par coup) et ne sont pas additionnés pour donner un résultat final. 
+A une chance d'infliger Curse à la cible. Les dégâts sont répartis sur tous les ennemis présents dans la zone. 
 Il y a (5*skill level)% chance d'infliger le statut Curse.^000000
 #
 HW_SOULDRAIN#
@@ -5782,7 +5856,8 @@ Portée : ^7777779 cases^000000
 Delai entre 2 casts : ^7777772 secondes^000000
 Durée : ^7777774+Skill lvl secondes^000000
 Objet nécéssaire: ^0000ff 1 Blue Gemstone^000000
-Effect: ^777777Augmente fortement la gravité autour de la cible, provoquant ainsi une réduction de l'ASPD, de la vitesse de déplacement et infligeant des dégâts ignorant la DEF toutes les secondes. Pendant la durée du skill vous ne pouvez rien faire (cast, utilisation de potions, bouger,...).
+Effect: ^777777Augmente fortement la gravité autour de la cible, provoquant ainsi une réduction de l'ASPD, de la vitesse de déplacement et infligeant des dégâts ignorant la DEF toutes les secondes. 
+Pendant la durée du skill vous ne pouvez rien faire (cast, utilisation de potions, bouger,...).
 Le malus d'ASPD, et de vitesse de déplacement n'affecte pas les MVP, mais les dégâts ignorant la DEF sont toujours appliqués.
 [Niveau 1] ^777777400 Dégâts/seconde  | -5% ASPD  | 5 secondes | 20 SP^000000 
 [Niveau 2] ^777777600 Dégâts/seconde  | -10% ASPD | 6 secondes | 40 SP^000000
@@ -5800,7 +5875,8 @@ Cible : ^777777Ennemi^000000
 Temps de Cast : ^777777instanné^000000
 Delai entre 2 casts : ^777777Niv 1-5 : 0.8 seconde, Niv 6-10 : 1 seconde^000000
 Combo Time : ^7777771.3 secondes^000000
-Effet : ^777777Après avoir attaqué la cible avec Raging Thrust ou Tiger Knuckle Fist, enchaînez avec ce skill pour infliger des dégâts supplémentaires de (400+100*skill lvl)% ATK en échange de 2 Spirit Spheres. Il est possible d'enchaîner Asura Strike après ce skill, pour peu qu'il vous reste une Spirit Sphere.
+Effet : ^777777Après avoir attaqué la cible avec Raging Thrust ou Tiger Knuckle Fist, enchaînez avec ce skill pour infliger des dégâts supplémentaires de (400+100*skill lvl)% ATK en échange de 2 Spirit Spheres. 
+Il est possible d'enchaîner Asura Strike après ce skill, pour peu qu'il vous reste une Spirit Sphere.
 Plus le niveau du skill est élevé, plus vous faites de dégâts. 2 Spirit Sphere sont nécessaires. Le plus long combo possible est : Raging Trifecta Blow -> Raging Quadruple Blow -> Raging Thrust -> Tiger Knuckle Fist -> Chain Crush Combo -> Asura strike.^000000
 [Niveau 1] ^777777500% ATK, 1 coup^000000
 [Niveau 2] ^777777600% ATK, 1 coup^000000
@@ -5932,7 +6008,9 @@ Temps de Cast : ^777777inconnu^000000
 Delai entre 2 casts : ^777777inconnu^000000
 Durée: ^7777778 secondes^000000
 Objet nécéssaire : ^7777771 Cobweb^000000
-Effet : ^777777Invoque une toile d'araignée sur une zone de 3x3 cases, ce qui empêchera de bouger toute personne prise dedans et réduit son Flee de 50%. Si la toile est touchée par un skill d'élément Fire , elle brûle (disparaît) et la cible recevra 2x les dégâts du skill . Vous ne pouvez invoquer plus de 3 spider webs en même temps.^000000
+Effet : ^777777Invoque une toile d'araignée sur une zone de 3x3 cases, ce qui empêchera de bouger toute personne prise dedans et réduit son Flee de 50%. 
+Si la toile est touchée par un skill d'élément Fire , elle brûle (disparaît) et la cible recevra 2x les dégâts du skill. 
+Vous ne pouvez invoquer plus de 3 spider webs en même temps.^000000
 #
 PF_SOULCHANGE#
 Soul Change
@@ -6150,7 +6228,10 @@ Cible : ^777777Soi-même^000000
 Temps de Cast : ^777777Aucun^000000
 Delai entre 2 casts : ^77777Aucun^000000
 Durée :^7777771 minute^000000
-Description : ^777777Augmente votre vitesse de déplacement de 20% pendant 1 minute. Ce skill ne s'accumule pas avec les autres skills affectant la vitesse de marche. Pour annuler le skill lancez le une seconde fois. Peut annuler un malus de vitesse de déplacement (sans apporter de bonus) mais n'annule pas Decrease Agi ou un statut cursed. Ne peut être utilisé qu'avec un cart équipé.^000000
+Description : ^777777Augmente votre vitesse de déplacement de 20% pendant 1 minute. 
+Ce skill ne s'accumule pas avec les autres skills affectant la vitesse de marche. 
+Pour annuler le skill lancez le une seconde fois. Peut annuler un malus de vitesse de déplacement (sans apporter de bonus) mais n'annule pas Decrease Agi ou un statut cursed. 
+Ne peut être utilisé qu'avec un cart équipé.^000000
 #
 WS_CREATECOIN#
 Create Coins
@@ -6266,8 +6347,12 @@ Cible : ^777777Soi-même^000000
 Temps de Cast : ^777777Aucun^000000
 Delai entre 2 casts : ^777777Aucun^000000
 Durée : ^777777Maintenue^000000
-Description : ^777777Permet de suivre à la trace votre cible en étant caché, votre vitesse de marche est diminuée pour plus de discrétion. Aucun skill de détection ne peut vous dévoiler.
-Vous ne devenez visible que quand vous le décidez ou quand les SP manquent, toutefois des traces de pas peuvent révéler votre position. Par contre si vous rentrez dans une zone où un skill de zone offensif est actif vous êtes dévoilé. Le Stalker ne peut pas attaquer quand le skill est actif. Peut être utilisé en WOE mais coûte alors 5 fois plus de SP. Augmente la STR pendant 30 secondes.^000000
+Description : ^777777Permet de suivre à la trace votre cible en étant caché, votre vitesse de marche est diminuée pour plus de discrétion. 
+Aucun skill de détection ne peut vous dévoiler.
+Vous ne devenez visible que quand vous le décidez ou quand les SP manquent, toutefois des traces de pas peuvent révéler votre position. 
+Par contre si vous rentrez dans une zone où un skill de zone offensif est actif vous êtes dévoilé. 
+Le Stalker ne peut pas attaquer quand le skill est actif. Peut être utilisé en WOE mais coûte alors 5 fois plus de SP. 
+Augmente la STR pendant 30 secondes.^000000
 [Niveau 1] ^777777Vitesse 70%, STR +1^000000
 [Niveau 2] ^777777Vitesse 75%, STR +2^000000
 [Niveau 3] ^777777Vitesse 80%, STR +4^000000
@@ -6804,10 +6889,14 @@ Range : ^7777774 cases^000000
 Temps de Cast : ^7777771 seconde^000000
 Délai entre 2 casts : ^777777Aucun^000000
 Durée : ^777777instannée^000000
-Effet : ^777777Ne peut être utilisé que quand on est Taekwon Boy/Girl. vous ne pourrez plus l'utiliser quand vous changerez de classe (Soul Linker ou Star Knight).
-quand vous l'utilisez, le nom d'un monstre est choisi aléatoirement, si vous tuez 100 fois ce monstre, vous obtenez  1 Point, et vous vous voyez assigné une nouvelle cible au hasard. Si vous utilisez ce skill alors que votre "quota" est à 0% (pas encore de monstre cible tué) il y a 1% de chance de changer de cible (nouvelle cible assignée au hasard). 
-Après avoir gagné un certain nombre de points vous devenez un "Taekwon Ranker" (pas d'effet si vous êtes déjà Star Knight ou Soul Linker). En tant que tel vous pouvez enchaîner de façon illimitée les combos de coups de pieds ("Whirlwind Kick, Round Kick, Axe Kick, Counter Kick ").
-Vous avez toutefois besoin de passer en stance, et une fois le premier coup de pied placé, vous devez alterner vos kicks. Si vous mettez deux fois de suite le même kick, l'effet est stoppé.
+Effet : ^777777Ne peut être utilisé que quand on est Taekwon Boy/Girl. 
+Vous ne pourrez plus l'utiliser quand vous changerez de classe (Soul Linker ou Star Knight).
+quand vous l'utilisez, le nom d'un monstre est choisi aléatoirement, si vous tuez 100 fois ce monstre, vous obtenez  1 Point, et vous vous voyez assigné une nouvelle cible au hasard. 
+Si vous utilisez ce skill alors que votre "quota" est à 0% (pas encore de monstre cible tué) il y a 1% de chance de changer de cible (nouvelle cible assignée au hasard). 
+Après avoir gagné un certain nombre de points vous devenez un "Taekwon Ranker" (pas d'effet si vous êtes déjà Star Knight ou Soul Linker). 
+En tant que tel vous pouvez enchaîner de façon illimitée les combos de coups de pieds (Whirlwind Kick, Round Kick, Axe Kick, Counter Kick).
+Vous avez toutefois besoin de passer en stance, et une fois le premier coup de pied placé, vous devez alterner vos kicks. 
+Si vous mettez deux fois de suite le même kick, l'effet est stoppé.
 Le "Flying Side Kick" ne fait pas partie de ces skills.
 AU lvl 90+ et en étant toujours ranké, vous avez votre MAXHP/SP multiplié par 3, et tout les skills taekwons seront utilisables.^000000
 #
@@ -6839,7 +6928,9 @@ Cible : ^777777Soi-même^000000
 Temps de Cast : ^777777Inconnu^000000
 Délai entre 2 casts : ^777777Inconnu^000000
 Durée : ^777777instannée^000000
-Effet : ^777777Mémorisez de façon permanente une map. Vous pouvez enregistrer une map pour chaque niveau de ce Skill, mais attention, vous ne pourrez pas en changer ! Le jeu vous demande si vous êtes vraiment sûr. Après avoir retenu une map, si vous réutilisez ce skill vous serez téléporté vers la zone correspondante au niveau utilisé.^000000
+Effet : ^777777Mémorise de façon permanente une map. 
+Vous pouvez enregistrer une map pour chaque niveau de ce Skill, mais attention, vous ne pourrez pas en changer ! 
+Le jeu vous demande si vous êtes vraiment sûr. Après avoir retenu une map, si vous réutilisez ce skill vous serez téléporté vers la zone correspondante au niveau utilisé.^000000
 [Niveau 1] ^777777Mémorise la "Place of the Sun" ou vous y téléporte^000000
 [Niveau 2] ^777777Mémorise la "Place of the Moon" ou vous y téléporte^000000
 [Niveau 3] ^777777Mémorise la "Place of the Star" ou vous y téléporte^000000
@@ -6870,7 +6961,8 @@ Range : ^7777771 case^000000
 Temps de Cast : ^777777Inconnu^000000
 Délai entre 2 casts : ^777777Inconnu^000000
 Durée : ^777777Niveau 1 : 10 secondes, Niveau 2 : 20 secondes, Niveau 3 : 60 secondes, ou jusqu'à épuisement des SP^000000
-Effet : ^777777Vous ne pouvez utiliser ce skill que sur la map marquée "Place of the Moon", sur les autres maps le skill ne marchera pas et vous ne perdrez pas de SP en tentant de l'activer. Vous obtenez une barrière offensive de protection qui envoie 100% de votre attaque contre les monstres qui vous attaquent, les repoussant de 2 cases. Sur les joueurs, les dégâts sont appliqués aux SP et il n'y a pas d'effet push back. 
+Effet : ^777777Vous ne pouvez utiliser ce skill que sur la map marquée "Place of the Moon", sur les autres maps le skill ne marchera pas et vous ne perdrez pas de SP en tentant de l'activer. 
+Vous obtenez une barrière offensive de protection qui envoie 100% de votre attaque contre les monstres qui vous attaquent, les repoussant de 2 cases. Sur les joueurs, les dégâts sont appliqués aux SP et il n'y a pas d'effet push back. 
 Chaque coup porté par la barrière vous prends 2 SP, quand vous n'avez plus de SP, la barrière disparaît.^000000
 [Niveau 1] ^777777Dure 10 secondes^000000
 [Niveau 2] ^777777Dure 20 secondes^000000
@@ -6886,7 +6978,8 @@ Range : ^7777771 case^000000
 Temps de Cast : ^777777non connu^000000
 Délai entre 2 casts : ^777777non connu^000000
 Durée : ^777777Niveau 1 : 10 secondes, Niveau 2 : 20 secondes, Niveau 3 : 60 secondes, ou jusqu'à épuisement des SP^000000
-Effet : ^777777Vous ne pouvez utiliser ce skill que sur la map marquée "Place of the Star", sur les autres maps le skill ne marchera pas et vous ne perdrez pas de SP en tentant de l'activer. Vous obtenez une barrière offensive de protection qui envoie 100% de votre attaque contre les monstres qui vous attaquent, les repoussant de 2 cases, sur les joueurs, les dégâts sont appliqués aux SP et il n'y a pas d'effet push back. 
+Effet : ^777777Vous ne pouvez utiliser ce skill que sur la map marquée "Place of the Star", sur les autres maps le skill ne marchera pas et vous ne perdrez pas de SP en tentant de l'activer. 
+Vous obtenez une barrière offensive de protection qui envoie 100% de votre attaque contre les monstres qui vous attaquent, les repoussant de 2 cases, sur les joueurs, les dégâts sont appliqués aux SP et il n'y a pas d'effet push back. 
 Chaque coup porté par la barrière vous prends 2 SP, quand vous n'avez plus de SP, la barrière disparaît.^000000
 [Niveau 1] ^777777Dure 10 secondes^000000
 [Niveau 2] ^777777Dure 20 secondes^000000
@@ -6902,7 +6995,10 @@ Cible: ^777777Soi-même^000000
 Temps de Cast : ^777777Aucun^000000
 Délai entre 2 casts : ^777777Aucun^000000
 Durée: ^77777780*skill lvl secondes^000000
-Effet: ^777777Ne peut être utilisé que sur la map mémorisée "Place of sun" et les "jours du soleil". Si vous tentez de l'utiliser sur une autre map, ou un autre jour, le Skill ne s'activera pas et vous ne perdrez pas de SP. La VIT DEF est augmentée de ((LV+DEX+LUK)/2. Si votre DEF change (changement d'armures, Angelus,...) le skill est annulé.^000000
+Effet: ^777777Ne peut être utilisé que sur la map mémorisée "Place of sun" et les "jours du soleil". 
+Si vous tentez de l'utiliser sur une autre map, ou un autre jour, le Skill ne s'activera pas et vous ne perdrez pas de SP. 
+La VIT DEF est augmentée de ((LV+DEX+LUK)/2. 
+Si votre DEF change (changement d'armures, Angelus,...) le skill est annulé.^000000
 [Niveau 1] ^77777780 secondes^000000
 [Niveau 2] ^777777160 secondes^000000
 [Niveau 3] ^777777240 secondes^000000
@@ -7066,7 +7162,9 @@ Cible : ^777777soi-même^000000
 Temps de Cast : ^777777Aucun^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^777777600 secondes^000000
-Effect : ^777777Vous devez être en mode Spirit (Skill Spirit of Star Gladiator des Soul Linker) pour activer ce skill, autrement vous gaspillerez juste des SP. Ce Skill augmente votre vitesse de déplacement, aucune de vos attaques ne ratera et les dégpats infligés ingoreront la DEF de votre cible. En contrepartie vous perdez 2% de votre MaxHP à chaque fois que vous attaquez un monstre et 8% quand vous attaquez un joueur.
+Effect : ^777777Vous devez être en mode Spirit (Skill Spirit of Star Gladiator des Soul Linker) pour activer ce skill, autrement vous gaspillerez juste des SP. 
+Ce Skill augmente votre vitesse de déplacement, aucune de vos attaques ne ratera et les dégpats infligés ingoreront la DEF de votre cible. 
+En contrepartie vous perdez 2% de votre MaxHP à chaque fois que vous attaquez un monstre et 8% quand vous attaquez un joueur.
 Si, pendant que ce skill est actif, vous attaquez un joueur alors que vous êtes à 20% de votre MaxHP, vous mourrez immédiatement.^000000
 #
 SL_ALCHEMIST#
@@ -7380,7 +7478,10 @@ Portée : ^77777710 cases^000000
 Temps de cast : ^7777775-0.5*Skill lvl seondes (La DEX ne réduit pas)^000000
 Délai entre 2 casts : ^777777Aucun^000000
 Durée : ^7777771800 secondes^000000
-Effet : ^777777Si vous mourez, vous ressuscitez immédiatement avec (10*Skill lvl)% HP. La résurrection annule le Kaizel mais vous profitez de 2 secondes de Kyrie Eleison. Ne fonctionne pas en WoE. Ne peut être utilisé que sur vous-même, votre femme et votre enfant, ou un autre Soul Linker, utilisé sur quelqu'un d'autre vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
+Effet : ^777777Si vous mourez, vous ressuscitez immédiatement avec (10*Skill lvl)% HP. 
+La résurrection annule le Kaizel mais vous profitez de 2 secondes de Kyrie Eleison. 
+Ne fonctionne pas en WoE. 
+Ne peut être utilisé que sur vous-même, votre femme et votre enfant, ou un autre Soul Linker, utilisé sur quelqu'un d'autre vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
 [Niveau 1] ^77777710% HP à la résurrection.^000000
 [Niveau 2] ^77777720% HP à la résurrection.^000000
 [Niveau 3] ^77777730% HP à la résurrection.^000000
@@ -7399,7 +7500,8 @@ Portée : ^77777710 cases^000000
 Temps de cast : ^777777Aucun^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^7777771800 secondes^000000
-Effet : ^777777Pendant l'activation de ce skill, chaque fois que vous recevez un coup (les Skills ne comptent pas), (5*Skill lvl) SP sont prélevés et vous êtes soigné de (200*Skill lvl) HP. Ne peut être utilisé que sur vous-même, votre femme et votre enfant, ou un autre Soul Linker, utilisé sur quelqu'un d'autre vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
+Effet : ^777777Pendant l'activation de ce skill, chaque fois que vous recevez un coup (les Skills ne comptent pas), (5*Skill lvl) SP sont prélevés et vous êtes soigné de (200*Skill lvl) HP. 
+Ne peut être utilisé que sur vous-même, votre femme et votre enfant, ou un autre Soul Linker, utilisé sur quelqu'un d'autre vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
 [Niveau 1] ^7777775 SP prélevés, 200 HP soignés^000000
 [Niveau 2] ^77777710 SP prélevés, 400 HP soignés^000000
 [Niveau 3] ^77777715 SP prélevés, 600 HP soignés^000000
@@ -7418,7 +7520,9 @@ Portée : ^77777710 cases^000000
 Temps de cast : ^7777770.5 seconde^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^777777600 secondes^000000
-Effet : ^777777Vous permet d'éviter complètement UNE attaque ennemie. Après une attaque évitée le skill disparaît. Marche sur tous les skills de joueur, mais sur les sorts de zone frappant plusieurs fois (ex : Storm Gust), seul le premier coup est évité. Sur les monstres seules les attaques normales sont évitées.
+Effet : ^777777Vous permet d'éviter complètement UNE attaque ennemie. 
+Après une attaque évitée le skill disparaît. Marche sur tous les skills de joueur, mais sur les sorts de zone frappant plusieurs fois (ex : Storm Gust), seul le premier coup est évité. 
+Sur les monstres seules les attaques normales sont évitées.
 Ne peut être utilisé que sur vous même, votre femme et votre enfant, utilisé sur quelqu'un d'autre vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
 [Niveau 1] ^77777733% de chances d'éviter^000000
 [Niveau 2] ^77777766% de chances d'éviter^000000
@@ -7448,7 +7552,8 @@ SL_KAINA#
 Kaina
 Niveau maximum : ^7777777^000000
 Type : ^000099Passif^000000
-Effet : ^777777Augmente la régénération de Happy Break de (30+10*Skill lvl)% et le  MaxSP de 30*Skill lvl. Et si votre Base lvl est supérieur à 70, le coût en SP de Estin, Estern et Esma est réduit de (3*Skill lvl)%, si votre base est supérieur à 80, le coût en SP de ces mêmes Skill est réduit de (5*Skill lvl)%, si votre base est supérieur à 90, la réduction est de (7*Skill lvl)%. ^000000
+Effet : ^777777Augmente la régénération de Happy Break de (30+10*Skill lvl)% et le  MaxSP de 30*Skill lvl. 
+Et si votre Base lvl est supérieur à 70, le coût en SP de Estin, Estern et Esma est réduit de (3*Skill lvl)%, si votre base est supérieur à 80, le coût en SP de ces mêmes Skill est réduit de (5*Skill lvl)%, si votre base est supérieur à 90, la réduction est de (7*Skill lvl)%. ^000000
 [Niveau 1] ^777777+40% régénération de Happy Break, +30 MaxSP^000000
 [Niveau 2] ^777777+50% régénération de Happy Break, +60 MaxSP^000000
 [Niveau 3] ^777777+60% régénération de Happy Break, +90 MaxSP^000000
@@ -7468,7 +7573,9 @@ Portée : ^77777710 cases^000000
 Temps de cast : ^7777770.1 seconde ^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^777777instantanée^000000
-Effet : ^777777skill d'attaque magique utilisable uniquement sur les petits monstres. La cible est repoussée de 2 cases. Utilisé contre des monstres autres que petit, il n'y a pas de dégâts mais juste l'effet push back. Au niveau 7 de ce skill, vous pouvez enchaîner avec Esma dans les 3 secondes suivantes.
+Effet : ^777777skill d'attaque magique utilisable uniquement sur les petits monstres. 
+La cible est repoussée de 2 cases. Utilisé contre des monstres autres que petit, il n'y a pas de dégâts mais juste l'effet push back. 
+Au niveau 7 de ce skill, vous pouvez enchaîner avec Esma dans les 3 secondes suivantes.
 Si vous l'utilisez contre un joueur, vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
 [Niveau 1] ^77777710% ATK^000000
 [Niveau 2] ^77777720% ATK^000000
@@ -7489,7 +7596,9 @@ Portée : ^77777710 cases^000000
 Temps de cast : ^7777770.1 seconde^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^777777instantannée^000000
-Effet : ^777777skill d'attaque magique utilisable uniquement sur les monstres de taille moyenne. La cibles est stunnée 2 secondes. Utilisée sur un monstre de taille petite, pas de stun mais juste des dégâts. Au niveau 7 de ce skill, vous pouvez enchaîner avec Esma dans les 3 secondes suivantes.
+Effet : ^777777skill d'attaque magique utilisable uniquement sur les monstres de taille moyenne. 
+La cibles est stunnée 2 secondes. Utilisée sur un monstre de taille petite, pas de stun mais juste des dégâts. 
+Au niveau 7 de ce skill, vous pouvez enchaîner avec Esma dans les 3 secondes suivantes.
 Si vous l'utilisez contre un joueur, vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
 [Niveau 1] ^7777775% ATK^000000
 [Niveau 2] ^77777710% ATK^000000
@@ -7533,7 +7642,8 @@ Temps de cast : ^7777771 seconde ^000000
 Délai entre 2 casts : ^7777770.5 seconde^000000
 Durée : ^777777Skill lvl secondes^000000
 Effet : ^777777Rapetisse le monstre, réduisant ainsi que sa vitesse de déplacement (n'affecte pas l'attribut de taille).
-Utilisé contre un MVP, ce skill dure 5 fois moins longtemps que sur un monstre normal. Si vous recastez Esu sur un monstre déjà victime de ce Skill, vous serez Stun pendant 10 secondes. Si vous l'utilisez contre un joueur, vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
+Utilisé contre un MVP, ce skill dure 5 fois moins longtemps que sur un monstre normal. Si vous recastez Esu sur un monstre déjà victime de ce Skill, vous serez Stun pendant 10 secondes. 
+Si vous l'utilisez contre un joueur, vous êtes immédiatement Stun pendant 0.5 seconde (irréductible).^000000
 #
 SL_SKE#
 Eske
@@ -8087,7 +8197,10 @@ Temps de cast :^777777 Inconnu^000000
 Délai entre 2 casts :^777777 ASPD^000000
 Durée :^777777 Instantanée^000000
 Objet nécéssaire :^777777 1 pièce^000000
-Effet :^777777 Tir remarquable infligeant des dégâts de 500% ATK et Coma (0.1% de chances) à l'ennemi. Ignore les cartes de votre arme et prend seulement en compte l'élement des munitions. Fonctionne seulement contre les monstres de type Demi-Humain (dont les joueurs ?) et Brute. Ne fonctionne pas contre les MVPs.^000000
+Effet :^777777 Tir remarquable infligeant des dégâts de 500% ATK et Coma (0.1% de chances) à l'ennemi. 
+Ignore les cartes de votre arme et prend seulement en compte l'élement des munitions. 
+Fonctionne seulement contre les monstres de type Demi-Humain (dont les joueurs ?) et Brute. 
+Ne fonctionne pas contre les MVPs.^000000
 #
 GS_MADNESSCANCEL#
 Madness Canceller
@@ -8149,7 +8262,10 @@ Temps de cast :^777777 Instantané^000000
 Délai entre 2 casts :^777777 ASPD^000000
 Durée :^777777 Instantanée^000000
 Objet nécéssaire :^777777 une pièce^000000
-Effect :^777777 Utilise une munition et fait une attaque rapide sur un ennemi pour lui infliger stun. Plus vous êtes proche de l'ennemi, plus les chances de Stun augmentent. N'inflige aucun dégât. Les monstres non-agressifs ne répliqueront pas. Vous devez avoir des Handguns ou un Rifle equipé.^000000
+Effect :^777777 Utilise une munition et fait une attaque rapide sur un ennemi pour lui infliger stun. 
+Plus vous êtes proche de l'ennemi, plus les chances de Stun augmentent. N'inflige aucun dégât. 
+Les monstres non-agressifs ne répliqueront pas. 
+Vous devez avoir des Handguns ou un Rifle equipé.^000000
 #
 GS_SINGLEACTION#
 Single Action
@@ -8239,8 +8355,11 @@ Portée :^777777 Portée de l'arme^000000
 Temps de Cast :^777777 Inconnu^000000
 Délai entre 2 casts :^777777 Inconnu^000000
 Durée :^777777 Instantanée^000000
-Effet :^777777 Cible la main de l'adversaire pour lui faire lâcher son arme. Si ce skill est utilisé sur un joueur, vous avez une chance de le déséquiper de son arme et l'empêcher pendant un moment de s'équiper d'une arme (n'importe laquelle). Sur les monstres, leur ATK est réduite de 25% pendant la durée du skill.
-Plus le niveau du skill est élevé, plus il a de chance de fonctionner. Ne fonctionne pas contre les Boss. Vous devez avoir un Handgun ou un Rifle equipé.^000000
+Effet :^777777 Cible la main de l'adversaire pour lui faire lâcher son arme.
+Si ce skill est utilisé sur un joueur, vous avez une chance de le déséquiper de son arme et l'empêcher pendant un moment de s'équiper d'une arme (n'importe laquelle). 
+Sur les monstres, leur ATK est réduite de 25% pendant la durée du skill.
+Plus le niveau du skill est élevé, plus il a de chance de fonctionner. 
+Ne fonctionne pas contre les Boss. Vous devez avoir un Handgun ou un Rifle equipé.^000000
 #
 GS_PIERCINGSHOT#
 Piercing Shot
@@ -8295,7 +8414,8 @@ Portée :^777777 Zone de 7*7 cases^000000
 Temps de Cast :^777777 Instantané^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Durée :^777777 Instantanée^000000
-Effet :^777777 Utilise 10 munitions et attaque tous les ennemis à moins de 7 cases de distance infligeant (50+50*Skill lvl)% ATK dommages par coup. Le nombre de fois que ce skill touche chaque cible est déterminé au hasard (10 fois maximum). Vous devez avoir un Handgun équipé.^000000
+Effet :^777777 Utilise 10 munitions et attaque tous les ennemis à moins de 7 cases de distance infligeant (50+50*Skill lvl)% ATK dommages par coup. 
+Le nombre de fois que ce skill touche chaque cible est déterminé au hasard (10 fois maximum). Vous devez avoir un Handgun équipé.^000000
 [Niveau 1]^777777 100% ATK par coup^000000
 [Niveau 2]^777777 150% ATK par coup^000000
 [Niveau 3]^777777 200% ATK par coup^000000
@@ -8537,9 +8657,11 @@ Portée :^777777 Voir plus bas^000000
 Cast :^777777 Aucun^000000
 Délai :^777777 3 secondes^000000
 Durée :^777777 3 secondes^000000
-Effet :^777777 Retourne un Tatami dans les 4 directions, frappant ainsi les ennemis proches, les repoussant et bloquant les attaques à distance pendant 3 secondes. Quand ils sont touchés par ce Skill, les ennemis sont repoussés de 5 cases et encaissent des dégâts de (100+10*Skill lvl)% ATK.
+Effet :^777777 Retourne un Tatami dans les 4 directions, frappant ainsi les ennemis proches, les repoussant et bloquant les attaques à distance pendant 3 secondes. 
+Quand ils sont touchés par ce Skill, les ennemis sont repoussés de 5 cases et encaissent des dégâts de (100+10*Skill lvl)% ATK.
 La zone affectée augmente en fonction du niveau du Skill, et seule une personne par ligne encaisse les dégâts.
-Le blocage des attaques à distance est simillaire à Pneuma (zone de 3*3 cases), centré sur le caster. Si le caster bouge, cet effet est annulé.^000000
+Le blocage des attaques à distance est simillaire à Pneuma (zone de 3*3 cases), centré sur le caster. 
+Si le caster bouge, cet effet est annulé.^000000
 [Niveau 1]^777777 1 case de portée, 110% ATK^000000
 [Niveau 2]^777777 2 case de portée, 120% ATK^000000
 [Niveau 3]^777777 2 case de portée, 130% ATK^000000
@@ -8602,7 +8724,10 @@ Portée :^777777 Portée de Shadow Jump^000000
 Cast :^777777 Aucun^000000
 Délai :^777777 Aucun^000000
 Durée :^777777 Instantanée^000000
-Effet :^777777 Une combinaison de Shadow Jump et Mist Slash. Vous sautez hors des ténèbres pour infliger de lourds dégâts. Ce skill a un Bonus de CRIT de (25+5*Skill lvl), cependant vous ne pourrez pas voir si vous avez fait un coup critique ou non. Les dégâts infligés sont de (100*Skill lvl)% ATK.
+Effet :^777777 Une combinaison de Shadow Jump et Mist Slash. 
+Vous sautez hors des ténèbres pour infliger de lourds dégâts. 
+Ce skill a un Bonus de CRIT de (25+5*Skill lvl), cependant vous ne pourrez pas voir si vous avez fait un coup critique ou non. 
+Les dégâts infligés sont de (100*Skill lvl)% ATK.
 Tout comme Shadow Jump, Shadow Slash est soumis à des restrictions en WOE, et ne peut que frapper les ennemis à côté de vous.^000000
 [Niveau 1]^777777 100% ATK | +30 CRIT^000000
 [Niveau 2]^777777 200% ATK | +35 CRIT^000000
@@ -8639,7 +8764,9 @@ Cast :^777777 4.5-0.5*Skill lvl (1 seconde minimum) secondes^000000
 Délai :^777777 1 seconde^000000
 Durée :^777777 40+20*Skill lvl secondes^000000
 Objet utilisé :^0000ff 1 Shadow Orb^000000
-Effet :^777777 Crée une illusion à votre image, vous permettant d'esquiver (Skill lvl/2) (arrondi à l'unité supérieure) attaques (mélée ou longue portée). Ne vous protège pas des attaques magiques et vous devez être dans l'état Soul pour utiliser ce Skill. Peut être annulé par Dispell.^000000
+Effet :^777777 Crée une illusion à votre image, vous permettant d'esquiver (Skill lvl/2) (arrondi à l'unité supérieure) attaques (mélée ou longue portée). 
+Ne vous protège pas des attaques magiques et vous devez être dans l'état Soul pour utiliser ce Skill. 
+Peut être annulé par Dispell.^000000
 [Niveau 1]^777777 esquive 1 attaque | dure 60 secondes^000000
 [Niveau 2]^777777 esquive 1 attaque | dure 80 secondes^000000
 [Niveau 3]^777777 esquive 2 attaques | dure 100 secondes^000000
@@ -8877,5 +9004,9 @@ Portée :^777777 Inconnue^000000
 Cast :^777777 Inconnu^000000
 Délai :^777777 Inconnu^000000
 Durée :^777777 Instantanée^000000
-Effect:^777777 Attaque une cible avec tous ce qui vous reste de HP pour provoquer d'énormes dégâts. Plus vous avez de HP en lançant ce Skill, plus les dégâts provoqués seront énormes. Les dégâts finals ne sont pas affectés par les cartes dans votre arme. Cette attaque est une attaque physique de mélée de type Neutral. Après avoir utilisé ce Skill, il ne vous restera que 1 HP.^000000
+Effect:^777777 Attaque une cible avec tous ce qui vous reste de HP pour provoquer d'énormes dégâts. 
+Plus vous avez de HP en lançant ce Skill, plus les dégâts provoqués seront énormes. 
+Les dégâts finals ne sont pas affectés par les cartes dans votre arme. 
+Cette attaque est une attaque physique de mélée de type Neutral. 
+Après avoir utilisé ce Skill, il ne vous restera que 1 HP.^000000
 #
