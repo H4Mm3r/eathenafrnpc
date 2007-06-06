@@ -14,6 +14,7 @@
 //= 1.1 Optimized, fixed a conditional bug [Lupus]
 //= 1.1a Redo back. It wasn't a bug [Lupus]
 //= 1.2 Added Rachel Cool Event Corp. Staff [Playtester]
+//= Traduit pour Agora-Online par Arkana
 //============================================================ 
 
 hugel,88,168,4	script	Cool Event Corp. Staff#hugel	874,{

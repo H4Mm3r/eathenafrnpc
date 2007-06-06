@@ -48,6 +48,7 @@
 //= If new locations are found of this NPC, please report on forums
 //= http://www.eathena.ws/board/index.php?showforum=106
 //= Base level 60 required to vote
+//= Traduit pour Agora-Online par Arkana
 //===== Version History: ====================================
 //= 1.0	Initial release [Evera]
 //= 1.1	SVN release, removed from major town (found true info after research),

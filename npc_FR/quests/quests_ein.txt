@@ -20,6 +20,7 @@
 //= 1.5 Fixed double levelup bug [Lupus]
 //= 1.5.1 Fixed exploit [KarLaeda]
 //= 1.5.2 Updated Shino Quest to leave no grabage vars [Lupus]
+//= Traduit pour Agora-Online par Arkana
 //============================================================ 
 
 

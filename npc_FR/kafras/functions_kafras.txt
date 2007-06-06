@@ -39,6 +39,7 @@
 //=	Need all coords for all guides.. and somehow pass their coords to kafra.
 //=	Removed universal Kafra Pass, added 3 new Kafra Tickets [Lupus]
 //= 5.4b temporary moved "-Guide" from the 1st menu punct [Lupus]
+//= Traduit pour Agora-Online par Arkana
 //============================================================ 
 
 
