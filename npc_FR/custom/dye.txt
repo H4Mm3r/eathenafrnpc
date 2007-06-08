@@ -27,13 +27,12 @@ prontera.gat,174,201,5	script	Stylist	122,{
 	mes "Je peux vous relooker à la pointe de la mode !";
 	mes "Alors, que souhaitez vous changer ?";
 	next;
-	menu "Ma coupe de cheveux",Lstyle,"Ma couleur de cheveux",Lcolor,"La teinte de mes vêtements",Lcloth,"Rien merci",LCancel;
+	menu "Ma couleur de cheveux",Lcolor, "Ma coupe de cheveux",Lstyle, "La teinte de mes vêtements",Lcloth, "Je veux de la haute couture !",Lhautecouture, "Rien merci",LCancel;
 
 	Lstyle:
 		if (#varNbCoupes >= 4) { 
 			mes "[^FF8000Stylist^000000]";
-			mes "Vous avez déjà béneficié de votre forfait 4 coupes de cheveux gratuites.";
-			mes "Essayez plutôt de contacter la styliste d'Alberta Sud maintenant.";
+			mes "Vous avez déjà béneficié de votre forfait 4 coupes de cheveux gratuites. Essayez plutôt de contacter la styliste d'Alberta Sud maintenant";
 			close; 
 		}
 		set @varCoupesRestantes, 4-#varNbCoupes;
@@ -175,7 +174,7 @@ prontera.gat,174,201,5	script	Stylist	122,{
 		mes "[^FF8000Stylist^000000]";
 		mes "Cela vous convient-il ou souhaitez vous un autre style ?";
 		next;
-		menu "C'est bien comme ça, merci",-,"Une autre coupe, s'il vous plait",Lwantcloth;
+		menu "C'est bien comme ça, merci",-,"Une autre couleur, s'il vous plait",Lwantcloth;
 		next;
 		mes "[^FF8000Stylist^000000]";
 		mes "Ca vous va bien~!  Surtout n'hésitez pas à revenir, okay?";
@@ -193,5 +192,91 @@ prontera.gat,174,201,5	script	Stylist	122,{
 		mes "Voici le style numéro^FF9009 "+@look+" ^000000!"; 
 		if(@look == 77) menu "Recommencer depuis le début",Lbrowsecloth,"J'aime ce style",Lstop;
 		if(@look != 77)	menu "Continuer",Lbrowseclothrep,"J'aime ce style",Lstop;
+		
+	Lhautecouture:
+		mes "[^FF8000Stylist^000000]";
+		mes "Voici les nouvelles collections de nos meilleurs créateurs de mode !";
+		
+		query_sql "select numero, collection, createur from couture order by numero", @numeros, @collections$, @createurs$;
+		
+		// les nouvelles collections commencent à 80 et finissent à $@maxCollection, mais on ne peut pas etre sure que tout les numeros sont pris
+		next;
+		menu "Voir le catalogue",Lcatalogue,"Tout essayer",Ltoutessayer;
+
+	Lcatalogue:
+		mes "[^FF8000Stylist^000000]";
+		mes "Super! Choisissez une collection du catalogue et c'est parti !";
+		next;
+		
+		//--------------------------------------------------------------------------------------
+		query_sql "select MAX(numero) from couture", @countCollections;
+		set $@countCollection, @countCollections[0];	
+		
+		// We loop through the list of possible menu items.
+		for( set @i,0; @i<$@countCollection ; set @i,@i+1 )
+		{				
+			set @menulist$[@i],@collections$[@i];				
+			set @menureference[@i],@i;
+		}
+		
+		menu @menulist$[0],-,
+			 @menulist$[1],-,
+			 @menulist$[2],-,
+			 @menulist$[3],-,
+			 @menulist$[4],-,
+			 @menulist$[5],-,
+			 @menulist$[6],-,
+			 @menulist$[7],-,
+			 @menulist$[8],-,
+			 @menulist$[9],-,
+			 @menulist$[10],-,
+			 @menulist$[11],-,
+			 @menulist$[12],-,
+			 @menulist$[13],-,
+			 @menulist$[14],-,
+			 @menulist$[15],-,
+			 @menulist$[16],-,
+			 @menulist$[17],-,
+			 @menulist$[18],-,
+			 @menulist$[19],-,
+			 @menulist$[20],-,
+			 @menulist$[21],-,
+			 @menulist$[22],-,
+			 @menulist$[23],-,
+			 @menulist$[24],-,
+			 @menulist$[25],-,
+			 @menulist$[26],-,
+			 @menulist$[27],-,
+			 @menulist$[28],-,
+			 @menulist$[29],-;
+		
+		//--------------------------------------------------------------------------------------
+		mes "[^FF8000Stylist^000000]";
+		mes "Voici la collection ^FF9009"+@collections$[@menu-1]+" ^000000 conçue par "+@createurs$[@menu-1]; 		
+		setlook 7,@numeros[@menu-1];
+
+		mes "Cela vous convient-il ou souhaitez vous tenter une autre collection ?";
+		next;
+		menu "C'est bien comme ça, merci",-,"Une autre collection, s'il vous plait",Lcatalogue;
+		next;
+		mes "[^FF8000Stylist^000000]";
+		mes "Ca vous va bien~!  Surtout n'hésitez pas à revenir, okay?";
+		close;
+
+	Ltoutessayer:
+		set @look, -1;
+		mes "[^FF8000Stylist^000000]";
+		mes "Okay, on y va~!  Faites moi signe lorsqu'une collection vous plait, okay?";
+		next;
+
+	Ltoutessayerrep:
+		set @look,@look+1;
+	    if (@numeros[@look] == null) menu "Recommencer depuis le début",Ltoutessayer,"J'aime ce style",Lstop;
+		setlook 7,@numeros[@look];
+		mes "Voici la collection ^FF9009"+@collections$[@look]+" ^000000 conçue par "+@createurs$[@look]; 
+		next;
+		menu "Continuer",Ltoutessayerrep,"J'aime cette collection",Lstop;
+		close;		
+		
 }
 
