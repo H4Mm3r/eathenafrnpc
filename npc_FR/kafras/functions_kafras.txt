@@ -91,12 +91,12 @@ function	script	F_Kafra	{
 			break;
 		//Common w/o teleport
 		case 3: 
-			setarray @K_Menu0$[0],"-Sauvegarder","-Utiliser le coffre","-Louer un Pushcart","-Guide","-Vérification des autres informations","-Annuler";
+			setarray @K_Menu0$[0],"-Sauvegarder","-Utiliser le coffre","-Louer une charette","-Guide","-Vérification des autres informations","-Annuler";
 			break;
 		//Case 4 is Einbroch no tele message.
 		//Common w/o save and teleport
 		case 5:
-			setarray @K_Menu0$[0],"-Utiliser le coffre","-Louer un Pushcart","-Vérification des autres informations","-Guide","-Annuler";
+			setarray @K_Menu0$[0],"-Utiliser le coffre","-Louer une charette","-Vérification des autres informations","-Guide","-Annuler";
 			break;
 		//Only storage and other info check
 		case 6:
@@ -104,13 +104,13 @@ function	script	F_Kafra	{
 			break;
 		//Common Kafra
 		default:
-			setarray @K_Menu0$[0],"-Sauvegarder","-Utiliser le coffre","-Utiliser le service de téléportation","-Louer un Pushcart","-Guide","-Vérification des autres informations","-Annuler";
+			setarray @K_Menu0$[0],"-Sauvegarder","-Utiliser le coffre","-Utiliser le service de téléportation","-Louer une charette","-Guide","-Vérification des autres informations","-Annuler";
 			break;
 	}
 	if(getarg(0)==2) {
 	//Guilds Kafra (free Teleport, free Storage, Free Cart)
 		cleararray @K_Menu0$[0],"",7;
-		setarray @K_Menu0$[0],"-Utiliser le coffre","-Utiliser le coffre de Guilde","-Louer un Pushcart","-Utiliser le service de téléportation","-Annuler";
+		setarray @K_Menu0$[0],"-Utiliser le coffre","-Utiliser le coffre de Guilde","-Louer une charette","-Utiliser le service de téléportation","-Annuler";
 	}
 	menu 	@K_Menu0$[0],K_Menu0,@K_Menu0$[1],K_Menu1,@K_Menu0$[2],K_Menu2,
 		@K_Menu0$[3],K_Menu3,@K_Menu0$[4],K_Menu4,@K_Menu0$[5],K_Menu5,
@@ -161,7 +161,7 @@ function	script	F_Kafra	{
 			callfunc "F_KafTele",getarg(0);
 			goto M_Menu;
 		}
-		if (@K_Menu0$[@num] == "-Louer un Pushcart"){
+		if (@K_Menu0$[@num] == "-Louer une charette"){
 			if(callfunc("F_KafCart",getarg(0)) == 1) next;
 			goto M_Menu;
 		}
@@ -303,17 +303,17 @@ function	script	F_KafTele	{
 function	script	F_KafCart	{
 	if(baseClass != Job_Merchant){
 		mes "[Kafra]";
-		mes "Je suis désolée chéri. Le service de location de Pushcart est réservé aux Merchants, Blacksmiths, Whitesmiths, Alchemists et Creators.";
+		mes "Je suis désolée chéri. Le service de location de charettes est réservé aux Merchants, Blacksmiths, Whitesmiths, Alchemists et Creators.";
 		return 1;
 	}
 	if(getskilllv(39)==0){
 		mes "[Kafra]";
-		mes "Je suis désolée mais vous avez besoin du Skill ^0000FF'Pushcart'^000000 pour louer un Pushcart.";
+		mes "Je suis désolée mais vous avez besoin du Skill ^0000FFPushcart^000000 pour louer une charette.";
 		return 1;
 	}
 	if(checkcart() == 1){
 		mes "[Kafra]";
-		mes "Excusez-moi... Mais vous avez déjà un Pushcart";
+		mes "Excusez-moi... Mais vous avez déjà une charette";
 		emotion e_swt;
 		return 1;
 	}
@@ -325,9 +325,9 @@ function	script	F_KafCart	{
 		goto L_FreeCart;
 	}
 	mes "[Kafra]";
-	mes "Le coût d'un Pushcart est de 800 Zenies. Voulez-vous louer un Puschart ?";
+	mes "Le coût d'un Pushcart est de 800 Zenies. Voulez-vous louer une charette ?";
 	next;
-	menu "-Louer un Pushcart.",-, "-Annuler.",M_End;
+	menu "-Louer une charette.",-, "-Annuler.",M_End;
 
 		if(Zeny<800){
 			mes "[Kafra]";
