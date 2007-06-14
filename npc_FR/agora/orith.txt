@@ -1,0 +1,768 @@
+//////////////////////////////////////////////////////////////////////////////
+//       ______                           //                                //
+//      /  _   | ___  ___  _  __ ___      //   type    : eAthena script     //
+//     /  /_|  |/ , |/ , \| '/__|\_ \     //   version : 0.3c               //
+//    /__/  |  |\_  |\___/|_|   /____\    //   author  : Etin               //
+//          |__|\__ /  D e v. T e a m     //   license : GPL                //
+//                                        //                                //
+//////////////////////////////////////////////////////////////////////////////
+//   Description
+//
+//   This script aims to provide a simple way for players to organize
+//   fights between teams within a structured frame.
+//
+//////////////////////////////////////////////////////////////////////////////
+//   Documentation
+//
+//   1. Compatibility
+//      Tested on eAthena SQL SVN 10034
+//
+//   2. Variables
+//
+//      $@OrgaState
+//         Desc:   Global state of the fighting system
+//         Values: 0 : Initial State
+//                 1 : means Warping Fighters
+//                 2 : means Fight is starting
+//                 3 : means Fight is going on
+//                 4 : means Fight is over
+//
+//      $@OrgaConf
+//         Desc:   Configuration flags for the whole system
+//         Values: This is a bit field of flags, here are each bit meaning:
+//                 1 : Check if both parties still exist before going on to next step
+//                 2 : Check if at least one member of each party enters the waiting
+//                     rooms before actually launching the fight
+//                 4 and up : unused
+//
+//      $@OrgaMapFightArray$[]
+//         Desc:   Names of the maps on which the fight may be held
+//         Values: Filled within the OnInit label, i.e. on NPC loading
+//                 Check $@OrgaMapFightNumber for more information.
+//
+//      $@OrgaMapFightXOneArray[]
+//         Desc:   Array containing the X coordinate for Team One
+//         Values: Should contain valid coord. for each corresponding map
+//                 in $@OrgaMapFightArray$[].
+//
+//      $@OrgaMapFightYOneArray[]
+//      $@OrgaMapFightXTwoArray[]
+//      $@OrgaMapFightYTwoArray[]
+//         Desc:   See $@OrgaMapFightXOneArray[].
+//                 Same thing except for Y coord. of Team One, X coord. for Team Two,
+//                 and Y coord. for Team Two.
+//
+//      $@OrgaMapFightNumber
+//         Desc:   Indice in the $@OrgaMapFightArray$ of the chosen map.
+//                 This indice is also used for the coord. on the chosen map
+//                 so the $@OrgaMapFightArray$[], $@OrgaMapFightXOneArray[],
+//                 $@OrgaMapFightYOneArray[], $@OrgaMapFightXTwoArray[] and
+//                 $@OrgaMapFightYTwoArray[] MUST be coherent.
+//                 To settle ideas THE i-th fighting map is represented through
+//                 the 5 (map name, x coord 1, y coord 1, x coord 2, y coord 2)
+//                 values at indice i in these arrays.
+//         Values: From 0 to getarraysize($@OrgaMapFightArray$)-1 included
+//
+//      $@OrgaMapWaitOne$
+//         Desc:   Name of the map for the team one waiting room
+//         Value:  Static, "guild_vs1-2"
+//
+//      $@OrgaMapWaitTwo$
+//         Desc:   Name of the map for the team two waiting room
+//         Value:  Static, "guild_vs1-3"
+//
+//      $@OrgaMode
+//         Desc:   Mode describing in the time the fight is supposed to last
+//         Values: Should be carefully checked, since the range deeply impacts
+//                 the code of the Arbiter NPCs, at least for now.
+//                 Currently may be 0 (2min30 mode) or 1 (5min mode) only.
+//
+//      $@OrgaCounterOne
+//         Desc:   Counter for the number of people from Team One who
+//                 entered the waiting room through the NPC.
+//
+//      $@OrgaCounterTwo
+//         Desc:   Same as $@OrgaCounterOne but for Team Two.
+//
+//   3. Comments
+//
+//      Some refactoring is probably still needed, and maybe a clearer
+//      presentation of the simple functions.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+//    Copyright (C)  2007  Etin (doomweaver@gmail.com), Agora Dev. Team     //
+//                                                                          //
+//    This program is free software; you can redistribute it and/or         //
+//    modify it under the terms of the GNU General Public License           //
+//    as published by the Free Software Foundation; either version 2        //
+//    of the License, or (at your option) any later version.                //
+//                                                                          //
+//    This program is distributed in the hope that it will be useful,       //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
+//    GNU General Public License for more details.                          //
+//                                                                          //
+//    You should have received a copy of the GNU General Public License     //
+//    along with this program; if not, write to the Free Software           //
+//    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,            //
+//    MA  02110-1301, USA.                                                  //
+//////////////////////////////////////////////////////////////////////////////
+
+//	Primary NPC
+//	* Registers Parties
+//	* Enables some options
+//	* Warps fighters to preparation room
+//	* Warps fighters to the fighting room
+//	* Contains Reset label
+//
+prontera.gat,273,241,4	script	Orith	106,{
+
+	// SIMPLE FUNCTION
+	// Resets the whole system
+	//
+	function SF_OrgaReset
+	{
+		stopnpctimer;
+		// state variable of the fighting system
+		set $@OrgaState,0;
+		// mode
+		set $@OrgaMode,0;
+		// IDs of the two parties
+		set $@partyOneID,0;
+		set $@partyTwoID,0;
+		// Counters : number of players entering through Orith for each team
+		set $@OrgaCounterOne,0;
+		set $@OrgaCounterTwo,0;
+		// Set a default fighting map number
+		set $@OrgaMapFightNumber,1;
+		// Wipe the rooms
+		for( set .@i,0; .@i<getarraysize($@OrgaMapFightArray$) ; set .@i,.@i+1 ) {
+			mapwarp $@OrgaMapFightArray$[.@i],
+					$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+			disablenpc "OArbiter"+.@i+"::OrgaArbiter";
+		}
+		mapwarp $@OrgaMapWaitOne$,$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+		mapwarp $@OrgaMapWaitTwo$,$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+		
+		return;
+	}
+
+	// SIMPLE FUNCTION
+	// Checks if the two parties whose IDs are $@partyOneID and $@partyTwoID
+	// exists. Simply returns if this is the case, displays an error message
+	// otherwise and calls OnOrgaReset.
+	//
+	function SF_CheckPartiesExist
+	{
+		if( $@OrgaConf & 1 == 0 ) { // Don't check if flag is not set
+			return;
+		}
+		if((getpartyname($@partyOneID)=="null")
+			|| (getpartyname($@partyTwoID)=="null"))
+		{
+			areaannounce $@OrgaMapOrith$,
+				$@OrgaRespCoordX-$@OrgaZone, $@OrgaRespCoordY-$@OrgaZone,
+				$@OrgaRespCoordX+$@OrgaZone, $@OrgaRespCoordY+$@OrgaZone,
+				"Grrr! Il manque une équipe! Combat annulé!!",2;
+			mapannounce $@OrgaMapWaitOne$,"Il manque une équipe!",bc_blue;
+			mapannounce $@OrgaMapWaitTwo$,"Il manque une équipe!",bc_blue;
+			// handle attached player if any
+			set .@attached, playerattached;
+			if(.@attached !=0) {
+				mes "Quelque chose cloche...";
+				close2;
+			}
+			SF_OrgaReset;
+			end;
+		}
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	// Checks if someone from both teams entered the waiting rooms.
+	// If not, cancels and reset the system.
+	//
+	// NO RID
+	//
+	function SF_CheckNotEntered
+	{
+		if( $@OrgaConf & 2 == 0 ) { // Don't check if flag is not set
+			return;
+		}
+		if( $@OrgaCounterOne==0 || $@OrgaCounterTwo==0 ) {
+			areaannounce $@OrgaMapOrith$,
+						$@OrgaRespCoordX-$@OrgaZone, $@OrgaRespCoordY-$@OrgaZone,
+						$@OrgaRespCoordX+$@OrgaZone, $@OrgaRespCoordY+$@OrgaZone,
+						"Huhu, vous semblez avoir perdu votre courrage...",2;
+			SF_OrgaReset;
+			end;
+		}
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	// Checks if $@OrgaState has the good value to allow or not
+	// entering the waiting rooms. Displays an error message otherwise.
+	//
+	// NEEDS AN ATTACHED RID
+	//
+	function SF_CheckTooLateToWarp
+	{
+		if($@OrgaState!=1) {
+			mes "Arg, trop tard!";
+			close;
+		}
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	//
+	// NEEDS AN ATTACHED RID
+	//
+	function SF_MakeChoiceZone
+	{
+		mes "[Orith]";
+		mes "Quelle zone de combat préférez-vous?";
+		//////////////////////////////////////////////////////////////////
+		// CRITICAL SECTION : You SHOULD have a number of choices
+		// EQUAL to your number of fighting maps
+		//////////////////////////////////////////////////////////////////
+		set .@choice, select("Zone 1","Zone 2","Zone 3","Zone 4","Zone 5","Zone 6");
+		if( $@OrgaState >= 2 ) {
+			mes "Je suis navré mais il est trop tard";
+			mes "pour changer le programme...";
+			mes "La zone par défaut est activée.";
+			close;
+		}
+			
+		set $@OrgaMapFightNumber, .@choice-1;
+		mes "Zone "+($@OrgaMapFightNumber+1);
+		//////////////////////////////////////////////////////////////////
+		// End of CRITICAL SECTION
+		//////////////////////////////////////////////////////////////////
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	//
+	// NEEDS AN ATTACHED RID
+	//
+	function SF_MakeChoiceMode
+	{
+		mes "[Orith]";
+		mes "Quelle durée préférez-vous?";
+		//////////////////////////////////////////////////////////////////
+		// CRITICAL SECTION : You SHOULD have a number of choices
+		// CORRESPONDING to those taken into account in the Arbiter NPCs
+		//////////////////////////////////////////////////////////////////
+		set .@choice, select("mode 1 (2min30)","mode 2 (5min)");
+		if( $@OrgaState >= 2 ) {
+			mes "Je suis navré mais il est trop tard";
+			mes "pour changer le programme...";
+			mes "Le temps par défaut est activé.";
+			close;
+		}
+			
+		set $@OrgaMode, .@choice-1;
+		mes "Mode "+($@OrgaMode+1);
+		//////////////////////////////////////////////////////////////////
+		// End of CRITICAL SECTION
+		//////////////////////////////////////////////////////////////////
+		return;
+	}
+
+	// Interaction starting point
+	mes "[Orith]";
+	
+	// Fight is over, we need a cleanup
+	if($@OrgaState==4) {
+		mes "Un instant, le combat vient de se terminer,";
+		mes "je dois régler quelques détails...";
+		close2;
+		SF_OrgaReset;
+		end;
+	}
+	// Fight is going on
+	if($@OrgaState==2 || $@OrgaState==3) {
+		// The following case MAY happen
+		if( getmapusers($@OrgaMapWaitOne$)
+				+getmapusers($@OrgaMapWaitTwo$)
+				+getmapusers($@OrgaMapFightArray$[$@OrgaMapFightNumber]) == 0) {
+			mes "Un Combat était sensé se dérouler,";
+			mes "mais il n'y a personne dans la salle...";
+			mes "Je dois régler quelques détails et";
+			mes "je suis à vous...";
+			close2;
+			SF_OrgaReset;
+			end;
+		} else {
+			mes "Le Combat se déroule en ce moment.";
+			close;
+		}
+	}
+	// Already ready and the fight will begin
+	if($@OrgaState==1) {
+		SF_CheckPartiesExist;
+		// Member of party One
+		if(getcharid(1)==$@partyOneID) {
+			mes "Préparez-vous...";
+			
+			// If too late, don't warp
+			SF_CheckTooLateToWarp;
+			
+			close2;
+			warp $@OrgaMapWaitOne$,50,50;
+			set $@OrgaCounterOne,$@OrgaCounterOne+1;
+			end;
+		}
+		// Member of party Two
+		if(getcharid(1)==$@partyTwoID) {
+			mes "Préparez-vous...";
+
+			// If too late, don't warp
+			SF_CheckTooLateToWarp;
+
+			close2;
+			warp $@OrgaMapWaitTwo$,50,50;
+			set $@OrgaCounterTwo, $@OrgaCounterTwo+1;
+			end;
+		}
+		mes "Les équipes se sont déjà présentées.";
+		mes "Le combat va commencer...";
+		close;
+	}
+	
+	// no party :s
+	if(getpartyname(getcharid(1))=="null") {
+		mes "Navré mais vous ne possédez pas de groupe.";
+		mes "Seuls les groupes peuvent";
+		mes "participer à ces combats.";
+		close;
+	}
+	
+	// First Party
+	if($@partyOneID==0) {
+		mes "Bonjour.";
+		mes "Souhaitez-vous que j'organise un combat pour vous?";
+		if(select("Oui","Non")==1) {
+			if( $@PartyOneID!=0 ) { // check if someone has already confirmed
+				mes "Un groupe a confirmé avant vous.";
+				mes "Revenez me voir si vous souhaitez";
+				mes "l'affronter";
+				close;
+			}
+			// else it's ok, register this first team
+			mes "Bien, il reste à attendre vos adversaires...";
+			set $@partyOneID,getcharid(1);
+			stopnpctimer;
+			initnpctimer;
+			announce "L'équipe "+getpartyname($@partyOneID)+" vient de se présenter!",2;
+			next;
+			
+			// Set some options : Fighting Zone choice			
+			SF_MakeChoiceZone;
+			next;
+
+			// Set some more options : Fighting Time choice
+			SF_MakeChoiceMode;
+
+		} else {
+			mes "Non?";
+			mes "Bonne journée dans ce cas.";
+		}
+		close;
+	}
+	// First Party - second visit
+	if($@partyOneID==getcharid(1)) {
+		mes "Votre groupe organise déjà le combat.";
+		mes "Il vous faut attendre des adversaires.";
+		close;
+	}
+	// Second Party
+	if($@partyTwoID==0) {
+		mes "Bonjour.";
+		mes "Un groupe a déjà demandé à organiser un combat,";
+		mes "souhaitez-vous y participer?";
+		if(select("Oui","Non")==1) {
+			mes "Bien, dans ce cas le combat va pouvoir commencer.";
+			mes "Préparez-vous.";
+			close2;
+			if( $@OrgaState==0 ) {
+				setnpctimer 60001;
+				set $@partyTwoID,getcharid(1);
+				set $@OrgaState,1;
+				announce "L'équipe "+getpartyname($@partyTwoID)+" relève le défi.",2;
+				announce "Combattantes et combattants des deux équipes, venez me voir!",2;
+			}
+			end;
+		} else {
+			mes "Mieux vaut être trop prudent, hein.";
+			mes "Au revoir...";
+		}
+		close;
+	}
+	close;
+	// End of Primary Interaction
+	
+	OnTimer90000:
+		// enable the chosen fighting room with its arbiter
+		enablenpc "OArbiter"+($@OrgaMapFightNumber)+"::OrgaArbiter";
+		// warp teams
+		mapwarp $@OrgaMapWaitOne$,
+				$@OrgaMapFightArray$[$@OrgaMapFightNumber],
+				$@OrgaMapFightXOneArray[$@OrgaMapFightNumber],
+				$@OrgaMapFightYOneArray[$@OrgaMapFightNumber];
+		mapwarp $@OrgaMapWaitTwo$,
+				$@OrgaMapFightArray$[$@OrgaMapFightNumber],
+				$@OrgaMapFightXTwoArray[$@OrgaMapFightNumber],
+				$@OrgaMapFightYTwoArray[$@OrgaMapFightNumber];
+		stopnpctimer;
+		end;
+		
+	OnTimer85000:
+		// Safety check : do the parties still exist?
+		SF_CheckPartiesExist;
+		
+		// Check if at least somenone from each team entered
+		SF_CheckNotEntered;
+		
+		set $@OrgaState,2;
+		areaannounce $@OrgaMapOrith$,
+					$@OrgaRespCoordX-$@OrgaZone, $@OrgaRespCoordY-$@OrgaZone,
+					$@OrgaRespCoordX+$@OrgaZone, $@OrgaRespCoordY+$@OrgaZone,
+					"Plus personne ne peut entrer, le combat va commencer!",2;
+		mapannounce $@OrgaMapWaitOne$,"Warp dans 5 secondes!",2;
+		mapannounce $@OrgaMapWaitTwo$,"Warp dans 5 secondes!",2;
+		
+		end;
+		
+	OnTimer60000:
+		// Reset
+		if( $@OrgaState==0 ) {
+			areaannounce $@OrgaMapOrith$,
+				$@OrgaRespCoordX-$@OrgaZone, $@OrgaRespCoordY-$@OrgaZone,
+				$@OrgaRespCoordX+$@OrgaZone, $@OrgaRespCoordY+$@OrgaZone,
+				"Personne ne semble vouloir relever le défi...",2;
+			SF_OrgaReset;
+		}
+		end;
+	
+	OnOrgaReset:
+		SF_OrgaReset;
+		end;
+	
+	OnInit:
+		// Dynamic configuration initialization : Flags
+		// set $@OrgaConf, (1 | 2);
+		set $@OrgaConf, 0;
+		// Set the Maps
+		// Waiting Rooms
+		set $@OrgaMapWaitOne$, "guild_vs1-2";
+		set $@OrgaMapWaitTwo$, "guild_vs1-3";
+		// Fight Maps
+		set $@OrgaMapFightArray$[0],"guild_vs1-1";
+		set $@OrgaMapFightXOneArray[0],10;
+		set $@OrgaMapFightYOneArray[0],50;
+		set $@OrgaMapFightXTwoArray[0],89;
+		set $@OrgaMapFightYTwoArray[0],50;
+		set $@OrgaMapFightArray$[1],"guild_vs2-1";
+		set $@OrgaMapFightXOneArray[1],10;
+		set $@OrgaMapFightYOneArray[1],50;
+		set $@OrgaMapFightXTwoArray[1],89;
+		set $@OrgaMapFightYTwoArray[1],50;
+		set $@OrgaMapFightArray$[2],"guild_vs3";
+		set $@OrgaMapFightXOneArray[2],13;
+		set $@OrgaMapFightYOneArray[2],50;
+		set $@OrgaMapFightXTwoArray[2],86;
+		set $@OrgaMapFightYTwoArray[2],50;
+		set $@OrgaMapFightArray$[3],"guild_vs4";
+		set $@OrgaMapFightXOneArray[3],10;
+		set $@OrgaMapFightYOneArray[3],50;
+		set $@OrgaMapFightXTwoArray[3],89;
+		set $@OrgaMapFightYTwoArray[3],50;
+		set $@OrgaMapFightArray$[4],"guild_vs5";
+		set $@OrgaMapFightXOneArray[4],21;
+		set $@OrgaMapFightYOneArray[4],49;
+		set $@OrgaMapFightXTwoArray[4],79;
+		set $@OrgaMapFightYTwoArray[4],49;
+		set $@OrgaMapFightArray$[5],"pvp_2vs2";
+		set $@OrgaMapFightXOneArray[5],16;
+		set $@OrgaMapFightYOneArray[5],62;
+		set $@OrgaMapFightXTwoArray[5],63;
+		set $@OrgaMapFightYTwoArray[5],16;
+		// Orith's Map
+		set $@OrgaMapOrith$, "prontera";
+		// Coord. for the end-of-fight warp
+		set $@OrgaRespCoordX,268;
+		set $@OrgaRespCoordY,241;
+		
+		// Fight maps' flags
+		for( set .@i,0; .@i<getarraysize($@OrgaMapFightArray$) ; set .@i,.@i+1 ) {
+			// try to clean
+			removemapflag $@OrgaMapFightArray$[.@i],mf_gvg; // remove GvG/WoE behaviour
+			removemapflag $@OrgaMapFightArray$[.@i],mf_gvg_castle;
+			removemapflag $@OrgaMapFightArray$[.@i],mf_gvg_noparty;
+			removemapflag $@OrgaMapFightArray$[.@i],mf_pvp_noparty;
+			// flags
+			setmapflag $@OrgaMapFightArray$[.@i],mf_partylock; // Lock party changes
+			setmapflag $@OrgaMapFightArray$[.@i],mf_nopenalty; // No exp penalty upon death
+			setmapflag $@OrgaMapFightArray$[.@i],mf_pvp_noguild; // ignore guilds
+			setmapflag $@OrgaMapFightArray$[.@i],mf_noteleport;
+			setmapflag $@OrgaMapFightArray$[.@i],mf_nowarpto; // should disable Urgent Call
+			setmapflag $@OrgaMapFightArray$[.@i],mf_nobranch;
+			setmapflag $@OrgaMapFightArray$[.@i],mf_novending;
+			// deco/reco respawn
+			setmapflagnosave $@OrgaMapFightArray$[.@i],
+								$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+		}
+		// Waiting rooms' flags
+		setmapflag $@OrgaMapWaitOne$,mf_partylock;
+		setmapflag $@OrgaMapWaitTwo$,mf_partylock;
+		setmapflag $@OrgaMapWaitOne$,mf_nowarpto;
+		setmapflag $@OrgaMapWaitTwo$,mf_nowarpto;
+		setmapflagnosave $@OrgaMapWaitOne$,$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+		setmapflagnosave $@OrgaMapWaitTwo$,$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+
+		// Distance around the respawn point within which players will hear the NPC
+		set $@OrgaZone,20;
+		SF_OrgaReset;
+		end;
+}
+
+//
+// Auxiliary NPC
+// Provides an interface so that GM may configure some options
+// and safety checks directly In Game.
+//
+// Manipulates $@OrgaConf bit field
+//
+prontera.gat,273,251,5	script	#OrgaKuzu	730,1,1{
+
+	// SIMPLE FUNCTION
+	// Provides a menu to configure some checks and options
+	// in the system
+	//
+	function SF_ConfMenu
+	{
+		mes "[Kuzu ~ GM Interface]";
+		
+		mes "Que souhaitez-vous?";
+		set .@choice, select("Config.","Réinit.","Examiner");
+		if( .@choice == 1) {
+
+			mes "Configuration...";
+			next;
+			
+			mes "[Kuzu ~ GM Interface]";
+			mes "Vérifier l'existence des groupes?";
+			mes "Actuellement :";
+			if( ($@OrgaConf & 1) == 0 ) { mes "Non"; }
+			else { mes "Oui"; }
+			if( select("Oui","Non")==1) {
+				set $@OrgaConf, ($@OrgaConf | 1);
+				mes "-> Oui";
+			} else {
+				set $@OrgaConf, ($@OrgaConf - ($@OrgaConf & 1));
+				mes "-> Non";
+			}
+			next;
+			
+			mes "[Kuzu ~ GM Interface]";
+			mes "Vérifier qu'au moins une personne";
+			mes "de chaque groupe entre avant de";
+			mes "lancer un combat?";
+			mes "Actuellement :";
+			if( ($@OrgaConf & 2) == 0 ) { mes "Non"; }
+			else { mes "Oui"; }
+			if( select("Oui","Non")==1) {
+				set $@OrgaConf, ($@OrgaConf | 2);
+				mes "-> Oui";
+			} else {
+				set $@OrgaConf, ($@OrgaConf - ($@OrgaConf & 2));
+				mes "-> Non";
+			}
+			next;
+			
+			mes "[Kuzu ~ GM Interface]";
+			mes "Configuration effectuée.";
+
+		} else if( .@choice == 2 ) {
+		
+			mes "Réinitialisation...";
+			next;
+			
+			donpcevent "Orith::OnOrgaReset";
+			
+			mes "[Kuzu ~ GM Interface]";
+			mes "Système réinitialisé.";
+			
+		} else {
+		
+			mes "Examen...";
+			next;
+			
+			mes "[Kuzu ~ GM Interface]";
+			mes "OrgaState == "+$@OrgaState;
+			mes "OrgaConf == "+$@OrgaConf;
+			
+			next;
+		
+		}
+		mes "Bonne journée.";
+		return;
+	}
+	
+	stopnpctimer;
+	hideonnpc "#OrgaKuzu";
+	// GM entry point : dynamic configuration
+	if( getgmlevel() >= 5 ) {
+		SF_ConfMenu;
+	} else {
+		mes "[Kuzu]";
+		mes "Orith organise des combats pour";
+		mes "les plus grands combattants de";
+		mes "Midgard vous savez...";
+		mes "Faites attention à ne pas vous";
+		mes "blesser...";
+	}
+	
+	close;
+	
+	OnTimer15000:
+		hideonnpc "#OrgaKuzu";
+		stopnpctimer;
+		end;
+	
+	OnTouch:
+		hideoffnpc "#OrgaKuzu";
+		stopnpctimer;
+		initnpctimer;
+		end;
+		
+	OnInit:
+		hideonnpc "#OrgaKuzu";
+		end;
+
+}
+
+
+//
+//	Fight Arbiter NPC
+//	* Welcomes players warped here
+//	* Starts PvP mode after a delay once the first character has entered the room
+//	* Warps players back near the primary NPC when fight is over
+//
+guild_vs1-1.gat,50,50,4	script	OArbiter0::OrgaArbiter	-1,100,100{
+
+	// SIMPLE FUNCTION
+	//
+	function SF_CleanUp
+	{
+		stopnpctimer;
+		mapwarp $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+				$@OrgaMapOrith$,$@OrgaRespCoordX,$@OrgaRespCoordY;
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	//
+	function SF_EndOfFight
+	{
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"Le combat est terminé!",2;
+		pvpoff $@OrgaMapFightArray$[$@OrgaMapFightNumber];
+		set $@OrgaState,4;
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	//
+	function SF_TenSecLeft
+	{
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"Le combat s'achève dans 10 secondes!",2;
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	//
+	function SF_OneMinLeft
+	{
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"Encore 1 minute!",2;
+		return;
+	}
+
+	close;
+	
+	OnTimer309000: // 5min mode
+		SF_CleanUp;
+		end;
+		
+	OnTimer304000: // 5min mode
+		SF_EndOfFight;
+		end;
+		
+	OnTimer294000: // 5min mode
+		SF_TenSecLeft;
+		end;
+	
+	OnTimer244000: // 5min mode
+		SF_OneMinLeft;
+		end;
+	
+	OnTimer159000: // 2min30 mode
+		if( $@OrgaMode==0 )	SF_CleanUp;
+		end;
+
+	OnTimer154000: // 2min30 mode
+		if( $@OrgaMode==0 )	SF_EndOfFight;
+		end;
+		
+	OnTimer144000: // 2min30 mode
+		if( $@OrgaMode==0 ) SF_TenSecLeft;
+		end;
+		
+	Ontimer94000: // 2min30 mode
+		if( $@OrgaMode==0 ) SF_OneMinLeft;
+		end;
+	
+	OnTimer4000:
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"Que le combat commence!",2;
+		pvpon $@OrgaMapFightArray$[$@OrgaMapFightNumber];
+		end;
+		
+	OnTimer3000:
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"1",2;
+		end;
+		
+	OnTimer2000:
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"2",2;
+		end;
+		
+	OnTimer1000:
+		mapannounce $@OrgaMapFightArray$[$@OrgaMapFightNumber],
+					"3",2;
+		end;
+	
+	OnTouch:
+		if($@OrgaState==2) {
+			set $@OrgaState,3;
+			stopnpctimer;
+			initnpctimer;
+		}
+		end;
+
+}
+
+// duplicate Arbiters
+guild_vs2-1.gat,50,50,4	duplicate(OrgaArbiter)	OArbiter1	-1,100,100
+guild_vs3.gat,50,50,4	duplicate(OrgaArbiter)	OArbiter2	-1,100,100
+guild_vs4.gat,50,50,4	duplicate(OrgaArbiter)	OArbiter3	-1,100,100
+guild_vs5.gat,50,50,4	duplicate(OrgaArbiter)	OArbiter4	-1,100,100
+pvp_2vs2.gat,39,44,4	duplicate(OrgaArbiter)	OArbiter5	-1,100,100

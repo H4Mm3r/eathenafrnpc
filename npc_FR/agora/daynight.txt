@@ -1,0 +1,421 @@
+//////////////////////////////////////////////////////////////////////////////
+//       ______                           //                                //
+//      /  _   | ___  ___  _  __ ___      //   type    : eAthena script     //
+//     /  /_|  |/ , |/ , \| '/__|\_ \     //   version : 0.1                //
+//    /__/  |  |\_  |\___/|_|   /____\    //   author  : Etin               //
+//          |__|\__ /  D e v. T e a m     //   license : GPL                //
+//                                        //                                //
+//////////////////////////////////////////////////////////////////////////////
+//   Description
+//
+//   This script aims to provide a simple day/night scheduler with
+//	yearly variations of day and night times.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+//    Copyright (C)  2007  Etin (doomweaver@gmail.com), Agora Dev. Team     //
+//                                                                          //
+//    This program is free software; you can redistribute it and/or         //
+//    modify it under the terms of the GNU General Public License           //
+//    as published by the Free Software Foundation; either version 2        //
+//    of the License, or (at your option) any later version.                //
+//                                                                          //
+//    This program is distributed in the hope that it will be useful,       //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
+//    GNU General Public License for more details.                          //
+//                                                                          //
+//    You should have received a copy of the GNU General Public License     //
+//    along with this program; if not, write to the Free Software           //
+//    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,            //
+//    MA  02110-1301, USA.                                                  //
+//////////////////////////////////////////////////////////////////////////////
+
+// The Day/Night Scheduler NPC
+// Invisible.
+//
+prontera.gat,267,239,0	script	#DayNight	111,{
+
+	// SIMPLE FUNCTION
+	// Computes the new offset for the upcoming day
+	//
+	function SF_SetNextOffset
+	{
+		if( $@YoruSimWS >= 0 && $@YoruSimWS <= ($@YoruSimDPY/2) ) {
+			// Le solstice d'hiver est dans la premiere moitié de l'année
+			if( $@YoruSimCurrentDay >= 0 && $@YoruSimCurrentDay <=$@YoruSimWS ) {
+				/// announce "x",bc_all;
+				// On est dans la diminution du jour vers le solstice d'hiver
+				set $@YoruOffset, (($@YoruSimWS-$@YoruSimCurrentDay)*$@YoruAmpli)/$@YoruSimDPY;
+			} else if( $@YoruSimCurrentDay > $@YoruSimWS && $@YoruSimCurrentDay <= $@YoruSimSS ) {
+				/// announce "y",bc_all;
+				// On est dans l'augmentation du jour vers le solstice d'été
+				set $@YoruOffset, (($@YoruSimCurrentDay-$@YoruSimWS)*$@YoruAmpli)/$@YoruSimDPY;
+			} else {
+				/// announce "z",bc_all;
+				// On est dans la diminution du jour après le solsitce d'été
+				set $@YoruOffset, $@YoruAmpli/2-(($@YoruSimCurrentDay-$@YoruSimSS)*$@YoruAmpli)/$@YoruSimDPY;
+			}
+		} else {
+			// Le solstice d'été est dans la premiere moitié de l'année
+			if( $@YoruSimCurrentDay >= 0 && $@YoruSimCurrentDay <=$@YoruSimSS ) {
+				/// announce "a",bc_all;
+				// On est dans l'augmentation du jour vers le solstice d'été
+				set $@YoruOffset, $@YoruAmpli/2-(($@YoruSimSS-$@YoruSimCurrentDay)*$@YoruAmpli)/$@YoruSimDPY;
+			} else if( $@YoruSimCurrentDay > $@YoruSimSS && $@YoruSimCurrentDay <= $@YoruSimWS ) {
+				/// announce "b",bc_all;
+				// On est dans la diminution du jour vers le solstice d'hiver
+				set $@YoruOffset, $@YoruAmpli/2-(($@YoruSimCurrentDay-$@YoruSimSS)*$@YoruAmpli)/$@YoruSimDPY;
+			} else {
+				/// announce "c",bc_all;
+				// On est dans l'augmentation du jour après le solstice d'hiver
+				set $@YoruOffset, (($@YoruSimCurrentDay-$@YoruSimWS)*$@YoruAmpli)/$@YoruSimDPY;
+			}
+		}
+		return;
+	}
+
+	// SIMPLE FUNCTION
+	// Performs checks and actions needed when going on to a new pTick
+	//
+	function SF_pTick
+	{
+		if($@pTick == $@YoruSimTPD/2+$@YoruMinMidTick/2+$@YoruOffset) {
+			// La nuit tombe
+			if( $@YoruRunning==1 ) night;
+		} else if($@pTick == $@YoruSimTPD/2-$@YoruMinMidTick/2-$@YoruOffset) {
+			// Le jour se leve
+			if( $@YoruRunning==1 ) day;
+			
+			if( $@YoruVerbose > 0 ) {
+				set .@DayTotalSecs, ($@YoruMinMidTick+2*$@YoruOffset)*$@YoruSimTick;
+				set .@DayHours, .@DayTotalSecs/3600;
+				set .@DayMins, (.@DayTotalSecs - .@DayHours*3600)/60;
+				announce "Le soleil se lève. Il se couchera dans "
+						+.@DayHours+"h "
+						+.@DayMins+"min",
+						bc_all;
+			}
+		}
+		if( $@pTick >= $@YoruSimTPD ) {
+			// Arrive durant la nuit, correspond à un pseudo minuit : on passe au jour suivant
+			set $@pTick, 0;
+			set $@YoruSimCurrentDay, $@YoruSimCurrentDay+1;
+			// Si l'année est finie
+			if( $@YoruSimCurrentDay == $@YoruSimDPY )
+				set $@YoruSimCurrentDay, 0;
+			// On calcule l'offset pour ce nouveau jour
+			SF_SetNextOffset();
+		}
+		return;
+	}
+	
+	end;
+
+	// Le vrai pTick correspond à ce timer
+	OnTimer10000:
+		// Hop, pTick suivant!
+		set $@pTick, $@pTick+1;
+		// Faire tout ce qu'il y'a à faire
+		SF_pTick();
+		// Relancer le timer
+		stopnpctimer;
+		initnpctimer;
+		end;
+	
+	// Initialisation, au chargement du script
+	OnInit:
+		set $@YoruRealDPY, 365; 	// Nombre de jours dans l'année normale (on va ignorer les années bissextiles)
+		set $@YoruRealHPD, 24; 		// Nombre d'heures par cycle de jour réel
+		set $@YoruSimHPD, 5;		// Nombre d'heures par cycle de jour que l'on veut simuler
+		set $@YoruSimDPY, ($@YoruRealDPY*$@YoruRealHPD) / $@YoruSimHPD; // Nombre de jours simulés induit
+		set $@YoruSimTick, 10; 		// pseudo tick, appelé, en secondes, doit correspondre au pTick timer
+		set $@YoruSimTPD, $@YoruSimHPD * 60 * (60/$@YoruSimTick); // Nombre de pTicks par jour simulé
+		set $@YoruSimWS, 24*350/5; // Solstice d'Hiver, en jours simulés
+		if( $@YoruSimWS >= 0 && $@YoruSimWS <= $@YoruSimDPY/2 ) { // Calcul du Solstice d'Ete
+			set $@YoruSimSS, $@YoruSimWS + $@YoruSimDPY/2;
+		} else {
+			set $@YoruSimSS, $@YoruSimWS - $@YoruSimDPY/2;
+		}
+		set $@YoruMinMidTick, $@YoruSimTPD/2; 	// Durée minimale de temps de jour, en pTicks
+		set $@YoruAmpli,$@YoruSimTPD/3;			// Amplitude pour la variation de la durée du jour, en pTicks
+		// Approximation du jour simulé de démarrage en fonction du jour de la machine
+		set $@YoruSimCurrentDay, (gettime(8)*$@YoruSimDPY)/$@YoruRealDPY +(gettime(3)*$@YoruSimDPY)/(24*$@YoruRealDPY);
+		SF_SetNextOffset();						// Calcul de l'offset pour le premier passage
+		set $@YoruRunning, 1;					// Changements jours/nuits effectifs
+		initnpctimer;							// On démarre le système!
+		end;
+}
+
+// 	The Assistant NPC
+//	Used to set variables and parameters at run time.
+//
+prontera.gat,264,238,0	script	#Yoru	111,1,1{
+	
+	// SIMPLE FUNCTION
+	function SF_YoruStart
+	{
+		if( $@YoruRunning == 0 ) {
+			set $@YoruRunning, 1;
+			stopnpctimer;
+			initnpctimer;
+			set .@attached, playerattached;
+			if(.@attached !=0) {
+				mes "Activation de Yoru.";
+				close2;
+			}
+		} else {
+			set .@attached, playerattached;
+			if(.@attached !=0) {
+				mes "Yoru est déjà activé.";
+				close2;
+			}
+		}
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	function SF_YoruStop
+	{
+		if( $@YoruRunning == 1 ) {
+			set $@YoruRunning, 0;
+			set .@attached, playerattached;
+			if(.@attached !=0) {
+				mes "Arrêt de Yoru.";
+				close2;
+			}
+		} else {
+			set .@attached, playerattached;
+			if(.@attached !=0) {
+				mes "Yoru est déjà arrêté.";
+				close2;
+			}
+		}
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuStartStop
+	{
+		if( $@YoruRunning == 1 )
+		{
+			mes "Arrêter Yoru?";
+			if(select("Oui","Non")==1)	{
+				SF_YoruStop();
+				end;
+			} else {
+				mes "Non.";
+			}
+		} else {
+			mes "Lancer Yoru?";
+			if(select("Oui","Non")==1)	{
+				SF_YoruStart();
+				end;
+			} else {
+				mes "Non.";
+			}
+		}
+		return;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuHPD
+	{
+		mes "Entrez le nombre d'heures par jour:";
+		input .@HPD;
+		if( ($@YoruRealDPY*$@YoruRealHPD) % .@HPD != 0 ) {
+			mes "Attention, le nombre d'heures par jour ne divise pas "+$@YoruRealDPY*$@YoruRealHPD+".";
+		}
+		set $@YoruSimHPD, .@HPD;
+		set .@HPD, 0;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuWS
+	{
+		mes "Entrez le numéro du jour le plus court:";
+		input .@WS;
+		if( .@WS < 0 || .@WS > $@YoruSimDPY ) {
+			mes "Erreur, doit être dans [0,"+$@YoruSimDPY-1+"].";
+		} else {
+			set $@YoruSimWS, .@WS;
+			if( $@YoruSimWS >= 0 && $@YoruSimWS <= $@YoruSimDPY/2 ) {
+				set $@YoruSimSS, $@YoruSimWS + $@YoruSimDPY/2;
+			} else {
+				set $@YoruSimSS, $@YoruSimWS - $@YoruSimDPY/2;
+			}
+		}
+		set .@WS, 0;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuCurrent
+	{
+		mes "Entrez le numéro du jour actuel:";
+		input .@Cur;
+		if( .@Cur < 0 || .@Cur > $@YoruSimDPY ) {
+			mes "Erreur, doit être dans [0,"+$@YoruSimDPY-1+"].";
+		} else {
+			set $@YoruSimCurrentDay, .@Cur;
+		}
+		set .@Cur, 0;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuMinMid
+	{
+		mes "Entrez la durée minimale d'un jour, en pTick:";
+		mes "Rappel, un pTick vaut "+$@YoruSimTick+" secondes.";
+		mes "Compris entre 0 et "+$@YoruSimTPD+".";
+		input .@MinMid;
+		if( .@MinMid < 0 || .@MinMid > $@YoruSimTPD ) {
+			mes "Erreur, valeur invalide.";
+		} else {
+			set $@YoruMinMidTick, .@MinMid;
+		}
+		set .@MinMid, 0;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuAmpli
+	{
+		mes "Entrez l'amplitude de variation de la durée d'une journée.";
+		mes "L'amplitude sera le 1/n-ème de la duree d'un cycle jour/nuit.";
+		input .@Ampli;
+		if( .@Ampli == 0 ) {
+			mes "Erreur, division par 0...";
+		} else if( $@YoruMinMidTick+($@YoruSimTPD/.@Ampli) > $@YoruSimTPD ) {
+			mes "Erreur, amplitude trop grande.";
+		} else {
+			set $@YoruAmpli, $@YoruSimTPD/.@Ampli;
+		}
+		set .@Ampli, 0;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuVerbose
+	{
+		mes "Mode verbeux?";
+		mes "Actuellement:";
+		if( $@YoruVerbose==0 ) 	mes "Non.";
+		else 					mes "Oui.";
+		if( select("Oui","Non")==1 ) {
+			set $@YoruVerbose, 1;
+			mes "-> Oui.";
+		} else {
+			set $@YoruVerbose, 0;
+			mes "-> Non.";
+		}
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuViewConf
+	{
+		mes "Heures/j: "+$@YoruSimHPD;
+		mes "Nombre de jours: "+$@YoruSimDPY;
+		mes "Jour courant: "+$@YoruSimCurrentDay;
+		mes "Jour le plus court: "+$@YoruSimWS;
+		mes "Jour le plus long: "+$@YoruSimSS;
+		mes "Durée cycle jour/nuit: "+$@YoruSimTPD+" pTicks";
+		mes "Durée mini mode jour: "+$@YoruMinMidTick+" pTicks";
+		mes "Amplitude: "+$@YoruAmpli+" pTicks";
+		mes "Durée d'un pTick: "+$@YoruSimTick+" sec";
+		mes "Verbosité: "+$@YoruVerbose;
+	}
+	
+	// SIMPLE FUNCTION
+	// Requires an ATTACHED RID
+	function SF_DisplayMenuParam
+	{
+		set .@choiceb, select(	"Nombre d'heures/j",
+								"Jour le plus court",
+								"Jour courant",
+								"Durée mini /jour",
+								"Amplitude",
+								"Verbosité",
+								"Voir la config." );
+		switch(.@choiceb) {
+			case 1:
+				SF_DisplayMenuHPD();
+				break;
+			case 2:
+				SF_DisplayMenuWS();
+				break;
+			case 3:
+				SF_DisplayMenuCurrent();
+				break;
+			case 4:
+				SF_DisplayMenuMinMid();
+				break;
+			case 5:
+				SF_DisplayMenuAmpli();
+				break;
+			case 6:
+				SF_DisplayMenuVerbose();
+				break;
+			case 7:
+				SF_DisplayMenuViewConf();
+				break;
+		}
+		
+		set .@choiceb, 0;
+		return;
+	}
+	
+	close;
+
+	OnTouch:
+		if( getgmlevel()<5 ) {
+			end;
+		}
+		
+		mes "[Yoru]";
+		mes "Configuration du système?";
+		if(select("Oui","Non")==1) {
+			mes "Bien.";
+			next;
+			
+			while( .@quit == 0 ) {
+				mes "[Yoru]";
+				set .@choice, select(	"Marche/Arrêt",
+										"Paramètres",
+										"Quitter" );
+				switch(.@choice) {
+					case 1:
+						SF_DisplayMenuStartStop();
+						break;
+					case 2:
+						SF_DisplayMenuParam();
+						break;
+					case 3:
+						set .@quit, 1;
+						break;
+				}
+				next;	
+			}
+			
+			set .@quit, 0;
+			set .@choice, 0;
+			
+			mes "[Yoru]";
+			mes "Bonne journee";
+			close;
+			
+		} else {
+			mes "Bonne journée.";
+			close;
+		}
+		
+		end;
+	
+
+}
