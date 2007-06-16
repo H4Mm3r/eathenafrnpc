@@ -35,7 +35,7 @@
 // The Day/Night Scheduler NPC
 // Invisible.
 //
-prontera.gat,267,239,0	script	#DayNight	111,{
+prontera.gat,267,239,0	script	#DayNight	-1,{
 
 	// SIMPLE FUNCTION
 	// Computes the new offset for the upcoming day
@@ -151,7 +151,7 @@ prontera.gat,267,239,0	script	#DayNight	111,{
 // 	The Assistant NPC
 //	Used to set variables and parameters at run time.
 //
-prontera.gat,264,238,0	script	#Yoru	111,1,1{
+prontera.gat,264,238,0	script	#Yoru	-1,1,1{
 	
 	// SIMPLE FUNCTION
 	function SF_YoruStart
