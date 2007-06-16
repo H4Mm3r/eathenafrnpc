@@ -421,7 +421,7 @@ function	script	F_CheckKafCode	{
 	set @code_,0;
 	input @code_;
 	if(@code_ != #kafra_code-getcharid(3)-1337) {
-		dispbottom "Wrong storage password.";
+		dispbottom "Mauvais mot de passe !";
 		close2;
 		cutin "",255;
 		end;

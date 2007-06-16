@@ -50,7 +50,10 @@ hugel,88,168,4	script	Cool Event Corp. Staff#hugel	874,{
 		set RESRVPTS, RESRVPTS + 4;
 		mes "Je vous prie de bien vouloir me laisser ouvrir votre coffre personnel pour vous.";
 		mes "Merci d'encourager Cool Event Corp. en utilisant nos services.";
-                mes "Bonne journée~";
+        mes "Bonne journée~";
+		
+		callfunc("F_CheckKafCode");	//check your storage password, if set
+		
 		close2;
 		openstorage;
 		end;
