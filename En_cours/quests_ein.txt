@@ -1263,7 +1263,7 @@ s_GotCoal1:
 	mes "Un ''Barbecue'', c'est ça ?";
 	next;
 	mes "[Satra]";
-	mes "Dans tous les cas, si vous m'amenez plus de ces Coals, vous seriez encore plus en faveur auprès de moi et vous recevriez mes bonnes grâces.";
+	mes "Dans tous les cas, si vous m'amenez plus de ces Coals, vous seriez plus encore en faveur auprès de moi et vous recevriez mes bonnes grâces.";
 	mes "Ho ho~";
 	set EIN_LOVERQ,9;
 	delitem 1003,10;
