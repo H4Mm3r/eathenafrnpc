@@ -37,7 +37,7 @@
 prontera.gat,266,239,0	script	#Weather	-1,{
 	close;
 	
-	OnTimer600000:
+	OnTimer1800000:
 		removemapflag "payon",mf_sakura;
 		removemapflag "payon",mf_snow;
 		removemapflag "payon",mf_leaves;
