@@ -1,0 +1,64 @@
+//////////////////////////////////////////////////////////////////////////////
+//       ______                           //                                //
+//      /  _   | ___  ___  _  __ ___      //   type    : eAthena script     //
+//     /  /_|  |/ , |/ , \| '/__|\_ \     //   version : 0.1                //
+//    /__/  |  |\_  |\___/|_|   /____\    //   author  : Etin               //
+//          |__|\__ /  D e v. T e a m     //   license : GPL                //
+//                                        //                                //
+//////////////////////////////////////////////////////////////////////////////
+//   Description
+//
+//   ~ TEST SCRIPT ~
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+//    Copyright (C)  2007  Etin (doomweaver@gmail.com), Agora Dev. Team     //
+//                                                                          //
+//    This program is free software; you can redistribute it and/or         //
+//    modify it under the terms of the GNU General Public License           //
+//    as published by the Free Software Foundation; either version 2        //
+//    of the License, or (at your option) any later version.                //
+//                                                                          //
+//    This program is distributed in the hope that it will be useful,       //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
+//    GNU General Public License for more details.                          //
+//                                                                          //
+//    You should have received a copy of the GNU General Public License     //
+//    along with this program; if not, write to the Free Software           //
+//    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,            //
+//    MA  02110-1301, USA.                                                  //
+//////////////////////////////////////////////////////////////////////////////
+
+// Weather Test NPC
+// Invisible.
+//
+prontera.gat,266,239,0	script	#Weather	-1,{
+	close;
+	
+	OnTimer600000:
+		removemapflag "payon",mf_sakura;
+		removemapflag "payon",mf_snow;
+		removemapflag "payon",mf_leaves;
+		set .@choice, rand(1,3);
+		switch( .@choice ) {
+			case 1:
+				setmapflag "payon",mf_snow;
+				break;
+			case 2:
+				setmapflag "payon",mf_sakura;
+				break;
+			case 3:
+				setmapflag "payon",mf_leaves;
+				break;
+		}
+		stopnpctimer;
+		initnpctimer;
+		end;
+	
+	OnInit:
+		stopnpctimer;
+		initnpctimer;
+		end;
+}
