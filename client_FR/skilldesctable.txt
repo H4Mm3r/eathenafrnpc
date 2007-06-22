@@ -5331,7 +5331,7 @@ Nécéssaire pour:^777777Regeneration^000000
 Niveau maximum :^777777 1^000000
 Type : ^777777Support, Guild Master seulement^000000
 Coût en SP :^777777 Inconnu^000000
-Temps de Cast :^777777 5 secondes^00000
+Temps de Cast :^777777 5 secondes^000000
 Délai entre 2 casts :^777777 1 seconde^000000
 Portée :^777777 Ecran du Guild Master^000000
 Effet :^777777 Tous les membres de la guilde visibles sur l'écran du Guild Master reçoivent un bonus de +5 bonus en STR, DEX et INT pendant 1 minute. 
