@@ -2783,7 +2783,7 @@ s_Forge:
 	next;
 	mes "[Uwe]";
 	mes "Mon nom est Uwe Klein, et c'est ma forge~ !";
-	mes "Et je suis le forgeron le plus élégant ainsi que le plus grand chef de la République de Schwartzwald~";
+	mes "Et je suis le forgeron le plus élégant ainsi que le plus grand chef de la République de Schwarzwald~";
 	next;
 	mes "[Uwe]";
 	mes "Donc, comment puis-je";

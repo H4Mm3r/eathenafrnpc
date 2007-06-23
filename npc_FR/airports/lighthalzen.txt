@@ -1,0 +1,79 @@
+//===== eAthena Script ======================================= 
+//= Lighthalzen Airport Staff
+//===== By: ================================================== 
+//= L0ne_W0lf, Muad_Dib
+//===== Current Version: ===================================== 
+//= 1.2
+//===== Compatible With: ===================================== 
+//= eAthena Revision 3000+
+//===== Description: ========================================= 
+//= Lighthalzen Airport Staff
+//===== Additional Comments: ================================= 
+//= 1.0 Cloned from einbroch.txt [Justin84]
+//= 1.1 Removed Duplicates [Silent]
+//= 1.2 Fixed syntax errors for duplicate [KarLaeda]
+//============================================================
+
+
+lhz_airport,126,43,4	script	Airport Staff#1::AirportL	90,{
+	mes "[Airport Staff]";
+	mes "Bienvenue à l'aéroport.";
+	mes "Comment puis-je vous aider ?";
+	next;
+	menu "Embarquer dans le vaisseau volant",-,"Annuler",L_Cancel;
+
+	mes "[Airport Staff]";
+	mes "Le prix d'embarquement dans le vaisseau volant est de 1200 zenies, mais si vous possédez un Free Ticket pour le vaisseau volant, vous n'aurez rien à payer.";
+	mes "Embarquez-vous dans le vaisseau volant ?";
+	next;
+	menu "Oui",-,"Non",L_Cancel;
+
+		if(countitem(7311) > 0) goto GotTicket;
+		if(zeny < 1200) goto L_NoZeny;
+		set Zeny,zeny-1200;
+		warp "lhz_airport",148,51;
+		close;
+
+	GotTicket:
+		delitem 7311,1;
+		warp "lhz_airport",148,51;
+		close;
+
+	L_NoZeny:
+		mes "[Airport Staff]";
+		mes "Vous n'avez pas assez d'argent.";
+		close;
+
+	L_Cancel:
+		mes "[Airport Staff]";
+		mes "Merci et bonne journée.";
+		close;
+}
+
+lhz_airport,143,43,4	duplicate(AirportL)	Airport Staff#2	90
+lhz_airport,156,43,4	duplicate(AirportL)	Airport Staff#3	90
+
+lhz_airport,126,51,4	script	Airport Staff#4::AirportL2	90,{
+	mes "[Airport Staff]";
+	mes "Bienvenue~";
+	mes "Veuillez suivre ce chemin pour embarquer dans le vaisseau volant.";
+	next;
+	menu "Sortir du Terminal principal",-,"Annuler.",L_Cancel;
+
+		mes "[Airport Staff]";
+		mes "Si vous quittez le terminal principal, vous devrez à nouveau payer les frais d'admission pour embarquer dans le vaisseau volant.";
+		mes "Etes-vous sûr de vouloir sortir ?";
+		next;
+		menu "Oui",-,"Non",L_Cancel;
+
+			warp "lhz_airport",142,40;
+			close;
+
+	L_Cancel:
+		mes "[Airport Staff]";
+		mes "Très bien, merci de votre soutien et j'espère que vous aurez un vol agréable~";
+		close;
+}
+
+lhz_airport,143,51,4	duplicate(AirportL2)	Airport Staff#5	90
+lhz_airport,156,51,4	duplicate(AirportL2)	Airport Staff#6	90
