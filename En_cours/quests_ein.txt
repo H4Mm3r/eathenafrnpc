@@ -1696,57 +1696,57 @@ ein_in01.gat,200,101,4	script	Clitzer	854,{
 	if(EIN_LOVERQ)goto s_Switches;
 s_Back:
 	mes "[Clitzer]";
-	mes "Is there something that you really want in life, but it's just beyond your grasp?";
+	mes "Y a-t-il quelque chose que vous désirez plus que tout au monde, mais que vous pouvez pas obtenir ?";
 	next;
 	mes "[Clitzer]";
-	mes "I wish I was more like you adventurers.";
-	mes "People like you never seem to give up, no matter what the obstacles may be.";
-	mes "But I'm so helpless...";
+	mes "J'aimerai tant être comme vous, les aventuriers.";
+	mes "Les gens comme vous ne semblent jamais abandonner, peut importe les obstacles.";
+	mes "Mais je suis si impuissant...";
 	next;
 	mes "[Clitzer]";
-	mes "I can't even see the one person that I love.";
-	mes "We're just so different that it's not even possible anymore...";
+	mes "Je ne peux même pas voir la personne que j'aime.";
+	mes "Nous sommes tellement différents que ce n'est plus possible...";
 	close;
 
 s_Switches:
 	switch(EIN_LOVERQ){
 	case 1:
 		mes "[Clitzer]";
-		mes "That faintly sweet and pleasant scent...";
-		mes "It's just like the fragrance they use in Calla's house.";
+		mes "Cette odeur légère, douce et agréable...";
+		mes "C'est la même que celle de la maison de Calla.";
 		next;
 		mes "[Clitzer]";
-		mes "Ah, so you visited Calla in Einbroch?";
-		mes "I miss her sooo much!";
-		mes "Is she doing alright?";
+		mes "Vous avez rendu visite à Calla à Einbroch ?";
+		mes "Elle me manque tellement !";
+		mes "Est-ce qu'elle va bien ?";
 		next;
 		mes "[Clitzer]";
-		mes "Calla's so beautiful.";
-		mes "And she's so lovely.";
-		mes "Every time I close my eyes, I can still see her lovely smile.";
+		mes "Calla est si belle.";
+		mes "Et elle est si agréable.";
+		mes "A chaque fois que je ferme mes yeux, je peux voir son charmant sourire.";
 		next;
 		mes "[Clitzer]";
-		mes "I'm sorry if I sound silly, but I can't help it.";
-		mes "I know I'm acting like a complete idiot.";
-		mes "But I'd give anything to see her...";
+		mes "Je suis désolé si j'ai l'air fou, mais je n'y peux rien.";
+		mes "Je sais que j'agis comme un imbécile fini.";
+		mes "Mais je donnerai n'importe quoi pour la voir...";
 		next;
 		mes "[Clitzer]";
-		mes "Just...";
-		mes "Just don't listen to anything I say.";
-		mes "I'm just a poor fool in love with the wrong person.";
-		mes "That has to be it...";
+		mes "Non...";
+		mes "N'écoutez pas ce que je dis.";
+		mes "Je ne suis qu'un pauvre idiot amoureux de la mauvaise personne.";
+		mes "Ca doit être ça...";
 		set EIN_LOVERQ,2;
 		close;
 		break;
 
 	case 2:
 		mes "[Clitzer]";
-		mes "^565656*Sigh*^000000";
-		mes "I really appreciate your sympathy, but I'm merely a coward and a fool.";
+		mes "^565656*Soupire*^000000";
+		mes "J'apprécie vraiment votre symptahie, mais je suis plus un lâche qu'un imbécile.";
 		next;
 		mes "[Clitzer]";
-		mes "Yeah...";
-		mes "I'm a coward for doing nothing about my feelings and an idiot for falling in love with such a high class girl in the first place...";
+		mes "Oui...";
+		mes "Je suis un lâche pour ignorer mes sentiments et un idiot pour être tombé amoureux d'une fille d'une si haute classe sociale en premier lieu.";
 		mes "Oh, Calla...";
 		close;
 		break;
@@ -1754,43 +1754,43 @@ s_Switches:
 	case 3:
 		if(!countitem(1901))goto s_Back;
 		mes "[Clitzer]";
-		mes "What brings you here?";
-		mes "aren't you tired of hearing me moan and whine about lost love?";
-		mes "^111111*Siiiiigh...*^000000";
+		mes "Qu'est-ce qui vous amène ?";
+		mes "Vous n'êtes pas fatigué de m'entendre me plaindre et gémir sur un amour perdu ?";
+		mes "^111111*Soupire...*^000000";
 		next;
 		mes "[Clitzer]";
-		mes "Hey, this violin...";
-		mes "Calla used to play such beautiful music on this for me.";
-		mes "Did she give this to you?";
+		mes "Hé, ce violon...";
+		mes "Calla jouait de belles musiques pour moi avec.";
+		mes "Vous l'a-telle donné ?";
 		next;
 		mes "[Clitzer]";
-		mes "I see.";
-		mes "Calla must have known that I'm all broken up right now.":
-		mes "She's too good to me.";
-		mes "How can se consider my feelings before thinking about herself?";
+		mes "Je vois.";
+		mes "Calla doit savoir que je suis totallement démoli maintenant.":
+		mes "Elle est trop bonne pour moi.";
+		mes "Comment peut-elle penser à mes sentiments avant de penser à elle ?";
 		next;
 		mes "[Clitzer]";
-		mes "I know I'm being shameless, but I have a favor to ask.";
-		mes "Adventurer, would you please send Calla a present for me?";
+		mes "Je sais que je ne devrais pas, mais j'ai une faveur à vous demander.";
+		mes "Aventurier, pourriez-vous donner un cadeau à Calla de ma part ?";
 		next;
 		mes "[Clitzer]";
-		mes "All you need to do is just give her ^FF00001 Flower^000000.";
-		mes "I don't have the zeny and I don't think I'm welcome at Kapellthaine Manor.";
+		mes "Tout ce que vous devez faire c'est simplement lui donner ^FF00001 Flower^000000.";
+		mes "Je n'ai pas l'argent et je ne pense pas être le bienvenu au manoir Kappellthaine.";
 		next;
 		mes "[Clitzer]";
-		mes "Here, in return, I'll give you this health massage.";
-		mes "It's not a big deal, but when I'm done, your mind and body will be refreshed.";
-		mes "Here goes!";
+		mes "En échange, je vous ferai un massage revigorant.";
+		mes "Ce n'est pas grand-chose mais quand j'aurai fini, votre esprit et votre corps seront relaxés.";
+		mes "Allons-y !";
 		next;
-		mes "^3151FF*Knead Knead*";
-		mes "*Rub Rub Rub Rub*";
-		mes "*Press Press Press*";
+		mes "^3151FF*Pétrit*";
+		mes "*Frotte*";
+		mes "*Presse*";
 		mes "*C-c-c-c-c-c-crakck!*^000000";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Oh--";
-		mes "Hell yeah!";
-		mes "That's the stuff!";
+		mes "Oh oui !";
+		mes "C'est génial !";
 		delitem 1901,1;
 		if(BaseLevel < 41)set BaseExp,BaseExp+3712;
 		else if(BaseLevel > 40 && BaseLevel < 61)set BaseExp,BaseExp+7425;
@@ -1801,53 +1801,53 @@ s_Switches:
 		set EIN_LOVERQ,4;
 		next;
 		mes "[Clitzer]";
-		mes "Would you please bring 1 Flower to Calla for me?";
-		mes "I'm sorry for troubling you...";
+		mes "Apporterez-vous 1 Flower à Calla pour moi ?";
+		mes "Je suis désolé de vous déranger...";
 		close;
 		break;
 
 	case 4:
 		mes "[Clitzer]";
-		mes "Would you please bring 1 Flower to Calla for me?";
-		mes "I'm sorry for troubling you...";
+		mes "Apportez-vous 1 Flower à Calla pour moi ?";
+		mes "Je suis désolé de vous déranger...";
 		close;
 		break;
 
 	case 5:
 		mes "[Clitzer]";
-		mes "You've given her the flower?";
-		mes "That's great!";
-		mes "Thank you, thank you so mu--";
+		mes "Vous lui avez donné la fleur ?";
+		mes "C'est génial !";
+		mes "Merci, merci beau....";
 		next;
 		mes "[Clitzer]";
-		mes "...Oh!";
-		mes "Gosh!";
-		mes "I was thinking so much about myself that I forgot to ask you for your name!";
-		mes "I'm sorry for being so knuckle-headed...";
+		mes "...Oh !";
+		mes "Mince !";
+		mes "J'étais tellement égocentrique que j'ai oublié de vous demander votre nom !";
+		mes "Je suis désolé d'être aussi tête en l'air...";
 		next;
 		mes "[Clitzer]";
-		mes "So...";
-		mes "What's your name?";
+		mes "Donc...";
+		mes "Quel est votre nom ?";
 		next;
 		input @str$;
 		mes "[Clitzer]";
 		if(@str$ != strcharinfo(0)){
 			mes "Hm...?";
-			mes "Oh, don't be so nervous~";
-			mes "But would you please tell me your name again?";
-			mes "I couldn't hear you...";
+			mes "Oh, ne vous offensez pas~";
+			mes "Mais voudriez-vous me répéter votre nom ?";
+			mes "Je n'ai pas bien entendu...";
 			close;
 		}
 		mes "" + strcharinfo(0) + "...";
-		mes "That's very nice.";
-		mes "Thank you, I'm really grateful for your help.";
-		mes "Although I can't see Calla in person, I can at least send my regards if you help me.";
+		mes "C'est pas mal.";
+		mes "Merci, je vous suis vraiment reconaissant pour votre aide.";
+		mes "A défaut de voir Calla en personne, je peux au moins donner mes hommages si vous m'aidez.";
 		next;
 		mes "[Clitzer]";
-		mes "I feel so much better now.";
-		mes "Oh!";
-		mes "When you have the time, why don't you talk to my mother?";
-		mes "She always likes meeting my friends.";
+		mes "Je me sens tellement mieux maintenant.";
+		mes "Oh !";
+		mes "Quand vous aurez le temps, pourquoi ne parleriez-vous pas à ma mère ?";
+		mes "Elle aime toujours rencontrer mes amis.";
 		set EIN_LOVERQ,6;
 		close;
 		break;
@@ -1859,36 +1859,36 @@ s_Switches:
 	case 10:
 	case 11:
 		mes "[Clitzer]";
-		mes "^111111*Sigh...*^000000";
-		mes "What can I do to get Calla's parents to accept me as her boyfriend?";
-		mes "I can't think of anything...";
+		mes "^111111*Soupire...*^000000";
+		mes "Que puis-je faire pour que les parents de Calla m'acceptent en tant que son petit-ami ?";
+		mes "Je ne sais pas à quoi penser...";
 		close;
 		break;
 
 	case 12:
 		mes "[Clitzer]";
-		mes "Eh...?";
-		mes "What did you just say?";
-		mes "You did something for the Kapellthaines?";
+		mes "Hein...?";
+		mes "Que venez-vous de dire ?";
+		mes "Vous avez fait quelque chose pour les Kappelthaines ?";
 		next;
 		mes "[Clitzer]";
-		mes "What...?";
-		mes "Did you just say that Calla's mother wants me to have tea with her?";
-		mes "Holy moley...!";
+		mes "Quoi...?";
+		mes "Vous venez de dire que la mère de Calla veut prendre le thé avec moi ?";
+		mes "Mon Dieu...!";
 		next;
 		mes "[Clitzer]";
-		mes "Okay, okay.";
-		mes "I-I I'll need something nice to wear, right?";
+		mes "Ok, ok.";
+		mes "J-Je je vais avoir besoin de porter quelque chose de classe, non ?";
 		mes "Oh.";
 		mes "Wow.";
-		mes "This is so sudden!";
-		mes "W-what should I do?";
+		mes "C'est si soudain !";
+		mes "Q-Que dois-je faire ?";
 		next;
 		mes "[Clitzer]";
-		mes "This monkey suit that I've got on just won't do!";
-		mes "Arrrgh!";
-		mes "But I've already outgrown all of my nice clothes already.";
-		mes "Boy, am I in a pickle...";
+		mes "Les stupides habits que j'ai ne feront pas l'affaire !";
+		mes "Arrrgh !";
+		mes "Et mes bons habits sont déjà trop petits pour moi.";
+		mes "Je suis dans le pétrin...";
 		set EIN_LOVERQ,13;
 		close;
 		break;
@@ -1896,82 +1896,82 @@ s_Switches:
 	case 13:
 		if(countitem(2320) || countitem(7170))goto s_Clothes;
 		mes "[Clitzer]";
-		mes "Noooooo!";
-		mes "I've got to find the perfect thing to wear or Calla's mother might ^FF0000hate^000000 me!";
+		mes "Noooooon !";
+		mes "Je dois trouver quelque chose de poarfait à porter ou la mère de Calla va me ^FF0000haïr^000000 !";
 		next;
 		mes "[Clitzer]";
-		mes "Think, Clitzer, think!";
-		mes "Okay, no fun colors.";
-		mes "I don't want her to think I'm not serious about Calla.";
-		mes "Stripes might be bad too...";
+		mes "Réfléchis Clitzer, réfléchis !";
+		mes "Ok, pas de couleurs extravagantes.";
+		mes "Je ne veux pas qu'elle pense que je ne suis pas sérieux pour Calla.";
+		mes "Des rayures n'iraient pas non-plus...";
 		close;
 		break;
 
 	case 14:
 	case 15:
 		mes "[Clitzer]";
-		mes "Look out, world!";
-		mes "I'm gonna become worth of Calla's love!";
-		mes "Someday, maybe even her parents will approve me!";
+		mes "Regarde, monde !";
+		mes "Je vais mériter l'amour de Calla !";
+		mes "Un jour, peut-être même que ses parents m'approuveront !";
 		close;
 		break;
 	}
 
 s_Clothes:
 	mes "[Clitzer]";
-	mes "Waaah!";
-	mes "What should I wear?!";
-	mes "I can't for the life of me figure this out! Something, um, formal?";
-	mes "I've never worn anything like that before!";
+	mes "Waaah !";
+	mes "Que dois-je porter ?!";
+	mes "Je n'ai aps toute la vie pour y réfléchir ! Quelque chose de... cérémonieux ?";
+	mes "Je n'ai jamais porté quelque chose de ce genre avant !";
 	next;
 	if(countitem(7170)){
 		set @clothes,7170;
 		mes "[Clitzer]";
-		mes "Wait, " + strcharinfo(0) + ".";
-		mes "What's that you've got there?";
-		mes "I've seen something like that before.";
-		mes "It's called a Tuxedo, right?";
-		mes "Something like that would be perfect!";
+		mes "Attendez, " + strcharinfo(0) + ".";
+		mes "Qu'est-ce que vous avez là ?";
+		mes "J'ai déjà vu quelque-chose comme ça avant.";
+		mes "Ca s'apelle un Tuxedo, c'est ça ?";
+		mes "Quelque-chose comme ça serait parfait !";
 		next;
-		menu "Give it to him.",s_Giveclothes,"Ignore him.",-;
+		menu "Lui donner.",s_Giveclothes,"L'ignorer.",-;
 
 		mes "[Clitzer]";
-		mes "But how can I get a Tuxedo?";
-		mes "Ooh, I hope it doesn't cost too much zeny or I won't be able to get one of those soon...";
+		mes "Mais comment puis-je me procurer un Tuxedo ?";
+		mes "Oh, j'espère que ce n'est pas trop cher ou je ne pourrai pas en avoir rapidement...";
 	} else if(countitem(2320)){
 		set @clothes,2320;
 		mes "[Clitzer]";
-		mes "Wait, " + strcharinfo(0) + ".";
-		mes "What's that you've got there?";
-		mes "I've seen something like that before.";
-		mes "It's called a Formal Suit, right?";
-		mes "Something like that would be perfect!";
+		mes "Attendez, " + strcharinfo(0) + ".";
+		mes "Qu'est-ce que vous avez là ?";
+		mes "J'ai déjà vu quelque-chose comme ça avant.";
+		mes "Ca s'appelle une Formal Suit, non ?";
+		mes "Quelque-chose comme ça serait parfait !";
 		next;
-		menu "Give it to him.",s_Giveclothes,"Ignore him.",-;
+		menu "Lui donner.",s_Giveclothes,"L'ignorer.",-;
 
 		mes "[Clitzer]";
-		mes "But how can I get a Formal Suit?";
-		mes "I hope it doesn't cost too much zeny or I won't be able to get one of those soon...";
+		mes "Mais comment puis-je me procurer une Formal Suit ?";
+		mes "J'espère que ce n'est pas trop cher ou je ne pourrai pas en avoir rapidement...";
 	}
 	close;
 
 s_Giveclothes:
 	mes "[Clitzer]";
-	mes "I can have this?";
-	mes "Oh, thank you so much!";
-	mes "Finally, I have something nice enough to wear to meet Calla's mom!";
-	mes "What a relief!";
+	mes "Je peux le prendre ?";
+	mes "Oh, merci beaucoup !";
+	mes "Enfin j'ai quelque chose de suffisamment bien à porter pour rencontrer la mère de Calla !";
+	mes "Quel soulagement !";
 	next;
 	mes "[Clitzer]";
-	mes "You've been helping me all this time and I haven't properly expressed my gratitude.";
-	mes "I'm sorry if I've been to absorbed in my own problems.";
-	mes "I may be poor, but I need to repay you somehow...";
+	mes "Vous m'avez aidé tout ce temps et je ne vous ai pas exprimé ma gratitude comme il le faudrait.";
+	mes "Je suis désolé mais j'étais trop absorbé par mes propres problêmes.";
+	mes "Je suis peut-être pauvre, mais je dois vous récompenser d'une manière ou d'une autre...";
 	next;
 	mes "[Clitzer]";
-	mes "Wait...";
-	mes "Why don't you have this ore?";
-	mes "I don't how valuable it is, but I know that it's pretty rare.";
-	mes "It may even be useful to you later~";
+	mes "Attendez...";
+	mes "Pourquoi ne prendriez-vous pas cette pierre ?";
+	mes "Je ne sais pas ce qu'elle vaut, mais je sais qu'elle est plutôt rare.";
+	mes "Ca peut vous être utile plus tard~";
 	delitem @clothes,1;
 	set EIN_LOVERQ,14;
 	switch(rand(1,9)){
@@ -2014,8 +2014,8 @@ s_Giveclothes:
 	next;
 	mes "[Clitzer]";
 	mes "" + strcharinfo(0) + ",";
-	mes "you've really opened my eyes.";
-	mes "From now on, I'll do my best to earn the approval of Calla's parents and become worthy of Calla's love.";
+	mes "vous m'avez vraiment ouvert les yeux.";
+	mes "A partir de maintenant, je ferai de mon mieux pour gagner l'approbation des parents de Calla et pour mériter l'amour de Calla.";
 	close;
 
 }
@@ -2048,7 +2048,7 @@ OnPolution:
 	disablenpc "Paddler";
 	disablenpc "Head Gear Dealer";
 
-	mapannounce "einbroch.gat","This is a state of emercency! Harmful smog is reaching high levels of saturation. Residents of Einbroch must find shelter immediately.",bc_map;
+	mapannounce "einbroch.gat","Ceci est un état d'urgence ! Le nuage de pollution atteint de hauts sommets de saturation. Les habitants d'Einbroch doivent trouver un abrit immédiatement.",bc_map;
 	monster "einbroch.gat",82,332,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
 	monster "einbroch.gat",99,328,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
 	monster "einbroch.gat",122,317,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
@@ -2137,7 +2137,7 @@ OnMobChk:
 
 OnTimer600000:
 	killmonster "einbroch.gat","#PolutionNPC::OnMobChk";
-	mapannounce "einbroch.gat","Emergency status is now cancelled. Air pollution levels are now within the safety zone.",bc_map;
+	mapannounce "einbroch.gat","Le statut d'urgence est maintenant annulé. Les niveaux de pollution de l'air sont de nouveau à un niveau tolérable.",bc_map;
 	enablenpc "Liotzburg";
 	donpcevent "Liotzburg::OnUnHide";
 	enablenpc "Morei";
@@ -2184,31 +2184,31 @@ sec_in02.gat,127,86,3	script	Einbroch Polution	851,{
 
 	if(getgmlevel() > 79){
 		mes "[Einbroch Polution Variable Management]";
-		mes "$EinPolution is currently: " + $EinPolution + ".";
-		mes "What would you like to do?";
+		mes "$EinPolution est actuellement à : " + $EinPolution + ".";
+		mes "Que désirez-vous faire ?";
 		next;
-		menu "Reset $EinPolution to 0",s_0,"Input My Own Value",s_Input,"Cancel.",-;
+		menu "Remettre $EinPolution à 0",s_0,"Entrez une valeur",s_Input,"Annuler",-;
 		close;
 	s_0:
 		mes "[Einbroch Polution Variable Management]";
-		mes "$EinPolution has been reset to 0.";
+		mes "$EinPolution a été remis à 0.";
 		set $EinPolution,0;
 		set @AlrdEinPoll,0;
 		close;
 	s_Input:
 		mes "[Einbroch Polution Variable Management]";
-		mes "Insert a number you want $EinPollution";
-		mes "to be replaced with. Type '0' to cancel.";
+		mes "Entrez la valeur que vous désirez pour $EinPollution";
+		mes "Entrez '0' pour annuler.";
 		input @temppol;
 		if(@temppol == 0)close;
 		set $EinPolution,@temppol;
 		mes "[Einbroch Polution Variable Management]";
-		mes "$EinPolution has been set to: " + $EinPolution + ".";
+		mes "$EinPolution a été mis à : " + $EinPolution + ".";
 		close;
 	} else {
 		mes "[Einbroch Polution Variable Management]";
-		mes "Sorry you don't have authorization";
-		mes "to use this NPC.";
+		mes "Désolé, vous n'avez pas l'autorisation";
+		mes "d'utiliser ce NPC.";
 		close;
 	}
 }
@@ -2221,17 +2221,15 @@ einbroch.gat,132,84,3	script	Liotzburg	853,{
 
 	if($EinPolution > 9){
 		mes "[Liotzburg]";
-		mes "What's going on?!";
-		mes "Who's responsible?!";
-		mes "God, I can't believe";
-		mes "this is happening!";
-		mes "^333333*Cough Cough!*^000000";
+		mes "Qu'est-ce qui se passe ?!";
+		mes "Qui a fait ça ?!";
+		mes "Mon Dieu, je ne peux pas croire que ça arrive !";
+		mes "^333333*Tousse Tousse!*^000000";
 		next;
 		mes "[Liotzburg]";
-		mes "I need to get out of here!";
-		mes "You! D-do something and";
-		mes "fix this! I gotta hide and find";
-		mes "someplace safe!";
+		mes "Je dois partir d'ici !";
+		mes "Vous ! Faites quelque chose !";
+		mes "Je dois me cacher et trouver un endroit sûr !";
 		close2;
 		if(!@AlrdEinPoll)donpcevent "#PolutionNPC::OnPolution";
 		end;
@@ -2239,57 +2237,41 @@ einbroch.gat,132,84,3	script	Liotzburg	853,{
 	if(EinFactory >= 13){
 		if(EinFactory > 13){
 			mes "[Liotzburg]";
-			mes "What...?";
-			mes "Factory Repair";
-			mes "budget? No way!";
+			mes "Quoi... ?";
+			mes "Un budget de réparation de l'usine ?";
+			mes "Hors de question !";
 			next;
 		}
 		mes "[Liotzburg]";
-		mes "Why waste money?";
-		mes "We haven't had any";
-		mes "problems so far! Look,";
-		mes "everything's fine! Why";
-		mes "are you exaggerating";
-		mes "such small details?";
+		mes "Pourquoi gaspiller de l'argent ?";
+		mes "Nous n'avons pas eu de problêmes depuis longtemps !";
+		mes "Regardez, tout va bien !";
+		mes "Pourquoi exagérez-vous de si petits détails ?";
 		next;
 		mes "[Liotzburg]";
-		mes "The field overseer,";
-		mes "Zelmeto, just came by to";
-		mes "ask for a budget increase.";
-		mes "Well, I think he's lying!";
-		mes "Everything's perfect!";
+		mes "Le contremaître, Zelmeto, vient juste de demander une augmentation du budget.";
+		mes "Et bien moi je pense qu'il ment !";
+		mes "Tout est parfait !";
 		if(EinFactory == 13)set EinFactory,14;
 		close;
 	}
 	mes "[Liotzburg]";
-	mes "I'm the plant";
-	mes "superintendant of this";
-	mes "factory. Most of my employees";
-	mes "are diligent workers. I can't say";
-	mes "that of everyone, but overall we're";
-	mes "doing an excellent job. Ha ha ha~!";
+	mes "Je suis le directeur responsable du matériel de cette usine.";
+	mes "La plupart de mes employés sont des travailleurs appliqués.";
+	mes "Je ne peux pas dire ça de tout le monde, mais globalement nous faisons du bon boulot..";
+	mes "Ha ha ha~ !";
 	next;
 	mes "[Liotzburg]";
-	mes "So long as this factory";
-	mes "is well maintained, we won't";
-	mes "have to worry about this city's";
-	mes "safety. The field overseer,";
-	mes "Zelmeto, is also very reliable.";
+	mes "Aussi longtemps que cette usine est bien entretenue, nous n'avons pas à nous soucier de la sécurité de la ville.";
+	mes "Le contremaître, Zelmeto, est également digne de confiance.";
 	next;
 	mes "[Liotzburg]";
-	mes "I can trust Zelmeto";
-	mes "to look after things,";
-	mes "so there's no need for";
-	mes "me to go inside the factory.";
-	mes "Delegating work is great!";
+	mes "Je peux faire confiance à Zelmeto pour surveiller les choses, donc je n'ai aps besoin d'entrer dans l'usine.";
+	mes "C'est tellement bien de déléguer le travail !";
 	next;
 	mes "[Liotzburg]";
-	mes "Our factory will";
-	mes "continue to develop";
-	mes "and everyone will be";
-	mes "proud of the progress";
-	mes "we're making. Yes, I can";
-	mes "assure you of that!";
+	mes "Notre usine va continuer à se développer et tout le monde sera fier des progrès que nous accomplissons.";
+	mes "Oui, je peux vous l'assurer !";
 	close;
 
 OnHide:
@@ -2307,30 +2289,19 @@ ein_in01.gat,67,243,3	script	Zelmeto	851,{
 
 	if($EinPolution > 9){
 		mes "[Zelmeto]";
-		mes "We've got a big problem";
-		mes "here! I appreciate that you've";
-		mes "been gathering the materials,";
-		mes "but the machines have been";
-		mes "broken for too long!";
+		mes "Nous avons un gros problême !";
+		mes "Nous avons reçu du matériel, mais les machines étaient cassées depuis trop longtemps !";
 		next;
 		mes "[Zelmeto]";
-		mes "Right when I tried to";
-		mes "fix it, a huge shortout";
-		mes "occurred. Our town is";
-		mes "probably filled with";
-		mes "toxic fog right now!";
+		mes "Et quand j'ai essayé de les réparer, un grand court-circuit s'est produit.";
+		mes "Notre ville doit maintenant être envahie par un brouillard toxique maintenant !";
 		next;
 		mes "[Zelmeto]";
-		mes "I'll try my best to fix";
-		mes "this, but we really should";
-		mes "have allocated some funds";
-		mes "to fix this machine earlier!";
+		mes "Je vais faire de mon mieux pour arranger ça, mais nous aurions vraiment dû allouer des fonds pour réparer ces machines plus tôt !";
 		next;
 		mes "[Zelmeto]";
-		mes "The most important";
-		mes "thing is that you get";
-		mes "out of here and find";
-		mes "shelter! Right now!";
+		mes "Le plus important est que vous sortiez d'ici et trouviez un abri !";
+		mes "Maintenant !";
 		close2;
 		warp "einbroch.gat",131,83;
 		end;
@@ -2338,433 +2309,266 @@ ein_in01.gat,67,243,3	script	Zelmeto	851,{
 
 	if(EinFactory > 0)goto s_Switches;
 	mes "[Zelmeto]";
-	mes "Ah, you must be a visitor.";
-	mes "I'm Zelmeto Abellov, the";
-	mes "field overseer. Have you";
-	mes "been in this facility before?";
+	mes "Ah, vous devez être un visteur.";
+	mes "Je suis Zelmeto Abellov, le contremaître.";
+	mes "Vous n'êtes jamais venu dans ces installations ?";
 	next;
 	mes "[Zelmeto]";
-	mes "This factory plays an";
-	mes "important role in our city";
-	mes "and generates a lot of income.";
-	mes "However, our employess suffer";
-	mes "from a poor work environment.";
+	mes "Cette usine joue un rôle important dans notre ville et génère beaucoup de revenus.";
+	mes "Malgré cela, nos employés souffent d'un mauvais environnement de travail.";
 	next;
 	mes "[Zelmeto]";
-	mes "Our superintendant makes a lot";
-	mes "of money and seems content with";
-	mes "the current situation. However, the";
-	mes "rest of the workforce doesn't enjoy";
-	mes "all of the benefits he receives.";
+	mes "Notre directeur gagne beaucoup d'argent et semble content de la situation actuelle.";
+	mes "Cependant, le reste des employés ne jouissent pas des bénéfices qu'il reçoit.";
 	mes "[Zelmeto]";
-	mes "Many people have already";
-	mes "quit and there are only a few";
-	mes "people who continue to work";
-	mes "here. So now we're understaffed";
-	mes "and I'm in quite a bind...";
+	mes "Beaucoup sont déjà partis et il ne reste que peu de monde pour travailler ici.";
+	mes "Donc maintenant nous sommes en sous-effectifs, et j'y suis un peu lié.";
 	next;
 	mes "[Zelmeto]";
-	mes "There are some urgent";
-	mes "tasks I need done, but";
-	mes "there's no way for me";
-	mes "to recruit new workers.";
-	mes "Ah, I'm sorry, I've spoken too";
-	mes "freely about my own problems...";
+	mes "Il y a des tâches urgentes qui doivent être accomplies, mais je ne peux pas engager de nouveaux travailleurs.";
+	mes "Oh, je suis désolé, j'ai parlé trop librement de mes problêmes...";
 	next;
-	menu "You're understaffed?",s_Underst,"No, it's okay.",-;
+	menu "Vous êtes en sous-effectifs ?",s_Underst,"Non, c'est bon.",-;
 
 	mes "[Zelmeto]";
-	mes "Thank you for";
-	mes "your kindness.";
-	mes "And please don't";
-	mes "let anyone know about";
-	mes "anything I just told you.";
+	mes "Merci de votre gentilesse.";
+	mes "Et, s'il vous plaît, ne racontez à personne ce que je viens de vous dire.";
 	close;
 
 s_Underst:
 	mes "[Zelmeto]";
-	mes "Yes, we are!";
-	mes "I don't have enough";
-	mes "people to inspect the";
-	mes "factory machines and";
-	mes "determine what kinds";
-	mes "of problems we have.";
+	mes "Oui, nous le sommes !";
+	mes "Je n'ai pas assez de monde pour inspecter les machines de l'usine et déterminer quels problêmes nous avons.";
 	next;
 	mes "[Zelmeto]";
-	mes "It's a time consuming";
-	mes "task I'd rather do on my";
-	mes "own. However, between that";
-	mes "and managing the workforce,";
-	mes "I don't have enough time...";
+	mes "C'est une tâche prenante que j'aimerai mieux faire moi-même.";
+	mes "Cependant, entre ça et m'occuper des employés, je n'ai pas assez de temps...";
 	next;
-	menu "I can help you.",s_Help,"Keep up the good job.",-;
+	menu "Je peux vous aider.",s_Help,"Continuez à bien travailler.",-;
 
 	mes "[Zelmeto]";
-	mes "Well, it's a living.";
-	mes "^6A6A6A*Sigh*^000000 I can put up with";
-	mes "this, but I hope the higher";
-	mes "ups will consider improving";
-	mes "the work environment here...";
+	mes "Ce n'est pas une vie...";
+	mes "^6A6A6A*Soupire*^000000 Je peux faire avec, mais j'espère que mes supérieurs considèrerons le fait d'améliorer l'environnement de travail ici....";
 	close;
 
 s_Help:
 	mes "[Zelmeto]";
-	mes "You can help me?";
-	mes "I know something like";
-	mes "this is too much to ask,";
-	mes "but I'll accept any help";
-	mes "anyone offers me. I'm";
-	mes "that desperate.";
+	mes "Vous pouvez m'aider ?";
+	mes "Je sais que c'est trop en demander, mais je vais accepter l'aide de tout ceux qui me la proposeront.";
+	mes "Je suis vraiment désespéré.";
 	next;
 	mes "[Zelmeto]";
-	mes "Alright, I'll have you";
-	mes "inspect the machines";
-	mes "in the factory one by one.";
-	mes "It's imperative that we know";
-	mes "what needs to be repaired";
-	mes "and what's working fine";
+	mes "Bien, je vais vous demander d'inspecter des machines dans l'usine  une par une.";
+	mes "Il est impératif que nous sachions ce qui a besoin d'être réparé et ce qui marche bien.";
 	next;
 	mes "[Zelmeto]";
-	mes "First, find the ^FF00002nd control";
-	mes "panel^000000 and determine its";
-	mes "status. I'm fairly certain that";
-	mes "it broke a long time ago, but";
-	mes "it wouldn't hur to make sure.";
-	mes "You should find it easily.";
+	mes "Pour commencer, trouvez le ^FF00002nd control panel^000000 et voyez comment il marche.";
+	mes "Je suis certain qu'il est cassé depuis longtemps, mais il ne coûte rien de le vérifier.";
+	mes "Vous devriez le trouver facilement.";
 	next;
 	mes "[Zelmeto]";
-	mes "When you finish your";
-	mes "inspection, report back";
-	mes "to me so I can tell you";
-	mes "which machine to check";
-	mes "next. Thanks again for";
-	mes "offering to help";
+	mes "Quand vous aurez fini votre inspection, faites-moi votre rapport et je vous dirai quelle autre machine vérifer ensuite.";
+	mes "Merci encore d'offrir votre aide.";
 	set EinFactory,1;
 	close;
 s_Switches:
 	switch(EinFactory){
 	case 1:
 		mes "[Zelmeto]";
-		mes "If you would,";
-		mes "please inspect the";
-		mes "2nd control panel that";
-		mes "seems to have been";
-		mes "broken for a while...";
+		mes "Si vous le voulez bien, allez inspecter le 2nd control pannel qui semble être cassé depuis longtemps...";
 		close;
 		break;
 
 	case 2:
 		mes "[Zelmeto]";
-		mes "Huh, I see.";
-		mes "We must do something";
-		mes "about that as soon as";
-		mes "we can. Now, let me tell";
-		mes "you what to check next.";
+		mes "Oh, je vois.";
+		mes "Nous devons faire quelque chose pour ça au plus tôt.";
+		mes "Maintenant, voyons ce que vous allez vérifier.";
 		next;
 		mes "[Zelmeto]";
-		mes "There are 3 automatic";
-		mes "pressure governors which";
-		mes "hammer the bent iron plates";
-		mes "from above to flatten them. It";
-		mes "seems that one of them may";
-		mes "have some kind of problem.";
+		mes "Il y a 3 automatic pressure governors qui martèlent les plaques de fer tordues afin de les aplatir.";
+		mes "Il semblerait qu'un d'entre eux puisse avoir quelques problêmes.";
 		next;
 		mes "[Zelmeto]";
-		mes "Please inspect the ^FF0000automatic";
-		mes "pressure governors^000000. Even if the";
-		mes "problem seems small, please";
-		mes "report it to me. I know it might";
-		mes "seem fine now, but I want to";
-		mes "prevent an accident if I can.";
+		mes "S'il vous plaît, inspectez les ^FF0000automatic pressure governors^000000.";
+		mes "Même si le problême semble négligeable, rapportez-le moi.";
+		mes "Je sais qu'ils ont l'air en état maintenant, mais je souhaite prévenir un accident si je le peux.";
 		next;
 		mes "[Zelmeto]";
-		mes "Thank you";
-		mes "in advance,";
-		mes "adventurer.";
+		mes "Merci d'avance, aventurier.";
 		set EinFactory,3;
 		close;
 		break;
 
 	case 3:
 		mes "[Zelmeto]";
-		mes "You need to inspect";
-		mes "an automatic pressure";
-		mes "governor. It looks fine,";
-		mes "but sometimes it makes";
-		mes "strange noises.";
+		mes "Vous devez inspecter les automatic pressure governors.";
+		mes "Ils ont l'air en état, mais l'un d'eux fait d'étranges bruits.";
 		next;
 		mes "[Zelmeto]";
-		mes "It probably will";
-		mes "be a good idea to";
-		mes "check that machine";
-		mes "more carefully this";
-		mes "time, just in case.";
+		mes "Ce serait une bonne idée de vérifier plus attentivement cette machine cette fois, juste au cas où.";
 		next;
 		mes "[Zelmeto]";
-		mes "Thank you";
-		mes "for helping us,";
-		mes "adventurer.";
+		mes "Merci de nous aider, aventurier.";
 		close;
 		break;
 
 	case 4:
 		mes "[Zelmeto]";
-		mes "What...?";
-		mes "This is worse";
-		mes "than I expected. But";
-		mes "it's good that we know";
-		mes "about these problems";
-		mes "as soon as possible.";
+		mes "Quoi...?";
+		mes "C'est pire que je le croyais.";
+		mes "Mais c'est bien que nous soyons au courant de ces problêmes le plus tôt possible.";
 		next;
 		mes "[Zelmeto]";
-		mes "Don't you worry,";
-		mes "we'll take care of";
-		mes "this. In the meantime,";
-		mes "I'd like you to inspect";
-		mes "the next machine for me.";
+		mes "Ne vous inquiétez pas, nous nous en occuperons.";
+		mes "Tant que nous y sommes, j'aimerai que vous inspectiez la prochaine machine pour moi.";
 		next;
 		mes "[Zelmeto]";
-		mes "I want you to check";
-		mes "a ^FF0000control panel^000000. It's the";
-		mes "same kind as the one";
-		mes "you just inspected, but";
-		mes "bigger in size.";
+		mes "Je veux que vous vérifiez le ^FF0000control panel^000000.";
+		mes "C'est le même genre que celui que vous avez déjà vérifié, mais plus grand.";
 		next;
 		mes "[Zelmeto]";
-		mes "It's located in the";
-		mes "middle of the factory,";
-		mes "so you should be able";
-		mes "to find it. It may be in bad";
-		mes "condition, even though it's";
-		mes "operating fine for now...";
+		mes "Il se trouve au milieu de l'usine, vous devriez être capable de le trouver.";
+		mes "Il est peut-être en mauvais état, bien qu'il fonctionne pour le moment.";
 		next;
 		mes "[Zelmeto]";
-		mes "We need to ensure that";
-		mes "it's stable, reliable and";
-		mes "doesn't pose a threat to";
-		mes "our workforce. Thanks";
-		mes "again, adventurer.";
+		mes "Nous avons besoin de nous assurer qu'il est stable, fiable et ne soit pas une menace pour les employés.";
+		mes "Merci encore, aventurier.";
 		set EinFactory,5;
 		close;
 		break;
 
 	case 5:
 		mes "[Zelmeto]";
-		mes "I'd like you to inspect";
-		mes "the control panel. It's";
-		mes "fairly large and can be";
-		mes "found in the middle of the";
-		mes "factory. You shouldn't have";
-		mes "too much trouble finding it.";
+		mes "J'aimerai que vous inspectiez le control pannel.";
+		mes "Il est plutôt large et se trouve au centre de l'usine.";
+		mes "Vous devriez pas avoir de mal à le trouver.";
 		close;
 		break;
 
 	case 6:
 		mes "[Zelmeto]";
-		mes "I see...";
-		mes "It's most likely that";
-		mes "there was a short";
-		mes "circuit and most";
-		mes "of the internal devices";
-		mes "were burnt out...";
+		mes "Je vois...";
+		mes "C'est comme s'il y avait eu un court-circuit et la plupart des pièces internes ont été brûlées...";
 		next;
 		mes "[Zelmeto]";
-		mes "Thanks for checking";
-		mes "that out for me. Now,";
-		mes "the next machine I need";
-		mes "you to inspect is different";
-		mes "than the others I've had";
-		mes "you examine.";
+		mes "Merci d'avoir vérifié ça pour moi.";
+		mes "Maintenant la prochaine machine est différente des autres que je vous ai indiquées.";
 		next;
 		mes "[Zelmeto]";
-		mes "It's a mechanical";
-		mes "hand that transports";
-		mes "small objects. We didn't";
-		mes "really give it a name, but";
-		mes "you should be able to find it.";
+		mes "C'est une main mécanique qui transporte de petits objets.";
+		mes "Nous ne lui avons pas vraiment donné de nom, mais vous devriez être capable de la trouver.";
 		next;
 		mes "[Zelmeto]";
-		mes "Recently, it seems";
-		mes "that there have been";
-		mes "problems in operating";
-		mes "that machine. If something's";
-		mes "broken, we need to know";
-		mes "and fix it right away.";
+		mes "Récemment, il semble y avoir eu des problêmes à faire marcher cette machine.";
+		mes "Si quelque chose est cassé, nous devons le savoir pour le réparer aussitôt.";
 		next;
 		mes "[Zelmeto]";
-		mes "Thanks again";
-		mes "in advance.";
+		mes "Encore une fois, merci d'avance.";
 		set EinFactory,7;
 		close;		
 		break;
 
 	case 7:
 		mes "[Zelmeto]";
-		mes "The machine which";
-		mes "I want you to inspect";
-		mes "this time is a small";
-		mes "sized conveyor.";
+		mes "La machine que je veux que vous inspectiez est un small sized conveyor.";
 		next;
 		mes "[Zelmeto]";
-		mes "Be sure that you";
-		mes "inspect the small";
-		mes "one, since we also";
-		mes "have a large conveyor";
-		mes "in the factory as well";
+		mes "Assurez-vous d'inspecter le petit, car nous en avons également un grand dans l'usine.";
 		close;
 		break;
 
 	case 8:
 		mes "[Zelmeto]";
-		mes "Huh?";
-		mes "I'm suprised to hear";
-		mes "that. ^6A6A6A*Sigh*^000000 There's just";
-		mes "too many things that need";
-		mes "fixing. This is terrible...";
+		mes "Oh ?";
+		mes "Je surpris d'entendre ça.";
+		mes "^6A6A6A*Soupir*^000000 Il y a vraiment trop de choses qui ont besoin de réparations.";
+		mes "C'est terrible...";
 		next;
 		mes "[Zelmeto]";
-		mes "Well, let me worry";
-		mes "about that for now. Please";
-		mes "focus on continuing to inspect";
-		mes "some of the other machines.";
+		mes "Laissez-moi m'inquiéter de ça pour le moment.";
+		mes "S'il vous plaît, contentez-vous d'inspecter les autres machines.";
 		next;
 		mes "[Zelmeto]";
-		mes "Now, there's a pipe inside";
-		mes "this factory that I want you";
-		mes "to look at. Many of our pipes";
-		mes "aren't in the best condition,";
-		mes "but this particular one might";
-		mes "be severely damaged.";
+		mes "Maintenant, il y a un tuyau (Pipe) que je veux que vous regardiez.";
+		mes "Beaucoup de nos tuyaux ne sont pas dans les meilleures conditions, mais celui-là en particulier risque d'être sévèrement endommagé.";
 		next;
 		mes "[Zelmeto]";
-		mes "Now, the pipe I want";
-		mes "you to inspect is located";
-		mes "near those large caultrons";
-		mes "of molten metal. You should";
-		mes "be able to find it pretty easily";
+		mes "Le tuyau (Pipe) que je veux que vous inspectiez se situe à côté des grandes cuves de métal en fusion.";
+		mes "Vous devriez le trouver facilement.";
 		next;
 		mes "[Zelmeto]";
-		mes "Thanks again";
-		mes "for your help,";
-		mes "adventurer.";
+		mes "Merci encore de votre aide, aventurier.";
 		set EinFactory,9;
 		close;
 		break;
 
 	case 9:
 		mes "[Zelmeto]";
-		mes "The pipe I want";
-		mes "you to inspect is located";
-		mes "near those large caultrons";
-		mes "of molten metal. You should";
-		mes "be able to find it pretty easily";
+		mes "Le tuyau (Pipe) que je veux que vous inspectiez se situe à côté des grandes cuves de métal en fusion.";
+		mes "Vous devriez le trouver facilement.";
 		next;
 		mes "[Zelmeto]";
-		mes "Thanks again";
-		mes "for your help,";
-		mes "adventurer.";
+		mes "Merci encore de votre aide, aventurier.";
 		close;
 		break;
 
 	case 10:
 		mes "[Zelmeto]";
-		mes "This is";
-		mes "worse than";
-		mes "I imagined...";
+		mes "C'est pire que je ne l'imaginais...";
 		next;
 		mes "[Zelmeto]";
-		mes "We've got to start";
-		mes "repairs as soon as we";
-		mes "can! Hopefully, we can";
-		mes "resolve this before";
-		mes "any serious problems happen...";
+		mes "Nous devons le réparer d'urgence !";
+		mes "J'espère que nous pourrons résoudre ça avant que de sérieux problêmes n'arrivent...";
 		next;
 		mes "[Zelmeto]";
-		mes "Alright, the last";
-		mes "thing that you need to";
-		mes "inspect is a ^FF0000large conveyor^000000.";
-		mes "It's similiar to the one you";
-		mes "inspected before, but it's";
-		mes "bigger and more powerful.";
+		mes "Bien, la dernière chose que je voudrais que vous inspectiez est un ^FF0000large conveyor^000000.";
+		mes "Il est semblable à l'autre, mais il ets plus grand et plus puissant.";
 		next;
 		mes "[Zelmeto]";
-		mes "We have only one of these";
-		mes "machines and it's usually";
-		mes "moved around a lot since";
-		mes "a lot of people in the factory";
-		mes "use it. I really don't know";
-		mes "where it could be now.";
+		mes "Nous n'avons qu'une seule de ces machines et il est bougé un peu partout car beaucoup de gens dans l'usine l'utilisent.";
+		mes "Je ne sais pas vraiment où il peut être maintenant.";
 		next;
 		mes "[Zelmeto]";
-		mes "Still I'm sure that";
-		mes "it's inside the building,";
-		mes "so you should be able to";
-		mes "find it. I hope you can inspect";
-		mes "that conveyor for me soon.";
+		mes "Mais je suis sûr qu'il est encore dans le bâtiment, donc vous devriez le trouver.";
+		mes "J'espère que vous pourrez vite l'inspecter.";
 		set EinFactory,11;
 		close;
 		break;
 
 	case 11:
 		mes "[Zelmeto]";
-		mes "The machine which";
-		mes "you are supposed to";
-		mes "inspect right now";
-		mes "is a large convyore.";
+		mes "La machine que vous êtes sensé inspecter est un large conveyor.";
 		next;
 		mes "[Zelmeto]";
-		mes "Remember that we";
-		mes "also have a small sized";
-		mes "conveyor, so make sure";
-		mes "that you examine the";
-		mes "larger one, alright?";
+		mes "Rappellez-vous qu'il y a également un small conveyor, donc faites attention d'examiner le grand, ok ?";
 		close;
 		break;
 
 	case 12:
 		mes "[Zelmeto]";
-		mes "Well, I figured that both";
-		mes "conveyors would have";
-		mes "similiar problems. We";
-		mes "can fix them at the";
-		mes "same time, but it'll";
-		mes "be a hassle";
+		mes "Je pensais bien que les deux conveyors avaient des problêmes simillaires.";
+		mes "Nous pouvons les réparer en même temps, mais ça sera toute une histoire.";
 		next;
 		mes "[Zelmeto]";
-		mes "Thank you so much for";
-		mes "your help. Without you,";
-		mes "I'm pretty sure we wouldn't";
-		mes "know about these problems";
-		mes "until it was too late.";
+		mes "Merci beaucoup de votre aide.";
+		mes "Sans vous, je suis sûr que nous n'aurions été au courant de ces problêmes que trop tard.";
 		next;
 		mes "[Zelmeto]";
-		mes "Now, I've got to make sure";
-		mes "we have enough materials";
-		mes "to make the repairs so that";
-		mes "the machines will be safely";
-		mes "functioning again.";
+		mes "Maintenant je dois m'assurer que nous ayons assez de matériel pour les réparations, afin que les machines fonctionnement de nouveau correctement.";
 		next;
 		mes "[Zelmeto]";
-		mes "First, I better";
-		mes "hurry and request";
-		mes "an increase for the";
-		mes "Factory Repair budget";
-		mes "from our superintendant.";
+		mes "En premier lieu, je ferais mieux de demander une augmentation du budget de répération de l'usine à notre directeur.";
 		set EinFactory,13;
 		close;
 		break;
 
 	case 13:
 		mes "[Zelmeto]";
-		mes "I've got to report this";
-		mes "to our superintendant";
-		mes "as soon as possible.";
+		mes "Je dois rapporter ça à notre directeur au plus tôt.";
 		next;
 		mes "[Zelmeto]";
-		mes "With any luck, he'll approve";
-		mes "a budget increase so that we";
-		mes "can get all of the materials";
-		mes "needed for the repairs.";
+		mes "Avec de la chance, il va approuver une augmentation du budget et nous pourrons avoir tout le matériel nécéssaire pour les réparations.";
 		close;
 		break;
 
@@ -2774,41 +2578,28 @@ s_Switches:
 		mes "......";
 		next;
 		mes "[Zelmeto]";
-		mes "^6A6A6A*Sigh*^000000";
-		mes "My proposal was rejected";
-		mes "by our superintendant. But";
-		mes "maintainance and repairs";
-		mes "are crucial for peak operating";
-		mes "efficiency and worker safety!";
+		mes "^6A6A6A*Soupire*^000000";
+		mes "Ma demande a été rejetée par le directeur.";
+		mes "Mais la maintenance et les réparations sont cruciales pour une efficacité maximum et la sécurité des travailleurs !";
 		next;
 		mes "[Zelmeto]";
-		mes "I'm frustrated and worried.";
-		mes "Maybe nothing will happen";
-		mes "for now, but we've got to";
-		mes "safeguard our future by";
-		mes "regularly maintaining";
-		mes "all of these machines";
+		mes "Je suis frustré et inquiet.";
+		mes "Peut-être que rien ne va se passer pour l'instant, mais nous devons assurer notre future sécurité en révisant régulièrement toutes ces machines.";
 		next;
 		mes "[Zelmeto]";
-		mes "Even possible threats";
-		mes "to the safety of our workers";
-		mes "can't be ignored. Isn't there";
-		mes "something I can do? ^6A6A6A*Sigh*^000000";
+		mes "Aucune menace potentielle pour la sécrité de nos ouvriers ne peut être ignorée.";
+		mes "Il n'y a rien que je puisse faire ? ^6A6A6A*Soupire*^000000";
 		next;
 		mes "[Zelmeto]";
-		mes "If we can";
-		mes "just get";
+		mes "Si seulement nous pouvions avoir";
 		mes "20 ^FF0000Flexible Tube^000000,";
-		mes "10 ^FF0000Rusty Screw^000000 and";
+		mes "10 ^FF0000Rusty Screw^000000 et";
 		mes "10 ^FF0000Used Iron Plate^000000,";
-		mes "we could make those repairs.";	
+		mes "nous pourrions faire ces réparations.";	
 		next;
 		mes "[Zelmeto]";
-		mes "But without funds, there's";
-		mes "no way we can purchase";
-		mes "those items. If something";
-		mes "happens, who's going to";
-		mes "be responsible?";
+		mes "Mais sans fonds, il n'y aucun moyen d'acheter ces objets.";
+		mes "Si quelque-chose arrive, qui sera le responsable ?";
 		set EinFactory,15;
 		close;
 		break;
@@ -2816,51 +2607,37 @@ s_Switches:
 	case 15:
 		mes "[Zelmeto]";
 		if(countitem(7325) < 20 || countitem(7317) < 10 || countitem(7319) < 10){
-			mes "We need";
-			mes "at least";
+			mes "Nous avons besoin d'au moins";
 			mes "20 ^FF0000Flexible Tube^000000,";
-			mes "10 ^FF0000Rusty Screw^000000 and";
+			mes "10 ^FF0000Rusty Screw^000000 et";
 			mes "10 ^FF0000Used Iron Plate^000000,";
-			mes "to repair this factory.";
+			mes "pour réparer cette usine.";
 			next;
 			mes "[Zelmeto]";
-			mes "^6A6A6A*Sigh*^000000";
-			mes "But there's no way";
-			mes "we can get all of those";
-			mes "things. Our budget isn't";
-			mes "big enough to cover it.";
+			mes "^6A6A6A*Soupir*^000000";
+			mes "Mais il n'y a aucun moyen d'obtenir tout ça.";
+			mes "Notre budget n'est pas assez grand pour couvrir ça.";
 			close;
 		}
-		mes "Ah, it's you again.";
-		mes "It's shameful letting";
-		mes "other people know about";
-		mes "our miserable situation...";
+		mes "Ah, c'est encore vous.";
+		mes "C'est honteux de mettre les gens au courant de ses misères...";
 		next;
 		mes "[Zelmeto]";
-		mes "There's nothing";
-		mes "worth seeing here,";
-		mes "so there really isn't";
-		mes "a point in you coming to";
-		mes "visit this place anymore.";
+		mes "C'est un des pires spectacles à voir ici, donc il n'y a pas de raison que vous reveniez ici.";
 		next;
-		menu "Give him the materials.",s_Give,"Huh.",-;
+		menu "Lui donner le matériel.",s_Give,"Huh.",-;
 
 		mes "[Zelmeto]";
-		mes "^6A6A6A*Sigh*^000000";
-		mes "I'm really worried";
-		mes "about this factory's";
-		mes "future. What is our";
-		mes "superintendant thinking...?";
+		mes "^6A6A6A*Soupire*^000000";
+		mes "Je suis vraiment inquiet pour le futur de cette usine.";
+		mes "A quoi diable pense notre directeur...?";
 		close;
 
 	s_Give:	
 		mes "[Zelmeto]";
 		mes "...Hm?";
-		mes "Aren't these the";
-		mes "materials we need";
-		mes "to make repairs in";
-		mes "the factory? How did";
-		mes "you find all of these?";
+		mes "N'est-ce pas le matériel pour faire les réparations dans l'usine ?";
+		mes "Comment avez-vous trouvé tout ça ?";
 		next;
 		if(countitem(7325) < 20 || countitem(7317) < 10 || countitem(7319) < 10)close;
 		delitem 7325,20;
@@ -2876,59 +2653,39 @@ s_Switches:
 		else if(BaseLevel >= 81 && BaseLevel < 91) set BaseExp,BaseExp+76026;
 		else if(BaseLevel >= 91) set BaseExp,BaseExp+290675;
 		mes "[Zelmeto]";
-		mes "I don't know how";
-		mes "I can possible pay you";
-		mes "back for this great favor.";
-		mes "I appreciate that you've";
-		mes "stepped forward to help us.";
+		mes "Je ne sais vraiment pas comment vous récompenser pour cette grande faveur.";
+		mes "J'apprécie que vous soyez resté nous aider.";
 		next;
 		mes "[Zelmeto]";
 		mes "Oh...!";
-		mes "In my years of managing,";
-		mes "I've learned the ultimate";
-		mes "motivation techniques. Let";
-		mes "me enhance your motivation";
-		mes "to show you my gratitude.";
+		mes "Dans mes années de managing, j'ai appris les techniques de motivation ultimes.";
+		mes "Laissez-moi faire monter votre motivation pour vous montrer ma gratitude.";
 		next;
 		mes "[Zelmeto]";
-		mes "Now...";
-		mes "Just open your mind";
-		mes "and listen to my words";
-		mes "of encouragement";
-		mes "and inspiration...";
+		mes "Maintenant...";
+		mes "Ouvrez votre esprit à mes encouragements et à l'inspiration...";
 		next;
 		mes "[Zelmeto]";
-		mes "^3131FFWhen the going";
-		mes "gets rough, you've";
-		mes "gotta get rougher!";
-		mes "You gotta climb that";
-		mes "mountain 'cause no one's";
-		mes "gonna climb it for you!";
+		mes "^3131FFQuand le chemin devient rude, vous devez être plus rude encore !";
+		mes "Vous devez escalader la montagne car personne ne l'escaladera pour vous !";
 		next;
 		mes "[Zelmeto]";
-		mes "^3131FFDon't give it up!";
-		mes "Go for broke!";
-		mes "Losers are quitters";
-		mes "and quitters are losers!";
+		mes "^3131FFN'abandonnez pas !";
+		mes "Allez de l'avant !";
+		mes "Les perdants sont des fuyards et les fuyards sont des perdants !";
 		next;
 		mes "[Zelmeto]";
 		mes "^6A6A6A*Whew*";
-		mes "^000000I haven't given that much";
-		mes "inspiration in a while, but";
-		mes "your help was well worth it.";
-		mes "I'm going to start  the repairs, but";
-		mes "once again I'd like to thank you.";
+		mes "^000000Je n'ai pas été aussi inspiré depuis un moment, mais votre aide a été précieuse.";
+		mes "Je vais commencer les réparations, mais je voudrais vous remercier une fois encore.";
 		close;
 		break;
 
 	case 16:
 		mes "[Zelmeto]";
-		mes "We'll be putting good";
-		mes "use to the materials you";
-		mes "gave me. With your help,";
-		mes "our factory will operate";
-		mes "safely. At least, for just";
-		mes "a little while longer.";
+		mes "Nous ferons un bon emploi du matériel que vous nous avez donné.";
+		mes "Avec votre aide, l'usine focntionnera en toute sécurité.";
+		mes "Du moins pour un peu plus longtemps.";
 		close;
 	}	
 }
@@ -2936,12 +2693,8 @@ s_Switches:
 ein_in01.gat,50,232,4	script	2nd Control Panel	111,{
 
 	if(EinFactory == 1){
-		mes "^3131FFIt's the 2nd control panel";
-		mes "Zelmeto asked you to inspect.";
-		mes "it looks totally broken: screws";
-		mes "are missing, and the iron cover";
-		mes "has been bent open, revealing";
-		mes "a tangled mess of wires inside.";
+		mes "^3131FFC'est le 2nd control panel que Zelmeto vous a demandé d'isnpecter.";
+		mes "Il a l'air totallement cassé : il manque des vis, et la coque en métal a été tordue et ouverte, mettant à jour un enchevêtrement de fils à l'intérieur.";
 		set EinFactory,2;
 		close;
 	}
@@ -2951,13 +2704,8 @@ ein_in01.gat,50,232,4	script	2nd Control Panel	111,{
 ein_in01.gat,108,217,4	script	3rd Pressure Governor	111,{
 
 	if(EinFactory == 3){
-		mes "^3131FFAt first glance, this";
-		mes "pressure governor looks";
-		mes "perfectly fine. But after you";
-		mes "check it more carefully, you";
-		mes "find that it's making strange";
-		mes "grinding noises and a few of";
-		mes "the surface screws are loose.";
+		mes "^3131FFA première vue, ce pressure governor a l'air en parfait état.";
+		mes "Mais après que vous l'ayez inspecté plus attentivement, il fait d'étranges bruits de forttement et il manque quelques vis extérieures.";
 		set EinFactory,4;
 		close;
 	}
@@ -2967,13 +2715,9 @@ ein_in01.gat,108,217,4	script	3rd Pressure Governor	111,{
 ein_in01.gat,61,259,4	script	Main Control Panel	111,{
 
 	if(EinFactory == 5){
-		mes "^3131FFThe main control panel";
-		mes "doesn't look like it has";
-		mes "any problems. But after";
-		mes "tapping on its surface,";
-		mes "you hear a disheartening";
-		mes "hollow sound. It looks like";
-		mes "it's missing some parts...";
+		mes "^3131FFLe main control panel n'a pas l'air d'avoir de problêmes.";
+		mes "Mais après avoir tappé sur la surface, vous entendez un son creux décourageant.";
+		mes "Comme s'il avait eprdu quelques pièces...";
 		set EinFactory,6;
 		close;
 	}
@@ -2983,13 +2727,9 @@ ein_in01.gat,61,259,4	script	Main Control Panel	111,{
 ein_in01.gat,47,197,4	script	Conveyor#01	111,{
 
 	if(EinFactory == 7){
-		mes "^3131FFThe conveyor's movements";
-		mes "look jittery and clumsy. The";
-		mes "mechanical arm also doesn't";
-		mes "look powerful enough to bear";
-		mes "the loads that it's carrying. The";
-		mes "screws in the conveyor look";
-		mes "loose and rusted over.";
+		mes "^3131FFLes mouvements du conveyor ont l'air nerveux et maladroits.";
+		mes "Le bras mécanique n'a pas l'air suffisamment puissant pour supporter les chargements qu'il transporte.";
+		mes "Il manque des vis sur le conveyor et d'autres sont rouillées.";
 		set EinFactory,8;
 		close;
 	}
@@ -2999,13 +2739,9 @@ ein_in01.gat,47,197,4	script	Conveyor#01	111,{
 ein_in01.gat,100,267,4	script	Pipe	111,{
 
 	if(EinFactory == 9){
-		mes "^3131FFThe inspection of this";
-		mes "pipe didn't take very long.";
-		mes "It's bloated and worn out";
-		mes "from long durations of";
-		mes "being overloaded with";
-		mes "pressure. It's a wonder";
-		mes "it hasn't exploded yet.";
+		mes "^3131FFL'inspection du tuyau ne prend pas beaucoup de temps.";
+		mes "Il est gonflé et totallement usé à cause des pressions qu'il supporte et de sa longue vie.";
+		mes "C'est un miracle qu'il n'ait pas encore explosé.";
 		set EinFactory,10;
 		close;
 	}
@@ -3015,12 +2751,8 @@ ein_in01.gat,100,267,4	script	Pipe	111,{
 ein_in01.gat,95,238,4	script	Conveyor#02	111,{
 
 	if(EinFactory == 11){
-		mes "^3131FFThis conveyor seems";
-		mes "to have similiar problems";
-		mes "as its smaller version. Its";
-		mes "movements are awkward,";
-		mes "erratic and weak, and almost";
-		mes "all of its screws are rusted.";
+		mes "^3131FFCe conveyor semble avoir les mêmes problêmes que la version plus petite.";
+		mes "Ses mouvements sont maladroits, irréguliers et faibles, et en plus toutes ses vis sont rouillées.";
 		set EinFactory,12;
 		close;
 	}
