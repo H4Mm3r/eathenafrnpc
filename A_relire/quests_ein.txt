@@ -1,0 +1,3040 @@
+//===== eAthena Script ======================================= 
+//= Quest NPCs related to Einbroch and Einbech
+//===== By: ================================================== 
+//= Evera and The eAthena Dev Team
+//===== Current Version: ===================================== 
+//= 1.5.2
+//===== Compatible With: ===================================== 
+//= eAthena 7.15 +
+//===== Description: ========================================= 
+//= Shinokas Quest, Einbroch Lover Quest, Factory Quest,
+//= Uwe Quest.
+//===== Additional Comments: ================================= 
+//= 1.0 Initial Release [Evera]
+//= 1.1 Added more quests [Evera]
+//= 1.2 Added quest bits from Einbech and renamed file to
+//=	quests_ein.txt [Evera]
+//= 1.3 Implemented the polution quest. [MasterOfMuppets]
+//= 1.4.1 Massive bugfix. Fixed Pollution exploit [Lupus]
+//= 1.4.2 Fixed Khowropher bug [Lupus]
+//= 1.5 Fixed double levelup bug [Lupus]
+//= 1.5.1 Fixed exploit [KarLaeda]
+//= 1.5.2 Updated Shino Quest to leave no grabage vars [Lupus]
+//= Traduit pour Agora-Online par Arkana
+//============================================================ 
+
+
+//============================================================
+//=================================================== Shinokas
+//====================================================== Quest
+
+ein_in01.gat,231,163,1	script	Sick Old Man	849,6,6,{
+	switch(Shinokas_Quest){
+	case 9:
+		mes "^3131FFLe corps de Shinokas est devenu glacé et raide.";
+		close;
+	case 8:
+		mes "["+strcharinfo(0)+"]";
+		mes "Shinokas,";
+		mes "J'ai trouvé quelque chose !";
+		next;
+		mes "[Shinokas]";
+		mes "Vous...";
+		mes "Etes... revenu...";
+		mes "Mais... c'est... c'est";
+		mes "Déjà... trop tard.";
+		mes "*Tousse* *Tousse*";
+		next;
+	 	mes "^3131FFVous aidez Shinokas à s'asseoir, mais vous vous appercevez que vos mains sont tachées de son sang.^000000";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Du sang...?!";
+		mes "Shinokas !";
+		mes "Qui vous a fait ça ?";
+		mes "Nous devons demander de l'aide !";
+		next;
+		mes "[Shinokas]";
+		mes "Non...";
+		mes "c'est déjà trop tard pour moi.";
+		mes "J'aurais du mourir il y a bien longtemps...";
+		next;
+		mes "[Shinokas]";
+		mes "*Tousse*";
+		mes "Je regrette juste de n'avoir jamais été capable de demander pardon à mes amis...";
+                mes "*Tousse*";
+		next;
+		mes "[Shinokas]";
+		mes "Mais avez-vous trouvé ?"; 
+                mes "Avez...Avez-vous trouvé ce qui était si spécial à propos de cette pierre ?"; 
+                mes "Q-Qu'est-ce... Qu'est-ce... vraiment ?";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "C'était...";
+		next;
+		input @text$;
+		mes "^0000FF"+@text$+"^000000!";
+		next;
+		mes "[Shinokas]";
+		mes "A-Attendez...!";
+		mes "Qu'est-ce que...";
+		mes "Je ne comprends pas...";
+		mes "*Tousse* *Tousse*";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Non...!";
+		mes "Dites-moi qui vous a fait ça !";
+		mes "Où sont-ils ?";
+		mes "Parlez-moi, s'il vous plaît !";
+		next;
+		mes "[Shinokas]";
+		mes "Q-que...?";
+		mes "Je vous ai dit.";
+		mes "I-Ils s--";
+		next;
+		mes "[Shinokas]";
+		mes "...";
+		mes "......";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Non !";
+		mes "Shinokas!";
+		mes "Mon Dieu, pourquoi ?";
+		mes "Pourquoi...";
+		set Shinokas_Quest,9;
+		close;
+	case 7:
+		mes "[Shinokas]";
+		mes "...";
+		mes "......";
+		close;
+	case 6:
+		mes "[Shinokas]";
+		mes "Alors...?";
+		mes "Avez-vous appris quelque chose à l'usine ?";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		if(EinFactory != 16){
+			mes "Je n'y suis pas encore allé";
+			next;
+			mes "[Shinokas]";
+			mes "Alors pourquoi êtes-vous revenu ?"; 
+                        mes "Allez-y et enquêtez dans l'usine maintenant.";
+			close;
+		}
+		mes "Et bien...";
+		mes "Il y a beaucoup de choses suspectes dans l'usine, mais je ne pense pas que ça soit lié à ce minerai dont vous parliez.";
+		next;
+		mes "[Shinokas]";
+		mes "Mince...";
+		mes "Alors où l'ont-ils caché ?";
+                mes "Où pensez-vous que cette pierre devrait se trouver ?";
+		next;
+		while(1){
+			switch(select("Aéroport:Usine:Gare:Atelier de répération des vaisseaux volants:Laboratoire")){
+			case 1: //airport
+				mes "[Shinokas]";
+				mes "Non...";
+				mes "l'Aéroport est toujours plein de monde.";
+				mes "Ce serait une mauvais idée de cacher quelque chose de si important dans ce genre d'endroit.";
+				next;
+				break;
+			case 2: //factory
+				mes "[Shinokas]";
+				mes "Ne venez-vous pas de vérifier l'usine ?";
+				mes "Vous ne pourriez plus trouver le moindre indice sur le minerai là-bas...";
+				next;
+				break;
+			case 3: //train
+				mes "[Shinokas]";
+				mes "Hum...";
+				mes "Des gens vont et viennent en permanence à la gare.";
+				mes "Ce n'est pas le meilleur endroit pour cacher quelque chose d'aussi important que la pierre.";
+				next;
+				break;
+			case 4: //repairshop
+				mes "Le vaisseau volant ?"; 
+                                mes "Hum, il vole grâce à une force mystérieuse..."; 
+                                mes "Mais j'ai déjà vérifié l'atelier de réparation des vaisseaux volants moi-même.";
+				mes "Je n'ai trouvé aucune trace de la pierre là-bas.";
+				next;
+				break;
+			case 5: //Laboratory
+				mes "[Shinokas]";
+				mes "...!";
+				mes "Oui. Oui...!";
+				mes "Ca peut tout à fait être ça !";
+				mes "Pourquoi n'ai-je jamais pensé au laboratoire ?";
+				mes "C'est tellement logique !";
+				next;
+				mes "[Shinokas]";
+				mes "J'ai un bon pressentiment pour cet endroit.";
+                                mes "S'il-vous plaît, introduisez-vous dans ce laboratoire et voyez si vous pouvez trouver le minerai !";
+				next;
+				mes "[Shinokas]";
+				mes "Rappellez-vous...";
+				mes "N'importe qui ne peut pas entrer dans ce genre d'endroits.";
+                                mes "Mais je suis persuadé que vous trouverez un moyen.";
+				set Shinokas_Quest,7;
+				close;
+			}
+		}
+	case 5:
+		mes "[Shinokas]";
+		mes "Alors, avez-vous trouvé quoi que ce soit chez les Kapellthaines ?";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Et bien, Mr. Kapelltheine est plutôt rustre, mais je n'ai rien trouvé de vraiment suspect.";
+		next;
+		mes "[Shinokas]";
+		mes "Hum...";
+		mes "J'ai du me tromper, mais...";
+		mes "où pourrait-il se trouver ?";
+		next;
+		mes "[Shinokas]";
+		mes "C'est vrai ! La grande usine à Einbroch !";
+		mes "Qu'est-ce qui pourrait être plus suspect ?"; 
+                mes "Il y a beaucoup d'ouvriers, mais personne ne sait vraiment ce qu'ils font là-bas...";
+		next;
+		mes "[Shinokas]";
+		mes "S'ils sont si discret il est possible qu'ils gardent le minerai là-bas.";
+		mes "S'il vous plaît, allez à l'usine chercher cette pierre au plus tôt.";
+		set Shinokas_Quest,6;
+		close;
+	case 4:
+		mes "[Shinokas]";
+		mes "S'il vous plaît...";
+		mes "Allez voir si les Kapelltheines possèdent un quelconque minerai unique.";
+                mes "Leur manoir est sur la route qui mène à l'Aéroport.";
+		close;
+	}
+	//Shinokas_Quest = 0 1 2 3 10
+	mes "[Sick Old Man]";
+	mes "...!";
+	next;
+	mes "[Sick Old Man]";
+	mes "Arrrg~";
+	mes "Je souffre le martyr !";
+	mes "Arrrgh ! Awwwrgh !";
+	mes "Q-Quand mon fils reviendra-t-il de de l'usine...?!";
+	next;
+	if(Shinokas_Quest != 3){
+		mes "^3131FFVous vous sentez vraiment gêné à rester planté devant ce vieil homme convulsé sur son lit";
+		close;
+	}
+	//Shinokas_Quest = 3
+	mes "["+strcharinfo(0)+"]";
+	mes "Shi...";
+	mes "Shinokas ?";
+	next;
+	mes "[Sick Old Man]";
+	mes "Quoi...?";
+	mes "Noooon ! Je m'appelle Shinotarous."; 
+        mes "Vous vous adressez à la mauvaise personne !";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Ce doit être ce Shinokas dont parlait Hikeman à Einbech";
+	mes "Humm, mais comment puis-je le forcer à l'admettre ?";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "*Ahem !*";
+	mes "Excusez-moi...";
+	next;
+	while(1){
+		switch(select("Vous rappellez-vous de l'effrondrement ?:Vous n'étiez pas un mineur ?:Avez-vous vécu toute votre vie à Einbroch ?")){
+		case 1: //remember
+			if(@shinqst2 > 4 || @shinqst3 > 4) goto L_Cont;
+			mes "[Sick Old Man]";
+			mes "Noooon !";
+			mes "Je ne sais pas de quoi diable vous parlez !";
+			next;	
+			break;
+		case 2: //miner
+			if(@shinqst2 > 1)goto s_Quest2;
+			mes "[Sick Old Man]";
+			mes "Noooon...!";
+		 	mes "P-pourquoi me posez-vous ce genre de questions ?!";
+		s_Quest2:
+			set @shinqst2,@shinqst2 + 1;
+			if(@shinqst3)set @shinqst3,0;
+			next;
+			break;
+
+		case 3: //einbroch
+			if(@shinqst3 > 1)goto s_Quest3;
+			mes "[Sick Old Man]";
+			mes "O-Oui !";
+			mes "Je suis né et j'ai gran... grandi ici à Einbe--Einbroch!";
+			next;
+			mes "^3131FFIl semble que le vieil homme ne dise pas la vérité...";
+		s_Quest3:
+			set @shinqst3,@shinqst3 + 1;
+			if(@shinqst2)set @shinqst2,0;
+			next;
+			break;
+		}
+	}
+	
+L_Cont:
+	mes "[Shinokas]";
+	mes "Hum...";
+	mes "^0000FFBuender Hikeman^000000...";
+	next;
+	mes "[Shinokas]";
+	mes "Non !";
+	mes "Je n'ai jamais rencontré Buender Hikeman de toute ma vie...";
+	next;
+	mes "[Shinokas]";
+	mes "...";
+	mes "......";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "C'était donc vrai !";
+	mes "Vous êtes Shinokas !";
+	next;
+	mes "[Shinokas]";
+	mes "Malédiction !";
+	mes "Ma couverture est fichue !";
+	mes "A-Attendez ! Qu'est-ce que vous savez ?!";
+	next;
+	mes "[Shinokas]";
+	mes "Vous ont-^0000FFils^000000 envoyé ?";
+	mes "*Soupir* Je pense que c'est ça.";
+        mes "Je ne pourrai jamais résoudre le mystère avant de mourir.";
+	next;
+	mes "[Shinokas]";
+	mes "Ok.";
+	mes "Allons-y.";
+	mes "Je suis prêt maintenant.";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Dites-moi tout ce que vous savez à propos de cet accident, quand le tunnel de la mine s'est effondré autour de vous et Hikeman.";
+	next;
+	mes "[Shinokas]";
+	mes "...?";
+	mes "Errr....";
+	mes "Vous n'êtes pas ici pour me tuer ?";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Non...!";
+	mes "Je suis ici pour trouver la vérité.";
+	next;
+	mes "[Shinokas]";
+	mes "Ce qui veut dire... que j'ai encore du temps.";
+	mes "Ce doit être le Destin !";
+	mes "Très bien, je vais vous raconter ce qui s'est passé.";
+        mes "Mais c'est une longue histoire...";
+	next;
+	mes "[Shinokas]";
+	mes "Que savez-vous sur l'accident ?";
+        mes "Non attendez.";
+	mes "Ne dites rien.";
+	mes "Je ne veux rien entendre.";
+	next;
+	mes "[Shinokas]";
+	mes "Je l'avoue. Oui.";
+	mes "J'ai poignardé mes amis dans le dos.";
+        mes "C'est un péché que je ne peux pas oublier et qui va me hanter jusqu'à ma mort.";
+	next;
+	mes "[Shinokas]";
+	mes "J'ai vendu mes amis pour de l'argent.";
+        mes "J'ai détruit ce tunnel et les ai tués.";
+        mes "Mais je crois que j'ai aussi été trahi.";
+	mes "^0000FFIls^000000 n'avaient pas l'intention de tenir leur engagement.";
+	next;
+	mes "[Shinokas]";
+	mes "Après que j'aie détruit le tunnel, ils m'ont traqué et j'ai passé le reste de ma vie à être poursuivi et à fuir d'un endroit à l'autre.";
+	mes "Que diable pouvait être ce ^0000FFminerai^000000 et pourquoi est-il si important ?";
+	next;
+	mes "[Shinokas]";
+	mes "Je dois en savoir plus sur cette pierre pour laquelle ils tuent.";
+	mes "C'est pourquoi je me suis risqué ici à Einbroch.";
+        mes "Il semble qu'une pierre simillaire au minerai que nous avions trouvé a été acheminée ici récemment.";
+	next;
+	menu "L'avez-vous trouvée ?",-;
+	mes "[Shinokas]";
+	mes "Non, pas pour le moment.";
+	mes "J'ai cherché cette pierre chaque nuit.";
+	mes "Pendant la journée, cet aimable forgeron s'est débrouillé pour me cacher de ces hommes.";
+	next;
+	mes "[Shinokas]";
+	mes "Mais je ne serai plus en sécurité pour longtemps.";
+        mes "Voyez, je suis mourrant, mais avant ça, je dois accomplir cette dernière tâche et savoir ce qui est si important avec cette pierre...";
+	next;
+	menu "Attendez, qui essaie de vous tuer ?",-;
+	mes "[Shinokas]";
+	mes "Qui tente de me tuer ?";
+	mes "Ceux qui nous ont payé, mes amis et moi pour déterrer cette roche où elle était.";
+        mes "Nous pensions qu'ils n'étaient que des hommes d'affaires ordinaires mais..."; 
+        mes "Ils sont dangereux.";
+	next;
+	mes "[Shinokas]";
+	mes "Voilà, je vous ai tout dit.";
+	mes "Et maintenant que vous savez que mes jours sont peut-être comptés.";
+	mes "Je vous supplie de m'accorder une faveur et de chercher cet étrange et mystérieux minerai à Einbroch.";
+	next;
+	mes "[Shinokas]";
+	mes "Maintenant, la première chose que j'ai appris dans cette affaire, c'est que la famille locale la plus riche est celle des Kapelltheines.";
+        mes "Seuls des gens aussi riches et puissants peuvent être impliqué dans quelque chose de si important.";
+	next;
+	mes "[Shinokas]";
+	mes "Irez-vous chercher ce minerai au Manoir des Kappelltheines ?";
+        mes "Il est sur le chemin de l'aéroport et ne devrait pas être dur à trouver.";
+        mes "Ils sont les plus riches d'Einbroch, après tout.";
+	next;
+	mes "[Shinokas]";
+	mes "Je suis trop vieux et faible pour quitter cette maison, et il est possible que ces gens me trouvent.";
+        mes "Si vous pouvez comprendre ma situation, s'il vous plaît, découvrez si la famille Kappelltheines a des pierres uniques...";
+	set Shinokas_Quest,4;
+	close;
+
+OnTouch:
+	if(Shinokas_Quest != 8) end;
+	mes "^3131FFLes fenêtres ouvertes claquent quand vous entrez dans la chambre et êtes reçu par une fraicheur soudaine.";
+	mes "Des empreintes de pas rouges se trouvent près de vos pieds.";
+	next;
+	mes "^3131FFLes draps gris sont chiffonnés sur le lit, mais vous pouvez voir des tâches rouges et sombres dans les plis.";
+	close;
+}	
+
+ein_in01.gat,32,133,6	script	Maid	850,{
+	mes "[Maid]";
+	if(Shinokas_Quest != 4){
+		mes "Il n'y a pas de fin à cette pille d'assiettes que je dois laver...!";
+		close;
+	}	
+	mes "Vous me demandez si j'ai vu des cailloux ici ?";
+	mes "C'est étrange...";
+	next;
+	mes "[Maid]";
+	mes "Je suis avec cette famille depuis longtemps.";
+	mes "Je peux vous assurer qu'il n'y a aucun secret pour moi dans cette maison !";
+	next;
+	mes "[Maid]";
+	mes "Je suis désolée, mais je ne pense pas que nous ayons quelque pierre que ce soit ici dans le manoir.";
+        mes "Pourquoi en avez vous besoin précisément ?";
+	set Shinokas_Quest,5;
+	close;
+}
+
+einbroch.gat,51,52,1	script	lab_warp	45,2,2{
+	if(Shinokas_Quest != 7){
+		mes "^3131FFLa porte est fermée à clé.";
+		mes "Vous ne pouvez pas entrer.";
+		close;
+	}
+	mes "[Security System]";
+	mes "^FF0000*Beep Boop*^000000";
+	mes "Zone à accès restreint.";
+	mes "Veuillez vous identifier via le système.";
+	next;
+	switch(select("S'identifier.:Informations:Annuler")){
+		case 1: //Identify
+			break; //continue after switch =\
+		case 2: //information
+			mes "[Security System]";
+			mes "Vous devez utiliser le système de sécrurité pour avoir accès au laboratoire d'Einbroch.";
+			next;
+			mes "[Security System]";
+			mes "Vous recevrez un mot de passe que vous devez entrer correctement dans les 60 secondes.";
+			mes "Autrement vous échouerez à la vérification.";
+			//hell of a security system ye got there mate
+			//wonder if gravity co has the same sort? xD
+			next;
+			mes "[Security System]";
+			mes "Si vous prenez plus de 3 minutes pour entrer le mot de passe le système de sécurité se réinitialisera.";
+			close;
+		case 3: //cancel
+			mes "[Security System]";
+			mes "Vous avez annulé la vérification d'identité.";
+			close;
+	}
+	//ID check:
+	mes "[Security System]";
+	mes "Entrez le mot de passe suivant en 60 secondes.";
+        mes "Un échec conduira à un accès refusé.";
+        mes "Veuillez patienter.";
+	next;
+	mes "[Security System]";
+	set @startseconds,gettime(3)*60*60+gettime(2)*60+gettime(1);
+	switch(rand(1,11)){
+	case 1:
+		mes "^00CCFFburrdingdingdilidingdingphoohudaamb";
+		mes "^00CCFFandoora^0000FFbambarambambamburanbamding";
+		input @str$;
+		if(@str$ != "burrdindingdilidingdingphoohudaambandoorabambarambambamburanbamding") goto L_SCFail;
+		goto L_Suc;
+	case 2:
+		mes "^FF33CCbarapaphurarlandreamduranbatuhi^990066wooi";
+		mes "^990066kabamturubamdingding";
+		next;
+		input @str$;
+		if(@str$ != "barapaphurarlandreamduranbatuhiwooikabamturubamdingding") goto L_SCFail;
+		goto L_Suc;
+	case 3:
+		mes "^00CCFFbelief love luck grimace sweat rush";
+		mes "^00CCFFfolktale rodimus optimus burnblebe";
+		input @str$;
+		if(@str$ != "belief love luck grimace sweat rush folktale rodimus optimus burnblebe") goto L_SCFail;
+		goto L_Suc;
+	case 4:
+		mes "^FF33CCLiGhTsPeEd RiGhT SPEed leFT TURn";
+		mes "^FF33CCRiGhT BuRn OrIGInAL GaNgSteR SmACk";
+		input @str$;
+		if(@str$ != "LiGhTsPeEd RiGhT SPEed leFT TURn RiGhT BuRn OrIGInAL GaNgSteR SmACk") goto L_SCFail;
+		goto L_Suc;
+	case 5:
+		mes "^00CCFFCoboman no chikara-yumei na";
+		mes "^00CCFFchikara-daiookii na chikara da ze!";
+		mes "^00CCFFCOBO ON";
+		input @str$;
+		if(@str$ != "Coboman no chikara-yumei na chikara-daiookii na chikara da ze! COBO ON") goto L_SCFail;
+		goto L_Suc;
+	case 6:
+		mes "^FF33CChfjdkeldjs^990066hfjdjeiskdlefvbd";
+		input @str$;
+		if(@str$ != "hfjdkeldjshfjdjeiskdlefvbd") goto L_SCFail;
+		goto L_Suc;
+	case 7:
+		mes "^00CCFFI'm the King of all Weirdos! Now";
+		mes "^00CCFFyou know of my true power. Obey~!";
+		input @str$;
+		if(@str$ != "I'm the King of all Weirdos! Now you know of my true power. Obey~!") goto L_SCFail;
+		goto L_Suc;
+	case 8:
+		mes "^990066uNflAPPaBLe LoVaBLe SeCreTs AnD";
+		mes "^990066BoWLiNg aGaINST tHe KarMA of YoUtH";
+		input @str$;
+		if(@str$ != "uNflAPPaBLe LoVaBLe SeCreTs AnD BoWLiNg aGaINST tHe KarMA if YoUtH") goto L_SCFail;
+		goto L_Suc;
+	case 9:
+		mes "^00CCFFBy the power of^000000";
+		mes "^00CCFFp-po-poi-po-poi-poin-poing";
+		mes "^00CCFFGOD-POING. I NEVER LOSE!";
+		input @str$;
+		if(@str$ != "By the power of p-po-poi-po-poi-poin-poing GOD-POING. I NEVER LOSE!") goto L_SCFail;
+		goto L_Suc;
+	case 10:
+		mes "^00CCFF...silence. quiet benevolence...";
+		mes "^00CCFFsoul mate... wonder. enigma...";
+		mes "^00CCFFcloud.^000000";
+		input @str$;
+		if(@str$ != "...silence. quiet benevolence... soul mate... wonder. enigma... cloud") goto L_SCFail;
+		goto L_Suc;
+	case 11:
+		mes "^FF33CCopeN,Open!op3n.openOpen0p3nOpEn0pen";
+		mes "^FF33CC`open'0Pen open?open!111OPENSESAME";
+		input @str$;
+		if(@str$ != "opeN,Open!op3n.openOpenOp3nIoEnOpen`open'0Pen open?open!111OPENSESAME") goto L_SCFail;
+		goto L_Suc;
+	}
+L_Suc:
+	next;
+	set @endtime,gettime(3)*60*60+gettime(2)*60+gettime(1);
+	set @time,@endtime-@startseconds;
+	if(@time > 60) goto L_SC60;
+	mes "[Security System]";
+	mes "Il vous a fallu ^FF0000"+@time+" secondes^000000 pour entrer le mot de passe."; 
+        mes "Ouverture en cours.";
+        mes "Accès autorisé.";
+	close2;
+	warp "ein_in01.gat",283,25;
+	end;
+	
+L_SC60:
+	mes "[Security System]";
+	mes "Délai écoulé.";
+	mes "Il vous a fallu ^FF0000"+@time+" secondes^000000 pour entrer le mot de passe."; 
+        mes "Fermeture en cours.";
+        mes "Accès refusé.";
+	close;
+	
+L_SCFail:
+	next;
+	mes "[Security System]";
+	mes "Vous avez échoué à l'identification.";
+	mes "Accès refusé.";
+	close;
+}
+einbroch.gat,51,56,6	script	Laboratory Soldier#01	852,{
+	mes "[Laboratory Soldier]";
+	mes "Cette zone est à accès limité.";
+	mes "Veuillez partir immédiatement.";
+	close;
+
+OnHide:
+	specialeffect 16;
+	disablenpc "Laboratory Soldier#01";
+	end;
+
+OnUnhide:
+	misceffect 215;
+	end;
+
+}
+einbroch.gat,51,47,6	script	Laboratory Soldier#02	852,{
+	mes "[Laboratory Soldier]";
+	mes "Cette zone est à accès limité.";
+	mes "Veuillez partir immédiatement.";
+	close;
+
+OnHide:
+	specialeffect 16;
+	disablenpc "Laboratory Soldier#02";
+	end;
+
+OnUnhide:
+	misceffect 215;
+	end;
+
+}
+ein_in01.gat,254,35,1	script	Scientist	749,{
+	mes "[Scientist]";
+	mes "*Grogne*";
+	next;
+	if(ein_scientist == 1) goto L_P2;
+	mes "[Scientist]";
+	mes "Hein...?";
+	mes "Comment êtes-vous entré ici ?";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Oh ! Et bien...!";
+	mes "Je suis le nouveau... gardien.";
+        mes "Enchanté de faire votre connaissance.";
+	next;
+	mes "[Scientist]";
+	mes "Oh. Oui.";
+	mes "Moi de même.";
+	mes "..............";
+	mes "*Grogne*";
+	next;
+	if(select("Qu'est-ce qui ne vas pas ?:A plus tard.")==2){
+		 mes "[Scientist]";
+		 mes "Bien.";
+		 mes "Oui.";
+		 mes "Plus tard.";
+		 close;
+	}
+	mes "[Scientist]";
+	mes "Qu'est-ce que ne va pas...?!";
+	mes "Ne me lancez pas !";
+	mes "Je suis coincé ici à faire tout le travail pendant que le directeur du Département Laboratoires se ballade chaque ****** de journée !";
+	next;
+	mes "[Scientist]";
+	mes "Pendant que je suis réduit à l'esclavage ici, il est dans le vaisseau volant à flirter avec cette femme.";
+	mes "Mon Dieu...!";
+	mes "Je suis comme mis à part !";
+	if(Shinokas_Quest < 8) set ein_scientist,1;
+	close;
+	
+L_P2:
+	mes "[Scientist]";
+	mes "Un homme en vie !";
+	mes "Est-ce que ça tuerait le directeur du Département de venir ici et travailler un peu pour changer ?";
+	next;
+	mes "[Scientist]";
+	mes "Venez !";
+	mes "Je ne devrais pas avoir à m'occuper de cette masse de travail !";
+	close;
+}
+
+ein_in01.gat,266,26,1	script	Unknown Stuff	111,{
+	mes "^3131FFIl y a quelque chose d'attaché à une immense machine avec beaucoup de cordes et entouré de fil barbelé.";
+	if(Shinokas_Quest < 8) set ein_stuff,1;
+	close;
+}
+
+airplane.gat,31,77,4	script	Drunken Man#03	853,{
+	if(Shinokas_Quest >= 8){
+		mes "[Drunken Man]";
+		mes "Hahahahaha !";
+		mes "Vous êtes bien !";
+		mes "Je me sens bien !";
+		mes "Tout est bien !";
+		mes "Bwahahahaahahah !";
+		mes "'Hic'";
+		close;
+	}
+	mes "[Drunken Man]";
+	mes "Ok Ok...";
+	mes "Papa va gagner quelques Apples cette fois, c'est sûr !";
+	next;
+	if(ein_stuff && ein_scientist){
+		mes "[Drunken Man]";
+		mes "C'est parti !";
+		mes "Le ^3131FFCoeur d'Ymir^000000 est avec moi ! GO !";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Quoi...?";
+		mes "Que vient-il de dire ?";
+		mes "Ca avait l'air important !";
+		next;
+	}
+	mes "^0000FF*Roule et rebondit*^000000";
+	next;
+	mes "[Kaci]";
+	mes "J'ai ^FF000011^000000 au total et vous ^FF00005^000000.";
+	mes "Vous avez perdu cette partie.";
+        mes "Je suis désolée, mais j'espère qu'on rejouera de temps en temps.";
+	donpcevent "Kaci::OnLose";
+	next;
+	mes "[Drunken Man]";
+	mes "Waaaaaahhhhhhhhh!";
+	mes "Apples ! Mes Apples !";
+	mes "Apples... il m'en faut plus...!";
+	if(countitem(512) && ein_stuff && ein_scientist) goto L_Apples;
+	close;
+	
+L_Apples:
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Voulez-vous quelques-unes des miennes ?";
+	next;
+	if(countitem(512) <100){
+		mes "[Drunken Man]";
+		mes "Quoi...?";
+		mes "Je ne peux rien faire avec si peu d'Apples !";
+		mes "Je suis un grand joueur et il me faut une grande mise !";
+		close;
+	}
+	mes "[Drunken Man]";
+	mes "Quoi...? Oui...";
+	mes "Bien sûr que oui ! Donne-moi quelques-unes de tes Apples !";
+	mes "Yeeeeeeeeeeehaw!";
+	mes "Je suis de retour, baby !";
+	next;
+	mes "[Drunken Man]";
+	mes "Maintenant, gagner !";
+	mes "Papa a besoin d'amour...";
+	mes "Il est temps d'aller du gouffre au sommet !";
+	next;
+	mes "^0000FF*Roule et rebondit*^000000";
+	next;
+	delitem 512,countitem(512);
+	set @kaci,rand(2,12);
+	set @man,rand(2,12);
+	if(@man == @kaci){
+		if(rand(2)){
+			if(@man != 12)
+				set @man,@man+1;
+			else
+				set @man,@man-1;
+		}else{
+			if(@man != 2)
+				set @man,@man-1;
+			else
+				set @man,@man+1;
+		}
+	}
+	mes "[Kaci]";
+	mes "Oooh...";
+	mes "J'ai ^FF0000"+@kaci+"^000000 au total et vous ^FF0000"+@man+"^000000.";
+	if(@man < @kaci){
+		mes "Je suis désolée mais vous avez encore perdu."; 
+                mes "Faites mieux la prochaine fois...";
+		donpcevent "Kaci::OnLose";
+		next;
+		mes "[Drunken Man]";
+		mes "Waaaaaahhhhhhhhhhhh !";
+		mes "Waaaaaaaahhhhhhh !";
+		close;
+	}
+	mes "Félicitations, vous avez gagné !";
+	mes "Laissez-moi vous donner ce que vous avez gagné";
+	mes "et rejouons encore un peu de temps en temps~";
+	donpcevent "Kaci::OnWin";
+	next;
+	mes "[Drunken Man]";
+	mes "Mwahhhahahahaha !";
+	mes "Whahahahahahahahaha !";
+	mes "C'est pour ça qu'ils m'appellent le ''Boomerang !''";
+	mes "Je reviens toujours !";
+	next;
+	mes "[Drunken Man]";
+	mes "Oh oui, c'est vrai !";
+	mes "Tu...! Tu m'as donné ces Apples porte-bonheur.";
+        mes "^111111'Hic'^000000";
+	next;
+	mes "[Drunken Man]";
+	mes "Je suis Kurschenburg !";
+	mes "Grâce à toi, je suis dans une passe de chance !";
+	mes "Hahaha ! Mer-Merci~";
+	mes "^111111'Hic-hic-hic !'*^000000";
+	next;
+	if(select("Que disiez-vous sur le Coeur d'Ymir ?:héhé, de rien.")==2){
+		 mes "[Drunken Man]";
+		 mes "Hahahaha !";
+		 mes "Tu es bien !";
+		 mes "Et je me sens bien !";
+		 mes "Bwahahahaahahah !";
+		 mes "^111111'Hic'*^000000";
+		 close;
+	}
+	mes "[Drunken Man]";
+	mes "Quoi...?";
+	mes "Le Coeur d'Ymir ?";
+	mes "Comment as-tu entendu parler de ça ? ^111111'Hic'^000000";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "V-Vous...!";
+	mes "Vous disiez à l'instant : ''Le Coeur d'Ymir est avec moi'' quand vous jouiez avec ces Apples !";
+	next;
+	mes "[Drunken Man]";
+	mes "Quoi...?!";
+	mes "Pas possible~";
+	mes "Err...? Je l'ai...?";
+	next;
+	mes "[Drunken Man]";
+	mes "Heh heh...";
+	mes "Je ne suis pas vraiment supposé parler de ça.";
+	mes "En tant que directeur du laboratoire, je suis tenu de garder le secret du Coeur d'Ymir.";
+	next;
+	mes "[Drunken Man]";
+	mes "Mais qu'est-ce que je risque ?!";
+	mes "Tout ce qu'ils veulent c'est les résultats de mes recherches !";
+	mes "Ils ne s'intéressent pas du tout à mon travail !";
+        mes "Mon titre ne vaut rien du tout !";
+	next;
+	mes "[Drunken Man]";
+	mes "Vous ne savez pas depuis combien de temps je suis prisonnier du laboratoire et que les conditions de travail ne vont que de pire en pire.";
+        mes "Qu'ils aillent au diable !";
+	mes "Je serai toujours payé tant que je leur montre du progrès dans notre projet !";
+	next;
+	menu "Projet ?",-;
+	mes "[Drunken Man]";
+	mes "Oui, nous faisons des recherches sur le Coeur d'Ymir.";
+        mes "Il se trouvait à ^3131FFEinbech^000000 il y a longtemps et maintenant il est à notre labo.";
+	next;
+	mes "[Drunken Man]";
+	mes "Tout le monde sait qu'il est sensé contenir un pouvoir légendaire.";
+	mes "Mais même moi j'ai été surpris d'en voir l'étendue.";
+        mes "C'est à la fois terrible et miraculeux, effrayant et merveilleux...";
+	next;
+	mes "[Drunken Man]";
+	mes "Donc...";
+	mes "Je pense...";
+	mes "Qu'il a peut-être aussi le pouvoir de m'aider à gagner aux dés !";
+	mes "Bwahaha--'Hic' !";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Cette chose que j'ai vue suspendue à toutes ces cordes au laboratoire doit être un morceau du ^3131FFCoeur d'Ymir^000000.";
+        mes "Je ferais mieux d'en parler à Shinokas.";
+	set Shinokas_Quest,8;
+	//cleaning temp variables from the lab.
+	set ein_stuff,0;
+	set ein_scientist,0;
+	close;
+}
+	
+einbech.gat,57,210,4	script	Young Man#04	854,{
+	mes "[Young Man]"; 
+	mes "Derrière le Bar, vous pourrez voir ce vieil homme qui passe sont temps à se marmonner quelque chose à lui-même.";
+	next;
+	mes "[Young Man]";
+	mes "Parfois il a l'air vraiment en colère, mais le reste du temps il a l'air extrêmement affligé.";
+        mes "Il a du vivre des expériences vraiment horribles.";
+	mes "Je ne peux pas l'aider mais je suis vraiment désolé pour le vieil homme.";
+	next;
+	mes "[Young Man]";
+	mes "Il dit et fait beaucoup de choses bizarres.";
+	mes "C'est triste de voir quelqu'un de si vieux agir comme ça, mais je me demande ce qui a bien pu lui arriver.";
+	if(!Shinokas_Quest)set Shinokas_Quest,1;
+	close;
+}
+
+einbech.gat,165,105,7	script	Buender Hikeman	847,{
+	if(Shinokas_Quest >= 9) goto L_P2;
+	if(Shinokas_Quest == 3) goto L_BEST;
+	if(Shinokas_Quest == 2) goto L_BASTARD;
+	mes "[Buender Hikeman]";
+	mes "...";
+	mes "......";
+	if(!Shinokas_Quest)close;
+	next;
+	mes "[Buender Hikeman]";
+	mes "...";
+	mes "......";
+	mes "......Toi...";
+	next;
+	mes "[Buender Hikeman]";
+	mes "...";
+	mes "......";
+	mes ".....Toi...";
+	mes "......Arrête...";
+	next;
+	mes "[Buender Hikeman]";
+	mes "...";
+	mes "......";
+	mes "......Toi...";
+	mes "......Arrête...";
+	mes "...Espèce d'^FF0000enfoiré^000000 !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "RaaaaAAAARGHHH!!";
+	next;
+	mes "[Buender Hikeman]";
+	mes "^0000FFLe vieil homme a l'air légèrement ennuyé de vous voir.^000000";
+	mes "^0000FFMalheureusement, ses cris et ses grognements sont totallement incohérents.^000000";
+	next;
+	mes "[Buender Hikeman]";
+	mes "C'^FF0000est^000000 toi !";
+	mes "C'est ta faute !";
+	mes "Tu m'as tout pris !!";
+	next;
+	menu "De quoi parlez-vous ?",L_WHAT,"L'ignorer.",-;
+	mes "[Buender Hikeman]";
+	mes "A...Attends !";
+	mes "J'ai dit attends !";
+	mes "*Tousse*";
+	close;
+L_WHAT:
+	mes "[Buender Hikeman]";
+	mes "Comment oses-tu...";
+	mes "Comment oses-tu te comporter comme ça après avoir détruit toute joie dans ma vie !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Sois maudit...";
+	mes "Comment peux-tu avoir l'audace de faire comme si rien ne s'était passé ?!";
+	mes "*Tousse*";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Es-tu diabolique au point de parfaitement oublier ce que tu as à fait à nos vies ?";
+        mes "As-tu déjà oublié ce que tu as fait ici, à Einbech ?!";
+	next;
+	mes "[Buender Hikeman]";
+	mes "C'était il y a très longtemps, mais je n'oublierai jamais.";
+	mes "Cette ville était petite, mais pleine de gens avec des coeurs chaleureux";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Moi, Khartophe, Anuto,";
+	mes "Maskharundt...";
+        mes "Nous étions tous amis, engagés par cet homme d'affaires pour déterrer du minerai dans la mine.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Et puis il y avait toi !";
+        mes "Tous ensembles nous étions la meilleure équipe de mineurs !";
+	mes "Jusqu'à ce que nous découvrions ^FF0000ça^000000.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Oui...";
+	mes "Le minerai mystérieux qui éblouissait par sa magnifique lumière.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Mais nous aurions du savoir que l'^0000FFUngoliant^000000 rôderait près de cette roche.";
+        mes "Nous aurions du réaliser le danger...";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Nous avons rapporté notre découverte à notre employeur, et puis le minerai a tout simplement disparu.";
+	mes "Il a du l'envoyer quelque part, ce n'était plus notre affaire.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Puis la vie redevint normale pendant un temps.";
+	mes "Mais un jour tu nous as appelés car tu avais trouvé un autre minerai mystérieux dans la mine.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Mais quand nous sommes venus pour vérifier le trou que tu avais creusé, sais-tu ce que nous avons trouvé ?";
+	next;
+	menu "L'Ungoliant?",L_UNGOLIANT,"Un minerai étrange, non ?",L_ORE,"Rien...?",-;
+	mes "[Buender Hikeman]";
+	mes "Oui...";
+	mes "Rien.";
+	next;
+	goto L_CONTINUE;
+L_UNGOLIANT:
+	mes "[Buender Hikeman]";
+	mes "Tu ne te rappelles pas ce qui s'est passé ?";
+	mes "Ce que tu nous as fait ?";
+	next;
+L_CONTINUE:
+	mes "[Buender Hikeman]";
+	mes "Il n'y avait rien dans le trou !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Ensuite tu as pointé le mur derrière nous et crié que l'Ungoliant arrivait !";
+        mes "En panique nous avons commencé à creuser notre chemin de sortie !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Je me rappelle que l'expression sur ton visage était étrange.";
+        mes "J'ai pensé que tu étais triste, mais maintenant je suis sûr que tu étais consummé par la cupudité !";
+	mes "Nous t'avions fait confiance et tu nous a trahis !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Puis nous avons finalement détruit ce dernier mur, tout commença à tomber autour de nous.";
+	mes "Nous n'avons été que deux à survivre à l'effondrement.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Puis j'ai appris...";
+	mes "Que tu avais tout planifié.";
+	if(Shinokas_Quest == 1) set Shinokas_Quest,2;
+	close;
+L_ORE:
+	mes "[Buender Hikeman]";
+	mes "Tu ne te rappelles pas ce qui s'est passé ?";
+        mes "Ce que tu nous as fait ?!";
+	next;
+	goto L_CONTINUE;
+L_BASTARD:
+	mes "[Buender Hikeman]";
+	mes "Enfoiré !";
+	mes "J'en ai assez de tes mensonges !";
+	next;
+	menu "Je ne suis pas celui que vous croyez !",L_IM,"Comment avez-vous survécu à l'accident ?",-;
+L_HOW:
+	mes "[Buender Hikeman]";
+	mes "Quand je suis revenu à moi, dans les ruines de ce tunnel sombre, j'avais l'estomac serré.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Et j'ai trouvé...";
+	mes "Tu sais ce que j'ai trouvé ?!";
+	next;
+	mes "[Buender Hikeman]";
+	mes "*Tousse*";
+	mes "Les corps de mes amis !";
+	mes "Kartophe, Anuto, Maskharundt, des hommes bons et mes meilleurs amis.";
+	mes "Mais où étais-tu ?!";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Ton corps ne se trouvait nulle-part.";
+        mes "J'ai cherché dans le tunnel et suis finallement grimpé en dehors.";
+	mes "J'ai été retrouvé inconscient.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "J'étais tellement stupide.";
+	mes "C'était à cause de ce minerai !";
+        mes "Tu a tué nos amis et détruit ma vie pour cette chose !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Et maintenant...";
+	mes "Tu sors de ta cachette et te montre.";
+	mes "Qu'est-ce que tu veux de moi ?";
+        mes "Que peux-tu encore me prendre ?!";
+	next;
+	menu "Je ne suis pas celui que vous croyez !",L_THINK,"Je voudrais m'excuser.",-;
+	mes "[Buender Hikeman]";
+	mes "Ha ha...";
+	mes "T'excuser ?";
+	mes "Le mal est déjà fait...";
+	goto L_CONTINUE2;
+L_THINK:
+	mes "[Buender Hikeman]";
+	mes "Arrête de mentir !";
+	mes "Tu as ranimé ma haine en te montrant à nouveau !";
+        mes "Je n'oublierai jamais ce jour !";
+	next;
+L_CONTINUE2:
+	mes "[Buender Hikeman]";
+	mes "C'est trop tard pour toi maintenant.";
+        mes "Au nom de mes amis, je vais avoir ma vengeance !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Prépare-toi à mourir !";
+	mes "^0000FFShinokas^000000 !!!";
+	next;
+	mes "[Buender Hikeman]";
+	mes "...!";
+	mes "*Tousse*";
+	mes "Noooon ! Pas maintenant...";
+	mes "*Tousse*";
+	next;
+	mes "[" + strcharinfo(0) + "]";
+	mes "...";
+	mes "Je ferais mieux de m'éloigner de lui !";
+	next;
+	mes "^0000FFVous fuyez Hikeman jusqu'à ce qu'il tombe par-terre.^000000";
+	mes "^0000FFCe ne serait pas une bonne idée de provoquer encore le vieil homme, intentionnellement ou non.^000000";
+	if(Shinokas_Quest == 2) set Shinokas_Quest,3;
+	close;
+L_BEST:
+	mes "^0000FFIl vaudrait mieux éviter d'énerver le vieil homme pour le moment.^000000";
+	close;
+L_IM:
+	mes "[Buender Hikeman]";
+	mes "Ha...!";
+	mes "Tu penses que j'oublierais si facilement le visage de la personne qui a brisé ma vie ?!";
+	goto L_HOW;
+	
+L_P2:
+	mes "^0000FFHikeman somnole sur sa chaise.^000000";
+        mes "^0000FFA en juger par l'impression d'inconfort sur son visage, il semble faire un cauchemard.^000000";
+	if(Shinokas_Quest == 10) close;
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Excusez-moi...";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Huh...?";
+	mes ".........!!";
+	mes "Hahahahaha !";
+	mes "Revenu pour ta raclée, hein, Shinokas ?!";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Regardez...!";
+	mes "Je ne suis pas Shinokas, ok ?";
+        mes "Comment pouvez-vous oublier à quoi il ressemble ou quel âge il a ?";
+	mes "Je suis beaucoup plus jeune !";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Quoi...?";
+	next;
+	mes "[Buender Hikeman]";
+	mes "..................";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Uhhhh......";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Huh.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Il semble... que j'ai fait une énorme erreur.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Depuis l'accident, les gens disent que je ne suis plus le même.";
+        mes "Peut-être ont-ils raison.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Je continue à faire les mêmes erreurs, alors peut-être ont-ils raison de penser que je deviens sénile.";
+	mes "Etes-vous venu rien que pour mettre un terme à ce malentendu ?";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Um...";
+	mes "En fait...";
+	next;
+	menu "Raconter à Hikeman la mort de Shinokas.",-,"Ne rien dire à Hikeman.",L_NNotify;
+
+	set Shinokas_Quest,10;
+	mes "["+strcharinfo(0)+"]";
+	mes "Shinokas est mort il y a peu à Einbroch.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Q-Quoi...?";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Shinokas a été tué par des gens.";
+        mes "Il pensait qu'ils devaient être ceux qui vous ont engagé.";
+        mes "Finallement, il a aussi été trahi...";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Je...";
+	mes "Je vois...";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Shinokas a peut-être gagné de l'argent.";
+	mes "Mais il a passé le reste de sa vie à se cacher, à être traqué.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Il ne reste plus rien. Je n'ai plus rien qui me rattache à ce passé.";
+	mes "Je ne vivais que pour venger mes amis...";
+	next;
+	mes "[Buender Hikeman]";
+	mes "S'il vous plaît... Retournez d'où vous venez.";
+	mes "Laissez-moi seul...";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "...";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Hikeman voulait-il vraiment se venger de Shinokas ou voulait-il simplement le revoir car ils étaient de très proches amis ?";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Si je dis que ce qu'ils ont trouvé était un morceau du Coeur d'Ymir, Hikeman finirait par être traqué aussi, donc il vaut mieux ne rien dire.";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "Pourquoi ces hommes sont-ils aussi obsédés par ce morceau du Coeur d'Ymir ?";
+	mes "Y a-t-il pire que cette cruauté ?";
+	mes "Qui qu'ils soient, leurs intentions ne peuvent pas être bonnes.";
+	if(BaseLevel < 41)set BaseExp,BaseExp+34750;
+	else if(BaseLevel > 40 && BaseLevel < 61)set BaseExp,BaseExp+69500;
+	else if(BaseLevel > 60 && BaseLevel < 71)set BaseExp,BaseExp+139000;
+	else if(BaseLevel > 70 && BaseLevel < 81)set BaseExp,BaseExp+278000;
+	else if(BaseLevel > 80 && BaseLevel < 91)set BaseExp,BaseExp+417000;
+	else if(BaseLevel > 90)set BaseExp,BaseExp+556000;
+	close;
+	
+L_NNotify:
+	mes "["+strcharinfo(0)+"]";
+	mes "Oui...";
+	mes "C'est vrai.";
+	mes "Je voulais mettre fin à ce malentendu.";
+	mes "Donc vous pourriez-vous vous calmer ? Même rien qu'un peu.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Vous n'avez pas à vous inquiéter autant pour mon stress.";
+        mes "Je trouve que les vents qui passent par cette ville sont très relaxants.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Chaque fois que le vent souffle, mes yeux se troublent, ma mémoire se voile et toute ma haine est emportée au loin.";
+	next;
+	mes "[Buender Hikeman]";
+	mes "Sans le vent, je n'aurai que ma haine contre ^FF0000lui^000000.";
+	mes "Peut-être que c'est ma seule raison de vivre et peut-être que je sui seul, mais il est trop tard pour être désolé pour moi maintenant.";
+	close;
+}
+
+
+//============================================================
+//============================================= Einbroch Lover
+//====================================================== Quest
+ein_in01.gat,31,151,4	script	Satra	850,{
+	if(EIN_LOVERQ > 11)goto s_Intimi;
+	if(EIN_LOVERQ == 11)goto s_Coal4;
+	if(EIN_LOVERQ == 10)goto s_Coal3;
+	if(EIN_LOVERQ == 9)goto s_Coal2;
+	if(EIN_LOVERQ == 8)goto s_Coal1;
+	if(EIN_LOVERQ == 7)goto s_Advent;
+	mes "[Satra]";
+	mes "Un aventurier errant... ?";
+	mes "Scandaleusement intriguant !";
+	mes "Ho ho ho ho~";
+	next;
+	mes "[Satra]";
+	mes "Oh, ne vous inquiétez pas, je suis sûre que c'est la beauté de ma maison qui vous a attiré.";
+	mes "Je vous préviens que mon mari vous détruirait s'il vous trouvait...";
+	next;
+	mes "[Satra]";
+	mes "Mais je suis tellement plus gentille que Megass.";
+	mes "Vous êtes plus que bienvenu pour admirer le mobilier.";
+	mes "Ho ho ho ho~";
+	close;
+
+s_Advent:
+	mes "[Satra]";
+	mes "Un aventurier errant...?";
+	mes "Quel ravissant délice !";
+	mes "Vous avez risqué votre vie et vous êtes infiltré malgré mon mari pour profiter de la vue captivante de ma maison.";
+	mes "Ho ho ho ho~";
+	next;
+	mes "[Satra]";
+	mes "Etant donné que vous êtes un cas unique, je dois vous accorder un honneur tout aussi unique et daigner converser avec vous, aventurier.";
+	next;
+	mes "[Satra]";
+	mes "Einbech existe pour fournir du charbon et des matérieux de sa mine à ma famille.";
+	mes "C'est une loi naturelle : les ouvriers doivent être dirigés par quelques privilégiés.";
+	next;
+	mes "[Satra]";
+	mes "C'est si délicieux de voir ces ridicules ouvriers aspirer à atteindre notre rang social.";
+	mes "Ho ho ho ho~";
+	next;
+	mes "[Satra]";
+	mes "Oh, cela fait si longtemps que je n'ai pas parlé à quelqu'un d'une classe inférieure !";
+	mes "C'est un interdit si excitant !";
+	next;
+	mes "[Satra]";
+	mes "Bien, aventurier, c'est la fin de notre dialogue immoral.";
+	mes "Je vais cependant vous permettre de vous vanter du fait que vous ayez parlé avec Lady Satra.";
+	next;
+	mes "[Satra]";
+	mes "Si vous désirez échanger encore quelques mots avec moi, prouvez que vous méritez plus que les autres ma gracieuse compagnie.";
+	next;
+s_Coal1:
+	mes "[Satra]";
+	mes "Oh, j'ai une idée formidable !";
+	mes "ourquoi ne me ramèneriez-vous pas des ^9C0000Coals^000000?";
+	mes "Ce n'est pas impossible pour quelqu'un comme vous, mais ce genre de travail vous demandera de fournir des efforts.";
+	next;
+	if(EIN_LOVERQ == 8 && countitem(1003) > 9)goto s_GotCoal1;
+	mes "[Satra]";
+	mes "Tah tah, aventurier~";
+	if(EIN_LOVERQ == 7)set EIN_LOVERQ,8;
+	close;
+
+s_GotCoal1:
+	mes "[Satra]";
+	mes "Vous avez déjà amené les Coals ?";
+	mes "Que vous êtes prompt~";
+	next;
+	mes "[Satra]";
+	mes "Au nom de famille Kappellthaine, je dois ignorer votre petit statut et gracieusement accepter votre petit cadeau.";
+	mes "Ho ho ho~";
+	next;
+	mes "[Satra]";
+	mes "Etes-vous d'Einbech, aventurier ?";
+	mes "Ah, du Royaume de Rune-Midgard !";
+	mes "J'ai visité votre pays.";
+	mes "C'est très pittoresque et Jawaii est adorable.";
+	next;
+	mes "[Satra]";
+	mes "Bien, je dois trouver comment utiliser ceci.";
+	mes "J'ai bien peur que le cadeau que je vous ai demandé ne soit guère pratique.";
+	mes "A quoi sert le charbon d'habitude ?";
+	mes "Ah, j'ai une nouvelle idée !";
+	next;
+	mes "[Satra]";
+	mes "Ne serais-ce pas totalement fou si Megass tenait une de ces réunions dont les petites classes sociales sont si friandes ?";
+	mes "Un ''Barbecue'', c'est ça ?";
+	next;
+	mes "[Satra]";
+	mes "Dans tous les cas, si vous m'amenez plus de ces Coals, vous seriez plus encore en faveur auprès de moi et vous recevriez mes bonnes grâces.";
+	mes "Ho ho~";
+	set EIN_LOVERQ,9;
+	delitem 1003,10;
+	close;
+
+s_Coal2:
+	mes "[Satra]";
+	mes "^111111*Glousse~*^000000";
+	mes "Que ne ferais-je pas pour mon intrépide aventurier ?";
+	mes "Ho ho ho ho~";
+	next;
+	if(countitem(1003) > 9)goto s_GotCoal2;
+	mes "[Satra]";
+	mes "Toutes mes excuses, mais vous devez d'abord me prouver que vous méritez une conversation.";
+	mes "Pourquoi vous ne me rammenez pas ces ^9C0000Coals^000000, mmm?";
+	next;
+	mes "[Satra]";
+	mes "Après tout, je ne désire que savoir si vous appréciez ou non le temps que je sacrifie à discuter avec quelqu'un de votre classe.";
+	mes "Ho ho ho ho~";
+	close;
+
+s_GotCoal2:
+	mes "[Satra]";
+	mes "Mon Dieu !";
+	mes "Pourquoi transportez-vous donc tout ce charbon crasseux ?";
+	mes "Pauvre misérable petite chose.";
+	next;
+	mes "[Satra]";
+	mes "Oh ! J'avais déjà oublié~";
+	mes "Quelle idiote je fais !";
+	mes "Une fois encore, j'accepte gracieusement votre petit cadeau au nom des Kappelthaines.";
+	next;
+	mes "[Satra]";
+	mes "Laissez-moi donc vous raconter une petite histoire sur notre merveilleuse Einbroch.";
+	mes "A une époque, il n'y avait qu'Einbech, le village minier.";
+	mes "Vous pouvez imaginer à quand ça remonte.";
+	next;
+	mes "[Satra]";
+	mes "Cependant, les minerais et les pierres déterrés à Einbech devaient être traités et raffinés dans un complexe industriel établi non-loin de là qui devint Einbroch.";
+	next;
+	mes "[Satra]";
+	mes "Et maintenant chaque citoyen d'Einbroch est riche et il est connu qu'il y a un plus haut niveau de vie ici qu'à Einbech.";
+	next;
+	mes "[Satra]";
+	mes "Bonté divine, je crois qu'il est l'heure du thé~";
+	mes "La prochaine fois que vous désirez une audience avec moi, apoportez-donc d'autres Coals en présent.";
+	mes "Glousse~";
+	set EIN_LOVERQ,10;
+	delitem 1003,10;
+	close;
+
+s_Coal3:
+	mes "[Satra]";
+	mes "Bonjour~";
+	mes "Vos récentes visistes étaient délicieuses, gentil aventurier.";
+	next;
+	mes "[Satra]";
+	mes "Oh, mes excuses !";
+	mes "Je croyais que vous ne veniez ici que pour la vue, mais peut-être cherchez-vous à accomplir une sorte de quête.";
+	mes "Ai-je raison ?";
+	next;
+	if(countitem(1003) > 9)goto s_GotCoal3;
+	mes "[Satra]";
+	mes "Je vous connais suffisamment pour savoir que vous ne seriez pas grossier au point de faire halte ici et converser sans amener des ^9C0000Coal^000000.";
+	mes "Ho ho ho ho~";
+	close;
+
+s_GotCoal3:
+	mes "[Satra]";
+	mes "Continuez à me montrer votre reconnaissance et votre dévouement et vous aurez bientôt la réputation d'être mon favori.";
+	mes "Ho ho ho ho~";
+	next;
+	mes "[Satra]";
+	mes "Je suis sûre que vous avez remarqué les relations tendues entre Einbroch et Einbech.";
+	mes "C'est une honte, vraiment.";
+	next;
+	mes "[Satra]";
+	mes "Alors qu'Einbroch devient de plus en plus riche et qu'Einbech sombre dans la pauvreté, les riches commencent à mépriser les pauvres.";
+	mes "Je pensais que ça venait du fait que les pauvres commencaient à avoir du ressentiment face aux riches.";
+	next;
+	mes "[Satra]";
+	mes "Il faut dire que chaque ville a essayé de profiter de l'autre, mais il est clair qu'Einbrech a toujours dominé.";
+	next;
+	mes "[Satra]";
+	mes "En fait, à cause de ces désacords entre nos villes, nos familles apprennent à ne pas se mêler aux gens d'Einbech.";
+	next;
+	mes "[Satra]";
+	mes "Je pense que la plupart des habitants d'Einbech ne sont que des péquenots, mais ça ne veut pas dire que je ne vais pas leur donner une chance de prouver leur mérite.";
+	next;
+	mes "[Satra]";
+	mes "Pourquoi devrais-je privé les pauvres de ma gracieuse présence, s'ils prouvent qu'ils la méritent ?";
+	mes "Ho ho ho ho~";
+	next;
+	mes "[Satra]";
+	mes "Oh, c'était plaisant !";
+	mes "Si vous voulez me rendre à nouveau visite, n'oubliez pas de ramener quelques Coal avec vous.";
+	mes "Tah tah~";
+	set EIN_LOVERQ,11;
+	delitem 1003,10;
+	close;
+
+s_Coal4:
+	mes "[Satra]";
+	mes "Ho ho ho ho~";
+	mes "Bienvenue aventurier, j'aime tellement nos petites conversations.";
+	mes "un hors d'oeuvre?";
+	next;
+	if(countitem(1003) > 9)goto s_GotCoal4;
+	mes "[Satra]";
+	mes "Ah...";
+	mes "On dirait que vous avez oublié vos ^9C0000Coals^000000.";
+	mes "Une erreur idiote, mais je passerai l'éponge pour cette fois.";
+	close;
+
+s_GotCoal4:
+	mes "[Satra]";
+	mes "Oh ! Vous ne pouvez pas apprécier comme il convient de la nourriture dans cet état !";
+	mes "Vos mains sont atrocement sales !";
+	mes "Puis-je vous demander pourquoi ?";
+	next;
+	mes "[Satra]";
+	mes "Ah~";
+	mes "Dans mon excitation, j'avais oublié que je vous avais demandé m'ammener de nouveau des Coals !";
+	mes "Toutes mes excuses~";
+	next;
+	mes "[Satra]";
+	mes "Vous m'avez apporté tellement de charbon, je suis convaincue que vous êtes beaucoup plus serviable que que tous ces paysans paresseux d'Einbech.";
+	mes "J'apprécie que vous ayez travaillé autant pour avoir mes faveurs.";
+	next;
+	mes "[Satra]";
+	mes "Hum, quoi donc ?";
+	mes "Quelqu'un d'autre a fourni ces charbons et vous n'avez fait que les apporter ?";
+	mes "Alors qui les a récupérés ?";
+	next;
+	input @str$;
+	mes "[Satra]";
+	if(@str$ != "Clitzer"){
+		mes "Je vous demande pardon ?";
+		mes "" + @str$ + "? Oh mon...";
+		mes "Je crois que je ne vous ai pas bien entendu.";
+		mes "Ho ho ho ho~";
+		close;
+	}
+	mes "Ah, Clitzer ?";
+	mes "Je dois avouer que c'est vraiment un nom de pauvre.";
+	mes "Oui c'est tellement familier...";
+	next;
+	mes "[Satra]";
+	mes "Ah, je me souviens qu'il avait un voyou du nom de Clitzer qui harcelait ma fille.";
+	mes "Peut-être est-ce le même.";
+	mes "Hmm...";
+	next;
+	mes "[Satra]";
+	mes "Je me rappelle qu'il était habillé plutôt pauvrement et n'avait aucun semblant de connaissance de l'étiquette.";
+	mes "Il est clair que c'est un imbécile et un lâche, mais maintenant je vois qu'il est sincère.";
+	next;
+	mes "[Satra]";
+	mes "Il ne sera peut-être pas poussbile de le laisser sortir avec ma fille tout de suite, mais je vais l'inviter à prendre le thé.";
+	mes "Et si Calla l'apprécie, et bien, il doit être spécial.";
+	next;
+	mes "[Satra]";
+	mes "Pour un humble paysan, ce doit être la réalisation d'un rêve !";
+	mes "Et prendre le Thé avec Clitzer...";
+	mes "Oh que diront les autres ?";
+	mes "Après tout, j'ai bien épousé ce rustre de Megass~";
+	next;
+	mes "[Satra]";
+	mes "De toute manière, quand vous reverrez Clitzer, veuillez lui dire de me rendre visite.";
+	mes "Oh, et rappellez-lui de s'habiller de manière appropriée pour cette occasion.";
+	mes "Ho ho ho ho ho~";
+	set EIN_LOVERQ,12;
+	close;
+
+s_Intimi:
+	mes "[Satra]";
+	mes "Je que comprends que ma maison soit prodigieusement splendide et qu'approcher un Kappelthaine est un honneur pour la plupart des gens.";
+	next;
+	mes "[Satra]";
+	mes "Cependant, Clitzer n'ai aucune raison d'être intimidé";
+	mes "Dites à ce pauvre garçon qu'il a gagné l'honneur de converser avec moi.";
+	close;
+
+}
+
+ein_in01.gat,31,138,4	script	Calla	90,{
+	if(EIN_LOVERQ > 4 && EIN_LOVERQ < 14)goto s_NoSwitch;
+	if(EIN_LOVERQ > 1)goto s_Switches;
+s_NoSwitch:
+	mes "[Calla]";
+	mes "Bonjour aventurier.";
+	mes "Notre ville ne doit être qu'un endroit où vous ne resterez pas plus de quelques jours.";
+	next;
+	mes "[Calla]";
+	mes "Vous devez être tellement libre.";
+	mes "Je vous envie.";
+	mes "Je ne peux pas faire ce que je veux.";
+	mes "Je n'ai même pas le courage de dire à ma famille ce que je veux vraiment, encore moins de changer les choses ici...";
+	next;
+	mes "[Calla]";
+	mes "Comment est-ce ?";
+	mes "D'aller où vous voulez, suivant les désirs de votre coeur ?";
+	mes "Qu'est-ce que je ne donnerai pas pour pouvoir faire ça...";
+	if(!EIN_LOVERQ)set EIN_LOVERQ,1;
+	close;
+
+s_Switches:
+	switch(EIN_LOVERQ)
+	{
+
+	case 2:
+		mes "[Calla]";
+		mes "Vous êtes l'aventurier de l'autre fois, n'est-ce pas ?";
+		mes "Malheureusement, il n'y a pas grand-chose à faire dans le coin.";
+		mes "Cet endroit est comme une prison pour moi...";
+		next;
+		mes "[Calla]";
+		mes "Oh, vous avez rencontré Clitzer ?";
+		mes "N'est-il pas gentil, un parfait gentleman ?";
+		next;
+		mes "[Calla]";
+		mes "Je souhaite vraiment le revoir, mais c'est impossible.";
+		mes "Mes parents pensent qu'il n'est pas assez bien pour moi, mais il ont tort !";
+		mes "Que vais-je faire ?";
+		mes "Oh, Clitzer...";
+		next;
+		mes "[Calla]";
+		mes "Bien, peut-être que je ne peux pas le revoir, mais, pouvez-vous donner mon violon à Clitzer pour moi ?";
+		mes "J'en jouais pour lui tout le temps...";
+		next;
+		mes "[Calla]";
+		mes "Je suis désolée de vous déranger, mais comprenez que je veux réconforter mon Clitzer de toutes les manières que je puis.";
+		mes "Merci beaucoup, aventurier...";
+		set EIN_LOVERQ,3;
+		getitem 1901,1;
+		close;
+	break;
+
+	case 3:
+	s_Regards:
+		mes "[Calla]";
+		mes "Oh, s'il vous plaît transmettez mes sentiments à Clitzer.";
+		mes "Je voudrais tellement pouvoir le faire moi-même, mais c'est le mieux que je puisse faire pour le moment.";
+		close;
+	break;
+
+	case 4:
+		if(!countitem(712))goto s_Regards;
+		mes "[Calla]";
+		mes "Vous avez parlé à Clitzer ?";
+		mes "Comment va-t-il ?";
+		mes "Qu'a-t-il dit ?";
+		next;
+		mes "[Calla]";
+		mes "Oh...?";
+		mes "Ils vous a demandé de me donner ces fleurs ?";
+		mes "C'est si gentil~";
+		mes "Merci beaucoup, gentil aventurier~";
+		next;
+		mes "[Calla]";
+		mes "Ah, je suis si impolie !";
+		mes "Je vous ai appelé ^111111*adventurer*^000000 tout le temps où vous m'avez aidé !";
+		mes "Pouvez-vous me dire votre nom s'il vous plaît ?";
+		next;
+		input @str$;
+		mes "[Calla]";
+		if(@str$ != strcharinfo(0)){
+			mes "Je suis désolée...";
+			mes "Je n'ai pas bien compris.";
+			mes "Pourriez-vous me le redire ?";
+			close;
+		}
+		mes "Ah, " + strcharinfo(0) + " !";
+		mes "Quel beau nom~";
+		mes "Je vous promet de ne jamais l'oublier.";
+		mes "Oh, et si vous passez à Einbech, pourriez-vous remercier Clitzer pour les fleurs de ma part ?";
+		next;
+		mes "[Calla]";
+		mes "E-Et... Et...";
+		mes "S'il vous plaît, dites-lui qu'il me manque beaucoup.";
+		mes "^565656*Sanglote*";
+		delitem 712,1;
+		set EIN_LOVERQ,5;
+		close;
+	break;
+
+	case 14:
+		mes "[Calla]";
+		mes "Je viens juste d'entendre ma mère dire qu'elle prévoyait de prendre le thé avec Clitzer !";
+		mes "Je suis sûre que je vous le dois~";
+		next;
+		mes "[Calla]";
+		mes "Je n'aurai jamais pu rêver que quelque chose de si merveilleux pourrait arriver.";
+		mes "Je suis si heureuse, j'en pleurerais...";
+		mes "Je vous serais toujours reconnaissante de ce que vous avez fait.";
+		next;
+		mes "[Calla]";
+		mes "Je me sens idiote d'avoir cru que c'était sans espoir.";
+		mes "Je vais faire de mon mieux pour faire accepter Clitzer à mes parents et un jour nous nous marierons~";
+		next;
+		mes "[Calla]";
+		mes "Il n'y a pas grand-chose que je puisse vous donner, mais je peux vous montrer un des secrets de ma famille.";
+		mes "C'est une technique de massage revigorante qui vous fera vous sentir mieux en seulement dix secondes.";
+		next;
+		mes "[Calla]";
+		mes "Bien, veuillez retirer votre équipement et rester calme pendant que je vous fait le massage.";
+		mes "Il se peut que ça fasse un peu mal au début...";
+		nude;
+		next;
+		mes "^3151FF*Frotte*";
+		mes "*Pétrit*";
+		mes "*Crrack C-c-c--c-crack*";
+		mes "*Crack Crack Crrrrrack*";
+		mes "*Frotte Crrraaaaaaaaaackk*^000000";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "Ooooooooh...";
+		mes "J'ai siii mal et maintenant je me sens siiiiiii bien.";
+		mes "Attends.";
+		mes "Maintenant je me sens bieeeeeeeeen~";
+		if(BaseLevel < 41)set BaseExp,BaseExp+3712;
+		else if(BaseLevel > 40 && BaseLevel < 61)set BaseExp,BaseExp+7425;
+		else if(BaseLevel > 60 && BaseLevel < 71)set BaseExp,BaseExp+14850;
+		else if(BaseLevel > 70 && BaseLevel < 81)set BaseExp,BaseExp+29700;
+		else if(BaseLevel > 80 && BaseLevel < 91)set BaseExp,BaseExp+59400;
+		else if(BaseLevel > 90)set BaseExp,BaseExp+118800;
+		set EIN_LOVERQ,15;
+		next;
+		mes "[Calla]";
+		mes "Alors comment c'était ?";
+		mes "J'espère que ça vous a rafraichit.";
+		mes "C'est le mieux que je puisse faire pour vous montrer ma gratitude.";
+		next;
+		mes "[Calla]";
+		mes "Une fois encore, merci beaucoup, " + strcharinfo(0) + ".";
+		mes "Je prierai toujours pour votre sécurité lors de vos aventures~";
+		close;
+	break;
+
+	case 15:
+		mes "[Calla]";
+		mes "Merci beaucoup !";
+		mes "Je vais faire de mon mieux pour que mes parents acceptent notre relation.";
+		mes "Ce sera dur, mais c'est un excellent premier pas~";
+		next;
+		mes "[Calla]";
+		mes "J'espère que tous ensembles nous pourrons faire en sorte d'améliorer les relations entre Einbech et Einbroch.";
+		mes "La haine entre nos deux villes doit cesser...";
+		next;
+		mes "[Calla]";
+		mes "J'apprécie vraiment ce que vous avez fait pour nous.";
+		mes "Je prierai pour votre sécurité, aventurier.";
+		close;
+	break;
+
+	}
+}
+
+ein_in01.gat,191,102,4	script	Kaijeta	846,{
+	if(EIN_LOVERQ > 13)goto s_Learned;
+	if(EIN_LOVERQ == 13)goto s_Clothes;
+	if(EIN_LOVERQ > 6 && EIN_LOVERQ < 13)goto s_Hatred;
+	if(EIN_LOVERQ == 6)goto s_Helping;
+	mes "[Kaijeta]";
+	mes "Bienvenue dans mon humble demeure, aventurier.";
+	mes "Je suis désolée de n'être qu'une hôte pauvre.";
+	next;
+	mes "[Kaijeta]";
+	mes "Comme vous pouvez le voir, nous partageons cette maison avec d'autres familles donc nous n'avons pas beaucoup d'espace privé.";
+	mes "Cet affreux que nous ne puissions pas même offrir le confort basique.";
+	next;
+	mes "[Kaijeta]";
+	mes "Pour le moment, c'est le mieux que nous puissions faire.";
+	mes "Nous n'avons pas l'argent pour acheter une maison ou un terrain, donc nous n'avons pas d'autre choix qu'endurer ça...";
+	close;
+
+s_Helping:
+	mes "[Kaijeta]";
+	mes "Merci d'aider mon fils.";
+	mes "Il a peut-être l'air d'un imbécile pour être tombé amoureux avec quelqu'un d'Einbroch, mais c'est un honnête et bon travailleur.";
+	next;
+	mes "[Kaijeta]";
+	mes "Mais bon, il était à prévoir que ça arriverait quelques fois.";*
+	mes "Einbech est une ville très pauvre alors qu'Einbroch est une ville riche.";
+	mes "Je comprendrais que vous ne soyez pas d'accord, mais l'opposition attire tôt ou tard.";
+	next;
+	mes "[Kaijeta]";
+	mes "^565656*Soupire...*^000000";
+	mes "Si mon fils et Calla pouvaient y arriver, peut-être que ça améliorerai les relations entre nos deux villes.";
+	mes "Je l'espère vraiment...";
+	next;
+	mes "[Kaijeta]";
+	mes "Cependant, je suis déroutée !";
+	mes "J'ai élevé mon fils pour qu'il ait les tripes pour ne pas sombrer dans la misère quand son coeur est brisé.";
+	mes "Et je n'ai toujours pas la moindre idée de comment il a pu être avec une femme aussi riche.";
+	next;
+	mes "[Kaijeta]";
+	mes "Avez-vous la moindre idée pour que nous puissions mettre fin à la haine entre nos deux villes ?";
+	mes "Je ne veux pas voir ce couple séparé à cause de ça.";
+	set EIN_LOVERQ,7;
+	close;
+
+s_Hatred:
+	mes "[Kaijeta]";
+	mes "Je ne peux pas supporter de voir la haine entre nos deux villes empêcher mon fils de voir la femme qu'il aime...";
+	close;
+
+s_Clothes:
+	mes "[Kaijeta]";
+	mes "Mercie d'aider mon fils Clitzer.";
+	mes "Malheureusement, le pauvre idiot n'a pas le moindre goût pour certaines choses comme choisir des vêtements.";
+	mes "Il est tellement nerveux pour ça !";
+	next;
+	mes "[Kaijeta]";
+	mes "Un homme devrait porter de bons habits, comme une Formal Suit ou un Tuxedo, pour les rencontres importantes et les occasions spéciales.";
+	mes "Heureusement, il va bientôt l'apprendre.";
+	close;
+
+s_Learned:
+	mes "[Kaijeta]";
+	mes "Mon fils a appris beaucoup de votre bon exemple.";
+	mes "En tant que mère, j'apprécie vraiment ce que vous avez fait pour lui.";
+	next;
+	mes "[Kaijeta]";
+	mes "Bien, aventurier, je prierai pour votre sécurité là où vos voyages vous mèneront.";
+	close;
+
+}
+
+ein_in01.gat,200,101,4	script	Clitzer	854,{
+	if(EIN_LOVERQ)goto s_Switches;
+s_Back:
+	mes "[Clitzer]";
+	mes "Y a-t-il quelque chose que vous désirez plus que tout au monde, mais que vous pouvez pas obtenir ?";
+	next;
+	mes "[Clitzer]";
+	mes "J'aimerai tant être comme vous, les aventuriers.";
+	mes "Les gens comme vous ne semblent jamais abandonner, peut importe les obstacles.";
+	mes "Mais je suis si impuissant...";
+	next;
+	mes "[Clitzer]";
+	mes "Je ne peux même pas voir la personne que j'aime.";
+	mes "Nous sommes tellement différents que ce n'est plus possible...";
+	close;
+
+s_Switches:
+	switch(EIN_LOVERQ){
+	case 1:
+		mes "[Clitzer]";
+		mes "Cette odeur légère, douce et agréable...";
+		mes "C'est la même que celle de la maison de Calla.";
+		next;
+		mes "[Clitzer]";
+		mes "Vous avez rendu visite à Calla à Einbroch ?";
+		mes "Elle me manque tellement !";
+		mes "Est-ce qu'elle va bien ?";
+		next;
+		mes "[Clitzer]";
+		mes "Calla est si belle.";
+		mes "Et elle est si agréable.";
+		mes "A chaque fois que je ferme mes yeux, je peux voir son charmant sourire.";
+		next;
+		mes "[Clitzer]";
+		mes "Je suis désolé si j'ai l'air fou, mais je n'y peux rien.";
+		mes "Je sais que j'agis comme un imbécile fini.";
+		mes "Mais je donnerai n'importe quoi pour la voir...";
+		next;
+		mes "[Clitzer]";
+		mes "Non...";
+		mes "N'écoutez pas ce que je dis.";
+		mes "Je ne suis qu'un pauvre idiot amoureux de la mauvaise personne.";
+		mes "Ca doit être ça...";
+		set EIN_LOVERQ,2;
+		close;
+		break;
+
+	case 2:
+		mes "[Clitzer]";
+		mes "^565656*Soupire*^000000";
+		mes "J'apprécie vraiment votre symptahie, mais je suis plus un lâche qu'un imbécile.";
+		next;
+		mes "[Clitzer]";
+		mes "Oui...";
+		mes "Je suis un lâche pour ignorer mes sentiments et un idiot pour être tombé amoureux d'une fille d'une si haute classe sociale en premier lieu.";
+		mes "Oh, Calla...";
+		close;
+		break;
+
+	case 3:
+		if(!countitem(1901))goto s_Back;
+		mes "[Clitzer]";
+		mes "Qu'est-ce qui vous amène ?";
+		mes "Vous n'êtes pas fatigué de m'entendre me plaindre et gémir sur un amour perdu ?";
+		mes "^111111*Soupire...*^000000";
+		next;
+		mes "[Clitzer]";
+		mes "Hé, ce violon...";
+		mes "Calla jouait de belles musiques pour moi avec.";
+		mes "Vous l'a-telle donné ?";
+		next;
+		mes "[Clitzer]";
+		mes "Je vois.";
+		mes "Calla doit savoir que je suis totallement démoli maintenant.":
+		mes "Elle est trop bonne pour moi.";
+		mes "Comment peut-elle penser à mes sentiments avant de penser à elle ?";
+		next;
+		mes "[Clitzer]";
+		mes "Je sais que je ne devrais pas, mais j'ai une faveur à vous demander.";
+		mes "Aventurier, pourriez-vous donner un cadeau à Calla de ma part ?";
+		next;
+		mes "[Clitzer]";
+		mes "Tout ce que vous devez faire c'est simplement lui donner ^FF00001 Flower^000000.";
+		mes "Je n'ai pas l'argent et je ne pense pas être le bienvenu au manoir Kappellthaine.";
+		next;
+		mes "[Clitzer]";
+		mes "En échange, je vous ferai un massage revigorant.";
+		mes "Ce n'est pas grand-chose mais quand j'aurai fini, votre esprit et votre corps seront relaxés.";
+		mes "Allons-y !";
+		next;
+		mes "^3151FF*Pétrit*";
+		mes "*Frotte*";
+		mes "*Presse*";
+		mes "*C-c-c-c-c-c-crakck!*^000000";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "Oh--";
+		mes "Oh oui !";
+		mes "C'est génial !";
+		delitem 1901,1;
+		if(BaseLevel < 41)set BaseExp,BaseExp+3712;
+		else if(BaseLevel > 40 && BaseLevel < 61)set BaseExp,BaseExp+7425;
+		else if(BaseLevel > 60 && BaseLevel < 71)set BaseExp,BaseExp+14850;
+		else if(BaseLevel > 70 && BaseLevel < 81)set BaseExp,BaseExp+29700;
+		else if(BaseLevel > 80 && BaseLevel < 91)set BaseExp,BaseExp+59400;
+		else if(BaseLevel > 90)set BaseExp,BaseExp+118800;
+		set EIN_LOVERQ,4;
+		next;
+		mes "[Clitzer]";
+		mes "Apporterez-vous 1 Flower à Calla pour moi ?";
+		mes "Je suis désolé de vous déranger...";
+		close;
+		break;
+
+	case 4:
+		mes "[Clitzer]";
+		mes "Apportez-vous 1 Flower à Calla pour moi ?";
+		mes "Je suis désolé de vous déranger...";
+		close;
+		break;
+
+	case 5:
+		mes "[Clitzer]";
+		mes "Vous lui avez donné la fleur ?";
+		mes "C'est génial !";
+		mes "Merci, merci beau....";
+		next;
+		mes "[Clitzer]";
+		mes "...Oh !";
+		mes "Mince !";
+		mes "J'étais tellement égocentrique que j'ai oublié de vous demander votre nom !";
+		mes "Je suis désolé d'être aussi tête en l'air...";
+		next;
+		mes "[Clitzer]";
+		mes "Donc...";
+		mes "Quel est votre nom ?";
+		next;
+		input @str$;
+		mes "[Clitzer]";
+		if(@str$ != strcharinfo(0)){
+			mes "Hm...?";
+			mes "Oh, ne vous offensez pas~";
+			mes "Mais voudriez-vous me répéter votre nom ?";
+			mes "Je n'ai pas bien entendu...";
+			close;
+		}
+		mes "" + strcharinfo(0) + "...";
+		mes "C'est pas mal.";
+		mes "Merci, je vous suis vraiment reconaissant pour votre aide.";
+		mes "A défaut de voir Calla en personne, je peux au moins donner mes hommages si vous m'aidez.";
+		next;
+		mes "[Clitzer]";
+		mes "Je me sens tellement mieux maintenant.";
+		mes "Oh !";
+		mes "Quand vous aurez le temps, pourquoi ne parleriez-vous pas à ma mère ?";
+		mes "Elle aime toujours rencontrer mes amis.";
+		set EIN_LOVERQ,6;
+		close;
+		break;
+
+	case 6:
+	case 7:
+	case 8:
+	case 9:
+	case 10:
+	case 11:
+		mes "[Clitzer]";
+		mes "^111111*Soupire...*^000000";
+		mes "Que puis-je faire pour que les parents de Calla m'acceptent en tant que son petit-ami ?";
+		mes "Je ne sais pas à quoi penser...";
+		close;
+		break;
+
+	case 12:
+		mes "[Clitzer]";
+		mes "Hein...?";
+		mes "Que venez-vous de dire ?";
+		mes "Vous avez fait quelque chose pour les Kappelthaines ?";
+		next;
+		mes "[Clitzer]";
+		mes "Quoi...?";
+		mes "Vous venez de dire que la mère de Calla veut prendre le thé avec moi ?";
+		mes "Mon Dieu...!";
+		next;
+		mes "[Clitzer]";
+		mes "Ok, ok.";
+		mes "J-Je je vais avoir besoin de porter quelque chose de classe, non ?";
+		mes "Oh.";
+		mes "Wow.";
+		mes "C'est si soudain !";
+		mes "Q-Que dois-je faire ?";
+		next;
+		mes "[Clitzer]";
+		mes "Les stupides habits que j'ai ne feront pas l'affaire !";
+		mes "Arrrgh !";
+		mes "Et mes bons habits sont déjà trop petits pour moi.";
+		mes "Je suis dans le pétrin...";
+		set EIN_LOVERQ,13;
+		close;
+		break;
+
+	case 13:
+		if(countitem(2320) || countitem(7170))goto s_Clothes;
+		mes "[Clitzer]";
+		mes "Noooooon !";
+		mes "Je dois trouver quelque chose de poarfait à porter ou la mère de Calla va me ^FF0000haïr^000000 !";
+		next;
+		mes "[Clitzer]";
+		mes "Réfléchis Clitzer, réfléchis !";
+		mes "Ok, pas de couleurs extravagantes.";
+		mes "Je ne veux pas qu'elle pense que je ne suis pas sérieux pour Calla.";
+		mes "Des rayures n'iraient pas non-plus...";
+		close;
+		break;
+
+	case 14:
+	case 15:
+		mes "[Clitzer]";
+		mes "Regarde, monde !";
+		mes "Je vais mériter l'amour de Calla !";
+		mes "Un jour, peut-être même que ses parents m'approuveront !";
+		close;
+		break;
+	}
+
+s_Clothes:
+	mes "[Clitzer]";
+	mes "Waaah !";
+	mes "Que dois-je porter ?!";
+	mes "Je n'ai aps toute la vie pour y réfléchir ! Quelque chose de... cérémonieux ?";
+	mes "Je n'ai jamais porté quelque chose de ce genre avant !";
+	next;
+	if(countitem(7170)){
+		set @clothes,7170;
+		mes "[Clitzer]";
+		mes "Attendez, " + strcharinfo(0) + ".";
+		mes "Qu'est-ce que vous avez là ?";
+		mes "J'ai déjà vu quelque-chose comme ça avant.";
+		mes "Ca s'apelle un Tuxedo, c'est ça ?";
+		mes "Quelque-chose comme ça serait parfait !";
+		next;
+		menu "Lui donner.",s_Giveclothes,"L'ignorer.",-;
+
+		mes "[Clitzer]";
+		mes "Mais comment puis-je me procurer un Tuxedo ?";
+		mes "Oh, j'espère que ce n'est pas trop cher ou je ne pourrai pas en avoir rapidement...";
+	} else if(countitem(2320)){
+		set @clothes,2320;
+		mes "[Clitzer]";
+		mes "Attendez, " + strcharinfo(0) + ".";
+		mes "Qu'est-ce que vous avez là ?";
+		mes "J'ai déjà vu quelque-chose comme ça avant.";
+		mes "Ca s'appelle une Formal Suit, non ?";
+		mes "Quelque-chose comme ça serait parfait !";
+		next;
+		menu "Lui donner.",s_Giveclothes,"L'ignorer.",-;
+
+		mes "[Clitzer]";
+		mes "Mais comment puis-je me procurer une Formal Suit ?";
+		mes "J'espère que ce n'est pas trop cher ou je ne pourrai pas en avoir rapidement...";
+	}
+	close;
+
+s_Giveclothes:
+	mes "[Clitzer]";
+	mes "Je peux le prendre ?";
+	mes "Oh, merci beaucoup !";
+	mes "Enfin j'ai quelque chose de suffisamment bien à porter pour rencontrer la mère de Calla !";
+	mes "Quel soulagement !";
+	next;
+	mes "[Clitzer]";
+	mes "Vous m'avez aidé tout ce temps et je ne vous ai pas exprimé ma gratitude comme il le faudrait.";
+	mes "Je suis désolé mais j'étais trop absorbé par mes propres problêmes.";
+	mes "Je suis peut-être pauvre, mais je dois vous récompenser d'une manière ou d'une autre...";
+	next;
+	mes "[Clitzer]";
+	mes "Attendez...";
+	mes "Pourquoi ne prendriez-vous pas cette pierre ?";
+	mes "Je ne sais pas ce qu'elle vaut, mais je sais qu'elle est plutôt rare.";
+	mes "Ca peut vous être utile plus tard~";
+	delitem @clothes,1;
+	set EIN_LOVERQ,14;
+	switch(rand(1,9)){
+	case 1:
+		getitem 7289,1;
+		break;
+
+	case 2:
+		getitem 7290,1;
+		break;
+
+	case 3:
+		getitem 7291,1;
+		break;
+
+	case 4:
+		getitem 7292,1;
+		break;
+
+	case 5:
+		getitem 7293,1;
+		break;
+
+	case 6:
+		getitem 7294,1;
+		break;
+
+	case 7:
+		getitem 7295,1;
+		break;
+
+	case 8:
+		getitem 7296,1;
+		break;
+
+	case 9:
+		getitem 7297,1;
+		break;
+	}
+	next;
+	mes "[Clitzer]";
+	mes "" + strcharinfo(0) + ",";
+	mes "vous m'avez vraiment ouvert les yeux.";
+	mes "A partir de maintenant, je ferai de mon mieux pour gagner l'approbation des parents de Calla et pour mériter l'amour de Calla.";
+	close;
+
+}
+
+//============================================================
+//=========================================== Einbroch Polution
+//============================================================
+
+einbroch.gat,1,1,0	script	#PolutionNPC	-1,{
+
+OnPolution:
+	set @AlrdEinPoll,1;
+	donpcevent "Liotzburg::OnHide";
+	donpcevent "Morei::OnHide";
+	donpcevent "Mark::OnHide";
+	donpcevent "Khemko::OnHide";
+	donpcevent "Oberu::OnHide";
+	donpcevent "Khowropher::OnHide";
+	donpcevent "Kesunboss::OnHide";
+	donpcevent "Train Station Staff#01::OnHide";
+	donpcevent "Train Station Staff#02::OnHide";
+	donpcevent "Leslie::OnHide";
+	donpcevent "Little Toby::OnHide";
+	donpcevent "Tan::OnHide";
+	donpcevent "Keneshiotz::OnHide";
+	donpcevent "Sleik::OnHide";
+	donpcevent "Uwe Kleine::OnHide";
+	donpcevent "Laboratory Soldier#01::OnHide";
+	donpcevent "Laboratory Soldier#02::OnHide";
+	disablenpc "Paddler";
+	disablenpc "Head Gear Dealer";
+
+	mapannounce "einbroch.gat","Ceci est un état d'urgence ! Le nuage de pollution atteint de hauts sommets de saturation. Les habitants d'Einbroch doivent trouver un abrit immédiatement.",bc_map;
+	monster "einbroch.gat",82,332,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",99,328,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",122,317,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",138,319,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",147,312,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",159,316,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",173,315,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",161,311,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",147,296,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",168,282,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",175,271,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",146,274,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",160,272,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",155,256,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",179,262,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",192,248,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",212,255,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",230,250,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",246,251,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",262,254,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",253,240,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",202,245,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",181,251,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",172,238,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",146,242,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",186,226,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",173,239,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",124,248,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",120,234,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",98,234,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",101,219,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",89,208,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",96,191,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",76,194,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",60,196,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",45,194,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",34,201,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",40,184,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",64,173,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",96,173,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",41,155,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",46,131,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",46,108,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",38,93,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",55,86,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",81,81,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",107,82,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",107,104,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",123,73,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",132,87,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",125,63,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",142,64,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",150,52,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",157,37,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",179,39,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",197,46,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",217,67,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",246,54,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",228,110,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",250,118,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",273,127,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",288,138,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",281,160,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",281,192,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",291,201,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",283,218,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",268,216,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",273,196,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk"; 
+	monster "einbroch.gat",262,164,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",241,180,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",216,205,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",209,198,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",224,177,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",227,163,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",208,166,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",132,87,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",149,119,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",119,36,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",84,155,"Toxic Fog",1621,1,"#PolutionNPC::OnMobChk";
+	monster "einbroch.gat",82,107,"Red Fog",1620,1,"#PolutionNPC::OnMobChk";
+	initnpctimer;
+	end;
+
+OnMobChk:
+	if(mobcount("einbroch.gat","#PolutionNPC::OnMobChk"))end;
+
+OnTimer600000:
+	killmonster "einbroch.gat","#PolutionNPC::OnMobChk";
+	mapannounce "einbroch.gat","Le statut d'urgence est maintenant annulé. Les niveaux de pollution de l'air sont de nouveau à un niveau tolérable.",bc_map;
+	enablenpc "Liotzburg";
+	donpcevent "Liotzburg::OnUnHide";
+	enablenpc "Morei";
+	donpcevent "Morei::OnUnHide";
+	enablenpc "Mark";
+	donpcevent "Mark::OnUnHide";
+	enablenpc "Khemko";
+	donpcevent "Khemko::OnUnHide";
+	enablenpc "Oberu";
+	donpcevent "Oberu::OnUnHide";
+	enablenpc "Khowropher";
+	donpcevent "Khowropher::OnUnHide";
+	enablenpc "Kesunboss";
+	donpcevent "Kesunboss::OnUnHide";
+	enablenpc "Train Station Staff#01";
+	donpcevent "Train Station Staff#01::OnUnHide";
+	enablenpc "Train Station Staff#02";
+	donpcevent "Train Station Staff#02::OnUnHide";
+	enablenpc "Leslie";
+	donpcevent "Leslie::OnUnHide";
+	enablenpc "Little Toby";
+	donpcevent "Little Toby::OnUnHide";
+	enablenpc "Tan";
+	donpcevent "Tan::OnUnHide";
+	enablenpc "Keneshiotz";
+	donpcevent "Keneshiotz::OnUnHide";
+	enablenpc "Sleik";
+	donpcevent "Sleik::OnUnHide";
+	enablenpc "Uwe Kleine";
+	donpcevent "Uwe Kleine::OnUnHide";
+	enablenpc "Laboratory Soldier#01";
+	donpcevent "Laboratory Soldier#01::OnUnHide";
+	enablenpc "Laboratory Soldier#02";
+	donpcevent "Laboratory Soldier#02::OnUnHide";
+	enablenpc "Paddler";
+	enablenpc "Head Gear Dealer";
+	set $EinPolution,0;
+	set @AlrdEinPoll,0;
+	end;
+
+}
+
+sec_in02.gat,127,86,3	script	Einbroch Polution	851,{
+
+	if(getgmlevel() > 79){
+		mes "[Einbroch Polution Variable Management]";
+		mes "$EinPolution est actuellement à : " + $EinPolution + ".";
+		mes "Que désirez-vous faire ?";
+		next;
+		menu "Remettre $EinPolution à 0",s_0,"Entrez une valeur",s_Input,"Annuler",-;
+		close;
+	s_0:
+		mes "[Einbroch Polution Variable Management]";
+		mes "$EinPolution a été remis à 0.";
+		set $EinPolution,0;
+		set @AlrdEinPoll,0;
+		close;
+	s_Input:
+		mes "[Einbroch Polution Variable Management]";
+		mes "Entrez la valeur que vous désirez pour $EinPollution";
+		mes "Entrez '0' pour annuler.";
+		input @temppol;
+		if(@temppol == 0)close;
+		set $EinPolution,@temppol;
+		mes "[Einbroch Polution Variable Management]";
+		mes "$EinPolution a été mis à : " + $EinPolution + ".";
+		close;
+	} else {
+		mes "[Einbroch Polution Variable Management]";
+		mes "Désolé, vous n'avez pas l'autorisation";
+		mes "d'utiliser ce NPC.";
+		close;
+	}
+}
+
+//============================================================
+//=========================================== Einbroch Factory
+//====================================================== Quest
+
+einbroch.gat,132,84,3	script	Liotzburg	853,{
+
+	if($EinPolution > 9){
+		mes "[Liotzburg]";
+		mes "Qu'est-ce qui se passe ?!";
+		mes "Qui a fait ça ?!";
+		mes "Mon Dieu, je ne peux pas croire que ça arrive !";
+		mes "^333333*Tousse Tousse!*^000000";
+		next;
+		mes "[Liotzburg]";
+		mes "Je dois partir d'ici !";
+		mes "Vous ! Faites quelque chose !";
+		mes "Je dois me cacher et trouver un endroit sûr !";
+		close2;
+		if(!@AlrdEinPoll)donpcevent "#PolutionNPC::OnPolution";
+		end;
+	}
+	if(EinFactory >= 13){
+		if(EinFactory > 13){
+			mes "[Liotzburg]";
+			mes "Quoi... ?";
+			mes "Un budget de réparation de l'usine ?";
+			mes "Hors de question !";
+			next;
+		}
+		mes "[Liotzburg]";
+		mes "Pourquoi gaspiller de l'argent ?";
+		mes "Nous n'avons pas eu de problêmes depuis longtemps !";
+		mes "Regardez, tout va bien !";
+		mes "Pourquoi exagérez-vous de si petits détails ?";
+		next;
+		mes "[Liotzburg]";
+		mes "Le contremaître, Zelmeto, vient juste de demander une augmentation du budget.";
+		mes "Et bien moi je pense qu'il ment !";
+		mes "Tout est parfait !";
+		if(EinFactory == 13)set EinFactory,14;
+		close;
+	}
+	mes "[Liotzburg]";
+	mes "Je suis le directeur responsable du matériel de cette usine.";
+	mes "La plupart de mes employés sont des travailleurs appliqués.";
+	mes "Je ne peux pas dire ça de tout le monde, mais globalement nous faisons du bon boulot..";
+	mes "Ha ha ha~ !";
+	next;
+	mes "[Liotzburg]";
+	mes "Aussi longtemps que cette usine est bien entretenue, nous n'avons pas à nous soucier de la sécurité de la ville.";
+	mes "Le contremaître, Zelmeto, est également digne de confiance.";
+	next;
+	mes "[Liotzburg]";
+	mes "Je peux faire confiance à Zelmeto pour surveiller les choses, donc je n'ai aps besoin d'entrer dans l'usine.";
+	mes "C'est tellement bien de déléguer le travail !";
+	next;
+	mes "[Liotzburg]";
+	mes "Notre usine va continuer à se développer et tout le monde sera fier des progrès que nous accomplissons.";
+	mes "Oui, je peux vous l'assurer !";
+	close;
+
+OnHide:
+	specialeffect 16;
+	disablenpc "Liotzburg";
+	end;
+
+OnUnhide:
+	misceffect 215;
+	end;
+
+}
+
+ein_in01.gat,67,243,3	script	Zelmeto	851,{
+
+	if($EinPolution > 9){
+		mes "[Zelmeto]";
+		mes "Nous avons un gros problême !";
+		mes "Nous avons reçu du matériel, mais les machines étaient cassées depuis trop longtemps !";
+		next;
+		mes "[Zelmeto]";
+		mes "Et quand j'ai essayé de les réparer, un grand court-circuit s'est produit.";
+		mes "Notre ville doit maintenant être envahie par un brouillard toxique maintenant !";
+		next;
+		mes "[Zelmeto]";
+		mes "Je vais faire de mon mieux pour arranger ça, mais nous aurions vraiment dû allouer des fonds pour réparer ces machines plus tôt !";
+		next;
+		mes "[Zelmeto]";
+		mes "Le plus important est que vous sortiez d'ici et trouviez un abri !";
+		mes "Maintenant !";
+		close2;
+		warp "einbroch.gat",131,83;
+		end;
+	}
+
+	if(EinFactory > 0)goto s_Switches;
+	mes "[Zelmeto]";
+	mes "Ah, vous devez être un visteur.";
+	mes "Je suis Zelmeto Abellov, le contremaître.";
+	mes "Vous n'êtes jamais venu dans ces installations ?";
+	next;
+	mes "[Zelmeto]";
+	mes "Cette usine joue un rôle important dans notre ville et génère beaucoup de revenus.";
+	mes "Malgré cela, nos employés souffent d'un mauvais environnement de travail.";
+	next;
+	mes "[Zelmeto]";
+	mes "Notre directeur gagne beaucoup d'argent et semble content de la situation actuelle.";
+	mes "Cependant, le reste des employés ne jouissent pas des bénéfices qu'il reçoit.";
+	mes "[Zelmeto]";
+	mes "Beaucoup sont déjà partis et il ne reste que peu de monde pour travailler ici.";
+	mes "Donc maintenant nous sommes en sous-effectifs, et j'y suis un peu lié.";
+	next;
+	mes "[Zelmeto]";
+	mes "Il y a des tâches urgentes qui doivent être accomplies, mais je ne peux pas engager de nouveaux travailleurs.";
+	mes "Oh, je suis désolé, j'ai parlé trop librement de mes problêmes...";
+	next;
+	menu "Vous êtes en sous-effectifs ?",s_Underst,"Non, c'est bon.",-;
+
+	mes "[Zelmeto]";
+	mes "Merci de votre gentilesse.";
+	mes "Et, s'il vous plaît, ne racontez à personne ce que je viens de vous dire.";
+	close;
+
+s_Underst:
+	mes "[Zelmeto]";
+	mes "Oui, nous le sommes !";
+	mes "Je n'ai pas assez de monde pour inspecter les machines de l'usine et déterminer quels problêmes nous avons.";
+	next;
+	mes "[Zelmeto]";
+	mes "C'est une tâche prenante que j'aimerai mieux faire moi-même.";
+	mes "Cependant, entre ça et m'occuper des employés, je n'ai pas assez de temps...";
+	next;
+	menu "Je peux vous aider.",s_Help,"Continuez à bien travailler.",-;
+
+	mes "[Zelmeto]";
+	mes "Ce n'est pas une vie...";
+	mes "^6A6A6A*Soupire*^000000 Je peux faire avec, mais j'espère que mes supérieurs considèrerons le fait d'améliorer l'environnement de travail ici....";
+	close;
+
+s_Help:
+	mes "[Zelmeto]";
+	mes "Vous pouvez m'aider ?";
+	mes "Je sais que c'est trop en demander, mais je vais accepter l'aide de tout ceux qui me la proposeront.";
+	mes "Je suis vraiment désespéré.";
+	next;
+	mes "[Zelmeto]";
+	mes "Bien, je vais vous demander d'inspecter des machines dans l'usine  une par une.";
+	mes "Il est impératif que nous sachions ce qui a besoin d'être réparé et ce qui marche bien.";
+	next;
+	mes "[Zelmeto]";
+	mes "Pour commencer, trouvez le ^FF00002nd control panel^000000 et voyez comment il marche.";
+	mes "Je suis certain qu'il est cassé depuis longtemps, mais il ne coûte rien de le vérifier.";
+	mes "Vous devriez le trouver facilement.";
+	next;
+	mes "[Zelmeto]";
+	mes "Quand vous aurez fini votre inspection, faites-moi votre rapport et je vous dirai quelle autre machine vérifer ensuite.";
+	mes "Merci encore d'offrir votre aide.";
+	set EinFactory,1;
+	close;
+s_Switches:
+	switch(EinFactory){
+	case 1:
+		mes "[Zelmeto]";
+		mes "Si vous le voulez bien, allez inspecter le 2nd control pannel qui semble être cassé depuis longtemps...";
+		close;
+		break;
+
+	case 2:
+		mes "[Zelmeto]";
+		mes "Oh, je vois.";
+		mes "Nous devons faire quelque chose pour ça au plus tôt.";
+		mes "Maintenant, voyons ce que vous allez vérifier.";
+		next;
+		mes "[Zelmeto]";
+		mes "Il y a 3 automatic pressure governors qui martèlent les plaques de fer tordues afin de les aplatir.";
+		mes "Il semblerait qu'un d'entre eux puisse avoir quelques problêmes.";
+		next;
+		mes "[Zelmeto]";
+		mes "S'il vous plaît, inspectez les ^FF0000automatic pressure governors^000000.";
+		mes "Même si le problême semble négligeable, rapportez-le moi.";
+		mes "Je sais qu'ils ont l'air en état maintenant, mais je souhaite prévenir un accident si je le peux.";
+		next;
+		mes "[Zelmeto]";
+		mes "Merci d'avance, aventurier.";
+		set EinFactory,3;
+		close;
+		break;
+
+	case 3:
+		mes "[Zelmeto]";
+		mes "Vous devez inspecter les automatic pressure governors.";
+		mes "Ils ont l'air en état, mais l'un d'eux fait d'étranges bruits.";
+		next;
+		mes "[Zelmeto]";
+		mes "Ce serait une bonne idée de vérifier plus attentivement cette machine cette fois, juste au cas où.";
+		next;
+		mes "[Zelmeto]";
+		mes "Merci de nous aider, aventurier.";
+		close;
+		break;
+
+	case 4:
+		mes "[Zelmeto]";
+		mes "Quoi...?";
+		mes "C'est pire que je le croyais.";
+		mes "Mais c'est bien que nous soyons au courant de ces problêmes le plus tôt possible.";
+		next;
+		mes "[Zelmeto]";
+		mes "Ne vous inquiétez pas, nous nous en occuperons.";
+		mes "Tant que nous y sommes, j'aimerai que vous inspectiez la prochaine machine pour moi.";
+		next;
+		mes "[Zelmeto]";
+		mes "Je veux que vous vérifiez le ^FF0000control panel^000000.";
+		mes "C'est le même genre que celui que vous avez déjà vérifié, mais plus grand.";
+		next;
+		mes "[Zelmeto]";
+		mes "Il se trouve au milieu de l'usine, vous devriez être capable de le trouver.";
+		mes "Il est peut-être en mauvais état, bien qu'il fonctionne pour le moment.";
+		next;
+		mes "[Zelmeto]";
+		mes "Nous avons besoin de nous assurer qu'il est stable, fiable et ne soit pas une menace pour les employés.";
+		mes "Merci encore, aventurier.";
+		set EinFactory,5;
+		close;
+		break;
+
+	case 5:
+		mes "[Zelmeto]";
+		mes "J'aimerai que vous inspectiez le control pannel.";
+		mes "Il est plutôt large et se trouve au centre de l'usine.";
+		mes "Vous devriez pas avoir de mal à le trouver.";
+		close;
+		break;
+
+	case 6:
+		mes "[Zelmeto]";
+		mes "Je vois...";
+		mes "C'est comme s'il y avait eu un court-circuit et la plupart des pièces internes ont été brûlées...";
+		next;
+		mes "[Zelmeto]";
+		mes "Merci d'avoir vérifié ça pour moi.";
+		mes "Maintenant la prochaine machine est différente des autres que je vous ai indiquées.";
+		next;
+		mes "[Zelmeto]";
+		mes "C'est une main mécanique qui transporte de petits objets.";
+		mes "Nous ne lui avons pas vraiment donné de nom, mais vous devriez être capable de la trouver.";
+		next;
+		mes "[Zelmeto]";
+		mes "Récemment, il semble y avoir eu des problêmes à faire marcher cette machine.";
+		mes "Si quelque chose est cassé, nous devons le savoir pour le réparer aussitôt.";
+		next;
+		mes "[Zelmeto]";
+		mes "Encore une fois, merci d'avance.";
+		set EinFactory,7;
+		close;		
+		break;
+
+	case 7:
+		mes "[Zelmeto]";
+		mes "La machine que je veux que vous inspectiez est un small sized conveyor.";
+		next;
+		mes "[Zelmeto]";
+		mes "Assurez-vous d'inspecter le petit, car nous en avons également un grand dans l'usine.";
+		close;
+		break;
+
+	case 8:
+		mes "[Zelmeto]";
+		mes "Oh ?";
+		mes "Je surpris d'entendre ça.";
+		mes "^6A6A6A*Soupir*^000000 Il y a vraiment trop de choses qui ont besoin de réparations.";
+		mes "C'est terrible...";
+		next;
+		mes "[Zelmeto]";
+		mes "Laissez-moi m'inquiéter de ça pour le moment.";
+		mes "S'il vous plaît, contentez-vous d'inspecter les autres machines.";
+		next;
+		mes "[Zelmeto]";
+		mes "Maintenant, il y a un tuyau (Pipe) que je veux que vous regardiez.";
+		mes "Beaucoup de nos tuyaux ne sont pas dans les meilleures conditions, mais celui-là en particulier risque d'être sévèrement endommagé.";
+		next;
+		mes "[Zelmeto]";
+		mes "Le tuyau (Pipe) que je veux que vous inspectiez se situe à côté des grandes cuves de métal en fusion.";
+		mes "Vous devriez le trouver facilement.";
+		next;
+		mes "[Zelmeto]";
+		mes "Merci encore de votre aide, aventurier.";
+		set EinFactory,9;
+		close;
+		break;
+
+	case 9:
+		mes "[Zelmeto]";
+		mes "Le tuyau (Pipe) que je veux que vous inspectiez se situe à côté des grandes cuves de métal en fusion.";
+		mes "Vous devriez le trouver facilement.";
+		next;
+		mes "[Zelmeto]";
+		mes "Merci encore de votre aide, aventurier.";
+		close;
+		break;
+
+	case 10:
+		mes "[Zelmeto]";
+		mes "C'est pire que je ne l'imaginais...";
+		next;
+		mes "[Zelmeto]";
+		mes "Nous devons le réparer d'urgence !";
+		mes "J'espère que nous pourrons résoudre ça avant que de sérieux problêmes n'arrivent...";
+		next;
+		mes "[Zelmeto]";
+		mes "Bien, la dernière chose que je voudrais que vous inspectiez est un ^FF0000large conveyor^000000.";
+		mes "Il est semblable à l'autre, mais il ets plus grand et plus puissant.";
+		next;
+		mes "[Zelmeto]";
+		mes "Nous n'avons qu'une seule de ces machines et il est bougé un peu partout car beaucoup de gens dans l'usine l'utilisent.";
+		mes "Je ne sais pas vraiment où il peut être maintenant.";
+		next;
+		mes "[Zelmeto]";
+		mes "Mais je suis sûr qu'il est encore dans le bâtiment, donc vous devriez le trouver.";
+		mes "J'espère que vous pourrez vite l'inspecter.";
+		set EinFactory,11;
+		close;
+		break;
+
+	case 11:
+		mes "[Zelmeto]";
+		mes "La machine que vous êtes sensé inspecter est un large conveyor.";
+		next;
+		mes "[Zelmeto]";
+		mes "Rappellez-vous qu'il y a également un small conveyor, donc faites attention d'examiner le grand, ok ?";
+		close;
+		break;
+
+	case 12:
+		mes "[Zelmeto]";
+		mes "Je pensais bien que les deux conveyors avaient des problêmes simillaires.";
+		mes "Nous pouvons les réparer en même temps, mais ça sera toute une histoire.";
+		next;
+		mes "[Zelmeto]";
+		mes "Merci beaucoup de votre aide.";
+		mes "Sans vous, je suis sûr que nous n'aurions été au courant de ces problêmes que trop tard.";
+		next;
+		mes "[Zelmeto]";
+		mes "Maintenant je dois m'assurer que nous ayons assez de matériel pour les réparations, afin que les machines fonctionnement de nouveau correctement.";
+		next;
+		mes "[Zelmeto]";
+		mes "En premier lieu, je ferais mieux de demander une augmentation du budget de répération de l'usine à notre directeur.";
+		set EinFactory,13;
+		close;
+		break;
+
+	case 13:
+		mes "[Zelmeto]";
+		mes "Je dois rapporter ça à notre directeur au plus tôt.";
+		next;
+		mes "[Zelmeto]";
+		mes "Avec de la chance, il va approuver une augmentation du budget et nous pourrons avoir tout le matériel nécéssaire pour les réparations.";
+		close;
+		break;
+
+	case 14:
+		mes "[Zelmeto]";
+		mes "...";
+		mes "......";
+		next;
+		mes "[Zelmeto]";
+		mes "^6A6A6A*Soupire*^000000";
+		mes "Ma demande a été rejetée par le directeur.";
+		mes "Mais la maintenance et les réparations sont cruciales pour une efficacité maximum et la sécurité des travailleurs !";
+		next;
+		mes "[Zelmeto]";
+		mes "Je suis frustré et inquiet.";
+		mes "Peut-être que rien ne va se passer pour l'instant, mais nous devons assurer notre future sécurité en révisant régulièrement toutes ces machines.";
+		next;
+		mes "[Zelmeto]";
+		mes "Aucune menace potentielle pour la sécrité de nos ouvriers ne peut être ignorée.";
+		mes "Il n'y a rien que je puisse faire ? ^6A6A6A*Soupire*^000000";
+		next;
+		mes "[Zelmeto]";
+		mes "Si seulement nous pouvions avoir";
+		mes "20 ^FF0000Flexible Tube^000000,";
+		mes "10 ^FF0000Rusty Screw^000000 et";
+		mes "10 ^FF0000Used Iron Plate^000000,";
+		mes "nous pourrions faire ces réparations.";	
+		next;
+		mes "[Zelmeto]";
+		mes "Mais sans fonds, il n'y aucun moyen d'acheter ces objets.";
+		mes "Si quelque-chose arrive, qui sera le responsable ?";
+		set EinFactory,15;
+		close;
+		break;
+
+	case 15:
+		mes "[Zelmeto]";
+		if(countitem(7325) < 20 || countitem(7317) < 10 || countitem(7319) < 10){
+			mes "Nous avons besoin d'au moins";
+			mes "20 ^FF0000Flexible Tube^000000,";
+			mes "10 ^FF0000Rusty Screw^000000 et";
+			mes "10 ^FF0000Used Iron Plate^000000,";
+			mes "pour réparer cette usine.";
+			next;
+			mes "[Zelmeto]";
+			mes "^6A6A6A*Soupir*^000000";
+			mes "Mais il n'y a aucun moyen d'obtenir tout ça.";
+			mes "Notre budget n'est pas assez grand pour couvrir ça.";
+			close;
+		}
+		mes "Ah, c'est encore vous.";
+		mes "C'est honteux de mettre les gens au courant de ses misères...";
+		next;
+		mes "[Zelmeto]";
+		mes "C'est un des pires spectacles à voir ici, donc il n'y a pas de raison que vous reveniez ici.";
+		next;
+		menu "Lui donner le matériel.",s_Give,"Huh.",-;
+
+		mes "[Zelmeto]";
+		mes "^6A6A6A*Soupire*^000000";
+		mes "Je suis vraiment inquiet pour le futur de cette usine.";
+		mes "A quoi diable pense notre directeur...?";
+		close;
+
+	s_Give:	
+		mes "[Zelmeto]";
+		mes "...Hm?";
+		mes "N'est-ce pas le matériel pour faire les réparations dans l'usine ?";
+		mes "Comment avez-vous trouvé tout ça ?";
+		next;
+		if(countitem(7325) < 20 || countitem(7317) < 10 || countitem(7319) < 10)close;
+		delitem 7325,20;
+		delitem 7317,10;
+		delitem 7319,10;
+		set EinFactory,16;
+		set $EinPolution,$EinPolution+1;
+		if(BaseLevel < 41) set BaseExp,BaseExp+615;
+		else if(BaseLevel >= 41 && BaseLevel < 51) set BaseExp,BaseExp+3075;
+		else if(BaseLevel >= 51 && BaseLevel < 61) set BaseExp,BaseExp+6604;
+		else if(BaseLevel >= 61 && BaseLevel < 71) set BaseExp,BaseExp+18508;
+		else if(BaseLevel >= 71 && BaseLevel < 81) set BaseExp,BaseExp+32062;
+		else if(BaseLevel >= 81 && BaseLevel < 91) set BaseExp,BaseExp+76026;
+		else if(BaseLevel >= 91) set BaseExp,BaseExp+290675;
+		mes "[Zelmeto]";
+		mes "Je ne sais vraiment pas comment vous récompenser pour cette grande faveur.";
+		mes "J'apprécie que vous soyez resté nous aider.";
+		next;
+		mes "[Zelmeto]";
+		mes "Oh...!";
+		mes "Dans mes années de managing, j'ai appris les techniques de motivation ultimes.";
+		mes "Laissez-moi faire monter votre motivation pour vous montrer ma gratitude.";
+		next;
+		mes "[Zelmeto]";
+		mes "Maintenant...";
+		mes "Ouvrez votre esprit à mes encouragements et à l'inspiration...";
+		next;
+		mes "[Zelmeto]";
+		mes "^3131FFQuand le chemin devient rude, vous devez être plus rude encore !";
+		mes "Vous devez escalader la montagne car personne ne l'escaladera pour vous !";
+		next;
+		mes "[Zelmeto]";
+		mes "^3131FFN'abandonnez pas !";
+		mes "Allez de l'avant !";
+		mes "Les perdants sont des fuyards et les fuyards sont des perdants !";
+		next;
+		mes "[Zelmeto]";
+		mes "^6A6A6A*Whew*";
+		mes "^000000Je n'ai pas été aussi inspiré depuis un moment, mais votre aide a été précieuse.";
+		mes "Je vais commencer les réparations, mais je voudrais vous remercier une fois encore.";
+		close;
+		break;
+
+	case 16:
+		mes "[Zelmeto]";
+		mes "Nous ferons un bon emploi du matériel que vous nous avez donné.";
+		mes "Avec votre aide, l'usine focntionnera en toute sécurité.";
+		mes "Du moins pour un peu plus longtemps.";
+		close;
+	}	
+}
+
+ein_in01.gat,50,232,4	script	2nd Control Panel	111,{
+
+	if(EinFactory == 1){
+		mes "^3131FFC'est le 2nd control panel que Zelmeto vous a demandé d'isnpecter.";
+		mes "Il a l'air totallement cassé : il manque des vis, et la coque en métal a été tordue et ouverte, mettant à jour un enchevêtrement de fils à l'intérieur.";
+		set EinFactory,2;
+		close;
+	}
+	end;
+}
+
+ein_in01.gat,108,217,4	script	3rd Pressure Governor	111,{
+
+	if(EinFactory == 3){
+		mes "^3131FFA première vue, ce pressure governor a l'air en parfait état.";
+		mes "Mais après que vous l'ayez inspecté plus attentivement, il fait d'étranges bruits de forttement et il manque quelques vis extérieures.";
+		set EinFactory,4;
+		close;
+	}
+	end;
+}
+
+ein_in01.gat,61,259,4	script	Main Control Panel	111,{
+
+	if(EinFactory == 5){
+		mes "^3131FFLe main control panel n'a pas l'air d'avoir de problêmes.";
+		mes "Mais après avoir tappé sur la surface, vous entendez un son creux décourageant.";
+		mes "Comme s'il avait eprdu quelques pièces...";
+		set EinFactory,6;
+		close;
+	}
+	end;
+}
+
+ein_in01.gat,47,197,4	script	Conveyor#01	111,{
+
+	if(EinFactory == 7){
+		mes "^3131FFLes mouvements du conveyor ont l'air nerveux et maladroits.";
+		mes "Le bras mécanique n'a pas l'air suffisamment puissant pour supporter les chargements qu'il transporte.";
+		mes "Il manque des vis sur le conveyor et d'autres sont rouillées.";
+		set EinFactory,8;
+		close;
+	}
+	end;
+}
+
+ein_in01.gat,100,267,4	script	Pipe	111,{
+
+	if(EinFactory == 9){
+		mes "^3131FFL'inspection du tuyau ne prend pas beaucoup de temps.";
+		mes "Il est gonflé et totallement usé à cause des pressions qu'il supporte et de sa longue vie.";
+		mes "C'est un miracle qu'il n'ait pas encore explosé.";
+		set EinFactory,10;
+		close;
+	}
+	end;
+}
+
+ein_in01.gat,95,238,4	script	Conveyor#02	111,{
+
+	if(EinFactory == 11){
+		mes "^3131FFCe conveyor semble avoir les mêmes problêmes que la version plus petite.";
+		mes "Ses mouvements sont maladroits, irréguliers et faibles, et en plus toutes ses vis sont rouillées.";
+		set EinFactory,12;
+		close;
+	}
+	end;
+}
+//============================================================
+//=============================================== Einbroch Uwe
+//====================================================== Quest
+einbroch.gat,215,180,5	script	Uwe Kleine	85,{
+
+	if(EinUwe == 2)goto s_Cont2;
+	if(EinUwe == 1)goto s_Cont;
+	mes "[Uwe]";
+	mes "C'est une telle joie de cuisiner~ !";
+	mes "Les odeurs, les assaisonnements, la sentation de pure ^EFAEBDsatiété^000000...";
+	next;
+	menu "Um, ce n'est pas une forge ?",s_Forge,"L'ignorer.",-;
+
+	mes "[Uwe]";
+	mes "La cuisine commence par le feu et finit par le feu.";
+	mes "C'est un art de créer de la nourriture fine et délicieuse pour ravir le palais~";
+	close;
+
+s_Forge:
+	mes "[Uwe]";
+	mes "Ce n'est pas une forge ?";
+	mes "Oh, mon petit chou en sucre, tu n'es jamais venu ici avant, n'est-ce pas ?";
+	next;
+	mes "[Uwe]";
+	mes "Mon nom est Uwe Klein, et c'est ma forge~ !";
+	mes "Et je suis le forgeron le plus élégant ainsi que le plus grand chef de la République de Schwartzwald~";
+	next;
+	mes "[Uwe]";
+	mes "Donc, comment puis-je";
+	if(Sex){
+		mes "t'aider, adorable petit bout d'homme ?";
+	}else{
+		mes "t'aider ?";
+	}
+	next;
+	menu "Parler d'Einbroch",s_Ein,"Lui demander de forger une arme.",s_Weap,"Maître, je veux apprendre à cuisiner.",s_Cook,"Annuler.",-;
+
+	mes "[Uwe]";
+	mes "Prends soin de toi, mon petit chou en sucre~";
+	mes "Ho ho ho !";
+	close;
+
+s_Ein:
+	mes "[Uwe]";
+	mes "Einbroch a été construit à l'origine pour apporter un support au travail des mines d'Einbech.";
+	mes "Parce qu'Einbech est petite et remplie de gens, il n'y a pas d'endroit pour construire une usine de raffinement des minerais là-bas.";
+	next;
+	mes "[Uwe]";
+	mes "Et comme Einbroch était vide, c'était un endroit parfait pour construire des usines.";
+	mes "C'est ce que mon grand-père m'a raconté il y a longtemps.";
+	mes "De toute façon, Einbroch a grandi très vite jusqu'à devenir une ville majeure.";
+	next;
+	mes "[Uwe]";
+	mes "Maintenant, les gens ne savent plus que cette ville ne devait être qu'une extension d'Einbech.";
+	mes "Tu vois les remparts là-bas ?";
+	mes "Ils ne sont aucunnement reliés à Einbech !";
+	mes "Pas de protection pour eux...";
+	next;
+	mes "[Uwe]";
+	mes "C'est comme si le gouvernement avait perdu tout intérêt pour Einbech.";
+	mes "Même les mineurs ont déménagé ici pour travailler dans les usines.";
+	mes "Mais plus de gens, ça n'a pas rendu cette ville plus vivable.";
+	next;
+	mes "[Uwe]";
+	mes "Einbroch a peut-être l'air moderne et excitante maintenant, mais tu verras bientôt qu'il n'y aura plus le moindre signe de vie.";
+	mes "Donc... ne viens pas y habiter quand tu seras  vieux.";
+	next;
+	menu "Alors pourquoi êtes-vous ici ?",s_WhyHere,"Je ne le ferai pas, merci du conseil.",-;
+
+	mes "[Uwe]";
+	mes "Oh, c'est un bon choix mon petit chou en sucre !";
+	mes "Oh, vous les aventuriers mignons êtes si précieux, si adorables.";
+	mes "^111111*Tee hee hee~*^000000";
+	next;
+	mes "[Uwe]";
+	mes "Bien, c'était une discussion amusante.";
+	mes "Reviens me rendre visite, 'kay ?";
+	mes "Tu me manqueras jusqu'à la prochaine fois~";
+	close;
+
+s_WhyHere:
+	mes "[Uwe]";
+	mes "Et bien, j'ai quelques précieux souvenirs de cet endroit.";
+	mes "Quand il y avait un homme ici qui était comme un père pour moi.";
+	next;
+	mes "[Uwe]";
+	mes "Oh, mais je suis sûr que tu ne veux pas entendre ça.";
+	mes "La prochaine fois que tu passeras, nous parlerons de quelque chose de plus gai, 'kay ?";
+	mes "Aurevoir, mon mignon~";
+	close;
+
+s_Weap:
+	mes "[Uwe]";
+	mes "Bien...";
+	mes "En fait je ne forge que pour créer mes propres ustensiles de cuisine.";
+	next;
+	mes "[Uwe]";
+	mes "Oh, je comprends qu'on puisse avoir besoin de combattre des monstres, mais je ne suis pas la bonne personne si tu veux qu'on te forge des armes.";
+	mes "Je...suis un pacifiste convaincu~";
+	next;
+	mes "[Uwe]";
+	mes "Si tu jettes un oeil sur les environs, je suis sûr que tu trouveras un forgeron qui voudra bien te forger une bonne arme~";
+	close;
+
+s_Cook:
+	mes "[Uwe]";
+	mes "Mm...? Tu viens juste de dire que tu veux apprendre l'art de la cuisine ?";
+	next;
+	mes "[Uwe]";
+	mes "Je suis désolé, mais je ne peux pas vraiment donner de cours.";
+	mes "Mais je te donnerai de bons conseils pour les débutants pleins d'espoirs.";
+	next;
+	mes "[Uwe]";
+	mes "Maintenant...";
+	mes "Pour ta leçon, j'aurai besoin de.... Zut, il a besoin de tellement de choses.";
+	mes "Prend un papier et un crayon pour la liste...";
+	next;
+	mes "[Uwe]";
+	mes "Je plaisantais !";
+	mes "^111111*Glousse~* ^000000 Je n'ai pas besoin de grand-chose pour faire des ustensiles de cusine.";
+	mes "Amène 6 ^0000FFLarge Jellopies^000000.";
+	mes "C'est ça !";
+	next;
+	mes "[Uwe]";
+	mes "En échange, je te donnerai 1 Coal et quelques conseils de cuisine pratiques pour les novices.";
+	mes "Je donne ces conseils gratuitement pour mes collègues, de toute façon.";
+	next;
+	mes "[Uwe]";
+	mes "Pourquoi ^EFAEBDne^000000 deviendrais-tu ^EFAEBDpas^000000 un Blacksmith?";
+	mes "Je suis plus à l'aise sur ce terrain.";
+	mes "^111111*Tee hee~*^000000";
+	next;
+	mes "[Uwe]";
+	mes "Bien, j'attendrai ton retour ici.";
+	mes "^111111...*Tee hee~*";
+	set EinUwe,1;
+	close;
+
+s_Cont:
+	mes "[Uwe]";
+	mes "Oh bonjour bonjour~";
+	mes "Ca fait longtemps que nous n'avons pas parlé, mon mignon petit aventurier~";
+	next;
+	mes "[Uwe]";
+	mes "Alors, mon petit chou en sucre, qu'en est-il de la petite faveur que je t'ai demandée la dernière fois ?";
+	mes "As-tu déjà oublié les 6 Large Jellopies ?";
+	next;
+	menu "Parler d'Einbroch.",s_Ein,"Lui demander de forger une arme.",s_Weap,"Lui donner le matériel.",s_Material,"Annuler.",-;
+
+s_Material:
+	mes "[Uwe]";
+	if(countitem(7126) < 6){
+		mes "Huh...?";
+		mes "Tu n'en n'as amené";
+		if(countitem(7126))
+			mes "que" + countitem(7126) + " d'entre eux ?";
+		else
+			mes "aucun...?";
+		mes "La prochaine fois, fais attention à amener 6 Large Jellopies, ok ?";
+		mes "N'oublie pas, mon mignon~";
+		close;
+	}
+	delitem 7126,6;
+	getitem 1003,1;
+	set EinUwe,2;
+	mes "Merci ^EFAEBDbeaucoup^000000 !";
+	mes "Voici le Coal que je t'ai promis~";
+	next;
+	mes "[Uwe]";
+	mes "Maintenant, je ne peux pas t'enseigner tout sur la cuisine, mais je vais te donner quelques conseils pour débutant.";
+	mes "J'espère que tu es attentif, mon petit chou en sucre.";
+	mes "De quoi veux-tu en savoir le plus ? Hmm... ?";
+	next;
+s_Menu3:
+	menu "Coeur",s_Heart,"Ingrédients",s_Ingredients,"Techniques",s_Skills,"Outils",s_Tools,"Annuler.",-;
+
+	mes "[Uwe]";
+	mes "Prends soin de toi, mon petit chou en sucre~";
+	mes "Ho ho ho !";
+	close;
+
+s_Heart:
+	mes "[Uwe]";
+	mes "Ah, le coeur.";
+	mes "Tout comme la forge, tu as besoin de passion et de désir pour créer quelque chose de spécial.";
+	mes "Chaque forgeron et cuisinier sait que tu peux faire n'importe quoi si tu en as la volonté et que tu es décidé à le faire.";
+	next;
+	mes "[Uwe]";
+	mes "Bien, c'est vraiment tout ce que j'ai à dire pour ça.";
+	mes "Mais reviens me parler quand tu le désires.";
+	mes "...Behbie~";
+	close;
+
+s_Ingredients:
+	mes "[Uwe]";
+	mes "Pour les débutants, apprendre à choisir les bons ingrédients c'est une des bases les plus importantes.";
+	next;
+	mes "[Uwe]";
+	mes "Cuisiner c'est comme forger, puisqu'il faut des ingrédients spécifiques pour faire des objets ou des plats spéciaux.";
+	mes "Tu ne peux pas simplement t'en passer si tu en as vraiment besoin, compris ?";
+	mes "Compris !";
+	next;
+	mes "[Uwe]";
+	mes "Une fois que tu as en tête de faire quelque chose, concentre-toi pour le finir, 'kay ?";
+	mes "Ne prends jamais de raccourcis et donne tout ce que tu as pour faire le meilleur des produits finis~";
+	next;
+	mes "[Uwe]";
+	mes "Bien, c'était une conversation amusante.";
+	mes "Reviens me voir, 'kay ?";
+	mes "Tu me manqueras jusqu'à la prochaine fois~";
+	mes "...Ho ho~";
+	close;
+
+s_Skills:
+	mes "[Uwe]";
+	mes "Quand tu commences à à apprendre des techniques, tu ne peux pas te laisser décourager !";
+	mes "La pratique fait la perfection, tu sais ?";
+	mes "Mais n'utilise jamais tes lacunes en technique comme excuse si tu rates...";
+	next;
+	mes "[Uwe]";
+	mes "L'effort est essentiel en forge comme en cuisine !";
+	mes "Mais d'un autre côté, si tu mets tous tes efforts mais n'as pas appris la moindre technique, tu n'avanceras pas rapidement, compris ?";
+	mes "Compris !";
+	next;
+	mes "[Uwe]";
+	mes "La clé est de toujours donner 100% d'efforts et de travailler à améliorer ses techniques.";
+	mes "Une fois que tu le feras, tu seras un maître respecté !";
+	next;
+	mes "[Uwe]";
+	mes "Bien, c'était une conversation amusante.";
+	mes "Reviens me voir, 'kay ?";
+	mes "Tu me manqueras jusqu'à la prochaine fois~";
+	mes "...Ho ho~";
+	close;
+
+s_Tools:
+	mes "[Uwe]";
+	mes "Il est un peu plus facile de cuisiner si tu as de bons outils.";
+	mes "Mais les outils en eux-mêmes ne peuvent pas faire devenir n'importe qui un maître.";
+	next;
+	mes "[Uwe]";
+	mes "En fait, les meilleurs outils sont ceux avec lesquel tu es le plus à l'aise.";
+	mes "Pour tout te dire, j'utilise encore le vieux couteau que j'utilisais quand je n'étais qu'un apprenti cuisinier~";
+	next;
+	mes "[Uwe]";
+	mes "Bien, c'était une conversation amusante.";
+	mes "Reviens me voir, 'kay ?";
+	mes "Tu me manqueras jusqu'à la prochaine fois~";
+	mes "...Ho ho~";
+	close; 
+
+s_Cont2:
+	mes "[Uwe]";
+	mes "Ah, rebonjour, mon mignon petit aventurier.";
+	mes "Comment puis-je t'aider ?";
+	next;
+	menu "Parler d'Einbroch.",s_Ein,"Lui demander de forger une arme.",s_Weap,"Parler de cuisine.",s_Cooking,"Annuler.",-;	
+
+	mes "[Uwe]";
+	mes "Prends soin de toi, mon petit chou en sucre~";
+	mes "Ho ho ho !";
+	close;
+
+s_Cooking:
+	mes "[Uwe]";
+	mes "Ooh, de la cuisine !";
+	mes "Que veux-tu me demander... ?";
+	next;
+	goto s_Menu3;
+
+OnHide:
+	specialeffect 16;
+	disablenpc "Uwe Kleine";
+	end;
+
+OnUnhide:
+	misceffect 215;
+	end;
+
+}
