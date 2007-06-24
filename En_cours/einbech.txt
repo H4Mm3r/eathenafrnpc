@@ -32,60 +32,60 @@ einbech,180,136,5	script	Notice Board	858,{
 
 einbech,46,107,6	script	Shena	846,{
 	mes "[Shena]";
-	mes "I think it's weird!";
-	mes "How do you youngsters not learn all of this?";
+	mes "C'est étrange !";
+	mes "Comment se fait-il que vous les jeunes ne sachiez pas ça ?";
 	next;
 	mes "[Luda]";
-	mes "Well, I'm sure the generation gap has something to do with it, but I'm surprised that elder people would know so much~";
+	mes "Je suis sûre que le fossé entre les générations doit y être pour quelque chose, mais je suis surprise que les personnes âgées connaissent tant de choses~ ";
 	next;
-	menu "What are you guys talking about?",L_WHAT,"Pass on by",-;
+	menu "De quoi parlez-vous ?",L_WHAT,"Ne pas s'en occuper",-;
 
 	mes "[Shena]";
 	mes "Luda...";
-	mes "You don't live to be as old as I am and not learn a little something about this world of ours~";
+	mes "On ne vit pas aussi vieux que moi sans en apprendre un petit peu sur notre monde~";
 	close;
 L_WHAT:
 	mes "[Shena]";
-	mes "Oh?";
-	mes "Well, well Aren't you the most adorable little girl?";
-	mes "Hello, dearie~";
+	mes "Oh ?";
+	mes "Et bien ne voici pas la plus adorable des petites filles ?";
+	mes "Bonjour, ma chérie~";
 	next;
-	menu "Excuse me, but I'm actually a guy.",-;
+	menu "Excusez-moi, mais en fait... je suis un garçon.",-;
 
 	mes "[Shena]";
-	mes "Oh, oh are you now?";
-	mes "Perhaps my eyes are getting bad in my old age.";
-	mes "Getting harder to tell the difference nowadays...";
+	mes "Oh, oh c'est vrai ?";
+	mes "Peut-être que ma vue baisse avaec l'âge.";
+	mes "Ca devient difficile de faire la différence...";
 	next;
 	mes "[Shena]";
-	mes "Anyway, me and Luda were just having a little chat about all the monsters near Einbroch.";
-	mes "Appearantly, you youngsters don't know as much about them as you should.";
+	mes "Bref, Luda et moi parlions des monstres des environs d'Einbroch.";
+	mes "Apparamment, vous, les jeunes, n'en savez pas autant sur eux que vous le devriez.";
 	next;
 	mes "[Shena]";
-	mes "If adventuring is your business, you should know what you're up against.";
-	mes "Did you have any questions about the monsters arround here, young lady?";
+	mes "Si vous êtes un aventurier, vous devriez savoir à quoi vous faites face.";
+	mes "Avez-vous des questions sur les monstres des alentours, jeune demoiselle ?";
 	next;
-	menu "I told you, I'm a dude...!",-;
+	menu "Je vous ai dit que j'étais un mec... !",-;
 	mes "[Shena]";
-	mes "Hmm. ''Dude.''";
-	mes "I think I've heard that before.";
-	mes "Ho ho~ You'll have to forgive this old biddy I don't quite have a grasp on all the words you kids use.";
+	mes "Hmm. ''Mec.''";
+	mes "Je crois que j'ai déjà entendu ça avant.";
+	mes "Ho ho~ Pardonnez à la vieille dame que je suis, mais je ne comprends pas tous les mots que vous, les jeunes, utilisez.";
 	next;
 	mes "[Shena]";
-	mes "So dearie, wich monster would you like to hear about?";
+	mes "Alors ma petite, de quel monstre veux-tu que je te parle ?";
 L_MENU:
 	next;
-	menu "Metaling",L_METALING,"Mineral",L_MINERAL,"Pitman",L_PITMAN,"Waste Stove",L_WASTE,"Quit",-;
+	menu "Metaling",L_METALING,"Mineral",L_MINERAL,"Pitman",L_PITMAN,"Waste Stove",L_WASTE,"Quitter",-;
 
 	mes "[Shena]";
-	mes "Alright then.";
-	mes "Have a good day, young lady.";
+	mes "Très bien.";
+	mes "Bonne journée, jeune fille.";
 	next;
 	mes "[Luda]";
-	mes "I'm sorry about my mother!";
-	mes "She can be overly friendly, I suppose.";
-	mes "But if you're bored, please feel free to visit.";
-	mes "Be safe on your travels, adventurer~";
+	mes "Je m'excuse pour ma mère !";
+	mes "Elle peut être excessivement famillière parfois.";
+	mes "Mais si vous êtes fatigué, n'hésitez pas à nous rendre visite.";
+	mes "Faites attention à vous, aventurier~";
 	close;
 L_METALING:
 	mes "[Shena]";
