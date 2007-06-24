@@ -31,7 +31,7 @@
 
 //== some boards, signs ======================
 einbroch,220,208,5	script	Notice Board#01	858,{
-	mes "[Weapon Shop Entrance]";
+	mes "[Entrée du magasin d'armes]";
 	close;
 }
 
@@ -44,14 +44,12 @@ einbroch,183,174,5	script	Bulletin Board#01	858,{
 }
 
 einbroch,244,255,5	script	Bulletin Board#02	858,{
-	mes " ";
-	mes "Station de train";
+	mes "[Station de train]";
 	close;
 }
 	
 einbroch,68,206,5	script	Bulletin Board#03	858,{
-	mes " ";
-	mes "Aéroport";
+	mes "[Aéroport] ";
 	close;
 }
 	
@@ -78,7 +76,7 @@ function	script	Ein_Tower	{
 	next;
 	mes "["+ @Tower_Name$ +"]";
 	mes "la Tour d'Einbroch offre la meilleure vue de notre ville et c'est un excellent endroit pour sortir entre amis ou pour avoir un rendez-vous galant.";
-	mes "Le prix d'entrée à la Tour d'Einbroch est de 10 zenies.";
+	mes "Le prix d'entrée de la Tour d'Einbroch est de 10 zenies.";
 	next;
 	mes "["+ @Tower_Name$ +"]";
 	mes "De plus, nous offrons une promotion spéciale appellée ''Apple Combo Set'' pour seulement 20 zenies.";
@@ -180,7 +178,7 @@ einbroch,175,196,5	script	Morei	854,{
 
 	mes "[Morei]";
 	mes "Je vois.";
-	mes "J'espère que vous avez apprécié votre visite à la Tour d'Einbroch.";
+	mes "J'espère que vous appréciez votre visite à la Tour d'Einbroch.";
 	close;
 s_Goback:
 	mes "[Morei]";
@@ -252,7 +250,7 @@ einbroch,232,255,5	script	Khowropher	847,{
 	mes "Mais pourtant, je voudrais passer le reste de ma vie dans un endroit calme avec un air sain...";
 	next;
 	mes "[Khowropher]";
-	mes "Mais Einbroch est ma ville de naissance, et je ne peux pas juste me lever et partir.";
+	mes "Mais Einbroch est ma ville de naissance, et je ne peux pas simplement me lever et partir.";
 	mes "Je suppose que c'est mon destin de souffrir de cet air vicié jusqu'au jour de ma mort.";
 	mes "^6A6A6A*Soupir...*";
 	close;
@@ -327,11 +325,11 @@ s_Yes:
 	end;
 s_Enviroment:
 	mes "[Staff]";
-	mes "Einbroch est malheureusement connue pour sa pollution de l'air, sans aucun doute causée par les installations industrielles.";
+	mes "Einbroch est malheureusement connue pour son air pollué, sans aucun doute causé par les installations industrielles.";
 	mes "C'est vraiment horrible...";
 	next;
 	mes "[Staff]";
-	mes "Parfois, la pollution de l'air devient tellement mauvaise qu'il est difficille de respirer.";
+	mes "Parfois, la pollution de l'air est tellement haute qu'il est difficille de respirer.";
 	mes "Si vous entendez l'Allerte à la Polution d'Einbroch, vous devez trouver un abrit immédiatement !";
 	close;
 
@@ -356,7 +354,7 @@ einbroch,228,121,5	script	Little Toby	855,{
 	mes "[Little Toby]";
 	mes "S-Suis-je à l'aéroport ?!";
 	mes "Mes parents sont supposés venir me chercher, mais je ne les ai toujours pas trouvés !";
-	mes "Nous venons juste d'emménager ici, donc je ne connais pas très bien 'lendroit.";
+	mes "Nous venons juste d'emménager ici, donc je ne connais pas très bien l'endroit.";
 	next;
 	mes "[Little Toby]";
 	mes "A-Attendez !";
@@ -382,7 +380,7 @@ einbroch,229,149,3	script	Sleik	854,{
 	next;
 	mes "[Sleik]";
 	mes "Maintenant, si vous voulez savoir où va le train, je ne serai pas capable de vous le dire.";
-	mes "Après-tout, je ne 'lai jamais utilisé.";
+	mes "Après-tout, je ne l'ai jamais utilisé.";
 	mes "Mais bon, je suppose qu'avoir notre propre station de train est une bonne chose.";
 	close;
 
@@ -402,12 +400,12 @@ einbroch,236,191,3	script	Tan	855,{
 	mes "Toutes les usines, ici à Einbroch, provoquent de sérieux problêmes de pollution.";
 	next;
 	mes "[Tan]";
-	mes "Je suis un ingénieur du vaisseau volant, et chaque jour, toute la journée, je suis travaille avec des vapeurs d'huiles et toutes sortes de polluants.";
+	mes "Je suis un ingénieur du vaisseau volant, et chaque jour, toute la journée, je travaille en présence de vapeurs d'huiles et de toutes sortes de polluants.";
 	mes "Je suis surpris de n'avoir jamais été malade pour le moment...";
 	next;
 	mes "[Tan]";
 	mes "Tout de même, j'essaie d'être prudent quand je le peux.";
-	mes "A chaque fois que je vais dans la brouillard de pollution, je porte toujours mon Flu Mask.";
+	mes "A chaque fois que je vais dans le brouillard de pollution, je porte toujours mon Flu Mask.";
 	mes "Si vous devez rester ici un moment, vous devriez en porter un sur vous.";
 	close;
 
@@ -425,7 +423,7 @@ OnUnhide:
 ein_in01,31,217,3	script	Cendadt	851,{
 
 	mes "[Cendadt]";
-	mes "Cette usine a beaucoup de chose qui ont besoin de réparations, et pronto !";
+	mes "Cette usine a beaucoup de choses qui ont besoin de réparations, et pronto !";
 	mes "Je suis ébahi que l'endroit continue de fonctionner.";
 	next;
 	mes "[Cendadt]";
@@ -448,7 +446,7 @@ ein_in01,31,217,3	script	Cendadt	851,{
 ein_in01,36,204,3	script	Rombell	851,{
 
 	mes "[Rombell]";
-	mes "C'est bien que l'usine fasse du bon business et draine beaucoup de profit, mais j'ai toujours un soucis majeur.";
+	mes "C'est bien que l'usine fasse du bon business et fasse beaucoup de profit, mais j'ai toujours un soucis majeur.";
 	next;
 	mes "[Rombell]";
 	mes "Le taux de pollution que provoque cet endroit est atroce !";
@@ -466,11 +464,11 @@ ein_in01,49,202,3	script	Dorf	851,{
 
 	mes "[Dorf]";
 	mes "Les machines sont siii pratiques.";
-	mes "Regardez cet engin faire facilement des tâches qui seraient rudes à finir seul pour moi.";
+	mes "Regardez cet engin faire facilement des tâches qui seraient rudes à finir pour moi tout seul.";
 	next;
 	mes "[Dorf]";
 	mes "Ca c'est ce que j'appelle la technologie !";
-	mes "Bien sûr, ça demande des efforts et de l'argent d'en faire un exemplaire, mais en quoi ça me regarde ?";
+	mes "Bien sûr, ça demande des efforts et de l'argent d'en fabriquer une, mais en quoi ça me regarde ?";
 	next;
 	mes "[Dorf]";
 	mes "Je n'ai aucun problême, tant que cette chose phénoménale continue à travailler comme je le veux !";
@@ -551,10 +549,10 @@ ein_in01,113,211,3	script	Treinz	851,{
 	mes "Si vous me donnez de l'argent, je serai votre esclave !";
 	mes "Il n'y a rien que je ne ferai pas !";
 	mes "Tout peut en valoir la peine.";
-	mes "J'irai jusqu'à me déshabiller si me payez assez.";
+	mes "J'irai jusqu'à me déshabiller pour peu qu'on me paye assez.";
 	next;
 	mes "[Treinz]";
-	mes "Si vous me payez ce que je mérite, je travaillerai dur, quelque soit la tâche que vous me confiez.";
+	mes "Si vous me payez ce que je mérite, je travaillerai dur, quelque soit la tâche que vous me confierez.";
 	mes "Bien sûr, travailler dans une mine c'est rude, mais tant que les zenies arrivent, je suis heureux.";
 	mes "Heh heh heh~";
 	close;
@@ -573,10 +571,10 @@ ein_in01,84,218,3	script	Tsuen	851,{
 	next;
 	mes "[Tsuen]";
 	mes "Peut-être que ma vie était destinée à être comme ça, même si je ne ne l'avais pas planifiée ainsi.";
-	mes "Mais le jour viendra où jeme lèverai, partirai et voyagerai dans le monde quand j'aurai ma chance !";
+	mes "Mais le jour viendra où je me lèverai, partirai et voyagerai dans le monde quand j'aurai ma chance !";
 	next;
 	mes "[Tsuen]";
-	mes "J'espère que ce jour arriverai et que je pourrai vous rencontrer par-delà ce monde immense et vous saluer en tant qu'aventurier.";
+	mes "J'espère que ce jour arrivera et que je pourrai vous rencontrer par-delà ce monde immense et vous saluer en tant qu'aventurier.";
 	close;
 }
 
@@ -600,13 +598,13 @@ ein_in01,85,261,3	script	Zherin	851,{
 ein_in01,64,271,3	script	Vonstein	851,{
 
 	mes "[Vonstein]";
-	mes "Regarder ce métal liquide chaud me donne un grand bien-être intérieur.";
-	mes "C'est comme si cette chose pouvait faire fondre n'imorte-quoi !";
+	mes "Regarder ce métal liquide bouillant me procure un grand bien-être intérieur.";
+	mes "C'est comme si cette chose pouvait faire fondre n'importe-quoi !";
 	next;
 	mes "[Vonstein]";
-	mes "Imaginez qu'on couvre une rue entière avec des gens avec ce truc !";
+	mes "Imaginez qu'on couvre une rue entière remplie de gens avec ce truc !";
 	mes "Bwahah--";
-	mes "Oj, je suis désolé si je pars dans des délires !";
+	mes "Oh, je suis désolé si je pars dans des délires !";
 	mes "Je plaisante juste~";
 	close;	
 }
@@ -637,11 +635,11 @@ ein_in01,87,237,3	script	Dinje	850,{
 	mes "Je vais vous le dire...";
 	next;
 	mes "[Dinje]";
-	mes "Mon fanéant de mari, Gesin, est en train de traîner ici, sur le sol !";
+	mes "Mon fainéant de mari, Gesin, est en train de traîner ici, sur le sol !";
 	mes "Donc je dois travailler afin de nous financer !";
 	next;
 	mes "[Dinje]";
-	mes "Nous ne pouvons pas nous reposer une seconde si nous voulons avoir assez d'argent pour être riche et puissants un jour.";
+	mes "Nous ne pouvons pas nous reposer une seconde si nous voulons avoir assez d'argent pour être riches et puissants un jour.";
 	mes "Vous comprenez ?";
 	next;
 	mes "[Dinje]";
@@ -655,16 +653,16 @@ ein_in01,103,238,9	script	Gesin	849,{
 
 	mes "[Gesin]";
 	mes "Arrgh !";
-	mes "Ca me tue !";
+	mes "Je suis mort !";
 	mes "Pourquoi devrais-je être riche ?!";
-	mes "Qu'est-ce qui ne va pas à vivre dans le besoin ?";
+	mes "Qu'est-ce qui ne va pas avec le fait de vivre dans le besoin ?";
 	next;
 	mes "[Gesin]";
-	mes "Je n'ai aucun problême avec ma vie actuelle, mais ma femme n'est aps d'accord.";
+	mes "Je n'ai aucun problême avec ma vie actuelle, mais ma femme n'est pas d'accord.";
 	mes "Pourquoi est-elle aussi obsédée par la richesse et le pouvoir ?";
 	next;
 	mes "[Gesin]";
-	mes "Bien, de tout façon, j'aimerais bien l'aider, mais je n'arrive pas à me lever !";
+	mes "Et puis, de toute façon, j'aimerais bien l'aider, mais je n'arrive pas à me lever !";
 	mes "Je suis crevé et mon corps est excédé.";
 	mes "Je n'ai plus la moindre force.";
 	next;
@@ -714,7 +712,7 @@ ein_in01,206,224,2	script	Hotel Employee	855,{
 s_Save:
 	savepoint "ein_in01",199,224;
 	mes "[Hotel Employee]";
-	mes "Votre point de reespawn a été enregistré ici, à l'Hôtel d'Einbroch.";
+	mes "Votre point de respawn a été enregistré ici, à l'Hôtel d'Einbroch.";
 	mes "Merci et n'hésitez pas à revenir.";
 	next;
 	mes "[Hotel Employee]";
