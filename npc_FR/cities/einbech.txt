@@ -26,7 +26,7 @@
 
 
 einbech,180,136,5	script	Notice Board	858,{
-	mes "[Tool Shop Entrance]";
+	mes "[Entrée du Tool Shop]";
 	close;
 }
 
@@ -54,7 +54,7 @@ L_WHAT:
 
 	mes "[Shena]";
 	mes "Oh, oh c'est vrai ?";
-	mes "Peut-être que ma vue baisse avaec l'âge.";
+	mes "Peut-être que ma vue baisse avec l'âge.";
 	mes "Ca devient difficile de faire la différence...";
 	next;
 	mes "[Shena]";
@@ -139,7 +139,7 @@ L_PITMAN:
 	goto L_MENU;
 L_WASTE:
 	mes "[Shena]";
-	mes "C'est four mangeur d'hommes démoniaque.";
+	mes "Ce sont des fours mangeurs d'hommes démoniaques.";
 	next;
 	menu "... C'est vrai ?",L_THAT,"T-Terrifiant !",-;
 
@@ -205,12 +205,12 @@ einbech,93,139,6	script	Raust	847,{
 	
 einbech,97,167,6	script	Cavitar	847,{
 	mes "[Cavitar]";
-	mes "Récemment nous avons eu des effondremments de tunnels qui ont causé la mort de mineurs.";
+	mes "Récemment nous avons eu des effondrements de tunnels qui ont causé la mort de mineurs.";
 	mes "Nous allons avoir encore plus de mal à travailler dans ces mines maintenant que nous avons moins de main d'oeuvre.";
 	next;
 	mes "[Cavitar]"; 
 	mes "Ce qui est vraiment suspect, c'est qu'il semble que quelque-chose a volontairement provoqué ces effondrements.";
-	mes "Quelques-uns d'entre nous croient que c'est parce que nous avons énervé le maître de la grotte.";
+	mes "Quelques-uns d'entre nous croient que c'est parce que nous avons énervé le Maître de la grotte.";
 	next;
 	mes "[Cavitar]"; 
 	mes "L'accident du tunnel est encore clair dans mon esprit.";
@@ -232,7 +232,7 @@ einbech,105,218,6	script	Gushenmu	848,{
 	mes "Et les usines d'Einbroch font tellement de fumée que nous ne pouvons même plus voir le soleil ici.";
 	next;
 	mes "[Gushenmu]"; 
-	mes "La triste réalité de la vie de mineur aujourd'hui, c'est de se lever, aller au travail et à la fin de la journée quelques-uns d'entre nous sont blessés alors que d'autres ne reviendront plus travailler.";
+	mes "La triste réalité de la vie de mineur aujourd'hui, c'est de se lever, aller au travail et à la fin de la journée quelques-uns d'entre nous sont blessés alors que d'autres ne reviendront plus.";
 	next;
 	mes "[Gushenmu]"; 
 	mes "Et en même temps qu'Einbroch et Einbech grandissent, j'entends de plus en plus de rumeurs qui disent que d'étranges monstres commencent à proliférer hors de la ville.";
@@ -269,7 +269,7 @@ L_ZENY:
 einbech,157,215,4	script	Train Station Manager	852,{
 	mes "[Train Station Manager]";
 	mes "Cette station de train est strictement réservée aux trains reliant Einbech et Einbroch.";
-	mes "Veuillez vous adresser au personnel plus au nord si vous désirez embarquer.";
+	mes "Veuillez vous adresser au personnel plus à l'Ouest si vous désirez embarquer.";
 	close;
 }
 
@@ -295,7 +295,7 @@ einbech,128,238,6	script	Mogan	848,{
 	mes "Le conseil municipal en a discutté et selon moi, je pense que les mineurs ont creusé trop profond ont dérangé... ^FF0000cette chose^000000.";
 	next;
 	mes "[Mogan]";
-	mes "Oui, ils ont réveillé Ungoliant, le maître des grottes, qui existe depuis des temps anciens.";
+	mes "Oui, ils ont réveillé Ungoliant, le Maître de la grotte, qui existe depuis des temps anciens.";
 	mes "Je ne sais pas combien seront encore les victimes d'Ungoliant.";
 	mes "Il n'y a rien à dire...";
 	next;
@@ -339,7 +339,7 @@ einbech,148,242,5	script	Jung	855,{
 	menu "Pourquoi pas ?",L_TELL,"Non-merci.",-;
 	mes "[Jung]";
 	mes "Je comprends que vous soyez pressé.";
-	mes "Cependant, si vous êtes nouveau dans le coin, vous devriez apprendre le plus possible avant d'entrer dans un donjon.";
+	mes "Cependant, si vous êtes nouveau dans le coin, vous devriez en apprendre le plus possible avant d'entrer dans un donjon.";
 	next;
 	mes "[Jung]";
 	mes "Bien, prenez garde à vous dans vos aventures, ok ?";
@@ -356,7 +356,7 @@ L_TELL:
 	mes "C'est comme s'ils étaient apparus de nulle-part quand Einbroch s'est industrialisée.";
 	next;
 	mes "[Jung]";
-	mes "Maintenant que j'y pense, je ne crois aps que ces monstres soient naturels.";
+	mes "Maintenant que j'y pense, je ne crois pas que ces monstres soient naturels.";
 	mes "Ils ont toujours cet air de désespoir et de souffrance et ont tendance à agir comme s'ils voulaient que leur ennemi les tue.";
 	next;
 	mes "[Jung]";
@@ -378,11 +378,11 @@ L_TELL:
 	close;
 L_PORCELLIO:
 	mes "[Jung]";
-	mes "Le Porcellio est un insect qui vit dans les grottes et qui boit l'eau des stalactites.";
+	mes "Le Porcellio est un insecte qui vit dans les grottes et qui boit l'eau des stalactites.";
 	mes "Ils sont différents de l'Ungoliant car ils aiment être à proximité de différents minerais ou métaux.";
 	next;
 	mes "[Jung]";
-	mes "les Porcellio droppent des Jubilee, des Insect Leg, des Single Cell, des Moss of Morning Dex, des Neon Liquid et d'autres choses dont je ne me rappelle pas.";
+	mes "les Porcellio droppent des Jubilee, des Insect Leg, des Single Cell, des Moss of Morning Dew, des Neon Liquid et d'autres choses dont je ne me rappelle pas.";
 	next;
 	mes "[Jung]";
 	mes "Enfin, les Porcellio ont la propriété Earth.";
@@ -391,12 +391,12 @@ L_PORCELLIO:
 	close;
 L_OBSIDIAN:
 	mes "[Jung]";
-	mes "Connaissez-vous cette croyance comme quoi les minerais du sous-sol qui contiennent de grands montants d'énergie ont en fait des âmes ?";
+	mes "Connaissez-vous cette croyance comme quoi les minerais du sous-sol, qui contiennent de grandes quantitées d'énergie, ont en fait des âmes ?";
 	mes "les Obsidian font partie de ces pierres vivantes.";
 	next;
 	mes "[Jung]";
-	mes "On suppose que rien qu'on morceau d'Obsidian dans un processeur aurait suffisamment d'énergie pour illuminer le ciel la nuit.";
-	mes "Malheureusement, ce n'est pas possible d'en capturer un vivant et les traquer n'est aps une mince affaire.";
+	mes "On suppose que rien qu'un morceau d'Obsidian dans un processeur aurait suffisamment d'énergie pour illuminer le ciel la nuit.";
+	mes "Malheureusement, ce n'est pas possible d'en capturer un vivant et les traquer n'est pas une mince affaire.";
 	next;
 	mes "[Jung]";
 	mes "Les Obsidians sont des monstres Formless et de taille Small qui droppent des Clear Jewel, des Piece of Black Crystal, des Coal, des Elunium, des Iron et des Steel.";
@@ -439,7 +439,7 @@ L_OKAY:
 	menu "La créature de la mine.",L_CREATURE,"L'accident de la ville.",-;
 	mes "[Franz]";
 	mes "A Einbroch, il y avait une petite fabrique de Teddy Bear vivants.";
-	mes "Mais une série de mystérieux accidents et de meurtres où des familles entières ont été tuées se sont produites.";
+	mes "Mais une série de mystérieux accidents et de meurtres où des familles entières ont été tuées s'est produite.";
 	next;
 	mes "[Franz]";
 	mes "Et il se trouvait que chacune des familles assassinées avait acheté un de ces Teddy Bear.";
@@ -477,18 +477,18 @@ L_CREATURE:
 	next;
 	mes "[Franz]";
 	mes "Et plus les signes d'Ungoliant augmentaient, plus il y avait d'effondremments.";
-	mes "Je pênse que les mineurs se sont aventurés sans le savoir sur son territoire.";
+	mes "Je pense que les mineurs se sont aventurés sans le savoir sur son territoire.";
 	next;
 	mes "[Franz]";
 	mes "Selon la légende, d'anciens géants se sont infiltrés dans la mine pour voler du charbon aux humains.";
 	mes "Mais ils ont fait trop de bruit quand ils creusaient et ont réveillé Ungoliant.";
 	next;
 	mes "[Franz]";
-	mes "Quand les mineurs se sont rendus au travail le matin suivant, ils ont trouvé els corps ensanglantés de ces géants.";
+	mes "Quand les mineurs se sont rendus au travail le matin suivant, ils ont trouvé les corps ensanglantés de ces géants.";
 	mes "Après ça, les gens ont craint qu'Ungoliant ne tue quiconque entre dans les mines.";
 	next;
 	mes "[Franz]";
-	mes "Un avneturier qui avait pour ambition de tuer Ungoliant m'a dit qu'il droppait des Ant's Jaw, des Colorful Shell, des Very Hard Shell, des Long Leg, des Neon Liquid et des Zircon.";
+	mes "Un aventurier qui avait pour ambition de tuer Ungoliant m'a dit qu'il droppait des Ant's Jaw, des Colorful Shell, des Very Hard Shell, des Long Leg, des Neon Liquid et des Zircon.";
 	close;
 }
 
@@ -496,7 +496,7 @@ einbech,151,168,4	script	Tollaf	854,{
 	mes "[Tollaf]";
 	mes "Ah...!";
 	mes "Je n'en peux plus !";
-	mes "Je n'ai aps assez d'argent pour partir, mais je ne veux plus vivre un instant de plus dans cette ville !";
+	mes "Je n'ai pas assez d'argent pour partir, mais je ne veux plus vivre un instant de plus dans cette ville !";
 	next;
 	mes "[Tollaf]";
 	mes "Partout ailleurs, les gens vivent largement mieux que nous, particulièrement ces snobs à Einbroch !";
@@ -521,12 +521,12 @@ einbech,149,154,4	script	Mjunia	850,{
 	next;
 	mes "[Mjunia]";
 	mes "Et je ne me marierai jamais avec quelqu'un d'Einbech !";
-	mes "Je préfèrerai mourrir seule que mariée à un voyou d'Einbech.";
+	mes "Je préfèrerai mourir seule que mariée à un voyou d'Einbech.";
 	next;
 	mes "[Mjunia]";
 	mes "Regardez ces muscles.";
 	mes "Que pensez-vous ?";
-	mes "QSuis-je belle ?";
+	mes "Suis-je belle ?";
 	mes "*Sniff* J'ai abandonné l'idée d'être féminine il y a des années.";
 	mes "Je dois travailler si dur...";
 	close;
@@ -551,7 +551,7 @@ einbech,176,125,4	script	Ellhenje	850,{
 	next;
 	mes "[Ellhenje]";
 	mes "Récemment, il y a eu quelque chose qui le préoccupe.";
-	mes "Je ne suis pas sûr, mais je pense que seule une femme peut mettre un homme dans un tel état.";
+	mes "Je ne suis pas sûre, mais je pense que seule une femme peut mettre un homme dans un tel état.";
 	mes "J'espère que ça s'arrangera pour lui...";
 	close;
 }
@@ -567,12 +567,12 @@ einbech,172,113,4	script	Nemuk	855,{
 	mes "Bien, je m'excuse de vous avoir interpelé aussi brusquement.";
 	next;
 	mes "[Nemuk]";
-	mes "Tout le monde ici a eu des temps très rudes, à ne vivre qu'au jour le jour depuis aussi longtemps que je puisse me le rappeler.";
+	mes "Tout le monde ici a vécu des temps très rudes, à ne vivre qu'au jour le jour depuis aussi longtemps que je puisse me le rappeler.";
 	mes "C'est comme si les choses semblaient ne pas s'arranger, peu importe ce que nous faisons.";
 	next;
 	mes "[Nemuk]";
 	mes "Je voudrais vraiment partir, mais c'est juste un souhait vain.";
-	mes "Mon corps est piégé ikci alors que mon coeur aspire à une vie meilleure.";
+	mes "Mon corps est piégé ici alors que mon coeur aspire à une vie meilleure.";
 	mes "*Soupire*";
 	mes "Est-ce sans espoir ?";
 	mes "Que puis-je faire ?";
@@ -610,18 +610,18 @@ ein_in01,277,95,8	script	Ryan Danger	855,{
 	next;
 	mes "[R.D. kim]";
 	mes "Oooh...";
-	mes "Momma.";
+	mes "Maman.";
 	next;
 	mes "[R.D. kim]";
 	mes "Oooh...";
-	mes "Momma.";
+	mes "Maman.";
 	mes "Tu es si...";
 	next;
 	mes "[R.D. kim]";
 	mes "Oooh...";
-	mes "Momma.";
+	mes "Maman.";
 	mes "Tu es si...";
-	mes "^FF0000Chaude ^000000!";
+	mes "^FF0000Hot ^000000!";
 	next;
 	mes "[R.D. kim]";
 	mes "Pourquoi n'enlèves-tu pas ces vêtements lourds et inconfortables ?";
@@ -643,7 +643,7 @@ ein_in01,277,95,8	script	Ryan Danger	855,{
 	next;
 	mes "[R.D. kim]";
 	mes "...";
-	mes "Ou le suis-je ?";
+	mes "Ou bien j'y suis ?";
 	mes "Bwahahahaha !";
 	next;
 	mes "[" + strcharinfo(0) + "]";
@@ -659,7 +659,7 @@ ein_in01,279,92,2	script	Tavern Lady	854,{
 	mes "[Tavern Lady]";
 	mes "Je pense qu'il n'y a rien de bien en eux !";
 	mes "Ils sont sauvages, violents, simples d'esprit et ignorants.";
-	mes "Ils règlent tous leurs conflits par les muscles et ils sont si... étroits d'espirt !";
+	mes "Ils règlent tous leurs conflits par les muscles et ils sont si... étroits d'esprit !";
 	next;
 	mes "[Tavern Lady]";
 	mes "Comment peuvent-ils comprendre que les femmes veulent des hommes gentils et sensibles avec qui elles pourraient partager leurs sentiments et boire le thé en mangeant des petits gateaux ?";
@@ -673,11 +673,11 @@ einbech,197,139,4	script	Young Man#05	855,{
 	mes "Qu'est-ce qui vous amène ?";
 	next;
 	mes "[Heinz]";
-	mes "Einbech n'offre pas grand-chose en terme de panorama, mais venez-vous pour voir la mine ?";
-	mes "En ce mement, elle est remplie de monstres et nous ne pouvons pas déterrer le moindre minerai car c'est trop dangereux.";
+	mes "Einbech n'offre pas grand-chose en terme de panorama, mais peut-être venez-vous pour voir la mine ?";
+	mes "En ce moment, elle est remplie de monstres et nous ne pouvons pas déterrer le moindre minerai car c'est trop dangereux.";
 	next;
 	mes "[Heinz]";
-	mes "Mais si des aventuriers étaient suffisammeent généreux pour chasser toutes ces créateurs démoniaques, nous pourrions à nouveau creuser et gagner plus d'argent.";
+	mes "Mais si des aventuriers étaient suffisamment généreux pour chasser toutes ces créatures démoniaques, nous pourrions à nouveau creuser et gagner plus d'argent.";
 	mes "C'est comme faire d'une pierre deux coups. Hahaha !";
 	next;
 	mes "[Heinz]";
@@ -732,6 +732,6 @@ einbech,216,118,4	script	Catzllanpu	854,{
 	next;
 	mes "[Catzllanpu]";
 	mes "Je pense que vous me direz que je n'ai pas les mêmes problêmes que les autres ont avec l'argent.";
-	mes "L'argent c'ets bien, mais pas au point de sacrifier sa vie, vous comprenez ?";
+	mes "L'argent c'est bien, mais pas au point de sacrifier sa vie, vous comprenez ?";
 	close;
 }
