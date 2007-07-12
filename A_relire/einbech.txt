@@ -1,0 +1,737 @@
+//===== eAthena Script ======================================= 
+//= Einbech Town
+//===== By: ================================================== 
+//= Muad_dib
+//===== Current Version: ===================================== 
+//= 1.4
+//===== Compatible With: ===================================== 
+//= eAthena Revision 3000+
+//===== Description: ========================================= 
+//=
+//===== Additional Comments: ================================= 
+//= 0.1  Started writing Einbech npc's. [Muad_Dib]
+//= 0.1a Conversion to eA format [MasterOfMuppets]
+//= 0.1b Added missing tabs. [Mass Zero] 0.1c more missing tabs [Lupus]
+//= 0.2 Added reddozen's NPCs, fixedmissing '";' [Lupus]
+//= 0.2a Removed a few npcs never intended to be there [MasterOfMuppets]
+//= 0.3 Added some more npcs, thanks to Muad_Dib [MasterOfMuppets]
+//= 1.0 Added the last of the town npcs, [MasterOfMuppets]
+//=     all credits to muad_dib for scripting them.
+//= 1.1 Made some changes according to the Shinokas quest, [MasterOfMuppets]
+//=	thanks to Dj-Yhn for scripting them.
+//= 1.2 Removed Duplicates [Silent]
+//= 1.3 Implemented the Lover's quest. [MasterOfMuppets]
+//= 1.4 Moved quests to quests/quests_ein.txt [Evera]
+//============================================================
+
+
+einbech,180,136,5	script	Notice Board	858,{
+	mes "[Tool Shop Entrance]";
+	close;
+}
+
+einbech,46,107,6	script	Shena	846,{
+	mes "[Shena]";
+	mes "C'est étrange !";
+	mes "Comment se fait-il que vous les jeunes ne sachiez pas ça ?";
+	next;
+	mes "[Luda]";
+	mes "Je suis sûre que le fossé entre les générations doit y être pour quelque chose, mais je suis surprise que les personnes âgées connaissent tant de choses~ ";
+	next;
+	menu "De quoi parlez-vous ?",L_WHAT,"Ne pas s'en occuper",-;
+
+	mes "[Shena]";
+	mes "Luda...";
+	mes "On ne vit pas aussi vieux que moi sans en apprendre un petit peu sur notre monde~";
+	close;
+L_WHAT:
+	mes "[Shena]";
+	mes "Oh ?";
+	mes "Et bien ne voici pas la plus adorable des petites filles ?";
+	mes "Bonjour, ma chérie~";
+	next;
+	menu "Excusez-moi, mais en fait... je suis un garçon.",-;
+
+	mes "[Shena]";
+	mes "Oh, oh c'est vrai ?";
+	mes "Peut-être que ma vue baisse avaec l'âge.";
+	mes "Ca devient difficile de faire la différence...";
+	next;
+	mes "[Shena]";
+	mes "Bref, Luda et moi parlions des monstres des environs d'Einbroch.";
+	mes "Apparamment, vous, les jeunes, n'en savez pas autant sur eux que vous le devriez.";
+	next;
+	mes "[Shena]";
+	mes "Si vous êtes un aventurier, vous devriez savoir à quoi vous faites face.";
+	mes "Avez-vous des questions sur les monstres des alentours, jeune demoiselle ?";
+	next;
+	menu "Je vous ai dit que j'étais un mec... !",-;
+	mes "[Shena]";
+	mes "Hmm. ''Mec.''";
+	mes "Je crois que j'ai déjà entendu ça avant.";
+	mes "Ho ho~ Pardonnez à la vieille dame que je suis, mais je ne comprends pas tous les mots que vous, les jeunes, utilisez.";
+	next;
+	mes "[Shena]";
+	mes "Alors ma petite, de quel monstre veux-tu que je te parle ?";
+L_MENU:
+	next;
+	menu "Metaling",L_METALING,"Mineral",L_MINERAL,"Pitman",L_PITMAN,"Waste Stove",L_WASTE,"Quitter",-;
+
+	mes "[Shena]";
+	mes "Très bien.";
+	mes "Bonne journée, jeune fille.";
+	next;
+	mes "[Luda]";
+	mes "Je m'excuse pour ma mère !";
+	mes "Elle peut être excessivement famillière parfois.";
+	mes "Mais si vous êtes fatigué, n'hésitez pas à nous rendre visite.";
+	mes "Faites attention à vous, aventurier~";
+	close;
+L_METALING:
+	mes "[Shena]";
+	mes "Bien, les Metalings ont été créés à l'époque où les dieux dirigeaient ce monde.";
+	next;
+	mes "[Shena]";
+	mes "Je ne sais pas si vous le saviez, mais selon les légendes, les Porings et les Drops sont faits à partir de la salive d'Odin.";
+	mes "Et pour les Poporings, je pense que vous ne voudriez pas savoir...";
+	next;
+	mes "[Shena]";
+	mes "Les Metalings, eux, ont été créés à partir du sang de machines vivantes, les ''Gigantes'' je crois.";
+	next;
+	mes "[Shena]";
+	mes "Mais les Metalings sont semblables aux autres blobbs gélatineux car ils absorbent tout ce qui traîne sur le sol.";
+	next;
+	mes "[Shena]";
+	mes "Si vous tuez un Metaling, il laissera peut-être un Large Jellopy, un Iron Ore ou même un Iron.";
+	mes "Ca peut être bon à savoir, non ?";
+	next;
+	mes "[Shena]";
+	mes "Y a-t-il autre-chose que vous souhaitez me demander ?";
+	goto L_MENU;
+L_MINERAL:
+	mes "[Shena]";
+	mes "Saviez-vous que les stalactites et les cristaux mettent des milliers et des milliers d'années à se former ?";
+	next;
+	mes "[Shena]";
+	mes "De plus, si quelque chose grandit depuis des millénaires, ce serait logique qu'il devienne vivant.";
+	mes "Les Minerals sont en fait des stalactites vivants.";
+	next;
+	mes "[Shena]";
+	mes "La rumeur veut qu'ils aient grandit dans une grotte obscure dans laquelle quelque-chose a une influence démoniaque sur eux.";
+	next;
+	mes "[Shena]";
+	mes "Les Minerals peuvent se défendre d'eux-même, mais ils peuvent laisser des Crystal Fragment, des Topaz ou des Emveretarcon si vous en détruisez un.";
+	mes "Il y a également une chance qu'ils laissent un joyau rare, mais je n'en suis pas vraiment sûre.";
+	next;
+	mes "[Shena]";
+	mes "Y a-t-il d'autres monstres des environs sur lesquels vous voulez apprendre des choses ?";
+	goto L_MENU;
+L_PITMAN:
+	mes "[Shena]";
+	mes "Les Pitmen sont des fantômes de mineurs qui hantent les vieux wagons de mines rouillés.";
+	mes "Pour je ne sais quelle raison, ils ne peuvent pas quitter ce monde, donc ils ne font qu'errer dans les mines.";
+	next;
+	mes "[Shena]";
+	mes "Si vous parvenez à les tuer, ils laisseront des Old Pick, des Lantern, des Iron, des Steel, des Coal, des Flashlight et des Rusty Iron Plate.";
+	next;
+	mes "[Shena]";
+	mes "Voulez-vous me questionner sur d'autres monstres locaux ?";
+	goto L_MENU;
+L_WASTE:
+	mes "[Shena]";
+	mes "C'est four mangeur d'hommes démoniaque.";
+	next;
+	menu "... C'est vrai ?",L_THAT,"T-Terrifiant !",-;
+
+	mes "[Shena]";
+	mes "Oui.";
+	mes "Cette créature est cruelle et sans pitié, si j'en voyais un, je le qualifierait certainement de pur symbole du Mal.";
+	next;
+	mes "[Shena]";
+	mes "Contrairement aux nouveaux appareils, les Wave Stoves ont été fabriqués par des maître-artisans et ont, je suppose, développé leur âme propre.";
+	mes "Ils étaient des machines autonomes qui devaient fournir une chaleur agréable.";
+	next;
+	mes "[Shena]";
+	mes "Pendant des années, ils auraient servi leurs maîtres avec fidélité.";
+	mes "Mais comme les technologies avancées et eux finirent par devenir obsolètes, ils ont été abandonnés comme des ordures.";
+	mes "Ce qui a insuflé le ^FF0000Mal^000000 dans leur coeur.";
+	next;
+	mes "[Shena]";
+	mes "Les Waste Stoves peuvent laisser des Battered Pot, des Burnt Tree, des Iron, des Iron Ore et des Rusty Iron Plate.";
+	mes "Mais de temps en temps ils peuvent laisser des objets intéressants comme des Rusty Iron ou même des Dead Branch.";
+	next;
+	mes "[Shena]";
+	mes "Bien, y a-t-il autre chose que vous voudriez que je partage avec vous ?";
+	goto L_MENU;
+L_THAT:
+	mes "[Shena]";
+	mes "Maintenant, vous savez l'importance de recycler et préserver nos ressources naturelles, n'est-ce pas ?";
+	mes "Ca m'appaiserai que vous recycliez le le fer dégoûtant de ces Waste Stoves.";
+	next;
+	mes "[Shena]";
+	mes "Les Waste Stoves peuvent laisser des Battered Pot, des Burnt Tree, des Iron, des Iron Ore et des Rusty Iron Plate.";
+	mes "Mais de temps en temps ils peuvent laisser des objets intéressants comme des Rusty Iron ou même des Dead Branch.";
+	next;
+	mes "[Shena]";
+	mes "Bien, y a-t-il autre chose que vous voudriez que je partage avec vous ?";
+	goto L_MENU;
+}
+	
+einbech,48,107,4	duplicate(Shena)	Luda	850
+	
+einbech,93,139,6	script	Raust	847,{
+	mes "[Raust]";
+	mes "Je ne comprends pas !";
+	mes "Einbroch devient de plus en plus grande et merveilleuse alors que notre ville devient de plus en plus sale et dégoûtante";
+	mes "Pourquoi ?!";
+	next;
+	mes "[Raust]";
+	mes "Ce n'est pas seulement que nous ayons l'air pauvres, mais nous sommes toujours fatigués et paraissons plus vieux !";
+	mes "C'est sale, c'est bondé, rien ne va dans cette ville !";
+	mes "Quoi ? Tu veux une liste ?";
+	next;
+	mes "[Raust]";
+	mes "La nourriture, c'est littérallement de la merde !";
+	mes "Le travail ici viole tous les droits fondamentaux des hommes.";
+	mes "Il n'y a presque aucune femme et celles que nous avons...";
+	mes "Tu es convaincu maintenant ?";
+	next;
+	mes "[Raust]";
+	mes "Pourquoi tout est si bien à Einbroch ?!";
+	mes "Je déteste ça !";
+	mes "*Grogne*";
+	close;
+}
+	
+einbech,97,167,6	script	Cavitar	847,{
+	mes "[Cavitar]";
+	mes "Récemment nous avons eu des effondremments de tunnels qui ont causé la mort de mineurs.";
+	mes "Nous allons avoir encore plus de mal à travailler dans ces mines maintenant que nous avons moins de main d'oeuvre.";
+	next;
+	mes "[Cavitar]"; 
+	mes "Ce qui est vraiment suspect, c'est qu'il semble que quelque-chose a volontairement provoqué ces effondrements.";
+	mes "Quelques-uns d'entre nous croient que c'est parce que nous avons énervé le maître de la grotte.";
+	next;
+	mes "[Cavitar]"; 
+	mes "L'accident du tunnel est encore clair dans mon esprit.";
+	mes "Il semble qu'il y a plus de signes du ^FF0000Maître de la grotte^000000 quand les tunnels commencent à s'effondrer.";
+	next;
+	mes "[Cavitar]"; 
+	mes "J'étais en repos quand l'accident est arrivé.";
+	mes "Mais j'ai entendu dire que le seul survivant est devenu fou et a disparu quelque-part.";
+	mes "Le pauvre...";
+	close;
+}
+	
+einbech,105,218,6	script	Gushenmu	848,{
+	mes "[Gushenmu]"; 
+	mes "J'ai vécu ici depuis longtemps, et croyez-le ou pas, les choses n'étaient pas aussi difficiles dans le passé.";
+	next;
+	mes "[Gushenmu]"; 
+	mes "Pour beaucoup de raisons différentes, le travail est plus dangereux et nous avons très peu de main d'oeuvre.";
+	mes "Et les usines d'Einbroch font tellement de fumée que nous ne pouvons même plus voir le soleil ici.";
+	next;
+	mes "[Gushenmu]"; 
+	mes "La triste réalité de la vie de mineur aujourd'hui, c'est de se lever, aller au travail et à la fin de la journée quelques-uns d'entre nous sont blessés alors que d'autres ne reviendront plus travailler.";
+	next;
+	mes "[Gushenmu]"; 
+	mes "Et en même temps qu'Einbroch et Einbech grandissent, j'entends de plus en plus de rumeurs qui disent que d'étranges monstres commencent à proliférer hors de la ville.";
+	mes "C'est vraiment la pire des époques qu'Einbech ait jamais vécu...";
+	close;
+}
+	
+einbech,39,215,6	script	Train Station Staff	852,{
+	mes "[Staff]";
+	mes "Bienvenue à la station de train.";
+	mes "Le prix du ticket pour Einbroch est de 200 zenies.";
+	mes "Voulez-vous embarquer ?";
+	next;
+	menu "Oui.",L_YES,"Non.",-;
+
+	mes "[Staff]";
+	mes "Profitez bien de votre séjour à Einbech.";
+	close;
+L_YES:
+	if(Zeny < 200)goto L_ZENY;
+	mes "[Staff]";
+	mes "Merci, nous espérons que vous apprécierez le voyage.";
+	mes "Tous en voiture !";
+	next;
+	set Zeny,Zeny - 200;
+	warp "einbroch",226,276;
+	end;
+L_ZENY:
+	mes "[Staff]";
+	mes "Je suis désolé mais vous n'avez pas assez d'argent pour payer le ticket.";
+	close;
+}
+
+einbech,157,215,4	script	Train Station Manager	852,{
+	mes "[Train Station Manager]";
+	mes "Cette station de train est strictement réservée aux trains reliant Einbech et Einbroch.";
+	mes "Veuillez vous adresser au personnel plus au nord si vous désirez embarquer.";
+	close;
+}
+
+einbech,129,234,6	script	Hander	848,{
+	mes "[Hander]";
+	mes "Ces salauds d'Einbroch !";
+	mes "Vivre des ressources que nous déterrons pendant qu'ils nous vampirisent !";
+	mes "Merde !";
+	next;
+	mes "[Hander]";
+	mes "Chaques jours nous risquons nos putains de vies rien que pour vivre décemment !";
+	mes "Pourquoi les anciens ne font-ils rien à propos de ça, comme augmenter le prix des minerais ?";
+	next;
+	mes "[Hander]";
+	mes "Le calendrier de travail est irraisonnable, la femme de Cavitar a été attaquée par une créature de la mine, l'hôpital est beaucoup trop loin et nous n'avons aucune nourriture !";
+	mes "Pourquoi...?";
+	close;
+}
+
+einbech,128,238,6	script	Mogan	848,{
+	mes "[Mogan]";
+	mes "Récemment nous avons eu quelques effondrements de tunnels qui ont fait beaucoup de blessés.";
+	mes "Le conseil municipal en a discutté et selon moi, je pense que les mineurs ont creusé trop profond ont dérangé... ^FF0000cette chose^000000.";
+	next;
+	mes "[Mogan]";
+	mes "Oui, ils ont réveillé Ungoliant, le maître des grottes, qui existe depuis des temps anciens.";
+	mes "Je ne sais pas combien seront encore les victimes d'Ungoliant.";
+	mes "Il n'y a rien à dire...";
+	next;
+	mes "[Mogan]";
+	mes "Aventurier, faîtes attention si vous voyagez dans la mine, le bruit de vos pas peut déranger le sommeil d'Ungoliant.";
+	close;
+}
+
+einbech,130,253,2	script	Ekuri	848,{
+	mes "[Ekuri]";
+	mes "Ho-Hisse !";
+	mes "Ho-Hisse~ !";
+	next;
+	mes "[Ekuri]";
+	mes "Qu'est-ce que je fais ici ?";
+	mes "Eh bien, j'ai peur de mourir en entrant dans la mine !";
+	mes "Mais je peux vivre correctement en récupérent les petits fragments de métaux à l'entrée !";
+	mes "Malin, hein ?";
+	next;
+	mes "[Ekuri]";
+	mes "Des fois, j'ai de la chance et déterre un minerai entier !";
+	mes "Bien sûr que je suis un lâche, mais au moins je suis en vie.";
+	mes "Du moins, pour le moment.";
+	next;
+	mes "[Ekuri]";
+	mes "Maintenant tu sais ce que je fais ici.";
+	mes "Alors pourquoi ne me laisses-tu pas travailler ?";
+	mes "Ho-Hisse !";
+	mes "Minerais, venez à moi !";
+	close;
+}
+
+einbech,148,242,5	script	Jung	855,{
+	mes "[Jung]";
+	mes "Je fais partie des rares personnes qui vivent à la fois à Einbroch et Einbech depuis longtemps.";
+	mes "Donc, je pense être un des meilleurs guides du coin.";
+	next;
+	mes "[Jung]";
+	mes "Dites, si vous pensez entrer dans la mine, je peux vous dire tout ce que je sais sur les monstres qui vivent dedans. Comme ça vous serez préparé.";
+	next;
+	menu "Pourquoi pas ?",L_TELL,"Non-merci.",-;
+	mes "[Jung]";
+	mes "Je comprends que vous soyez pressé.";
+	mes "Cependant, si vous êtes nouveau dans le coin, vous devriez apprendre le plus possible avant d'entrer dans un donjon.";
+	next;
+	mes "[Jung]";
+	mes "Bien, prenez garde à vous dans vos aventures, ok ?";
+	close;
+L_TELL:
+	mes "[Jung]";
+	mes "Voyons.";
+	mes "Ah, les monstres typiques de la Mine sont les Noxious, les Venomous, les Porcellio et les Obsidian.";
+	mes "Sur lequel d'entre-eux désirez-vous en savoir plus ?";
+	next;
+	menu "Noxious et Venomous",-,"Porcellio",L_PORCELLIO,"Obsidian",L_OBSIDIAN;
+	mes "[Jung]";
+	mes "Vous savez, personne ne semble savoir d'où viennent les Noxious et les Venomous.";
+	mes "C'est comme s'ils étaient apparus de nulle-part quand Einbroch s'est industrialisée.";
+	next;
+	mes "[Jung]";
+	mes "Maintenant que j'y pense, je ne crois aps que ces monstres soient naturels.";
+	mes "Ils ont toujours cet air de désespoir et de souffrance et ont tendance à agir comme s'ils voulaient que leur ennemi les tue.";
+	next;
+	mes "[Jung]";
+	mes "Mais vous devez faire attention !";
+	mes "Attention !";
+	mes "Les Noxious et les Venomous sont des monstres furtifs qui peuvent glisser dans l'air et vous attaquer avant que ne vous vous en rendiez compte...";
+	next;
+	mes "[Jung]";
+	mes "Il faut savoir également que les Noxious ont la propriété Ghost et les Venomous Poison.";
+	mes "Tous les deux sont les monstres de taille Medium et de type Formless.";
+	next;
+	mes "[Jung]";
+	mes "De plus ils droppent des Apple, des Dust Pollutant, des Toxic Gas, des Poisonous Powder, des Bacillus, des Mold Powder et des Anodyne.";
+	next;
+	mes "[Jung]";
+	mes "C'est tout.";
+	mes "N'hésitez pas à me poser des questions sur les monstres de la mine.";
+	mes "Attention à vous, aventurier.";
+	close;
+L_PORCELLIO:
+	mes "[Jung]";
+	mes "Le Porcellio est un insect qui vit dans les grottes et qui boit l'eau des stalactites.";
+	mes "Ils sont différents de l'Ungoliant car ils aiment être à proximité de différents minerais ou métaux.";
+	next;
+	mes "[Jung]";
+	mes "les Porcellio droppent des Jubilee, des Insect Leg, des Single Cell, des Moss of Morning Dex, des Neon Liquid et d'autres choses dont je ne me rappelle pas.";
+	next;
+	mes "[Jung]";
+	mes "Enfin, les Porcellio ont la propriété Earth.";
+	mes "C'est tout ce que je sais sur eux.";
+	mes "Mais si vous voulez en savoir plus sur les monstres habitant la mine, n'hésitez pas à demander.";
+	close;
+L_OBSIDIAN:
+	mes "[Jung]";
+	mes "Connaissez-vous cette croyance comme quoi les minerais du sous-sol qui contiennent de grands montants d'énergie ont en fait des âmes ?";
+	mes "les Obsidian font partie de ces pierres vivantes.";
+	next;
+	mes "[Jung]";
+	mes "On suppose que rien qu'on morceau d'Obsidian dans un processeur aurait suffisamment d'énergie pour illuminer le ciel la nuit.";
+	mes "Malheureusement, ce n'est pas possible d'en capturer un vivant et les traquer n'est aps une mince affaire.";
+	next;
+	mes "[Jung]";
+	mes "Les Obsidians sont des monstres Formless et de taille Small qui droppent des Clear Jewel, des Piece of Black Crystal, des Coal, des Elunium, des Iron et des Steel.";
+	next;
+	mes "[Jung]";
+	mes "C'est tout pour les Obsidian.";
+	mes "Mais si vous voulez en savoir plus sur les monstres habitant la mine, n'hésitez pas à demander.";
+	close;
+}
+
+einbech,148,246,5	script	Franz	851,{
+	mes "[Franz]";
+	mes "Je m'ennuie...";
+	mes "Je meurs d'envie de...";
+	mes "Parler.";
+	mes "Q-quelqu'un...";
+	next;
+	mes "[Franz]";
+	mes "Hé, un voyageur !";
+	mes "Planifiez-vous d'explorer la mine ? Ou les terres alentours ?";
+	mes "Parlons-donc ! Peut-être que je vous apprendrai quelque-chose !";
+	next;
+	menu "Ok.",L_OKAY,"Non-merci.",-;
+	mes "[Franz]";
+	mes "Oh, ok.";
+	mes "Vous êtes occupé et avez des choses à faire, je comprends.";
+	mes "Vous devez certainement vous rendre quelque part sur-le-champ.";
+	mes "Bien. J'ai compris.";
+	next;
+	mes "[Franz]";
+	mes "Je...";
+	mes "J'ai des choses sur lesquelles je dois travailler.";
+	mes "Oui. Vraiment occupé.";
+	close;
+L_OKAY:
+	mes "[Franz]";
+	mes "Oh, avez-vous entendu parler de la créature de la mine, ou de ce qui s'est passé dans la ville récemment ?";
+	mes "Sur quoi voulez-vous en savoir plus ?";
+	next;
+	menu "La créature de la mine.",L_CREATURE,"L'accident de la ville.",-;
+	mes "[Franz]";
+	mes "A Einbroch, il y avait une petite fabrique de Teddy Bear vivants.";
+	mes "Mais une série de mystérieux accidents et de meurtres où des familles entières ont été tuées se sont produites.";
+	next;
+	mes "[Franz]";
+	mes "Et il se trouvait que chacune des familles assassinées avait acheté un de ces Teddy Bear.";
+	mes "Il y avait même des rumeurs qui disaient que ces Teddy Bear prenaient vie.";
+	next;
+	mes "[Franz]";
+	mes "Après enquête, les autorités ont appris que tous les marchands les vendant se procuraient auprès d'une même personne, un étranger que personne ne connaissait.";
+	next;
+	mes "[Franz]";
+	mes "Et vu que les nounours n'étaient clairement pas des jouets inoffensifs, des troupes ont été envoyées pour sécuriser la ville et mettre ces Teddy Bear hors de la ville.";
+	next;
+	mes "[Franz]";
+	mes "Mais dès qu'ils étaient mis en dehors, ils prenaient vie et ont commencé à attaquer !";
+	mes "C'est une preuve évidente que ces nounours sont contrôlés par une force diabolique.";	
+	next;
+	mes "[Franz]";
+	mes "Maintenant, ces Teddy Bears aggressifs sont éparpillés un peu partout et le gouvernement les a classés comme monstres.";
+	mes "A tuer avec des précautions extrêmes !";
+ 	next;
+	mes "[Franz]";
+	mes "D'après les aventuriers qui ont capturé ces nounours, ils sont de taille Small, de propriété Neutral et droppent des Honey, des Screw, des Well-baked Cookie et des Oridecon Hammer.";
+	next;
+	mes "[Franz]";
+	mes "C'est tout ce que je sais sur eux.";
+	mes "Faites bien attention à ces nounours si vous partez explorer, ok ?";
+	mes "Ils ont peut-être l'air mignons, mais ils sont réputés pour être extrêmement vicieux !";
+	close;
+L_CREATURE:
+	mes "[Franz]";
+	mes "La créature dont je parle est Ungoliant, également appelé ''Maître de la grotte'' dans le coin.";
+	mes "On dit qu'il vit très profond dans la grotte, où il garde de précieux métaux et des minerais avec d'étranges pouvoirs.";
+	next;
+	mes "[Franz]";
+	mes "Au début, je croyais que ce n'était qu'une légende, mais il est effectivement réapparu il y a environ 10 ans, quand les effondremments de tunnels ont commencé.";
+	next;
+	mes "[Franz]";
+	mes "Et plus les signes d'Ungoliant augmentaient, plus il y avait d'effondremments.";
+	mes "Je pênse que les mineurs se sont aventurés sans le savoir sur son territoire.";
+	next;
+	mes "[Franz]";
+	mes "Selon la légende, d'anciens géants se sont infiltrés dans la mine pour voler du charbon aux humains.";
+	mes "Mais ils ont fait trop de bruit quand ils creusaient et ont réveillé Ungoliant.";
+	next;
+	mes "[Franz]";
+	mes "Quand les mineurs se sont rendus au travail le matin suivant, ils ont trouvé els corps ensanglantés de ces géants.";
+	mes "Après ça, les gens ont craint qu'Ungoliant ne tue quiconque entre dans les mines.";
+	next;
+	mes "[Franz]";
+	mes "Un avneturier qui avait pour ambition de tuer Ungoliant m'a dit qu'il droppait des Ant's Jaw, des Colorful Shell, des Very Hard Shell, des Long Leg, des Neon Liquid et des Zircon.";
+	close;
+}
+
+einbech,151,168,4	script	Tollaf	854,{
+	mes "[Tollaf]";
+	mes "Ah...!";
+	mes "Je n'en peux plus !";
+	mes "Je n'ai aps assez d'argent pour partir, mais je ne veux plus vivre un instant de plus dans cette ville !";
+	next;
+	mes "[Tollaf]";
+	mes "Partout ailleurs, les gens vivent largement mieux que nous, particulièrement ces snobs à Einbroch !";
+	mes "Einbech doit être la pire des villes de la République de Schwartzwald.";
+	mes "Non, c'est la pire du monde !";
+	close;
+}
+
+einbech,149,154,4	script	Mjunia	850,{
+	mes "[Mjunia]";
+	mes "C'est dur d'être une femme dans cette ville.";
+	mes "Naître ici, c'est comme si le destin avait décidé d'être particulièrement cruel avec moi.";
+	next;
+	mes "[Mjunia]";
+	mes "Ma peau et mes mains sont abîmées par le travail que je dois faire.";
+	mes "Mais pire que tout...Je...Je...J'ai développé de plus gros muscles que la plupart des hommes !";
+	mes "Waaaaaah~ !";
+	next;
+	mes "[Mjunia]";
+	mes "J'espère que je pourrai trouver un gentil homme d'Einbroch et me marier, comme ça je pourrai partir de cette ville.";
+	mes "Mais il ne semble pas que cela se produise...";
+	next;
+	mes "[Mjunia]";
+	mes "Et je ne me marierai jamais avec quelqu'un d'Einbech !";
+	mes "Je préfèrerai mourrir seule que mariée à un voyou d'Einbech.";
+	next;
+	mes "[Mjunia]";
+	mes "Regardez ces muscles.";
+	mes "Que pensez-vous ?";
+	mes "QSuis-je belle ?";
+	mes "*Sniff* J'ai abandonné l'idée d'être féminine il y a des années.";
+	mes "Je dois travailler si dur...";
+	close;
+}
+
+einbech,176,125,4	script	Ellhenje	850,{
+	mes "[Ellhenje]";
+	mes "Les choses sont peut-être mauvaises dans cette ville avec la pollution et la tyrannie d'Einbroch...";
+	next;
+	mes "[Ellhenje]";
+	mes "Mais pourtant, les gens parviennent à endurer ça.";
+	mes "C'est parce qu'il y a un gars que tout le monde apprécie ici.";
+	next;
+	mes "[Ellhenje]";
+	mes "Je parle de Clitzer !";
+	mes "Il est presque trop honnête et serviable.";
+	mes "Mais par dessus tout, c'est le gars le plus sympa~";
+	next;
+	mes "[Ellhenje]";
+	mes "Clitzer est né dans une des familles les plus pauvres d'Einbech, mais d'habitude il est toujours heureux et pense toujours aux autres.";
+	mes "Je crois que c'est pourquoi les gens aiment à penser qu'il représente Einbech.";
+	next;
+	mes "[Ellhenje]";
+	mes "Récemment, il y a eu quelque chose qui le préoccupe.";
+	mes "Je ne suis pas sûr, mais je pense que seule une femme peut mettre un homme dans un tel état.";
+	mes "J'espère que ça s'arrangera pour lui...";
+	close;
+}
+
+einbech,172,113,4	script	Nemuk	855,{
+	mes "[Nemuk]";
+	mes "Vous semblez être un étranger, donc laissez-moi vous poser une question.";
+	mes "Que pensez-vous d'Einbech ?";
+	next;
+	menu "C'est bien.",L_FINE,"Ca a l'air dur de vivre ici.",-;
+	mes "[Nemuk]";
+	mes "J'en pense de même.";
+	mes "Bien, je m'excuse de vous avoir interpelé aussi brusquement.";
+	next;
+	mes "[Nemuk]";
+	mes "Tout le monde ici a eu des temps très rudes, à ne vivre qu'au jour le jour depuis aussi longtemps que je puisse me le rappeler.";
+	mes "C'est comme si les choses semblaient ne pas s'arranger, peu importe ce que nous faisons.";
+	next;
+	mes "[Nemuk]";
+	mes "Je voudrais vraiment partir, mais c'est juste un souhait vain.";
+	mes "Mon corps est piégé ikci alors que mon coeur aspire à une vie meilleure.";
+	mes "*Soupire*";
+	mes "Est-ce sans espoir ?";
+	mes "Que puis-je faire ?";
+	close;
+L_FINE:
+	mes "[Nemuk]";
+	mes "Hein...?";
+	mes "Je ne sais pas si vous l'avez remarqué, mais je suis surpris que vous disiez quelque-chose comme ça.";
+	next;
+	mes "[Nemuk]";
+	mes "Ca fait pas loin de 10 ans que je pense à partir.";
+	mes "Cependant, je continue à y réfléchir.";
+	mes "Si j'étais riche, je partirai sans délai. Mais c'est dur de récolter l'argent pour partir.";
+	next;
+	mes "[Nemuk]";
+	mes "*Soupire...*";
+	mes "Peut-être que si j'avais été un aventurier quand j'étais plus jeune, je n'aurai pas eu ces problêmes aujurd'hui...";
+	close;
+}
+
+ein_in01,281,85,2	script	Drunken Man#01	849,{
+	mes "[Drunken Man]";
+	mes "...*Hiccup*...";
+	mes "*Hiccup*...";
+	mes "*Baille*.....";
+	mes ".................";
+	mes "..*Hiccup*.....";
+	mes "*Hiccup*..";
+	close;
+}
+
+ein_in01,277,95,8	script	Ryan Danger	855,{
+	mes "[R.D. kim]";
+	mes "Oooh...";
+	next;
+	mes "[R.D. kim]";
+	mes "Oooh...";
+	mes "Momma.";
+	next;
+	mes "[R.D. kim]";
+	mes "Oooh...";
+	mes "Momma.";
+	mes "Tu es si...";
+	next;
+	mes "[R.D. kim]";
+	mes "Oooh...";
+	mes "Momma.";
+	mes "Tu es si...";
+	mes "^FF0000Chaude ^000000!";
+	next;
+	mes "[R.D. kim]";
+	mes "Pourquoi n'enlèves-tu pas ces vêtements lourds et inconfortables ?";
+	mes "Je t'achèterai tout ce que tu veux, c'est pour moi !";
+	mes "Allez~";
+	next;
+	mes "[" + strcharinfo(0) + "]";
+	mes "N-non...!";
+	mes "J-J-J-Je...";
+	mes "(C'est l'homme le plus bizarre que j'ai jamais vu !)";
+	next;
+	mes "[R.D. kim]";
+	mes "Hm ? Non...?";
+	mes "Absolument non ?";
+	mes "Tu es sûre ?";
+	mes "Très bien, très bien.";
+	mes "Je suis désolé, je m'excuse.";
+	mes "J'était totallement à côté de la plaque.";
+	next;
+	mes "[R.D. kim]";
+	mes "...";
+	mes "Ou le suis-je ?";
+	mes "Bwahahahaha !";
+	next;
+	mes "[" + strcharinfo(0) + "]";
+	mes "(C-Ce gars doit être ivre, totallement hors de son esprit)";
+	close;
+}
+
+ein_in01,279,92,2	script	Tavern Lady	854,{
+	mes "[Tavern Lady]";
+	mes "La plupart des hommes d'Einbech sont de primitifs mâles chauvinistes !";
+	mes "Ils me dégoûtent !";
+	next;
+	mes "[Tavern Lady]";
+	mes "Je pense qu'il n'y a rien de bien en eux !";
+	mes "Ils sont sauvages, violents, simples d'esprit et ignorants.";
+	mes "Ils règlent tous leurs conflits par les muscles et ils sont si... étroits d'espirt !";
+	next;
+	mes "[Tavern Lady]";
+	mes "Comment peuvent-ils comprendre que les femmes veulent des hommes gentils et sensibles avec qui elles pourraient partager leurs sentiments et boire le thé en mangeant des petits gateaux ?";
+	close;
+}
+
+einbech,197,139,4	script	Young Man#05	855,{	
+	mes "[Heinz]";
+	mes "Wow...";
+	mes "Un aventurier de Rune-Midgard, hein ?";
+	mes "Qu'est-ce qui vous amène ?";
+	next;
+	mes "[Heinz]";
+	mes "Einbech n'offre pas grand-chose en terme de panorama, mais venez-vous pour voir la mine ?";
+	mes "En ce mement, elle est remplie de monstres et nous ne pouvons pas déterrer le moindre minerai car c'est trop dangereux.";
+	next;
+	mes "[Heinz]";
+	mes "Mais si des aventuriers étaient suffisammeent généreux pour chasser toutes ces créateurs démoniaques, nous pourrions à nouveau creuser et gagner plus d'argent.";
+	mes "C'est comme faire d'une pierre deux coups. Hahaha !";
+	next;
+	mes "[Heinz]";
+	mes "Oh attendez... Je suis désolé.";
+	mes "Je ne sais pas ce qui ne va pas avec moi, à demander à de complets inconnus de me faire des faveurs.";
+	mes "C'est entièrement impoli !";
+	mes "Je veux dire, qui pourrait faire ça ?";
+	next;
+	mes "[Heinz]";
+	mes "Mais... Je n'ai rien à faire de mon amour-propre.";
+	mes "Pour l'amour de Dieu, je vous en supplie, s'il vous plaît, tuez ces créatures démoniaques.";
+	mes "S'il vous plaît !";
+	close;
+}
+
+
+ein_in01,192,90,2	script	Supineque	849,{	
+	mes "[Supineque]";
+	mes "Ugh...";
+	mes "Je meurs de faim !";
+	next;
+	mes "[Supineque]";
+	mes "Je n'ai pas eu de nourriture depuis si longtemps que mon estomac commence à se digérer lui-même !";
+	mes "C'est horrible...";
+	next;
+	mes "[Supineque]";
+	mes "Je pense que j'aurai de quoi manger aujourd'hui.";
+	mes "Mais si je mange ça, qu'est-ce qui me restera demain ?";
+	close;
+}
+
+ein_in01,208,86,3	script	Decii	855,{	
+	mes "[Decii]";
+	mes "C'est tellement frustrant !";
+	mes "Je suis entouré de tous ces ^FF0000gens^000000!";
+	next;
+	mes "[Decii]";
+	mes "Il n'y a aucune intimité dans une ville aussi surpeuplée !";
+	mes "Je crois que je devrais essayer de partir au plus tôt possible.";
+	close;
+}
+
+einbech,216,118,4	script	Catzllanpu	854,{	
+	mes "[Catzllanpu]";
+	mes "*Soupire...* ";
+	mes "Les plaisirs simples.";
+	mes "Ils sont ce qui fait que la vie vaut la peine d'être vécue, vous savez ?";
+	next;
+	mes "[Catzllanpu]";
+	mes "Ca me suffit de vivre une vie normale et heureuse, mais tout le monde autour de moi veut travailler de plus en plus dur.";
+	mes "Si vous ne prenez jamais de pause, vous vous tuez à petit feu.";
+	next;
+	mes "[Catzllanpu]";
+	mes "Je pense que vous me direz que je n'ai pas les mêmes problêmes que les autres ont avec l'argent.";
+	mes "L'argent c'ets bien, mais pas au point de sacrifier sa vie, vous comprenez ?";
+	close;
+}
