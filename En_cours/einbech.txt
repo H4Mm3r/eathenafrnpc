@@ -181,25 +181,25 @@ einbech,48,107,4	duplicate(Shena)	Luda	850
 	
 einbech,93,139,6	script	Raust	847,{
 	mes "[Raust]";
-	mes "I don't get it!";
-	mes "Einbroch gets bigger and fancier and our town gets dirtier and nastier.";
-	mes "What the hell?!";
+	mes "Je ne comprends pas !";
+	mes "Einbroch devient de plus en plus grande et merveilleuse alors que notre ville devient de plus en plus sale et dégoûtante";
+	mes "Pourquoi ?!";
 	next;
 	mes "[Raust]";
-	mes "Not only do the people look more ragged, we're more tired and older looking as well!";
-	mes "It's dirty, it's crowded, everything in this city is a total mess!";
-	mes "What, you want a list?!";
+	mes "Ce n'est pas seulement que nous ayons l'air pauvres, mais nous sommes toujours fatigués et paraissons plus vieux !";
+	mes "C'est sale, c'est bondé, rien ne va dans cette ville !";
+	mes "Quoi ? Tu veux une liste ?";
 	next;
 	mes "[Raust]";
-	mes "The food, literally, is garbage!";
-	mes "The jobs here have to be a violation of human rights.";
-	mes "There's barely any women here and the ones we do have all stink anyway!";
-	mes "Are you convinced yet?!";
+	mes "La nourriture, c'est littérallement de la merde !";
+	mes "Le travail ici viole tous les droits fondamentaux des hommes.";
+	mes "Il n'y a presque aucune femme et celles que nous avons...";
+	mes "Tu es convaincu maintenant ?";
 	next;
 	mes "[Raust]";
-	mes "Why is everything that's good over in Einbroch?!";
-	mes "I hate this!";
-	mes "*Grumble*";
+	mes "Pourquoi tout est si bien à Einbroch ?!";
+	mes "Je déteste ça !";
+	mes "*Grogne*";
 	close;
 }
 	
