@@ -250,7 +250,7 @@ einbroch,232,255,5	script	Khowropher	847,{
 	mes "Mais pourtant, je voudrais passer le reste de ma vie dans un endroit calme avec un air sain...";
 	next;
 	mes "[Khowropher]";
-	mes "Mais Einbroch est ma ville de naissance, et je ne peux pas simplement me lever et partir.";
+	mes "Mais Einbroch est la ville où je suis né, et je ne peux pas simplement partir.";
 	mes "Je suppose que c'est mon destin de souffrir de cet air vicié jusqu'au jour de ma mort.";
 	mes "^6A6A6A*Soupir...*";
 	close;
@@ -571,7 +571,7 @@ ein_in01,84,218,3	script	Tsuen	851,{
 	next;
 	mes "[Tsuen]";
 	mes "Peut-être que ma vie était destinée à être comme ça, même si je ne ne l'avais pas planifiée ainsi.";
-	mes "Mais le jour viendra où je me lèverai, partirai et voyagerai dans le monde quand j'aurai ma chance !";
+	mes "Mais le jour viendra où je partirai et voyagerai dans le monde quand j'aurai ma chance !";
 	next;
 	mes "[Tsuen]";
 	mes "J'espère que ce jour arrivera et que je pourrai vous rencontrer par-delà ce monde immense et vous saluer en tant qu'aventurier.";
