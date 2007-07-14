@@ -268,7 +268,7 @@ L_ZENY:
 
 einbech,157,215,4	script	Train Station Manager	852,{
 	mes "[Train Station Manager]";
-	mes "Cette station de train est strictement réservée aux trains reliant Einbech et Einbroch.";
+	mes "Cette station de train est strictement réservée aux trains.";
 	mes "Veuillez vous adresser au personnel plus à l'Ouest si vous désirez embarquer.";
 	close;
 }
