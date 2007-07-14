@@ -51,7 +51,7 @@ yuno,184,173,4	script	Freidrich	729,{
 	mes "Il y a Salomon, l'île de l'honneur, Mineta, l'île de la prospérité et Snotora, l'île de la connaissance.";
 	next;
 	mes "[Freidrich]";
-	mes "Voici la localisation de ces îles :";
+	mes "Voici la localisation de ces îles";
 	mes "Nord-Ouest : Salomon";
 	mes "Nord-Est : Snotora";
 	mes "Sud : Mineta";
@@ -227,7 +227,7 @@ yuno,213,298,4	script	Sage Esklah	735,{
 	next;
 	mes "[Esklah]";
 	mes "Alors que je trouvais cette image merveilleusement poétique, ce papier m'a soudainement attaqué !";
-	mes "Moi, une des plus grands Sages de Yuno !";
+	mes "Moi, un des plus grands Sages de Yuno !";
 	next;
 	mes "[Esklah]";
 	mes "J'ai essayé de me défendre avec ma bonne vieille épée, mais grâce à son épaisseur de papier, ce monstre a réussi à esquiver tous mes coups.";
@@ -252,6 +252,6 @@ yuno,165,111,4	script	Juno Sage	123,{
 	next;
 	mes "[Le Morpheus]";
 	mes "Mais les années ont affecté son intelligence artificielle, et il ne peut plus distinguer ses alliés de ses ennemis.";
-	mes "C'est triste, mais c'est androïde n'est plus qu'un monstre sans âme.";
+	mes "C'est triste, mais cet androïde n'est plus qu'un monstre sans âme.";
 	close;
 }
