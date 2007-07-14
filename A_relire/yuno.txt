@@ -1,0 +1,257 @@
+//===== eAthena Script ======================================= 
+//= Yuno City
+//===== By: ================================================== 
+//= KitsuneStarwind, kobra_k88
+//===== Current Version: ===================================== 
+//= 1.3.3
+//===== Compatible With: ===================================== 
+//= eAthena 7.15 +
+//===== Description: ========================================= 
+//=
+//===== Additional Comments: ================================= 
+//= Added additional npcs.  Added Metto quest. [kobra_k88]
+//= Moved item quest to quest folder. Re-edited a majority of the npcs. [kobra_k88]
+//= Removed duplicate npcs already found in the sage quest.
+//= Fixed & Spellchecked [massdriller]
+//= 1.3 Started updating Juno NPCs based on iRO. 10% complete.
+//= 1.3.2 Started updating Juno NPCs based on iRO. 30% complete.
+//= 1.3.3 Removed Noyee	NPC (it's implemented in sleipnir_seal.txt)
+//============================================================ 
+
+
+yuno,330,100,4	script	Knight	734,{
+	mes "[Leibech]";
+	mes "Ma grande passion est de collecter des objets uniques et hors du commun.";
+	mes "Vous savez, ce genre de choses que la plupart des gens ne voient qu'une fois dans leur vie.";
+	next;
+	mes "[Leibech]";
+	mes "J'utilise l'Alchesh Trading Company pour complêter ma collection.";
+	mes "Ils sont peut-être chers, mais leur service est impeccable.";
+	close;
+}
+
+//======================================================================================
+yuno,208,164,4	script	Active little girl	101,{
+	mes "[Hisa]";
+	mes ".....";
+	mes "Cette ville est si ennuyeuse.";
+	mes "Aucun évênement, aucun festival...";
+	mes "Les gens ne font que rester chez eux et étudier.";
+	mes "C'est ennuyeux !";
+	close;
+}
+
+
+//======================================================================================
+yuno,184,173,4	script	Freidrich	729,{
+	mes "[Freidrich]";
+	mes "La cité des Sages, ^5533FFYuno^000000, est composée de trois grandes îles.";
+	next;
+	mes "[Freidrich]";
+	mes "Il y a Salomon, l'île de l'honneur, Mineta, l'île de la prospérité et Snotora, l'île de la connaissance.";
+	next;
+	mes "[Freidrich]";
+	mes "Voici la localisation de ces îles :";
+	mes "Nord-Ouest : Salomon";
+	mes "Nord-Est : Snotora";
+	mes "Sud : Mineta";
+	close;
+}
+
+//======================================================================================
+yuno,157,87,4	script	A Citizen of Yuno	102,{
+	mes "[Shalima]";
+	mes "Quand vous allez au Nord depuis Al De Baran, vous arriverez au plateau d'Elmeth, une zone entièrement composée de roches volcaniques.";
+	next;
+	mes "[Shalima]";
+	mes "Au sommet d'une montagne reliée à ce plateau, vous pourrez trouver un pont qui vous ammènera ici, à ^5533FFYuno^000000, la cité des Sages !";
+	next;
+	mes "[Shalima]";
+	mes "A Yuno vous pourrez visiter des endroits comme la Juperos Plaza, le hall de conférence de Yuno, l'académie de magie Schweicherbil ou le musée des monstres.";
+	mes "Ces endroits sont connus dans le monde entier !";
+	next;
+	mes "[Shalima]";
+	mes "Vous désirez sûrement aller chateau des sages, où les gens peuvent devenir des Sages, une classe vraiment unique !";
+	next;
+	mes "[Shalima]";
+	mes "Si vous voulez vous renseigner sur les Sages, pourquoi ne pas jeter un oeil au chateau ?";
+	close;
+}
+
+//=======================================================================================
+yuno,157,205,4	script	Juno Artisan	54,{
+	mes "[Artisan]";
+	mes "*Marmonne...*";
+	next;
+	mes "[Artisan]";
+	mes "Oh, bonjour.";
+	mes "Laissez-moi me présenter.";
+	mes "Je suis un artisan qui essaie de mériter les droits et les devoirs d'un fabriquant d'objets à Yuno.";
+	mes "Désirez-vous des informations sur certains objets particuliers ?";
+	next;
+	menu "Sur des objets uniques",M_1,"Sur les Worn-Out Magic Scroll",M_2,"Sur la nourriture traditionnelle",M_3,"Mettre fin à la conversation",M_End;
+	
+	M_1: 
+		mes "[Artisan]";
+		mes "Laissez-moi vous suggérer le ^5533FFHoly Guard^000000 et le ^5533FFHoly Avenger^000000, des objets pour les Crusaders.";
+		next;
+		mes "[Artisan]";
+		mes "Ces équipements sont très légers et ont de bonnes capacités.";
+		mes "Ils possèdent un pouvoir sacré.";
+		next;
+		mes "[Artisan]";
+		mes "De plus, ces équipements sont plus efficaces contre certains types de monstres comme les Ghost et les Undead.";
+		next;
+		mes "[Artisan]";
+		mes "Cependant, on dit que seuls une poignée de Crusaders peuvent posséder ces objets à cause de leur rareté.";
+		close;
+		
+	M_2:
+		mes "[Artisan]";
+		mes "Ils ont l'air de simples parchemins magiques avec des cercles concentriques et une étoile.";
+		mes "Cependant, les ^5533FFWorn-Out Magic Scroll^000000 sont très anciens.";
+		mes "Les Sages en veulent pour leurs recherches.";
+		next; 
+		mes "[Artisan]";
+		mes "Il semble qu'il soit possible de les utiliser quand on incante un sort de très haut niveau.";
+		close;
+	
+	M_3:
+		mes "[Artisan]";
+		mes "^5533FFRice Cake^000000 ! Oui c'est une nourriture traditionnelle appréciée par beaucoup de gens.";
+		mes "Il y a beaucoup de souvenirs nostalgiques avec les bons vieux magasins qui en distribuaient.";
+		next;
+		mes "[Artisan]";
+		mes "Ahhh~";
+		mes "J'aimerai tellement manger un morceau de Rice Cake.";
+		close;		
+
+	M_End:
+		mes "[Artisan]";
+		mes "Bien que Yuno soit connue comme la cité des Sages, j'espère que vous comprendrez que les gens ordinaires vivent et prospèrent tout aussi bien ici.";
+		mes "Appréciez-donc l'unique athmosphère que Yuno offre.";
+		close;
+}
+
+//======================================================================================
+yuno,336,227,4	script	Juno Granny	103,{
+	mes "[Granny]";
+	mes "Je suis la vieille Sage Granny, qui peut tout voir à l'avance...";
+	next;
+	mes "[Granny]";
+	mes "Avez-vous entendu parler d'un puissant monstre qui a rôdé aux alentours de Yuno pendant bien longtemps ?";
+	mes "Il est connu sous le nom de ^FF3355Lord of the Dead^000000";
+	next;
+	mes "[Granny]";
+	mes "On dit qu'il vient du royaume des morts.";
+	mes "Des hordes de morts-vivants le suivent, et il a pour but de mener les vivants à son sombre royaume glacé.";
+	next;
+	mes "[Granny]";
+	mes "Vous avez déjà décidé si vous allez affronter ou non le Lord of the Dead.";
+	mes "Tout ce qu'il vous reste à faire est de comprendre pourquoi vous avez pris cette décision.";
+	close;
+}
+
+//========================================================================================
+yuno,328,239,4	script	Juno Fighter	732,{
+	mes "[Sergiof]";
+	mes "Mon nom est Sergiof, le combattant au service de Granny.";
+	next;
+	mes "[Sergiof]";
+	mes "Je vais vous parler du ^5533FFGrand Peco^000000, un vieux Peco Peco.";
+	mes "Le Grand Peco est beaucoup plus rapide que le Peco Peco et est beaucoup plus dangereux.";
+	next;
+	mes "[Sergiof]";
+	mes "Il attaque en utilisant son puissant bec et tous les Peco Peco aux alentours viendront à son aide.";
+	mes "Il y a une grande différence de puissance entre le Grand Peco et le Peco Peco.";
+	close;
+}
+
+//========================================================================================
+yuno,343,68,4	script	Juno Despot	730,{
+	mes "[Ninno]";
+	mes "Avez-vous déjà entendu parler d'un Roi égyptien qui croyait être le fils d'un dieu ?";
+	mes "Son nom est ^5533FFPharaoh^000000";
+	next;
+	mes "[Ninno]";
+	mes "On dit qu'il était un grand sorcier qui lancait des malédictions aux innocents.";
+	mes "On dit également qu'il est toujours présent, à répandre le malheur.";
+	next;
+	mes "[Ninno]";
+	mes "En tant qu'aventurier, il est possible que vous le voyez lors de vos voyages.";
+	mes "Faites très attention...";
+	close;
+}
+	
+//=======================================================================================
+yuno,261,99,4	script	Sage Yklah	735,{
+	mes "[Yklah]";
+	mes "^5533FFJuperos^000000...";
+	mes "C'était le nom d'une cité qui existait en des temps anciens.";
+	next;
+	mes "[Yklah]";
+	mes "Le peuple qui y vivait était le plus intelligent et le plus talentueux et il exploitait les morceaux du Coeur d'Ymir qui donnaient toute sa puissance à leur civilisation.";
+	next;
+	mes "[Yklah]";
+	mes "Malheureusement, ils ont abusé de ce grand pouvoir et ont causé leur propre perte.";
+	next;
+	mes "[Yklah]";
+	mes "Si vous aspirez à la connaissance divine, vous devez avant tout être humble.";
+	mes "Sinon...";
+	close;
+}
+
+//=========================================================================================
+yuno,305,207,6	script	Sage Syklah	735,{
+	mes "[Syklah]";
+	mes "Les gens ne font que parler d'un homme suspect habitant Yuno.";
+	next;
+	mes "[Syklah]";
+	mes "Apparamment, il est très dangereux et est en permanence immergé dans ses recherches.";
+	next;
+	mes "[Syklah]";
+	mes "Les gens le considèrent comme un savant fou, passant son temps à étudier des choses impossibles qui dépassent l'entendement.";
+	next;
+	mes "[Syklah]";
+	mes "On dit même que ce scientifique est responsable de la création du Blazer, un monstre fait de feu magique.";
+	next;
+	mes "[Syklah]";
+	mes "C'est un monstre dangereux et effrayant qui incante des sorts comme Fire Bolt et Fire Ball et qui vit à l'extérieur de Yuno.";	
+	close;
+}
+
+//==========================================================================================
+yuno,213,298,4	script	Sage Esklah	735,{
+	mes "[Esklah]";
+	mes "Je me rappelle avoir vu un innofensif morceau de papier flotter dans les airs...";
+	next;
+	mes "[Esklah]";
+	mes "Alors que je trouvais cette image merveilleusement poétique, ce papier m'a soudainement attaqué !";
+	mes "Moi, une des plus grands Sages de Yuno !";
+	next;
+	mes "[Esklah]";
+	mes "J'ai essayé de me défendre avec ma bonne vieille épée, mais grâce à son épaisseur de papier, ce monstre a réussi à esquiver tous mes coups.";
+	mes "J'ai dû incanter un sort pour le détruire.";
+	next;
+	mes "[Esklah]";
+	mes "Plus tard, j'ai appris que ce monstre était connu sous le nom de ^FF5533The Paper^000000";
+	next;
+	mes "[Esklah]";
+	mes "C'était une page d'un livre ancien qui contenait les plus vieilles connaissances de Yuno, et qui on ne sait comment devint un monstre.";
+	mes "N'est-ce pas étrange ?";
+	close;
+}
+
+
+
+//======================================================================================
+yuno,165,111,4	script	Juno Sage	123,{
+	mes "[Le Morpheous]";
+	mes "^FF5533Apocalypse...^000000";
+	mes "C'est le nom d'un androïde qui gardait Juperos il y a fort longtemps.";
+	next;
+	mes "[Le Morpheus]";
+	mes "Mais les années ont affecté son intelligence artificielle, et il ne peut plus distinguer ses alliés de ses ennemis.";
+	mes "C'est triste, mais c'est androïde n'est plus qu'un monstre sans âme.";
+	close;
+}
