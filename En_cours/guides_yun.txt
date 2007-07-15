@@ -23,10 +23,8 @@
 //=====================================================================================
 yuno.gat,153,47,4	script	Juno Guide#yun1	700,{ 
 	mes "[Ms. Yoon]"; 
-	mes "A place that takes the vision of"; 
-	mes "the future, and gives it form in";
-	mes "the present. welcome to";
-	mes "the city of Juno!";
+	mes "A place that takes the vision of the future, and gives it form in the present.";
+	mes "welcome to the city of Juno!";
 	set @name$, "[Ms. Yoon]";
 	next;
 	callfunc "F_YunoLoc";
@@ -35,158 +33,108 @@ yuno.gat,153,47,4	script	Juno Guide#yun1	700,{
 //=====================================================================
 yuno.gat,334,182,4	script	Juno Soldier#yun1	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Among the Sage's weapons, there is";
-	mes "a 'Dagger of Counter'.";
+	mes "Among the Sage's weapons, there is a 'Dagger of Counter'.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Its use is limited to the Sage";
-	mes "class, and it increases the chance";
-	mes "of inflicting critical attacks. So,";
-	mes "for Sages, that dagger can be very";
-	mes "useful, as well as make them look";
-	mes "stylish in battle.";
+	mes "Its use is limited to the Sage class, and it increases the chance of inflicting critical attacks.";
+	mes "So, for Sages, that dagger can be very useful, as well as make them look stylish in battle.";
 	close;
 }
 
 //=====================================================================
 yuno.gat,263,320,4	script	Juno Soldier#yun2	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
-	mes "There is a holy shield named";
-	mes "'Sacred Mission' which can only be";
-	mes "used by Crusaders.";
+	mes "There is a holy shield named 'Sacred Mission' which can only be used by Crusaders.";
 	next;
 	mes "[Juno Soldier]";
-	mes "It's a long and narrow shield with";
-	mes "an angel wing engraved in the";
-	mes "center of the front side. Against";
-	mes "Devil and Undead monsters, it is";
-	mes "especially powerful.";
+	mes "It's a long and narrow shield with an angel wing engraved in the center of the front side.";
+	mes "Against Devil and Undead monsters, it is especially powerful.";
 	close;
 }
 
 //=====================================================================
 yuno.gat,227,292,4	script	Juno Soldier#yun3	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Near Juno, there exists a fallen";
-	mes "angel named 'False Angel'. It";
-	mes "feigns innocence, pretending to";
-	mes "bless adventurers and then stabbing";
-	mes "them in the back without any";
-	mes "warning.";
+	mes "Near Juno, there exists a fallen angel named 'False Angel'.";
+	mes "It feigns innocence, pretending to bless adventurers and then stabbing them in the back without any warning.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Don't be fooled by its appearance,";
-	mes "or you'll find yourself in";
-	mes "trouble.";
+	mes "Don't be fooled by its appearance, or you'll find yourself in trouble.";
 	close;
 }
 
 //=====================================================================
 yuno.gat,165,283,4	script	Yuno Soldier#yun4	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
 	mes "Geographer...";
-	mes "That monster looks like a flower";
-	mes "blooming from the ground.";
+	mes "That monster looks like a flower blooming from the ground.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Strangely, it can extend its body a";
-	mes "long distance. Even if you're far";
-	mes "away from it, it can still pose a";
-	mes "threat.";
+	mes "Strangely, it can extend its body a long distance.";
+	mes "Even if you're far away from it, it can still pose a threat.";
 	next;
 	mes "[Juno Soldier]";
-	mes "The name of this monster originated";
-	mes "from a story about a poor";
-	mes "geographer who, unfortunately, was";
-	mes "eaten by this monster while he was";
-	mes "immersed in his studies.";
+	mes "The name of this monster originated from a story about a poor geographer who, unfortunately, was eaten by this monster while he was immersed in his studies.";
 	close;
 }
 
 //=====================================================================
 yuno.gat,150,283,4	script	Yuno Soldier#yun5	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
-	mes "there is a monster near here known";
-	mes "as Lava Golem. This golem is made";
-	mes "from a stone heart whose power";
-	mes "happened to be amplified with magic";
-	mes "power when it was swept away by";
-	mes "molten rock.";
+	mes "there is a monster near here known as Lava Golem.";
+	mes "This golem is made from a stone heart whose power happened to be amplified with magic power when it was swept away by molten rock.";
 	next;
 	mes "[Juno Soldier]";
-	mes "The lava dripping from its body is";
-	mes "so hot that it can melt down armor";
-	mes "and weapons made out of high";
-	mes "quality steel.";
+	mes "The lava dripping from its body is so hot that it can melt down armor and weapons made out of high quality steel.";
 	next;
 	mes "[Juno Soldier]";
-	mes "You'd better be careful when you";
-	mes "encounter this monster. It will";
-	mes "damage armor and weapons in the";
-	mes "twinkling of an eye.";
+	mes "You'd better be careful when you encounter this monster.";
+	mes "It will damage armor and weapons in the twinkling of an eye.";
 	close;
 }
 
 //=====================================================================
 yuno.gat,165,228,4	script	Yuno Soldier#yun6	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
-	mes "'Goat' is a monster that was an";
-	mes "antelope living in the high";
-	mes "mountains that was somehow turned";
-	mes "into a monster.";
+	mes "'Goat' is a monster that was an antelope living in the high mountains that was somehow turned into a monster.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Even if you manage to dodge to its";
-	mes "horns, you still need to be wary of";
-	mes "its powerful legs.";
+	mes "Even if you manage to dodge to its horns, you still need to be wary of its powerful legs.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Goat's legs are so strong because";
-	mes "it's always climbing cliffs when";
-	mes "it's not busy slaughtering the";
-	mes "innocent.";
+	mes "Goat's legs are so strong because it's always climbing cliffs when it's not busy slaughtering the innocent.";
 	close;
 }
 
 //=====================================================================
 yuno.gat,150,228,4	script	Yuno Soldier#yun7	105,{
 	mes "[Juno Soldier]";
-	mes "Welcome to Juno, the city of";
-	mes "noble-mindedness.";
+	mes "Welcome to Juno, the city of noble-mindedness.";
 	next;
 	mes "[Juno Soldier]";
-	mes "Have you ever";
-	mes "seen a Large Jellopy?";
+	mes "Have you ever seen a Large Jellopy?";
 	mes "Those things are huuuge!";
 	next;
 	mes "[Juno Soldier]";
-	mes "It's hard to believe";
-	mes "that such a large and";
-	mes "shining jellopy even exists!";
+	mes "It's hard to believe that such a large and shining jellopy even exists!";
 	close;
 }
 
@@ -199,52 +147,42 @@ sM_Menu:
 		menu "Armory",-, "Tool Shop",sM_2, "Sage Castle (Sage Job Change Place)",sM_3, "Street of Book Stores",sM_4, "Juphero Plaza",sM_5,"Library of the Republic",sM_6, "Schwheicherbil Magic Academy",sM_7, "Monsters Museum",sM_8, "Forge",sM_9, "Airport", sM_10, "End Conversation",M_End;
 
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
+			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Armory";
-			mes "Thank you,";
-			mes "Have a good day.";
+			mes "Thank you,, Have a good day.";
 			viewpoint 1,117,135,1,0xFF0000;
 			close;
 		sM_2: 
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
+			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Tool Shop";
-			mes "Thank you,";
-			mes "Have a good day.";
+			mes "Thank you, Have a good day.";
 			viewpoint 1,163,189,2,0x0000FF;
 			close;
 		sM_3: 
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
-			mes "^FF3355+^000000 -> Sage Castle";
-			mes "(Sage Job Change Place)";
+			mes "Please look at the mini map.";
+			mes "^FF3355+^000000 -> Sage Castle (Sage Job Change Place)";
 			mes "Thank you, Have a good day.";
 			viewpoint 1,89,320,3,0x00FF00;
 			close;
 		sM_4: 
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
+			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Street of Book Stores";
 			mes "Thank you, Have a good day.";
 			viewpoint 1,196,138,4,0x0000ff;
 			close;
 		sM_5: 
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
+			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Juphero Plaza";
-			mes "Thank you,"; 
-			mes "Have a good day.";
+			mes "Thank you, Have a good day.";
 			viewpoint 1,157,327,5,0x0000ff;
 			close;
 		sM_6: 
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
+			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Library of the Republic";
 			mes "Thank you, Have a good day.";
 			viewpoint 1,335,204,6,0x00FF00;
@@ -267,15 +205,13 @@ sM_Menu:
 			mes @name$;
 			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Forge";
-			mes "The forge is located underneath";
-			mes "Armory";
+			mes "The forge is located underneath Armory";
 			mes "Thank you, Have a good day.";
 			viewpoint 1,117,135,9,0xFF0000;
 			close;
 		sM_10:
 			mes @name$;
-			mes "Please look";
-			mes "at the mini map.";
+			mes "Please look at the mini map.";
 			mes "^FF3355+^000000 -> Airport";
 			mes "Thank you, Have a good day.";
 			viewpoint 1,53,214,10,0xFF0000;
@@ -288,4 +224,3 @@ sM_Menu:
 		mes "Welcome to Juno.";
 		close;
 }
-
