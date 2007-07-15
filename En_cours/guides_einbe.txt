@@ -24,7 +24,7 @@ einbech.gat,67,37,4	script	Guide#1::Einbech_Guide	852,{
 	mes "Nous sommes ici pour aider les touristes, donc si vous avez la moindre question, n'hésitez pas à nous demander.";
 L_MENU:
 	next;
-	menu "Guide de la ville",-,"Enlever les marques de la mini-map",L_REMOVE,"Conseils",L_NOTICE,"Annuler",L_END;
+	menu "Guide de la ville",-,"Enlever les marques de la mini-map",L_REMOVE,"Remarques",L_NOTICE,"Annuler",L_END;
 
 	mes "[Einbech Guide]";
 	mes "Si vous le désirez, je peux vous indiquer différents lieux.";
