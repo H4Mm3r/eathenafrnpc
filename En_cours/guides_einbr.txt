@@ -42,7 +42,7 @@ M_Menu:
 	L_Cont:
 sM_Menu:
 	menu "^FF0000Aéroport^000000",-,"Station de train",sM_2b,"Usine",sM_2c,"Plaza",sM_2d,
-	"Hôtel",sM_2e,"Magasin d'armes",sM_2f,"Laboratoire",sM_2g,"Guilde des Blacksmith",sM_2h,
+	"Hôtel",sM_2e,"Armurerie",sM_2f,"Laboratoire",sM_2g,"Guilde des Blacksmith",sM_2h,
 	"Tour d'Einbroch",sM_2i,"Annuler",SM_2j;
 
 	mes "[Einbroch Guide]";
@@ -80,7 +80,7 @@ sM_2e:
 	goto sL_Wipe;
 sM_2f:
 	mes "[Einbroch Guide]";
-	mes "Le magasin d'armes est au Nord de la Plaza.";
+	mes "L'armurerie est au Nord de la Plaza.";
 	mes "Vous pourrez y acheter des armes pour votre usage personnel.";
 	viewpoint 1,217,212,6,0xDDAA00;
 	next;

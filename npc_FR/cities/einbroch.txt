@@ -36,7 +36,7 @@ einbroch,220,208,5	script	Notice Board#01	858,{
 }
 
 einbroch,183,174,5	script	Bulletin Board#01	858,{
-	mes "Est - Magasin d'armes, Hôtel";
+	mes "Est - Armurerie, Hôtel";
 	mes "Sud - Usine";
 	mes "Sud-Ouest - Atelier de réparation des vaisseaux volants, Laboratoire";
 	mes "Nord-Ouest - Aéroport";
@@ -56,7 +56,7 @@ einbroch,68,206,5	script	Bulletin Board#03	858,{
 einbroch,162,256,5	script	Bulletin Board#04	858,{
 	mes "Est - Station de train";
 	mes "Sud-Est - Hotel";
-	mes "Sud - Magasin d'armes, Usine";
+	mes "Sud - Armurerie, Usine";
 	mes "Sud-Ouest - Aéroport, atelier de réparation des vaisseaux volants, Laboratoire";
 	close;
 }
@@ -64,7 +64,7 @@ einbroch,162,256,5	script	Bulletin Board#04	858,{
 einbroch,235,141,5	script	Bulletin Board#05	858,{
 	mes "Sud-Ouest - Atelier de réparation des vaisseaux volants, Laboratoire.";
 	mes "Nord-Ouest - Aéroport";
-	mes "Nord-Ouest - Magasin d'armes, Hôtel, Station de train.";
+	mes "Nord-Ouest - Armurerie, Hôtel, Station de train.";
 	close;
 }
 
