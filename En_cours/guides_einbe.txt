@@ -103,7 +103,7 @@ L_NOTICE:
 	next;
   	mes "[Einbech Guide]";
   	mes "Votre Mini-Map est située en haut à droite de l'écran.";
-	mes "Si vous ne pouvez pas la voir, appuyez sur Ctrl+Tab, ou sur le bouton 'Map' dans la fneêtre des informations basiques.";
+	mes "Si vous ne pouvez pas la voir, appuyez sur Ctrl+Tab, ou sur le bouton 'Map' dans la fenêtre des informations basiques.";
   	next;
   	mes "[Einbech Guide]";
  	mes "Si votre Mini-Map, cliquez sur les symbole ''+'' et ''-'' pour zoomer et dézoomer sur votre Mini-Map";

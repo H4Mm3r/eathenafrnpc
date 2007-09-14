@@ -16,25 +16,25 @@
 lighthalzen.gat,220,311,3	script	Guide::LhzSlum	852,{
 
 	mes "[Lighthalzen Guide]";
-	mes "welcome to Lighthalzen, the Coropration City-State.";
-	mes "If you need any guidance around the city, feel free to ask me and I'll do my very best to help you.";
+	mes "Bienvenue à Lighthalzen, la Cité-État des Corporations.";
+	mes "Si vous avez besoin d'être guidé dans la ville, n'hésitez pas à me demander de l'aide et je ferai tout ce que je peux pour vous aider.";
 	next;
 loopback:
-	menu "City Guide",s_Guide,"Remove Marks from Mini-Map",s_Remove,"Notice.",s_Notice,"Cancel",-;
+	menu "Guide de la ville",s_Guide,"Retirer les marques de la Mini-Map",s_Remove,"Conseils.",s_Notice,"Annuler",-;
 
 	mes "[Lighthalzen Guide]";
-	mes "Lighthalzen is divided into the East and West districts by a railroad that runs right through the middle.";
-	mes "There are always guards on watch to protect the peace.";
+	mes "Lighthalzen est séparée en deux parties : les quartiers Est et West. Le chemin de fer qui passe au milieu fait office de séparation.";
+	mes "Il y a toujours des gardes pour surveiller et protéger la paix.";
 	next;
 	mes "[Lighthalzen Guide]";
-	mes "Please don't hesitate to report and suspicious activity or persons to us.";
-	mes "We hope that you enjoy our fair city, adventurer.";
+	mes "N'hésitez pas à nous faire part de toute personne ou activité suspecte.";
+	mes "Nous espérons que vous apprécierez notre belle ville, aventurier.";
 	close;
 
 s_Guide:
 	mes "[Lighthalzen Guide]";
-	mes "Please be aware that I'm in charge of providing info regarding the East District, more commonly known as the Slums.";
-	mes "Select the location that you'd like know more about.";
+	mes "Je vous prie de noter que je suis en charge des renseignements sur le quartier Est, plus connu sous le nom de Ghetto.";
+	mes "Choisissez le lieu sur lequel vous souhaitez des renseignements.";
 	next;
 	mes "[Lighthalzen Guide]";
 	mes "But before that, would you like me to mark locations on your Mini-Map?";
