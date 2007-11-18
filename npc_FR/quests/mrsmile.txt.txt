@@ -1,0 +1,94 @@
+//===== eAthena Script ======================================= 
+//= Mr. Smile Quest
+//===== By: ================================================== 
+//= kobra_k88, Akaru
+//===== Traduit en français par ==============================
+//= Arkana
+//===== Current Version: ===================================== 
+//= 1.3
+//===== Compatible With: ===================================== 
+//= eAthena 7.15 +
+//===== Description: ========================================= 
+//= 
+//===== Additional Comments: ================================= 
+//= Fully working. 1.1 Optimized
+//= 1.2 updated Payon coords [Lupus]
+//= 1.3 fixed exploit [Lupus]
+//============================================================ 
+
+
+
+// Alberta ------------------------------------------------------------------------------------------
+alberta,113,53,3	script	Smile Assistance::SmileAT	92,{
+	mes "[Smile Assistant]";
+	mes "Salut, je suis un marchand de sourire. Comment puis-je vous aider ?";
+	next;
+	menu "^0099FFMr. Smile^000000 ?",M_0, "Fabriquer un ^0099FFMr. Smile^000000",M_1, "Partir",M_End;
+	
+	M_0:
+		mes "[Smile Assistant]";
+		mes "Oh, l'évênement Mr. Smile est un évênement national sponsorisé par ^0099FFsa Majesté Tristran III^000000.";
+		mes "Cet évênement a pour but que chaque citoyen de Rune-Midgard mette un joyeux masque Mr. Smile sur son visage.";
+		next;
+		mes "[Smile Assistant]";
+		mes "Grâce à ceci, sa Majesté espère encourager la population de Rune-Midgard à s'amuser plus et à être heureuse !";
+		mes "Comme vous l'avez peut-être deviné, le masque Mr. Smile est tout simplement un visage souriant.";
+		next;
+		mes "[Smile Assistant]";
+		mes "Bien qu'il soit vraiment très simpliste, personne ne peut affronter le pouvoir d'un sourire ! Et si tout le royaume venait à en porter...";
+		mes "Imaginez toute la joie et l'égaiement que verrait alors le monde !";
+		next;
+		mes "[Smile Assistant]";
+		mes "En tant que marchand de sourire, c'est à moi qu'il revient de faire un masque Mr. Smile à tous ceux qui en veulent.";
+		mes "Voici les quelques petits objets dont j'ai besoin pour faire le masque :";
+		mes "^5555FF10 Jellopy^000000";
+		mes "^5555FF10 Fluff^000000";
+		mes "^5555FF10 Clover^000000";
+		next;
+		mes "[Smile Girl]";
+		mes "Le monde n'a jamais assez de sourires, alors récupérez ces objets et revenez. Je vous attendrai juste ici.";
+		close;
+	M_1:
+		mes "[Smile Assistant]";
+		if(countitem(705) < 10 || countitem(909) < 10 || countitem(914) < 10) goto sL_NoItems;
+		delitem 705,10;
+		delitem 909,10;
+		delitem 914,10;
+		mes "Super ! Vous avez ramené tous les objets dont j'avais besoin. Juste une seconde, que je finisse votre Mr. Smile...";
+		next;
+		mes "~! Remue !~! Remue !~! clac !~! clac !~! toc !~! toc !~";
+		next;
+		mes "[Smile Assistant]";
+		mes "Et voilà, votre Mr. Smile rien qu'à vous !";
+		getitem 2278,1;
+		next;
+		mes "[Smile Assistant]";
+		mes "L'évênement Mr. Smile n'est qu'une des milles façons que sa Majesté Tristan III essaie d'employer pour rendre la vie plus agréable ici, à Rune-Midgard.";
+		next;
+		mes "[Smile Assistant]";
+		mes "Nous espérons que vous vous rappelerez de ça à chaque fois que vous enfilerez votre Mr. Smile.";
+		close;
+	
+		sL_NoItems:
+			mes "Oh... Malheureusement vous n'avez pas assez d'objets pour un Mr. Smile. Voici ce dont vous avez besoin :";
+			mes "^5555FF10 Jellopy^000000,";
+			mes "^5555FF10 Fluff^000000,";
+			mes "^5555FF10 Clover^000000,";
+			mes "Je vous attendrai ici, alors dépêchez-vous.";
+			close;
+	M_End:
+		close;
+}
+
+// Aldebaran --------------------------------------------------------------------------------
+aldebaran,136,135,4	duplicate(SmileAT)	Smile Assistance#2	92
+// Geffen -----------------------------------------------------------------------------------
+geffen,119,107,4	duplicate(SmileAT)	Smile Assistance#3	92
+// Izlude -----------------------------------------------------------------------------------
+izlude,129,118,4	duplicate(SmileAT)	Smile Assistance#4	92
+// Morroc -----------------------------------------------------------------------------------
+morocc,158,97,4	duplicate(SmileAT)	Smile Assistance#5	92
+// Payon ------------------------------------------------------------------------------------
+payon,168,225,4	duplicate(SmileAT)	Smile Assistance#6	92
+// Prontera ---------------------------------------------------------------------------------
+prontera,157,187,4	duplicate(SmileAT)	Smile Assistance#7	92
