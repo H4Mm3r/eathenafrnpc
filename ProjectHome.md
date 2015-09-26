@@ -1,0 +1,2 @@
+This project is a french translation for the NPC scripts (No Player Character) of eAthena.ws. (Eathena.ws project is an english emulator of a Server for the Korean Game Ragnarok).
+The translation will be done from english to french.
